@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # [GainMate]
 ## サービス概要
 「GainMate」は、食が細い、あるいは体質的に痩せ型の人々が
@@ -171,4 +172,3 @@ RDS
 テスティング
    RSpec
    Capybara
-
