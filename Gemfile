@@ -74,5 +74,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'rubocop', '~> 1.56', '>= 1.56.4'
 end
