@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_01_222540) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_02_145030) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,19 +32,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_01_222540) do
   end
 
   create_table "food_preferences", force: :cascade do |t|
+    t.string "preference_type"
     t.string "food_item"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_food_preferences_on_user_id"
-  end
-
-  create_table "notifications", force: :cascade do |t|
-    t.text "content"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -84,7 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_01_222540) do
   add_foreign_key "favorites", "recipes"
   add_foreign_key "favorites", "users"
   add_foreign_key "food_preferences", "users"
-  add_foreign_key "notifications", "users"
   add_foreign_key "recipes", "users"
   add_foreign_key "weight_logs", "users"
 end
