@@ -17,7 +17,7 @@ Devise.setup do |config|
   # config.confirmable = true # メール確認が必要な場合に有効にします
 
   # Recoverable（パスワードリセット）
-  config.recoverable = true # パスワードリセットが必要な場合に有効にします
+  # config.recoverable = true # パスワードリセットが必要な場合に有効にします
 
   # Rememberable（永続ログイン）
   # config.rememberable = true # 永続ログインが必要な場合に有効にします
