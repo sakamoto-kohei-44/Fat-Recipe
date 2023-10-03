@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  root 'pages#index'
-  resources :pages
-=======
-  root 'pages#home'
 
-  # 利用規約とプライバシーポリシー
-  get 'terms', to: 'pages#terms'
-  get 'privacy', to: 'pages#privacy'
   # Deviseによる認証関連
   devise_for :users, controllers: {
     registrations: 'users/registrations',
@@ -43,5 +35,4 @@ Rails.application.routes.draw do
       get 'search_results'  # => /recipes/search_results
     end
   end
->>>>>>> 15d11f6 (:sparkles:各ルーティングを記述)
 end
