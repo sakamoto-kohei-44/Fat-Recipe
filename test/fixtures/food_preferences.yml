@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  preference_type: MyString
+  food_item: MyString
+  user: one
+
+two:
+  preference_type: MyString
+  food_item: MyString
+  user: two
