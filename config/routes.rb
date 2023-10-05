@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pages#home'
   get 'dashboard/show'
   get 'recipe_suggestions/index'
   get 'recipes/search'
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   get 'users/update_profile'
   get 'users/edit_account'
   get 'users/update_account'
-  root 'pages#home'
 
   # 利用規約とプライバシーポリシー
   get 'terms', to: 'pages#terms'
