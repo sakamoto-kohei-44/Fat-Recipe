@@ -1,0 +1,47 @@
+body {
+  background-color: white;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead {
+  background-color: #007BFF;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 上部に配置 */
+  align-items: flex-start; /* 左側に配置 */
+  padding: 20px; /* 上部の空間を確保 */
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* 横方向に配置 */
+  align-items: center; /* 中央に配置 */
+  justify-content: space-between; /* 余白を最大にして左右に配置 */
+  width: 100%; /* コンテナを全幅に */
+}
+
+.text-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 左側に配置 */
+}
+
+.user-links {
+  display: flex;
+  gap: 10px; /* ボタン間の間隔 */
+}
+
+.custom-header h1, .custom-header h3 {
+  margin: 10px 0;
+  text-align: left; /* 左側に配置 */
+}
+
+.custom-header a {
+  margin-top: 20px;
+  color: inherit;
+  display: block;
+}
