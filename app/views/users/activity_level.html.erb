@@ -1,2 +1,71 @@
-<h1>Users#activity_level</h1>
-<p>Find me in app/views/users/activity_level.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動レベル選択</title>
+    <link rel="stylesheet" href="path_to_bootstrap.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .choice-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <!-- ヘッダーの内容 -->
+    </header>
+
+    <div class="choice-container">
+        <h1>活動レベル選択</h1>
+        
+        <div class="input-container">
+            <label for="activity-level">活動レベルは？</label>
+            <select id="activity-level" name="activity-level">
+                <option value="low">低い</option>
+                <option value="moderate">適度</option>
+                <option value="high">高い</option>
+            </select>
+        </div>
+
+        <%= link_to '次へ', allergies_users_path, class: "btn btn-light" %>
+    </div>
+</body>
+</html>
