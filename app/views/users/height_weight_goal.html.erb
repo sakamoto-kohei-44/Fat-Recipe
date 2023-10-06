@@ -1,2 +1,77 @@
-<h1>Users#height_weight_goal</h1>
-<p>Find me in app/views/users/height_weight_goal.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あああ</title>
+    <link rel="stylesheet" href="path_to_bootstrap.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .choice-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-left: 10%;
+        }
+
+        button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="p-3 text-bg-dark">
+        <!-- ...ヘッダーの内容... -->
+    </header>
+
+    <div class="choice-container">
+        <h1>体重管理</h1>
+        
+        <div class="input-container">
+            <label for="height">身長は？</label>
+            <input type="text" id="height" name="height" placeholder="cm">
+        </div>
+
+        <div class="input-container">
+            <label for="weight">体重は？</label>
+            <input type="text" id="weight" name="weight" placeholder="kg">
+        </div>
+
+        <div class="input-container">
+            <label for="target-weight">目標体重は？</label>
+            <input type="text" id="target-weight" name="target-weight" placeholder="kg">
+        </div>
+
+        <%= link_to '次へ', activity_level_users_path, class: "btn btn-light" %>
+    </div>
+</body>
+</html>
