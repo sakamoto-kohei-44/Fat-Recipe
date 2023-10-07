@@ -20,3 +20,4 @@ COPY yarn.lock /app/yarn.lock
 RUN bundle install
 RUN yarn install
 COPY . /app
+RUN apt-get update && apt-get install -y postgresql-client

@@ -16,4 +16,5 @@ class User < ApplicationRecord
   validates :height, :weight, presence: true, numericality: { greater_than: 0 }
 
   enum gender: { man: 0, woman: 1 }
+  enum goal: { standard: 0, slim_muscle: 1 }
 end
