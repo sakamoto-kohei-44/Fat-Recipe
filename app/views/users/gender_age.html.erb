@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>あああ</title>
-    <link rel="stylesheet" href="path_to_bootstrap.css">
+    <link rel="stylesheet" href="/assets/bootstrap.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -68,30 +68,24 @@
     </header>
 <body>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <form>
-                    <div class="mb-3">
-                        <label for="gender" class="form-label">性別</label>
-                        <select class="form-select" id="gender" name="gender">
-                            <option selected>選択してください</option>
-                            <option value="male">男性</option>
-                            <option value="female">女性</option>
-                            <!-- 他のオプションも追加可能です -->
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="age" class="form-label">年齢</label>
-                        <input type="number" class="form-control" id="age" name="age" placeholder="何歳ですか？">
-                    </div>
-                    <div class="mb-3 text-center">
-                        <%= link_to '次へ', height_weight_goal_users_path, class: "btn btn-primary" %>
-                    </div>
-                </form>
-            </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <%= form_with url: save_gender_age_users_path, local: true do |f| %>
+                <div class="mb-3">
+                    <%= f.label :gender, "性別", class: "form-label" %>
+                    <%= f.select :gender, User.genders.keys.map { |k| [k.humanize, k] }, { prompt: '選択してください' }, class: "form-select" %>
+                </div>
+                <div class="mb-3">
+                    <%= f.label :age, "年齢", class: "form-label" %>
+                    <%= f.number_field :age, placeholder: "何歳ですか？", class: "form-control" %>
+                </div>
+                <div class="mb-3 text-center">
+                    <%= f.submit "次へ", class: "btn btn-primary" %>
+                </div>
+            <% end %>
         </div>
     </div>
-
+</div>
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
