@@ -1,86 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>あああ</title>
-    <link rel="stylesheet" href="path_to_bootstrap.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-        }
-
-        .choice-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 400px;
-            margin: 50px auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            background-color: #007BFF;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-
-<body>
-    <header class="p-3 text-bg-dark">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-                </a>
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-                </ul>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-                </form>
-                <div class="text-end">
-                    <%= link_to 'ログイン', new_user_session_path, class: "btn btn-light" %>
-            </div>
+<div class="choice-container">
+    <h1>目標は？</h1>
+    <%= form_with url: save_goal_users_path, local: true do |f| %>
+        <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+            <label class="btn btn-light">
+                <%= f.radio_button :goal, "standard" %>
+                標準体型になりたい
+            </label>
+            <label class="btn btn-light">
+                <%= f.radio_button :goal, "slim_muscle" %>
+                細マッチョになりたい
+            </label>
         </div>
-    </header>
-    <div class="choice-container">
-        <h1>目標は？</h1>
-        <%= form_with url: save_goal_path, local: true do |f| %>
-          <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
-            <label class="btn btn-light">
-              <%= f.radio_button :goal, "standard" %>
-              標準体型になりたい
-            </label>
-            <label class="btn btn-light">
-              <%= f.radio_button :goal, "slim_muscle" %>
-              細マッチョになりたい
-            </label>
-          </div>
-          <%= f.submit "次へ", class: "btn btn-light" %>
-        <% end %>
-    </div>
-</body>
-</html>
+        <%= f.submit "次へ", class: "btn btn-light" %>
+    <% end %>
+</div>
