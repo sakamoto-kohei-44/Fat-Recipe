@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def save_goal
     # セッションに目標を保存
     session[:user_goal] = params[:goal]
-    redirect_to users_gender_age_path, notice: '目標が正常に保存されました。'
+    redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
   end
 
   def create
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     if user_params
       session[:gender] = user_params[:gender]
       session[:age] = user_params[:age]
-      redirect_to users_height_weight_target_weight_path, notice: "性別と年齢が正常に保存されました。"
+      redirect_to height_weight_target_weight_users_path, notice: "性別と年齢が正常に保存されました。"
     else
       render :gender_age, alert: "保存できませんでした。入力内容を確認してください。"
     end
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
       session[:height] = user_params[:height]
       session[:weight] = user_params[:weight]
       session[:target_weight] = user_params[:target_weight]
-      redirect_to users_activity_level_path, notice: "正常に保存されました。"
+      redirect_to activity_level_users_path, notice: "正常に保存されました。"
     else
       render :height_weight_target_weight, alert: "保存できませんでした。入力内容を確認してください。"
     end
@@ -55,13 +55,25 @@ class UsersController < ApplicationController
     # activity_levelパラメータが存在するか確認
     if user_params[:activity_level].present?
         session[:activity_level] = user_params[:activity_level]
-        redirect_to users_allergies_path, notice: "活動レベルが正常に保存されました。"
+        Rails.logger.debug "活動レベル: #{session[:activity_level]}"
+        redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
     else
         render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
     end
   end
 
   def allergies
+  end
+
+  def save_allergies
+    # アレルギー項目のIDが存在するか確認
+    if user_params[:allergy_item_ids]&.reject(&:blank?).present?
+      session[:allergy_item_ids] = user_params[:allergy_item_ids]
+      # 次のページへリダイレクト
+      redirect_to dashboard_home_path, notice: "アレルギー項目が正常に保存されました。"
+    else
+      render :allergies, alert: "アレルギー項目を選択してください。"
+    end
   end
 
   def edit_profile
@@ -86,6 +98,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.permit(:age, :gender, :goal, :email, :password, :name, :height, :weight, :activity_level, :target_weight, :authenticity_token, :commit)
+    params.permit(:age, :gender, :goal, :email, :password, :name, :height, :weight, :activity_level, :target_weight, :authenticity_token, :commit, allergy_item_ids: [])
   end
 end
+
