@@ -10,16 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_07_121254) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_08_011506) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "allergies", force: :cascade do |t|
-    t.string "item"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "allergy_item_id"
+    t.index ["allergy_item_id"], name: "index_allergies_on_allergy_item_id"
     t.index ["user_id"], name: "index_allergies_on_user_id"
+  end
+
+  create_table "allergy_items", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -88,6 +95,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_07_121254) do
     t.index ["user_id"], name: "index_weight_logs_on_user_id"
   end
 
+  add_foreign_key "allergies", "allergy_items"
   add_foreign_key "allergies", "users"
   add_foreign_key "favorites", "recipes"
   add_foreign_key "favorites", "users"
