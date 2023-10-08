@@ -16568,3 +16568,1410 @@ Processing by UsersController#allergies as HTML
 Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 2980)
 
 
+Started GET "/users/activity_level" for 172.21.0.1 at 2023-10-08 01:33:54 +0900
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 16.4ms | Allocations: 6826)
+  Rendered layout layouts/application.html.erb (Duration: 1636.0ms | Allocations: 85773)
+Completed 500 Internal Server Error in 1756ms (ActiveRecord: 0.0ms | Allocations: 93074)
+
+
+  
+ActionView::Template::Error (Missing partial users/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/app/app/views"
+  * "/usr/local/bundle/gems/devise-4.9.2/app/views"
+  * "/usr/local/bundle/gems/turbo-rails-1.4.0/app/views"
+  * "/usr/local/bundle/gems/letter_opener_web-2.0.0/app/views"
+  * "/usr/local/bundle/gems/kaminari-core-1.2.2/app/views"
+  * "/usr/local/bundle/gems/actiontext-7.0.8/app/views"
+  * "/usr/local/bundle/gems/actionmailbox-7.0.8/app/views"
+):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= render 'header' %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/users/activity_level" for 172.22.0.1 at 2023-10-08 01:39:52 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 12.7ms | Allocations: 6680)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 264.2ms | Allocations: 31146)
+Completed 200 OK in 303ms (Views: 271.6ms | ActiveRecord: 0.0ms | Allocations: 35506)
+
+
+Started POST "/users/save_activity_level" for 172.22.0.1 at 2023-10-08 01:39:57 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"low", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 842)
+
+
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 01:39:57 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 2.3ms | Allocations: 103)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2891)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 3217)
+
+
+Started GET "/" for 172.22.0.1 at 2023-10-08 01:40:07 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 343)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3189)
+Completed 200 OK in 78ms (Views: 13.2ms | ActiveRecord: 44.9ms | Allocations: 13748)
+
+
+Started GET "/path_to_bootstrap.css" for 172.22.0.1 at 2023-10-08 01:40:07 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path_to_bootstrap.css"):
+  
+Started GET "/" for 172.22.0.1 at 2023-10-08 01:40:40 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.1ms | Allocations: 204)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 3446)
+Completed 200 OK in 46ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 4349)
+
+
+Started GET "/users/body_info" for 172.22.0.1 at 2023-10-08 01:40:43 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 32.3ms | Allocations: 9518)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 40.9ms | Allocations: 12038)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.0ms | Allocations: 12659)
+
+
+Started POST "/save_goal" for 172.22.0.1 at 2023-10-08 01:40:50 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 515)
+
+
+Started GET "/users/gender_age" for 172.22.0.1 at 2023-10-08 01:40:50 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3100)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5551)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 5874)
+
+
+Started POST "/users/save_gender_age" for 172.22.0.1 at 2023-10-08 01:40:56 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 750)
+
+
+Started GET "/users/height_weight_target_weight" for 172.22.0.1 at 2023-10-08 01:40:56 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3842)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 6293)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6615)
+
+
+Started POST "/users/users_save_height_weight_target_weight" for 172.22.0.1 at 2023-10-08 01:41:01 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 1006)
+
+
+Started GET "/users/activity_level" for 172.22.0.1 at 2023-10-08 01:41:01 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1961)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4412)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 4733)
+
+
+Started POST "/users/save_activity_level" for 172.22.0.1 at 2023-10-08 01:41:04 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 667)
+
+
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 01:41:04 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 1.4ms | Allocations: 101)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2910)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 3232)
+
+
+Started GET "/" for 172.22.0.1 at 2023-10-08 09:37:35 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 2860)
+Completed 200 OK in 49ms (Views: 41.7ms | ActiveRecord: 0.0ms | Allocations: 3158)
+
+
+Started GET "/users/body_info" for 172.22.0.1 at 2023-10-08 09:37:38 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1701)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 4152)
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 4418)
+
+
+Started POST "/save_goal" for 172.22.0.1 at 2023-10-08 09:37:42 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"slim_muscle", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 572)
+
+
+Started GET "/users/gender_age" for 172.22.0.1 at 2023-10-08 09:37:42 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2732)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 5183)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 5449)
+
+
+Started POST "/users/save_gender_age" for 172.22.0.1 at 2023-10-08 09:37:49 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 764)
+
+
+Started GET "/users/height_weight_target_weight" for 172.22.0.1 at 2023-10-08 09:37:49 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 2.5ms | Allocations: 3517)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5968)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 6234)
+
+
+Started POST "/users/users_save_height_weight_target_weight" for 172.22.0.1 at 2023-10-08 09:37:55 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 997)
+
+
+Started GET "/users/activity_level" for 172.22.0.1 at 2023-10-08 09:37:55 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1754)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4205)
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 4471)
+
+
+Started POST "/users/save_activity_level" for 172.22.0.1 at 2023-10-08 09:37:57 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"low", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 688)
+
+
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 09:37:57 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2801)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 3067)
+
+
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(323732312933266965)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAllergyItems (20231008011428)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (69.8ms)[0m  [1m[35mCREATE TABLE "allergy_items" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (8.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231008011428"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ModifyAllergies (20231008011506)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.8ms)[0m  [1m[35mALTER TABLE "allergies" DROP COLUMN "item"[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "allergies" ADD "allergy_item_id" bigint[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE INDEX "index_allergies_on_allergy_item_id" ON "allergies" ("allergy_item_id")[0m
+  [1m[35m (18.1ms)[0m  [1m[35mALTER TABLE "allergies" ADD CONSTRAINT "fk_rails_f5df0a1be8"
+FOREIGN KEY ("allergy_item_id")
+  REFERENCES "allergy_items" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231008011506"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(323732312933266965)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 10:28:09 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1283)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2230)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `allergies_path' for #<ActionView::Base:0x00000000018420>):
+    1: <div class="choice-container">
+    2:     <h1>アレルギー選択</h1>
+    3:     <%= form_with model: @user, url: allergies_path, local: true do |f| %>
+    4:         <div class="input-container">
+    5:             <%= f.label :allergies, "アレルギー項目は？" %>
+    6:             <br>
+  
+app/views/users/allergies.html.erb:3
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 11:10:51 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1171)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1259)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 2187)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `save_allergies_path' for #<ActionView::Base:0x0000000001ef50>):
+    1: <div class="choice-container">
+    2:     <h1>アレルギー選択</h1>
+    3:     <%= form_with model: @user, url: save_allergies_path, local: true do |f| %>
+    4:         <div class="input-container">
+    5:             <%= f.label :allergies, "アレルギー項目は？" %>
+    6:             <br>
+  
+app/views/users/allergies.html.erb:3
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 11:13:07 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1203)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 1291)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 2137)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `save_allergies_path' for #<ActionView::Base:0x0000000001f130>):
+    1: <div class="choice-container">
+    2:     <h1>アレルギー選択</h1>
+    3:     <%= form_with url: save_allergies_path, local: true do |f| %>
+    4:         <div class="input-container">
+    5:             <%= f.label :allergies, "アレルギー項目は？" %>
+    6:             <br>
+  
+app/views/users/allergies.html.erb:3
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 11:13:09 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 1.2ms | Allocations: 990)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1077)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1321)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `save_allergies_path' for #<ActionView::Base:0x0000000001f298>):
+    1: <div class="choice-container">
+    2:     <h1>アレルギー選択</h1>
+    3:     <%= form_with url: save_allergies_path, local: true do |f| %>
+    4:         <div class="input-container">
+    5:             <%= f.label :allergies, "アレルギー項目は？" %>
+    6:             <br>
+  
+app/views/users/allergies.html.erb:3
+Started GET "/users/allergies" for 172.22.0.1 at 2023-10-08 11:13:09 +0900
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 0.5ms | Allocations: 990)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1077)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1320)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `save_allergies_path' for #<ActionView::Base:0x0000000001f3d8>):
+    1: <div class="choice-container">
+    2:     <h1>アレルギー選択</h1>
+    3:     <%= form_with url: save_allergies_path, local: true do |f| %>
+    4:         <div class="input-container">
+    5:             <%= f.label :allergies, "アレルギー項目は？" %>
+    6:             <br>
+  
+app/views/users/allergies.html.erb:3
+Started GET "/users/allergies" for 172.23.0.1 at 2023-10-08 11:14:38 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1774)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1876)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms | Allocations: 6178)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `save_allergies_path' for #<ActionView::Base:0x00000000010dd8>):
+    1: <div class="choice-container">
+    2:     <h1>アレルギー選択</h1>
+    3:     <%= form_with url: save_allergies_path, local: true do |f| %>
+    4:         <div class="input-container">
+    5:             <%= f.label :allergies, "アレルギー項目は？" %>
+    6:             <br>
+  
+app/views/users/allergies.html.erb:3
+Started GET "/users/allergies" for 172.23.0.1 at 2023-10-08 11:18:53 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  Rendered users/allergies.html.erb within layouts/application (Duration: 47.4ms | Allocations: 9528)
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 9617)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms | Allocations: 10468)
+
+
+  
+ActionView::Template::Error (undefined method `has_many' for main:Object):
+    4:         <div class="input-container">
+    5:             <%= f.label :allergies, "アレルギー項目は？" %>
+    6:             <br>
+    7:             <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name %>
+    8:         </div>
+    9:         <%= f.submit '次へ', class: "btn btn-light" %>
+   10:     <% end %>
+  
+app/models/allergy_item.rb:1:in `<main>'
+app/views/users/allergies.html.erb:7
+app/views/users/allergies.html.erb:3
+Started GET "/users/allergies" for 172.23.0.1 at 2023-10-08 11:20:59 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (5.7ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 260.5ms | Allocations: 6869)
+  Rendered shared/_header.html.erb (Duration: 2.3ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 605.0ms | Allocations: 31342)
+Completed 200 OK in 611ms (Views: 474.4ms | ActiveRecord: 133.1ms | Allocations: 31916)
+
+
+Started POST "/users/save_allergies" for 172.23.0.1 at 2023-10-08 11:21:04 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>[""], "commit"=>"次へ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 1011)
+
+
+Started GET "/" for 172.23.0.1 at 2023-10-08 11:21:14 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 213)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3133)
+Completed 200 OK in 111ms (Views: 12.4ms | ActiveRecord: 77.8ms | Allocations: 13648)
+
+
+Started GET "/users/body_info" for 172.23.0.1 at 2023-10-08 11:21:17 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2093)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 4550)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 4872)
+
+
+Started GET "/users/body_info" for 172.23.0.1 at 2023-10-08 11:22:10 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1938)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4889)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 5846)
+
+
+Started POST "/users/save_goal" for 172.23.0.1 at 2023-10-08 11:22:33 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"slim_muscle", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started GET "/users/gender_age" for 172.23.0.1 at 2023-10-08 11:22:33 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 14.9ms | Allocations: 3410)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 5872)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 6194)
+
+
+Started POST "/users/save_gender_age" for 172.23.0.1 at 2023-10-08 11:22:38 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms | Allocations: 815)
+
+
+Started GET "/users/height_weight_target_weight" for 172.23.0.1 at 2023-10-08 11:22:38 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3847)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 6298)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 6620)
+
+
+Started POST "/users/save_gender_age" for 172.23.0.1 at 2023-10-08 11:22:45 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 788)
+
+
+Started GET "/users/height_weight_target_weight" for 172.23.0.1 at 2023-10-08 11:22:45 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3526)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5977)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 6243)
+
+
+Started GET "/users/height_weight_target_weight" for 172.23.0.1 at 2023-10-08 11:23:24 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3556)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 6089)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 6623)
+
+
+Started POST "/users/save_gender_age" for 172.23.0.1 at 2023-10-08 11:23:29 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 782)
+
+
+Started GET "/users/height_weight_target_weight" for 172.23.0.1 at 2023-10-08 11:23:29 +0900
+Cannot render console from 172.23.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 2.1ms | Allocations: 3517)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5968)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 6234)
+
+
+Started GET "/" for 172.24.0.1 at 2023-10-08 11:23:49 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 518)
+  Rendered shared/_header.html.erb (Duration: 3.8ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 268.4ms | Allocations: 25561)
+Completed 200 OK in 367ms (Views: 276.8ms | ActiveRecord: 41.0ms | Allocations: 39775)
+
+
+Started GET "/users/body_info" for 172.24.0.1 at 2023-10-08 11:23:51 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2245)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4768)
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 5473)
+
+
+Started POST "/users/save_goal" for 172.24.0.1 at 2023-10-08 11:23:53 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 699)
+
+
+Started GET "/users/gender_age" for 172.24.0.1 at 2023-10-08 11:23:53 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 13.5ms | Allocations: 3488)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5940)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 6267)
+
+
+Started POST "/users/save_gender_age" for 172.24.0.1 at 2023-10-08 11:23:57 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 809)
+
+
+Started GET "/users/height_weight_target_weight" for 172.24.0.1 at 2023-10-08 11:23:57 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3889)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 6341)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6665)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.24.0.1 at 2023-10-08 11:24:01 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1012)
+
+
+Started GET "/users/activity_level" for 172.24.0.1 at 2023-10-08 11:24:01 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1969)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4421)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4745)
+
+
+Started POST "/users/save_activity_level" for 172.24.0.1 at 2023-10-08 11:24:04 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"low", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms | Allocations: 661)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 11:24:04 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (3.0ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 21.7ms | Allocations: 3675)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 6137)
+Completed 200 OK in 34ms (Views: 27.5ms | ActiveRecord: 3.0ms | Allocations: 6459)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 11:24:39 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (4.2ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 32.6ms | Allocations: 2541)
+  Rendered shared/_header.html.erb (Duration: 6.5ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 5479)
+Completed 200 OK in 96ms (Views: 76.8ms | ActiveRecord: 4.2ms | Allocations: 6352)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 11:28:48 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (2.9ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 26.5ms | Allocations: 2539)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 5476)
+Completed 200 OK in 60ms (Views: 51.0ms | ActiveRecord: 2.9ms | Allocations: 6346)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 11:28:50 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (1.1ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2258)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 4709)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 1.1ms | Allocations: 4976)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-082b048bb3ea1ff3afac5ce39a89d4110ff3c74229406d59ccd74f5c3f084b56.map"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (19.3ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "乳製品"], ["created_at", "2023-10-08 02:50:08.038049"], ["updated_at", "2023-10-08 02:50:08.038049"]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.8ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "小麦"], ["created_at", "2023-10-08 02:50:08.067040"], ["updated_at", "2023-10-08 02:50:08.067040"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "卵"], ["created_at", "2023-10-08 02:50:08.073934"], ["updated_at", "2023-10-08 02:50:08.073934"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "えび"], ["created_at", "2023-10-08 02:50:08.078695"], ["updated_at", "2023-10-08 02:50:08.078695"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "かに"], ["created_at", "2023-10-08 02:50:08.083378"], ["updated_at", "2023-10-08 02:50:08.083378"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "そば"], ["created_at", "2023-10-08 02:50:08.088255"], ["updated_at", "2023-10-08 02:50:08.088255"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "落花生"], ["created_at", "2023-10-08 02:50:08.093116"], ["updated_at", "2023-10-08 02:50:08.093116"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAllergyItem Load (7.9ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 11:52:06 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (5.9ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 360.8ms | Allocations: 21907)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 376.8ms | Allocations: 24369)
+Completed 200 OK in 384ms (Views: 189.3ms | ActiveRecord: 190.2ms | Allocations: 24636)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-082b048bb3ea1ff3afac5ce39a89d4110ff3c74229406d59ccd74f5c3f084b56.map"):
+  
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 11:52:14 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "1"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 902)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 11:52:27 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "2"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 555)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 11:53:34 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "1"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.0ms | Allocations: 627)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 11:59:15 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "1"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 11ms (ActiveRecord: 0.0ms | Allocations: 633)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 11:59:19 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "1"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 0.0ms | Allocations: 579)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 11:59:21 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "1"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 582)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 12:05:11 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (5.4ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 294.4ms | Allocations: 14561)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 304.3ms | Allocations: 17094)
+Completed 200 OK in 309ms (Views: 120.3ms | ActiveRecord: 186.0ms | Allocations: 17628)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 12:05:13 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "2"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 612)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 12:06:52 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (4.4ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 50.7ms | Allocations: 11532)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 14068)
+Completed 200 OK in 75ms (Views: 40.8ms | ActiveRecord: 30.7ms | Allocations: 14602)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 12:06:54 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "3"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 564)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 12:06:57 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "3"], "commit"=>"ホームへ"}
+No template found for UsersController#save_allergies, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.0ms | Allocations: 570)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 12:07:37 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (4.8ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 50.4ms | Allocations: 11540)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | Allocations: 14074)
+Completed 200 OK in 69ms (Views: 35.6ms | ActiveRecord: 29.8ms | Allocations: 14608)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 12:07:39 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "2"], "commit"=>"ホームへ"}
+[31mUnpermitted parameter: :allergy_item_ids. Context: { controller: UsersController, action: save_allergies, request: #<ActionDispatch::Request:0x0000ffff765babf0>, params: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "2"], "commit"=>"ホームへ", "controller"=>"users", "action"=>"save_allergies"} }[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 1103)
+
+
+  
+NoMethodError (undefined method `reject' for nil:NilClass):
+  
+app/controllers/users_controller.rb:59:in `save_allergies'
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 12:14:43 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "2"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms | Allocations: 852)
+
+
+Started GET "/" for 172.24.0.1 at 2023-10-08 12:14:44 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 210)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 3095)
+Completed 200 OK in 295ms (Views: 19.1ms | ActiveRecord: 171.3ms | Allocations: 11193)
+
+
+Started GET "/users/body_info" for 172.24.0.1 at 2023-10-08 12:18:41 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1914)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 4437)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 5024)
+
+
+Started POST "/users/save_goal" for 172.24.0.1 at 2023-10-08 12:18:43 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"slim_muscle", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 587)
+
+
+Started GET "/users/gender_age" for 172.24.0.1 at 2023-10-08 12:18:43 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3039)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5490)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 5811)
+
+
+Started POST "/users/save_gender_age" for 172.24.0.1 at 2023-10-08 12:18:48 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 829)
+
+
+Started GET "/users/height_weight_target_weight" for 172.24.0.1 at 2023-10-08 12:18:48 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3816)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 6278)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 6600)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.24.0.1 at 2023-10-08 12:19:14 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 1213)
+
+
+Started GET "/users/activity_level" for 172.24.0.1 at 2023-10-08 12:19:15 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2024)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 4546)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 5100)
+
+
+Started POST "/users/save_activity_level" for 172.24.0.1 at 2023-10-08 12:19:17 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'save_activity_level' could not be found for UsersController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+bullet (7.0.7) lib/bullet/rack.rb:14:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users/save_activity_level" for 172.24.0.1 at 2023-10-08 12:23:20 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+活動レベル: moderate
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 811)
+
+
+Started GET "/users/allergies" for 172.24.0.1 at 2023-10-08 12:23:20 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (10.9ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 69.1ms | Allocations: 11658)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 14190)
+Completed 200 OK in 94ms (Views: 43.0ms | ActiveRecord: 47.5ms | Allocations: 14690)
+
+
+Started POST "/users/save_allergies" for 172.24.0.1 at 2023-10-08 12:23:22 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "2"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 778)
+
+
+Started GET "/home" for 172.24.0.1 at 2023-10-08 12:23:22 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.0ms | Allocations: 880)
+
+
+  
+ActionController::MissingExactTemplate (PagesController#dashboard is missing a template for request formats: text/html):
+  
+actionpack (7.0.8) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.8) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.8) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.8) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.8) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.8) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.8) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.8) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.8) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.8) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.8) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.8) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.8) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.8) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.8) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.8) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+bullet (7.0.7) lib/bullet/rack.rb:14:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/home" for 172.24.0.1 at 2023-10-08 12:25:58 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.3ms | Allocations: 106)
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 3445)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 4365)
+
+
+Started GET "/" for 172.24.0.1 at 2023-10-08 13:19:59 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 211)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 53)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 3064)
+Completed 200 OK in 376ms (Views: 23.2ms | ActiveRecord: 218.2ms | Allocations: 11048)
+
+
+Started GET "/" for 172.24.0.1 at 2023-10-08 13:20:02 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2828)
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 3123)
+
+
+Started GET "/users/body_info" for 172.24.0.1 at 2023-10-08 13:20:04 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1951)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4477)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 5176)
+
+
+Started POST "/users/save_goal" for 172.24.0.1 at 2023-10-08 13:20:06 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 910)
+
+
+  
+NameError (undefined local variable or method `users_gender_age_path' for #<UsersController:0x00000000054d08>):
+  
+app/controllers/users_controller.rb:9:in `save_goal'
+Started POST "/users/save_goal" for 172.24.0.1 at 2023-10-08 13:25:49 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 904)
+
+
+  
+NameError (undefined local variable or method `users_gender_age_path' for #<UsersController:0x0000000005b310>):
+  
+app/controllers/users_controller.rb:9:in `save_goal'
+Started POST "/users/save_goal" for 172.24.0.1 at 2023-10-08 13:30:09 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 904)
+
+
+  
+NameError (undefined local variable or method `users_gender_age_path' for #<UsersController:0x00000000061968>):
+  
+app/controllers/users_controller.rb:9:in `save_goal'
+Started POST "/users/save_goal" for 172.24.0.1 at 2023-10-08 13:30:18 +0900
+Cannot render console from 172.24.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 880)
+
+
+  
+NameError (undefined local variable or method `users_gender_age_path' for #<UsersController:0x00000000061b70>):
+  
+app/controllers/users_controller.rb:9:in `save_goal'
+Started POST "/users/save_goal" for 172.25.0.1 at 2023-10-08 13:31:12 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2503)
+
+
+  
+NameError (undefined local variable or method `users_gender_age_path' for #<UsersController:0x000000000106f8>):
+  
+app/controllers/users_controller.rb:9:in `save_goal'
+Started POST "/users/save_goal" for 172.25.0.1 at 2023-10-08 13:31:16 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 883)
+
+
+  
+NameError (undefined local variable or method `users_gender_age_path' for #<UsersController:0x00000000010950>):
+  
+app/controllers/users_controller.rb:9:in `save_goal'
+Started POST "/users/save_goal" for 172.25.0.1 at 2023-10-08 13:32:58 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 739)
+
+
+Started GET "/users/gender_age" for 172.25.0.1 at 2023-10-08 13:32:59 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 19.1ms | Allocations: 3664)
+  Rendered shared/_header.html.erb (Duration: 2.5ms | Allocations: 207)
+  Rendered layout layouts/application.html.erb (Duration: 348.6ms | Allocations: 28066)
+Completed 200 OK in 356ms (Views: 351.7ms | ActiveRecord: 0.0ms | Allocations: 29089)
+
+
+Started POST "/users/save_gender_age" for 172.25.0.1 at 2023-10-08 13:33:03 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1239)
+
+
+  
+NameError (undefined local variable or method `users_height_weight_target_weight_path' for #<UsersController:0x000000000171b0>):
+  
+app/controllers/users_controller.rb:30:in `save_gender_age'
+Started POST "/users/save_gender_age" for 172.25.0.1 at 2023-10-08 13:33:26 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 935)
+
+
+Started GET "/users/height_weight_target_weight" for 172.25.0.1 at 2023-10-08 13:33:26 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3928)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6457)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 7014)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.25.0.1 at 2023-10-08 13:33:32 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1485)
+
+
+  
+NameError (undefined local variable or method `users_activity_level_path' for #<UsersController:0x0000000001d768>):
+  
+app/controllers/users_controller.rb:45:in `save_height_weight_target_weight'
+Started POST "/users/save_height_weight_target_weight" for 172.25.0.1 at 2023-10-08 13:33:47 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 1216)
+
+
+Started GET "/users/activity_level" for 172.25.0.1 at 2023-10-08 13:33:47 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2060)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4588)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 5144)
+
+
+Started POST "/users/save_activity_level" for 172.25.0.1 at 2023-10-08 13:33:50 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+活動レベル: moderate
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1077)
+
+
+  
+NameError (undefined local variable or method `users_allergies_path' for #<UsersController:0x00000000023cf8>):
+  
+app/controllers/users_controller.rb:59:in `save_activity_level'
+Started POST "/users/save_activity_level" for 172.25.0.1 at 2023-10-08 13:34:06 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+活動レベル: moderate
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 808)
+
+
+Started GET "/users/allergies" for 172.25.0.1 at 2023-10-08 13:34:06 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (9.9ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 85.1ms | Allocations: 14411)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 92.2ms | Allocations: 16939)
+Completed 200 OK in 97ms (Views: 41.6ms | ActiveRecord: 52.4ms | Allocations: 17494)
+
+
+Started POST "/users/save_allergies" for 172.25.0.1 at 2023-10-08 13:34:09 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "7"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 749)
+
+
+Started GET "/home" for 172.25.0.1 at 2023-10-08 13:34:09 +0900
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.1ms | Allocations: 105)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3019)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 3720)
+
+
