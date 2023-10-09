@@ -17975,3 +17975,2701 @@ Processing by PagesController#dashboard as HTML
 Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.0ms | Allocations: 3720)
 
 
+Started GET "/home" for 172.26.0.1 at 2023-10-08 17:32:24 +0900
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 7.2ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 139.0ms | Allocations: 11594)
+Completed 500 Internal Server Error in 294ms (ActiveRecord: 0.0ms | Allocations: 19943)
+
+
+  
+ActionView::Template::Error (couldn't find file 'custom_styles.css'
+Checked in these paths: 
+  /app/app/assets/builds
+  /app/app/assets/config
+  /app/app/assets/images
+  /app/app/assets/javascripts
+  /app/app/assets/stylesheets
+  /usr/local/bundle/gems/stimulus-rails-1.2.2/app/assets/javascripts
+  /usr/local/bundle/gems/turbo-rails-1.4.0/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8/app/assets/javascripts
+  /usr/local/bundle/gems/actiontext-7.0.8/app/assets/stylesheets
+  /usr/local/bundle/gems/actioncable-7.0.8/app/assets/javascripts
+  /usr/local/bundle/gems/activestorage-7.0.8/app/assets/javascripts
+  /usr/local/bundle/gems/actionview-7.0.8/lib/assets/compiled
+  /usr/local/bundle/gems/popper_js-2.11.8/assets/javascripts
+  /usr/local/bundle/gems/bootstrap-5.0.2/assets/stylesheets
+  /usr/local/bundle/gems/bootstrap-5.0.2/assets/javascripts):
+  
+app/assets/config/manifest.js:5
+Started GET "/home" for 172.26.0.1 at 2023-10-08 19:03:19 +0900
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 1.8ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 1749.1ms | Allocations: 56213)
+Completed 500 Internal Server Error in 1776ms (ActiveRecord: 0.0ms | Allocations: 56462)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+
+and restart your server):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/home" for 172.26.0.1 at 2023-10-08 19:05:04 +0900
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.4ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 19.1ms | Allocations: 267)
+  Rendered shared/_footer.html.erb (Duration: 4.4ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 250.0ms | Allocations: 25189)
+Completed 200 OK in 268ms (Views: 255.2ms | ActiveRecord: 0.0ms | Allocations: 25508)
+
+
+Started GET "/home" for 172.26.0.1 at 2023-10-08 20:13:11 +0900
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.2ms | Allocations: 104)
+  Rendered shared/_header.html.erb (Duration: 2.7ms | Allocations: 214)
+  Rendered shared/_footer.html.erb (Duration: 4.0ms | Allocations: 1291)
+  Rendered layout layouts/application.html.erb (Duration: 91.6ms | Allocations: 5282)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms | Allocations: 6132)
+
+
+  
+ActionView::Template::Error (undefined method `page_path' for #<ActionView::Base:0x00000000010e50>):
+     7:       <a href="https://twitter.com/cherry_00023" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@cherry_00023</a>
+     8:     </p>
+     9:     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+    10:       <%= link_to '利用規約', page_path('terms_of_service'), class: 'link link-hover my-1 text-gray-500' %>
+    11:     </span>
+    12:     <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+    13:       <%= link_to 'プライバシーポリシー', page_path('privacy_policy'), class: 'link link-hover my-1 text-gray-500' %>
+  
+app/views/shared/_footer.html.erb:10
+app/views/layouts/application.html.erb:15
+Started GET "/home" for 172.26.0.1 at 2023-10-08 20:13:58 +0900
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.9ms | Allocations: 104)
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 2.4ms | Allocations: 300)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 4288)
+Completed 200 OK in 64ms (Views: 56.5ms | ActiveRecord: 0.0ms | Allocations: 5159)
+
+
+Started GET "/home" for 172.26.0.1 at 2023-10-08 20:31:17 +0900
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.4ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 3377)
+Completed 200 OK in 51ms (Views: 46.0ms | ActiveRecord: 0.0ms | Allocations: 3644)
+
+
+Started GET "/home" for 172.26.0.1 at 2023-10-08 20:31:24 +0900
+Cannot render console from 172.26.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3411)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 3679)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:31:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.3ms | Allocations: 296)
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 274)
+  Rendered shared/_footer.html.erb (Duration: 2.0ms | Allocations: 310)
+  Rendered layout layouts/application.html.erb (Duration: 240.1ms | Allocations: 25988)
+Completed 200 OK in 283ms (Views: 247.1ms | ActiveRecord: 0.0ms | Allocations: 30345)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:31:47 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3417)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 3687)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:31:59 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 3387)
+Completed 200 OK in 24ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 3655)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:35:38 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.5ms | Allocations: 104)
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 300)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 4266)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 5137)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:05 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 1.4ms | Allocations: 104)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 300)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 4272)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 5142)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:07 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3390)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 3659)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:08 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3404)
+Completed 200 OK in 26ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 3670)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:08 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3428)
+Completed 200 OK in 25ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 3694)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:08 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3398)
+Completed 200 OK in 27ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 3664)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:08 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 3414)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.0ms | Allocations: 3680)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:08 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3437)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 3703)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3408)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 3674)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3425)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 3691)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3422)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3407)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 3673)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3401)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 3667)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 3398)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 3664)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3404)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 3670)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3410)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 3676)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3419)
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 3685)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 3422)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3395)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 3661)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3407)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 3673)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:11 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3415)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 3681)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:11 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3421)
+Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 3687)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:11 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3425)
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 3691)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:11 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3419)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 3685)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:11 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 3416)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3431)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 3697)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3437)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 3703)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 3416)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3380)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 3646)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3410)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 3676)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3416)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3413)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 3679)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:13 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3401)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 3667)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:13 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3404)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 3670)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:13 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3448)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 3714)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:13 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 3426)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 3692)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:13 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3401)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 3667)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:36:14 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3422)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:37:31 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 3401)
+Completed 200 OK in 39ms (Views: 33.8ms | ActiveRecord: 0.0ms | Allocations: 3667)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:38 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.4ms | Allocations: 109)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.8ms | Allocations: 300)
+  Rendered layout layouts/application.html.erb (Duration: 53.2ms | Allocations: 4304)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 5176)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:40 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 3416)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 3683)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:40 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3425)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 3691)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:40 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3413)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 3679)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3422)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3410)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 3676)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 3449)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 3715)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3416)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 3400)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 3666)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3453)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 3719)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3431)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 3697)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3416)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:42 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3431)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 3697)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:42 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3401)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 3667)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:42 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3428)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 3694)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:42 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3401)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 3667)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:42 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3422)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3389)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 3655)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3416)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 3682)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3404)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 3670)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3398)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 3664)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 3401)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 3667)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3436)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 3702)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:43 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 3411)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 3677)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:44 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3422)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 3688)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 20:42:44 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3407)
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 3673)
+
+
+Started GET "/" for 172.27.0.1 at 2023-10-08 20:42:49 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 192)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3602)
+Completed 200 OK in 357ms (Views: 16.6ms | ActiveRecord: 181.6ms | Allocations: 22985)
+
+
+Started GET "/" for 172.27.0.1 at 2023-10-08 20:45:06 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 3186)
+Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 0.0ms | Allocations: 3485)
+
+
+Started GET "/" for 172.27.0.1 at 2023-10-08 20:45:14 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3248)
+Completed 200 OK in 32ms (Views: 27.6ms | ActiveRecord: 0.0ms | Allocations: 3543)
+
+
+Started GET "/" for 172.27.0.1 at 2023-10-08 20:50:42 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 7.3ms | Allocations: 190)
+  Rendered shared/_footer.html.erb (Duration: 7.7ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 4001)
+Completed 200 OK in 77ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 4902)
+
+
+Started GET "/users/body_info" for 172.27.0.1 at 2023-10-08 20:50:54 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 19.4ms | Allocations: 2047)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 5080)
+Completed 200 OK in 62ms (Views: 56.5ms | ActiveRecord: 0.0ms | Allocations: 5781)
+
+
+Started POST "/users/save_goal" for 172.27.0.1 at 2023-10-08 20:51:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 503)
+
+
+Started GET "/users/gender_age" for 172.27.0.1 at 2023-10-08 20:51:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 45.0ms | Allocations: 3858)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 6820)
+Completed 200 OK in 67ms (Views: 63.5ms | ActiveRecord: 0.0ms | Allocations: 7145)
+
+
+Started POST "/users/save_gender_age" for 172.27.0.1 at 2023-10-08 20:51:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 715)
+
+
+Started GET "/users/height_weight_target_weight" for 172.27.0.1 at 2023-10-08 20:51:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3696)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 6633)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 6955)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 20:51:30 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 24.2ms | Allocations: 1748)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 4605)
+Completed 200 OK in 58ms (Views: 41.4ms | ActiveRecord: 0.0ms | Allocations: 6727)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 20:59:17 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 1604)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 4774)
+Completed 200 OK in 78ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 6314)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:10:57 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1604)
+  Rendered shared/_footer.html.erb (Duration: 3.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 4764)
+Completed 200 OK in 88ms (Views: 78.7ms | ActiveRecord: 0.0ms | Allocations: 6302)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:10:58 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1371)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 4078)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 4760)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:10:59 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1371)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4077)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 4766)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:10:59 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1353)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 4038)
+Completed 200 OK in 31ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:11:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1353)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4038)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 4699)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:11:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1353)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4038)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 4735)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:11:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1353)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 4038)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 4729)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:11:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1353)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 4038)
+Completed 200 OK in 41ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 4726)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:11:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1353)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 4038)
+Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:11:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1353)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4038)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 4714)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:16:11 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1607)
+  Rendered layout layouts/application.html.erb (Duration: 66.6ms | Allocations: 10798)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms | Allocations: 12327)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+        <%= render 'shared/header' %>
+      <% end %>
+      <div class="content-wrap">
+        <%= yield %>
+      </div>
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+      <%= render 'shared/footer' %>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ja">
+3:      <head>
+4:        <title>App</title>
+5:        <!-- Bootstrap CSS -->
+6:        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+7:        <!-- Optional Bootstrap JavaScript -->
+8:        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+9:        <meta name="viewport" content="width=device-width,initial-scale=1">
+10:        <%= csrf_meta_tags %>
+11:        <%= csp_meta_tag %>
+12:    
+13:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+14:        <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+15:      </head>
+16:    
+17:      <body>
+18:        <div class="page-container">
+19:          <% unless controller_name == 'sessions' && action_name == 'new' %>
+20:            <%= render 'shared/header' %>
+21:          <% end %>
+22:          <div class="content-wrap">
+23:            <%= yield %>
+24:          </div>
+25:          <% unless controller_name == 'sessions' && action_name == 'new' %>
+26:          <%= render 'shared/footer' %>
+27:        </div>
+28:      </body>
+29:    </html>
+  
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:16:33 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1622)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 4607)
+Completed 200 OK in 76ms (Views: 62.0ms | ActiveRecord: 0.0ms | Allocations: 6134)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.27.0.1 at 2023-10-08 21:18:29 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 19ms (ActiveRecord: 0.0ms | Allocations: 974)
+
+
+Started GET "/users/activity_level" for 172.27.0.1 at 2023-10-08 21:18:29 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1885)
+  Rendered shared/_header.html.erb (Duration: 3.3ms | Allocations: 194)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 5262)
+Completed 200 OK in 70ms (Views: 65.8ms | ActiveRecord: 0.0ms | Allocations: 5884)
+
+
+Started GET "/" for 172.27.0.1 at 2023-10-08 21:18:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 201)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 53)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 3427)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 4077)
+
+
+Started GET "/users/body_info" for 172.27.0.1 at 2023-10-08 21:19:07 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1754)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 4695)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 5017)
+
+
+Started POST "/users/save_goal" for 172.27.0.1 at 2023-10-08 21:19:15 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"slim_muscle", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 403)
+
+
+Started GET "/users/gender_age" for 172.27.0.1 at 2023-10-08 21:19:15 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2881)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 5822)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 6143)
+
+
+Started POST "/users/save_gender_age" for 172.27.0.1 at 2023-10-08 21:19:23 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms | Allocations: 675)
+
+
+Started GET "/users/height_weight_target_weight" for 172.27.0.1 at 2023-10-08 21:19:23 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3694)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 6635)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 6956)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.27.0.1 at 2023-10-08 21:19:29 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 974)
+
+
+Started GET "/users/activity_level" for 172.27.0.1 at 2023-10-08 21:19:29 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1609)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4576)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 4842)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 21:19:33 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1371)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4015)
+Completed 200 OK in 34ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 4713)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 22:38:11 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 3975)
+Completed 200 OK in 50ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 4678)
+
+
+Started POST "/users/save_activity_level" for 172.27.0.1 at 2023-10-08 22:38:19 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"low", "commit"=>"次へ"}
+活動レベル: low
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 600)
+
+
+Started GET "/users/allergies" for 172.27.0.1 at 2023-10-08 22:38:19 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (7.3ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 476.5ms | Allocations: 22974)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 48)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 493.7ms | Allocations: 25945)
+Completed 200 OK in 499ms (Views: 284.2ms | ActiveRecord: 211.2ms | Allocations: 26266)
+
+
+Started POST "/users/save_allergies" for 172.27.0.1 at 2023-10-08 22:38:22 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "1"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 625)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 22:38:22 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 1.3ms | Allocations: 103)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 3311)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 3632)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 22:45:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 3193)
+Completed 200 OK in 49ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 3459)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 22:45:14 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 3191)
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 3457)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 22:49:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 6.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 1460)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms | Allocations: 2317)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+        <%= render 'shared/header' %>
+      <% end %>
+      <div class="content-wrap">
+        <%= yield %>
+      </div>
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+      <%= render 'shared/footer' %>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ja">
+3:      <head>
+4:        <title>App</title>
+5:        <!-- Bootstrap CSS -->
+6:        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+7:        <!-- Optional Bootstrap JavaScript -->
+8:        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+9:        <meta name="viewport" content="width=device-width, initial-scale=1">
+10:        <%= csrf_meta_tags %>
+11:        <%= csp_meta_tag %>
+12:    
+13:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+14:        <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+15:      </head>
+16:    
+17:      <body>
+18:        <div class="page-container">
+19:          <% unless controller_name == 'sessions' && action_name == 'new' %>
+20:            <%= render 'shared/header' %>
+21:          <% end %>
+22:          <div class="content-wrap">
+23:            <%= yield %>
+24:          </div>
+25:          <% unless controller_name == 'sessions' && action_name == 'new' %>
+26:          <%= render 'shared/footer' %>
+27:        </div>
+28:      </body>
+29:    </html>
+  
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+Started GET "/home" for 172.27.0.1 at 2023-10-08 22:50:14 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 1347)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 1592)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+        <%= render 'shared/header' %>
+      <% end %>
+      <div class="content-wrap">
+        <%= yield %>
+      </div>
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+      <%= render 'shared/footer' %>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html lang="ja">
+3:      <head>
+4:        <title>App</title>
+5:        <!-- Bootstrap CSS -->
+6:        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+7:        <!-- Optional Bootstrap JavaScript -->
+8:        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+9:        <meta name="viewport" content="width=device-width, initial-scale=1">
+10:        <%= csrf_meta_tags %>
+11:        <%= csp_meta_tag %>
+12:    
+13:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+14:        <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+15:      </head>
+16:    
+17:      <body>
+18:        <div class="page-container">
+19:          <% unless controller_name == 'sessions' && action_name == 'new' %>
+20:            <%= render 'shared/header' %>
+21:          <% end %>
+22:          <div class="content-wrap">
+23:            <%= yield %>
+24:          </div>
+25:          <% unless controller_name == 'sessions' && action_name == 'new' %>
+26:          <%= render 'shared/footer' %>
+27:        </div>
+28:      </body>
+29:    </html>
+  
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected end-of-input
+Started GET "/home" for 172.27.0.1 at 2023-10-08 22:51:45 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.3ms | Allocations: 104)
+  Rendered shared/_header.html.erb (Duration: 20.4ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 4054)
+Completed 200 OK in 65ms (Views: 57.1ms | ActiveRecord: 0.0ms | Allocations: 4926)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 23:39:17 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 2169.3ms | Allocations: 57871)
+Completed 200 OK in 2178ms (Views: 2173.9ms | ActiveRecord: 0.0ms | Allocations: 58138)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 23:39:24 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 3153)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 3419)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 23:39:25 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 3164)
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 3430)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-08 23:39:27 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3164)
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 3430)
+
+
+Started GET "/users/sign_in" for 172.27.0.1 at 2023-10-08 23:47:06 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1620)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 4266)
+Completed 200 OK in 53ms (Views: 41.3ms | ActiveRecord: 0.0ms | Allocations: 5594)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 07:59:22 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.8ms | Allocations: 118)
+  Rendered shared/_header.html.erb (Duration: 3.0ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 4087)
+Completed 200 OK in 66ms (Views: 59.6ms | ActiveRecord: 0.0ms | Allocations: 4959)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 07:59:48 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.9ms | Allocations: 117)
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 4040)
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 4910)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 07:59:56 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.2ms | Allocations: 117)
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4055)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 4925)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 08:00:27 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.6ms | Allocations: 118)
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 119)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 4041)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 4911)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 08:02:23 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 4.4ms | Allocations: 118)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 4024)
+Completed 200 OK in 58ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 4894)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 15:37:12 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.8ms | Allocations: 120)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 2.2ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 4110)
+Completed 200 OK in 51ms (Views: 43.9ms | ActiveRecord: 0.0ms | Allocations: 4983)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 15:37:15 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 3205)
+Completed 200 OK in 28ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 3472)
+
+
+Started GET "/home" for 172.27.0.1 at 2023-10-09 15:39:07 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.8ms | Allocations: 117)
+  Rendered shared/_header.html.erb (Duration: 1.8ms | Allocations: 212)
+  Rendered shared/_footer.html.erb (Duration: 2.3ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 4183)
+Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 0.0ms | Allocations: 5052)
+
+
+Started GET "/dashboard" for 172.27.0.1 at 2023-10-09 15:39:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for DashboardController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+bullet (7.0.7) lib/bullet/rack.rb:14:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/dashboard" for 172.27.0.1 at 2023-10-09 15:39:41 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+Completed 406 Not Acceptable in 11ms (ActiveRecord: 0.0ms | Allocations: 683)
+
+
+  
+ActionController::MissingExactTemplate (DashboardController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.8) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.8) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.0.8) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.0.8) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.8) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.8) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.8) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.8) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.8) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.8) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.8) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.8) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.8) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.8) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.8) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.8) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.8) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.8) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+bullet (7.0.7) lib/bullet/rack.rb:14:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/dashboard" for 172.27.0.1 at 2023-10-09 15:44:38 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 107)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 218)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 4185)
+Completed 200 OK in 64ms (Views: 54.3ms | ActiveRecord: 0.0ms | Allocations: 5113)
+
+
+Started GET "/dashboard" for 172.27.0.1 at 2023-10-09 15:52:08 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 105)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 4.1ms | Allocations: 1330)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 5240)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms | Allocations: 6097)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `recipes_index_path' for #<ActionView::Base:0x0000000001a608>):
+     8:         <%= link_to 'ダッシュボード', dashboard_path %>
+     9:       </div>
+    10:       <div class="col-3">
+    11:         <%= link_to 'レシピ', recipes_index_path %>
+    12:       </div>
+    13:       <div class="col-3">
+    14:         <h5>お気に入り</h5>
+  
+app/views/shared/_footer.html.erb:11
+app/views/layouts/application.html.erb:26
+Started GET "/dashboard" for 172.27.0.1 at 2023-10-09 15:55:01 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 105)
+  Rendered shared/_header.html.erb (Duration: 2.4ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 3.8ms | Allocations: 269)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 4186)
+Completed 200 OK in 58ms (Views: 50.5ms | ActiveRecord: 0.0ms | Allocations: 5063)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 15:55:07 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3475)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 4121)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 15:57:05 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 2.1ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 3.7ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 5273)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms | Allocations: 5943)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `favorites_path' for #<ActionView::Base:0x0000000001aa18>):
+    11:         <%= link_to 'レシピ', recipes_path %>
+    12:       </div>
+    13:       <div class="col-3">
+    14:         <%= link_to 'お気に入り', favorites_path %>
+    15:       </div>
+    16:     </div>
+    17:   </div>
+  
+app/views/shared/_footer.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 15:59:00 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 10.1ms | Allocations: 1548)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 5465)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms | Allocations: 6131)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"favorites", :user_id=>nil}, missing required keys: [:user_id]):
+    11:         <%= link_to 'レシピ', recipes_path %>
+    12:       </div>
+    13:       <div class="col-3">
+    14:         <%= link_to 'お気に入り', user_favorites_path(current_user) %>
+    15:       </div>
+    16:     </div>
+    17:   </div>
+  
+app/views/shared/_footer.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 15:59:13 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 4.1ms | Allocations: 1466)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 5383)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 6047)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"favorites"}, missing required keys: [:user_id]):
+    11:         <%= link_to 'レシピ', recipes_path %>
+    12:       </div>
+    13:       <div class="col-3">
+    14:         <%= link_to 'お気に入り', user_favorites_path %>
+    15:       </div>
+    16:     </div>
+    17:   </div>
+  
+app/views/shared/_footer.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 15:59:23 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 3.1ms | Allocations: 1495)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 5412)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 6076)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"favorites", :user_id=>nil}, missing required keys: [:user_id]):
+    11:         <%= link_to 'レシピ', recipes_path %>
+    12:       </div>
+    13:       <div class="col-3">
+    14:         <%= link_to 'お気に入り', user_favorites_path(current_user) %>
+    15:       </div>
+    16:     </div>
+    17:   </div>
+  
+app/views/shared/_footer.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 16:00:18 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 2.0ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 10.0ms | Allocations: 1365)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 5282)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms | Allocations: 5946)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `favorites_users_path' for #<ActionView::Base:0x0000000001b260>):
+    11:         <%= link_to 'レシピ', recipes_path %>
+    12:       </div>
+    13:       <div class="col-3">
+    14:         <%= link_to 'お気に入り', favorites_users_path %>
+    15:       </div>
+    16:     </div>
+    17:   </div>
+  
+app/views/shared/_footer.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 16:03:09 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 2.3ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 4.9ms | Allocations: 1495)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 5412)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms | Allocations: 6076)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"favorites", :user_id=>nil}, missing required keys: [:user_id]):
+    11:         <%= link_to 'レシピ', recipes_path %>
+    12:       </div>
+    13:       <div class="col-3">
+    14:         <%= link_to 'お気に入り', user_favorites_path(current_user) %>
+    15:       </div>
+    16:     </div>
+    17:   </div>
+  
+app/views/shared/_footer.html.erb:14
+app/views/layouts/application.html.erb:26
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:29:27 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 95)
+  Rendered shared/_header.html.erb (Duration: 3.3ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 8.7ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 102.7ms | Allocations: 4225)
+Completed 200 OK in 121ms (Views: 113.5ms | ActiveRecord: 0.0ms | Allocations: 4912)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:29:31 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 3278)
+Completed 200 OK in 52ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 3546)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:29:33 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 3269)
+Completed 200 OK in 33ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 3536)
+
+
+Started GET "/dashboard" for 172.27.0.1 at 2023-10-09 20:29:34 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 104)
+  Rendered shared/_header.html.erb (Duration: 32.6ms | Allocations: 74)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 70.1ms | Allocations: 3472)
+Completed 200 OK in 89ms (Views: 79.3ms | ActiveRecord: 0.0ms | Allocations: 4101)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:29:37 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 3265)
+Completed 200 OK in 51ms (Views: 45.1ms | ActiveRecord: 0.0ms | Allocations: 3533)
+
+
+Started GET "/dashboard" for 172.27.0.1 at 2023-10-09 20:32:54 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 3276)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 0.0ms | Allocations: 3543)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:32:56 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3263)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 3530)
+
+
+Started GET "/favorites" for 172.27.0.1 at 2023-10-09 20:33:10 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/favorites"):
+  
+Started GET "/favorites" for 172.27.0.1 at 2023-10-09 20:33:33 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/favorites"):
+  
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:42 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 2.3ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 3337)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 3604)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:45 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3290)
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 3557)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:45 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 3275)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 3542)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:46 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3248)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.0ms | Allocations: 3515)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:46 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 3275)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 3542)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:46 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 5.0ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 3352)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 0.0ms | Allocations: 3619)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:47 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 2.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 3278)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 3545)
+
+
+Started GET "/recipes" for 172.27.0.1 at 2023-10-09 20:38:47 +0900
+Cannot render console from 172.27.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 3274)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.0ms | Allocations: 3541)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:11 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 281)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 274)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 826.9ms | Allocations: 33677)
+Completed 200 OK in 846ms (Views: 834.8ms | ActiveRecord: 0.0ms | Allocations: 36209)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:14 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3255)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.0ms | Allocations: 3523)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:16 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3261)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 3528)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:17 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3269)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 3536)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:17 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3284)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 3551)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:17 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 3267)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 3534)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:17 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 3270)
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 3537)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:17 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3296)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 3563)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:18 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3278)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 3545)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:18 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3275)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 3542)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:18 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 3284)
+Completed 200 OK in 30ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 3551)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:18 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3302)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 3569)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:19 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3267)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 3534)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 20:40:19 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3279)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 3546)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:40:26 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 4.0ms | Allocations: 123)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 80)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3521)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 4222)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:43:12 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.4ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 3258)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 3524)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:45:12 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.6ms | Allocations: 117)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 216)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 1640.3ms | Allocations: 57325)
+Completed 200 OK in 1652ms (Views: 1646.3ms | ActiveRecord: 0.0ms | Allocations: 58197)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:47:41 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.4ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 3285)
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 3552)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:47:43 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 3267)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 0.0ms | Allocations: 3533)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:48:10 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.1ms | Allocations: 115)
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 4216)
+Completed 200 OK in 38ms (Views: 32.5ms | ActiveRecord: 0.0ms | Allocations: 5088)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:48:21 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.8ms | Allocations: 114)
+  Rendered shared/_header.html.erb (Duration: 1.6ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4212)
+Completed 200 OK in 35ms (Views: 28.4ms | ActiveRecord: 0.0ms | Allocations: 5082)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 20:48:27 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.4ms | Allocations: 114)
+  Rendered shared/_header.html.erb (Duration: 1.5ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 4224)
+Completed 200 OK in 37ms (Views: 31.7ms | ActiveRecord: 0.0ms | Allocations: 5094)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 23:20:55 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 3294)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 3561)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 23:21:07 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.6ms | Allocations: 116)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 2.3ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 4214)
+Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 5083)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 23:21:20 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.4ms | Allocations: 118)
+  Rendered shared/_header.html.erb (Duration: 1.4ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 4219)
+Completed 200 OK in 32ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 5089)
+
+
+Started GET "/dashboard" for 172.28.0.1 at 2023-10-09 23:21:25 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 106)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3486)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4194)
+
+
+Started GET "/recipes" for 172.28.0.1 at 2023-10-09 23:21:30 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 94)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 74)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 3452)
+Completed 200 OK in 56ms (Views: 47.9ms | ActiveRecord: 0.0ms | Allocations: 4020)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 23:21:36 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3261)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 3529)
+
+
+Started GET "/home" for 172.28.0.1 at 2023-10-09 23:26:30 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.6ms | Allocations: 117)
+  Rendered shared/_header.html.erb (Duration: 1.7ms | Allocations: 211)
+  Rendered shared/_footer.html.erb (Duration: 1.4ms | Allocations: 309)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 4242)
+Completed 200 OK in 55ms (Views: 49.2ms | ActiveRecord: 0.0ms | Allocations: 5111)
+
+
+Started GET "/users/sign_in" for 172.28.0.1 at 2023-10-09 23:26:32 +0900
+Cannot render console from 172.28.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1961)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2049)
+Completed 500 Internal Server Error in 463ms (ActiveRecord: 194.2ms | Allocations: 16644)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `login_path' for #<ActionView::Base:0x00000000011a80>):
+    3:   <div class="row">
+    4:     <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+    5:       <h1><%= t '.title' %></h1>
+    6:       <%= form_with url: login_path, local: true do |f| %>
+    7:         <div class="form-group">
+    8:           <%= f.label :email, User.human_attribute_name(:email) %>
+    9:           <%= f.text_field :email, class: 'form-control' %>
+  
+app/views/users/sessions/new.html.erb:6
