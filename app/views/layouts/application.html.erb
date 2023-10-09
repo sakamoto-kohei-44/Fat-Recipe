@@ -2,7 +2,8 @@
 <html lang="ja">
   <head>
     <title>App</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,7 +12,16 @@
   </head>
 
   <body>
-    <%= render 'shared/header' %>
-    <%= yield %>
+    <div class="page-container">
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+        <%= render 'shared/header' %>
+      <% end %>
+      <div class="content-wrap">
+        <%= yield %>
+      </div>
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+      <%= render 'shared/footer' %>
+      <% end %>
+    </div>
   </body>
 </html>
