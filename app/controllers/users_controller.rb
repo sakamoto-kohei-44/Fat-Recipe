@@ -81,7 +81,12 @@ class UsersController < ApplicationController
 
   def save_allergies
     if user_params[:allergy_item_ids]&.reject(&:blank?).present?
-      session[:allergy_item_ids] = user_params[:allergy_item_ids]
+      # アレルギーなしのIDをチェック (例として1を使用)
+      if user_params[:allergy_item_ids].include?("39")
+        session[:allergy_item_ids] = ["39"]
+      else
+        session[:allergy_item_ids] = user_params[:allergy_item_ids]
+      end
       redirect_to dashboard_home_path, notice: "アレルギー項目が正常に保存されました。"
     else
       render :allergies, alert: "アレルギー項目を選択してください。"
