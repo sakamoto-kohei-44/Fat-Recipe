@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   end
 
   def save_goal
-    # セッションに目標を保存
     session[:user_goal] = params[:goal]
     redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
   end
@@ -37,7 +36,6 @@ class UsersController < ApplicationController
   end
 
   def save_height_weight_target_weight
-    # 必要なパラメータがすべて存在するか確認
     if user_params[:height].present? && user_params[:weight].present? && user_params[:target_weight].present?
       session[:height] = user_params[:height]
       session[:weight] = user_params[:weight]
@@ -52,13 +50,21 @@ class UsersController < ApplicationController
   end
 
   def save_activity_level
-    # activity_levelパラメータが存在するか確認
     if user_params[:activity_level].present?
-        session[:activity_level] = user_params[:activity_level]
-        Rails.logger.debug "活動レベル: #{session[:activity_level]}"
-        redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
+      session[:activity_level] = user_params[:activity_level]
+      # 基礎代謝（BMR）とTDEEの計算
+      gender = session[:gender]
+      age = session[:age].to_i
+      height = session[:height].to_i
+      weight = session[:weight].to_i
+      activity_level = session[:activity_level]
+      bmr = calculate_bmr(gender, age, height, weight)
+      tdee = calculate_tdee(bmr, activity_level)
+      session[:bmr] = bmr
+      session[:tdee] = tdee
+      redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
     else
-        render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
+      render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
     end
   end
 
@@ -66,10 +72,8 @@ class UsersController < ApplicationController
   end
 
   def save_allergies
-    # アレルギー項目のIDが存在するか確認
     if user_params[:allergy_item_ids]&.reject(&:blank?).present?
       session[:allergy_item_ids] = user_params[:allergy_item_ids]
-      # 次のページへリダイレクト
       redirect_to dashboard_home_path, notice: "アレルギー項目が正常に保存されました。"
     else
       render :allergies, alert: "アレルギー項目を選択してください。"
@@ -92,6 +96,27 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def calculate_bmr(gender, age, height, weight)
+    if gender == "man"
+      bmr = 66.5 + (13.75 * weight) + (5.003 * height) - (6.75 * age)
+    else
+      bmr = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
+    end
+    bmr
+  end
+
+  def calculate_tdee(bmr, activity_level)
+    case activity_level
+    when "ほとんど活動しない"
+      tdee = bmr * 1.2
+    when "中程度の活動"
+      tdee = bmr * 1.55
+    when "激しい活動"
+      tdee = bmr * 1.9
+    end
+    tdee
+  end
 
   def user_goal_params
     params.permit(:goal)
