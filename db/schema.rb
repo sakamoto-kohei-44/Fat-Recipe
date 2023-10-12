@@ -15,11 +15,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_12_024446) do
   enable_extension "plpgsql"
 
   create_table "allergies", force: :cascade do |t|
+    t.string "item"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "allergy_item_id"
-    t.index ["allergy_item_id"], name: "index_allergies_on_allergy_item_id"
     t.index ["user_id"], name: "index_allergies_on_user_id"
   end
 
@@ -66,7 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_12_024446) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
+    t.string "email", default: "", null: false
     t.string "name"
     t.integer "gender"
     t.integer "age"
@@ -74,8 +73,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_12_024446) do
     t.float "weight"
     t.integer "activity_level"
     t.integer "goal"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -94,7 +91,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_12_024446) do
     t.index ["user_id"], name: "index_weight_logs_on_user_id"
   end
 
-  add_foreign_key "allergies", "allergy_items"
   add_foreign_key "allergies", "users"
   add_foreign_key "favorites", "recipes"
   add_foreign_key "favorites", "users"
