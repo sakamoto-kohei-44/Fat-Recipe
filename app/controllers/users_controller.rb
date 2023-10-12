@@ -52,6 +52,7 @@ class UsersController < ApplicationController
   def save_activity_level
     if user_params[:activity_level].present?
       session[:activity_level] = user_params[:activity_level]
+      Rails.logger.debug "活動レベル: #{session[:activity_level]}"
       # 基礎代謝（BMR）とTDEEの計算
       gender = session[:gender]
       age = session[:age].to_i
@@ -62,6 +63,7 @@ class UsersController < ApplicationController
       tdee = calculate_tdee(bmr, activity_level)
       session[:bmr] = bmr
       session[:tdee] = tdee
+      Rails.logger.debug "TDEE: #{session[:tdee]}"
       redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
     else
       render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
@@ -108,11 +110,11 @@ class UsersController < ApplicationController
 
   def calculate_tdee(bmr, activity_level)
     case activity_level
-    when "ほとんど活動しない"
+    when "ほとんど活動しない", "low"
       tdee = bmr * 1.2
-    when "中程度の活動"
+    when "中程度の活動", "moderate"
       tdee = bmr * 1.55
-    when "激しい活動"
+    when "激しい活動", "high"
       tdee = bmr * 1.9
     end
     tdee
