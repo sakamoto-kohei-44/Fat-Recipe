@@ -25195,3 +25195,242 @@ Processing by Users::SessionsController#new as HTML
 Completed 200 OK in 33ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 5399)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (17.4ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "乳製品"], ["created_at", "2023-10-12 13:49:47.346264"], ["updated_at", "2023-10-12 13:49:47.346264"]]
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.4ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "小麦"], ["created_at", "2023-10-12 13:49:47.373100"], ["updated_at", "2023-10-12 13:49:47.373100"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "卵"], ["created_at", "2023-10-12 13:49:47.378801"], ["updated_at", "2023-10-12 13:49:47.378801"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "えび"], ["created_at", "2023-10-12 13:49:47.384064"], ["updated_at", "2023-10-12 13:49:47.384064"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "かに"], ["created_at", "2023-10-12 13:49:47.389273"], ["updated_at", "2023-10-12 13:49:47.389273"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "そば"], ["created_at", "2023-10-12 13:49:47.394299"], ["updated_at", "2023-10-12 13:49:47.394299"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "落花生"], ["created_at", "2023-10-12 13:49:47.399378"], ["updated_at", "2023-10-12 13:49:47.399378"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (15.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "なし"], ["created_at", "2023-10-12 13:50:05.900823"], ["updated_at", "2023-10-12 13:50:05.900823"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.2ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "乳製品"], ["created_at", "2023-10-12 13:50:05.925076"], ["updated_at", "2023-10-12 13:50:05.925076"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "小麦"], ["created_at", "2023-10-12 13:50:05.930420"], ["updated_at", "2023-10-12 13:50:05.930420"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "卵"], ["created_at", "2023-10-12 13:50:05.935270"], ["updated_at", "2023-10-12 13:50:05.935270"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "えび"], ["created_at", "2023-10-12 13:50:05.940005"], ["updated_at", "2023-10-12 13:50:05.940005"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "かに"], ["created_at", "2023-10-12 13:50:05.944586"], ["updated_at", "2023-10-12 13:50:05.944586"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "そば"], ["created_at", "2023-10-12 13:50:05.949044"], ["updated_at", "2023-10-12 13:50:05.949044"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "落花生"], ["created_at", "2023-10-12 13:50:05.953802"], ["updated_at", "2023-10-12 13:50:05.953802"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAllergyItem Load (4.5ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (8.5ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.7ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.7ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.2ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.2ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.2ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.4ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.1ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.2ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.1ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (19.1ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "なし"], ["created_at", "2023-10-12 13:55:49.810362"], ["updated_at", "2023-10-12 13:55:49.810362"]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.6ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "乳製品"], ["created_at", "2023-10-12 13:55:49.841793"], ["updated_at", "2023-10-12 13:55:49.841793"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.4ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "小麦"], ["created_at", "2023-10-12 13:55:49.848030"], ["updated_at", "2023-10-12 13:55:49.848030"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.1ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "卵"], ["created_at", "2023-10-12 13:55:49.854025"], ["updated_at", "2023-10-12 13:55:49.854025"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.2ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "えび"], ["created_at", "2023-10-12 13:55:49.859444"], ["updated_at", "2023-10-12 13:55:49.859444"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.4ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "かに"], ["created_at", "2023-10-12 13:55:49.866394"], ["updated_at", "2023-10-12 13:55:49.866394"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.4ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "そば"], ["created_at", "2023-10-12 13:55:49.873297"], ["updated_at", "2023-10-12 13:55:49.873297"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.3ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "落花生"], ["created_at", "2023-10-12 13:55:49.880276"], ["updated_at", "2023-10-12 13:55:49.880276"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (18.3ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "なし"], ["created_at", "2023-10-12 14:01:49.983088"], ["updated_at", "2023-10-12 14:01:49.983088"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.5ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "乳製品"], ["created_at", "2023-10-12 14:01:50.011382"], ["updated_at", "2023-10-12 14:01:50.011382"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "小麦"], ["created_at", "2023-10-12 14:01:50.016994"], ["updated_at", "2023-10-12 14:01:50.016994"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "卵"], ["created_at", "2023-10-12 14:01:50.021703"], ["updated_at", "2023-10-12 14:01:50.021703"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "えび"], ["created_at", "2023-10-12 14:01:50.026526"], ["updated_at", "2023-10-12 14:01:50.026526"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "かに"], ["created_at", "2023-10-12 14:01:50.031095"], ["updated_at", "2023-10-12 14:01:50.031095"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "そば"], ["created_at", "2023-10-12 14:01:50.036084"], ["updated_at", "2023-10-12 14:01:50.036084"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "落花生"], ["created_at", "2023-10-12 14:01:50.040572"], ["updated_at", "2023-10-12 14:01:50.040572"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAllergyItem Load (4.4ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (8.1ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.8ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 25]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.1ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 26]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.4ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 27]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.2ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 28]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 29]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.3ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 30]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 31]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 32]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.5ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 33]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.2ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 34]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 35]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.4ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 36]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.1ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 37]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Destroy (1.1ms)[0m  [1m[31mDELETE FROM "allergy_items" WHERE "allergy_items"."id" = $1[0m  [["id", 38]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (16.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "なし"], ["created_at", "2023-10-12 14:02:22.395975"], ["updated_at", "2023-10-12 14:02:22.395975"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.3ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "乳製品"], ["created_at", "2023-10-12 14:02:22.420478"], ["updated_at", "2023-10-12 14:02:22.420478"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "小麦"], ["created_at", "2023-10-12 14:02:22.425989"], ["updated_at", "2023-10-12 14:02:22.425989"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.1ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "卵"], ["created_at", "2023-10-12 14:02:22.431323"], ["updated_at", "2023-10-12 14:02:22.431323"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "えび"], ["created_at", "2023-10-12 14:02:22.436439"], ["updated_at", "2023-10-12 14:02:22.436439"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "かに"], ["created_at", "2023-10-12 14:02:22.441643"], ["updated_at", "2023-10-12 14:02:22.441643"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (1.0ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "そば"], ["created_at", "2023-10-12 14:02:22.446803"], ["updated_at", "2023-10-12 14:02:22.446803"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAllergyItem Create (0.9ms)[0m  [1m[32mINSERT INTO "allergy_items" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "落花生"], ["created_at", "2023-10-12 14:02:22.452082"], ["updated_at", "2023-10-12 14:02:22.452082"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAllergyItem Load (3.9ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items" WHERE "allergy_items"."name" = $1 LIMIT $2[0m  [["name", "なし"], ["LIMIT", 1]]
