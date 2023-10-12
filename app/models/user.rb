@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  attr_accessor :skip_special_validation
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :weight_logs
@@ -10,11 +9,16 @@ class User < ApplicationRecord
   has_many :favorites
 
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :password_digest, presence: true
-  validates :name, presence: true
-  validates :age, presence: true, numericality: { only_integer: true, greater_than: 0 }
-  validates :height, :weight, presence: true, numericality: { greater_than: 0 }
+  validates :age, presence: true, numericality: { only_integer: true, greater_than: 0 }, unless: :skip_special_validation?
+  validates :height, :weight, presence: true, numericality: { greater_than: 0 }, unless: :skip_special_validation?
+
 
   enum gender: { man: 0, woman: 1 }
   enum goal: { standard: 0, slim_muscle: 1 }
+
+  private
+
+  def skip_special_validation?
+    skip_special_validation == true
+  end
 end

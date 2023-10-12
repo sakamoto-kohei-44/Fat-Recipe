@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   root 'pages#home'
+  # Deviseによる認証関連
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
   get '/home', to: 'pages#dashboard', as: 'dashboard_home'
   get 'recipe_suggestions/index'
   get 'recipes/search'
@@ -11,12 +16,6 @@ Rails.application.routes.draw do
   # 利用規約とプライバシーポリシー
   get 'terms', to: 'pages#terms'
   get 'privacy', to: 'pages#privacy'
-  # Deviseによる認証関連
-  devise_for :users, controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions'
-  }
-
   # ユーザー情報関連のルーティング
   resources :users do
     collection do

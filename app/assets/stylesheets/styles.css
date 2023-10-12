@@ -10946,7 +10946,7 @@ html {
   line-height: 50px;
   z-index: 999;
 }
-:focus, .menu-toggle:hover {
+.menu-toggle:focus, .menu-toggle:hover {
   color: #fff;
 }
 .menu-toggle:hover {
