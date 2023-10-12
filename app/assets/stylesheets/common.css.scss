@@ -32,3 +32,9 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.header-title {
+    font-size: 2em; /* fs-1に相当 */
+    font-weight: bold; /* fw-boldに相当 */
+    color: #ffc107; /* text-warningに相当 */
+}
