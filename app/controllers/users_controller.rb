@@ -52,18 +52,24 @@ class UsersController < ApplicationController
   def save_activity_level
     if user_params[:activity_level].present?
       session[:activity_level] = user_params[:activity_level]
-      Rails.logger.debug "活動レベル: #{session[:activity_level]}"
       # 基礎代謝（BMR）とTDEEの計算
       gender = session[:gender]
       age = session[:age].to_i
       height = session[:height].to_i
       weight = session[:weight].to_i
+
       activity_level = session[:activity_level]
       bmr = calculate_bmr(gender, age, height, weight)
       tdee = calculate_tdee(bmr, activity_level)
       session[:bmr] = bmr
       session[:tdee] = tdee
-      Rails.logger.debug "TDEE: #{session[:tdee]}"
+
+      tdee = calculate_tdee(bmr, activity_level)
+      macros = calculate_macros(tdee, weight)
+      session[:protein] = macros[:protein]
+      session[:fat] = macros[:fat]
+      session[:carbs] = macros[:carbs]
+
       redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
     else
       render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
@@ -118,6 +124,18 @@ class UsersController < ApplicationController
       tdee = bmr * 1.9
     end
     tdee
+  end
+
+  def calculate_macros(tdee, weight)
+    protein_per_kg = 1.5  # これは1.5g〜2.0gの間で調整可能
+    protein_calories = protein_per_kg * weight * 4  # タンパク質1gあたり4kcal
+    fat_calories = tdee * 0.25  # 25%の脂質、これも20〜35%の間で調整可能
+    carb_calories = tdee - (protein_calories + fat_calories)
+    {
+      protein: protein_calories / 4,  # タンパク質のg数
+      fat: fat_calories / 9,  # 脂質のg数（1gの脂質は9kcal）
+      carbs: carb_calories / 4  # 炭水化物のg数
+    }
   end
 
   def user_goal_params
