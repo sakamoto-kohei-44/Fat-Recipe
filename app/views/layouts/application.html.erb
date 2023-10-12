@@ -19,7 +19,9 @@
       <div class="content-wrap">
         <%= yield %>
       </div>
-      <% unless controller_name == 'sessions' && action_name == 'new' %>
+      <% unless controller_name == 'sessions' && action_name == 'new' ||
+          controller_name == 'pages' && action_name == 'home' ||
+          controller_name == 'users' && ['body_info', 'gender_age', 'height_weight_target_weight', 'activity_level', 'allergies'].include?(action_name) %>
       <%= render 'shared/footer' %>
       <% end %>
     </div>
