@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :skip_special_validation
+  before_validation :set_skip_special_validation
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :weight_logs
@@ -20,5 +21,9 @@ class User < ApplicationRecord
 
   def skip_special_validation?
     skip_special_validation == true
+  end
+
+  def set_skip_special_validation
+    self.skip_special_validation = true if new_record? && password.present? && email.present?
   end
 end
