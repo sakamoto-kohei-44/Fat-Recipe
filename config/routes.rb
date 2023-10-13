@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
   get '/home', to: 'pages#dashboard', as: 'dashboard_home'
-  get 'recipe_suggestions/index'
+  get 'recipe_suggestions/index', as: 'recipe_suggestions'
   get 'recipes/search'
   get 'recipes/search_results'
   patch 'users/update_profile', to: 'users#update_profile'
