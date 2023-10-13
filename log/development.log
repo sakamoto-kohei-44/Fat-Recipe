@@ -27027,3 +27027,196 @@ Response body: {"vegetarian":true,"vegan":false,"glutenFree":false,"dairyFree":f
 Completed 200 OK in 1072ms (Views: 35.8ms | ActiveRecord: 1.4ms | Allocations: 7848)
 
 
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-13 23:22:38 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 969)
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 105.1ms | Allocations: 11682)
+  Rendered shared/_footer.html.erb (Duration: 4.7ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 833.9ms | Allocations: 39374)
+Completed 200 OK in 907ms (Views: 779.4ms | ActiveRecord: 65.9ms | Allocations: 43737)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-13 23:36:49 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 6.5ms | Allocations: 211)
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 238.2ms | Allocations: 3900)
+  Rendered layout layouts/application.html.erb (Duration: 286.1ms | Allocations: 7917)
+Completed 200 OK in 303ms (Views: 169.9ms | ActiveRecord: 120.4ms | Allocations: 8622)
+
+
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-13 23:36:53 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 20.8ms | Allocations: 2111)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 7.7ms | Allocations: 892)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 6548)
+Completed 200 OK in 61ms (Views: 55.2ms | ActiveRecord: 1.7ms | Allocations: 7251)
+
+
+Started POST "/users/save_goal" for 172.19.0.1 at 2023-10-13 23:36:55 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 587)
+
+
+Started GET "/users/gender_age" for 172.19.0.1 at 2023-10-13 23:36:55 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 19.1ms | Allocations: 3377)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 24.7ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 7727)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 1.4ms | Allocations: 8054)
+
+
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-13 23:36:59 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 748)
+
+
+Started GET "/users/height_weight_target_weight" for 172.19.0.1 at 2023-10-13 23:36:59 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3763)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 6.7ms | Allocations: 866)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 8120)
+Completed 200 OK in 43ms (Views: 34.8ms | ActiveRecord: 1.4ms | Allocations: 8442)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.19.0.1 at 2023-10-13 23:37:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"163", "weight"=>"47", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 999)
+
+
+Started GET "/users/activity_level" for 172.19.0.1 at 2023-10-13 23:37:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1864)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 6.0ms | Allocations: 866)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 6203)
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 2.2ms | Allocations: 6525)
+
+
+Started POST "/users/save_activity_level" for 172.19.0.1 at 2023-10-13 23:37:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 648)
+
+
+Started GET "/users/allergies" for 172.19.0.1 at 2023-10-13 23:37:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (4.4ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 102.1ms | Allocations: 14257)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 4.2ms | Allocations: 864)
+  Rendered layout layouts/application.html.erb (Duration: 123.0ms | Allocations: 18594)
+Completed 200 OK in 129ms (Views: 57.8ms | ActiveRecord: 67.2ms | Allocations: 18915)
+
+
+Started POST "/users/save_allergies" for 172.19.0.1 at 2023-10-13 23:37:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "39"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 642)
+
+
+Started GET "/home" for 172.19.0.1 at 2023-10-13 23:37:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.3ms | Allocations: 115)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 17.5ms | Allocations: 885)
+  Rendered shared/_footer.html.erb (Duration: 2.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 57.6ms | Allocations: 4882)
+Completed 200 OK in 65ms (Views: 58.4ms | ActiveRecord: 1.0ms | Allocations: 5204)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-13 23:37:16 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 253)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 5.1ms | Allocations: 875)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 4769)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.7ms | Allocations: 5036)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-13 23:37:24 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 194)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:14
+  Rendered shared/_header.html.erb (Duration: 5.1ms | Allocations: 877)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 5033)
+Completed 200 OK in 37ms (Views: 32.6ms | ActiveRecord: 0.6ms | Allocations: 5741)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-13 23:37:26 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:6:in `index'
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 538)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 77)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 4416)
+Completed 200 OK in 1143ms (Views: 40.6ms | ActiveRecord: 0.8ms | Allocations: 7930)
+
+
