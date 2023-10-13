@@ -162,6 +162,9 @@ GEM
       rails (>= 6.0.0)
       stimulus-rails
       turbo-rails
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -210,6 +213,7 @@ GEM
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
+    multi_xml (0.6.0)
     net-imap (0.3.7)
       date
       net-protocol
@@ -355,6 +359,7 @@ DEPENDENCIES
   devise (~> 4.9, >= 4.9.3)
   dotenv-rails (~> 2.8, >= 2.8.1)
   hotwire-rails
+  httparty (~> 0.21.0)
   jbuilder
   jsbundling-rails
   kaminari (~> 1.2, >= 1.2.2)
