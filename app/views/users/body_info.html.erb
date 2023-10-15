@@ -1,0 +1,16 @@
+<div class="choice-container">
+    <h1>目標は？</h1>
+    <%= form_with url: save_goal_users_path, local: true do |f| %>
+        <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+            <label class="btn btn-light">
+                <%= f.radio_button :goal, "standard" %>
+                標準体型になりたい
+            </label>
+            <label class="btn btn-light">
+                <%= f.radio_button :goal, "slim_muscle" %>
+                細マッチョになりたい
+            </label>
+        </div>
+        <%= f.submit "次へ", class: "btn btn-light" %>
+    <% end %>
+</div>
