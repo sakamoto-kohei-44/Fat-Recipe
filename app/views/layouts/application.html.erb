@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>App</title>
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <% unless controller_name == 'sessions' && action_name == 'new' %>
+        <%= render 'shared/header' %>
+      <% end %>
+      <div class="content-wrap">
+        <%= yield %>
+      </div>
+      <% unless controller_name == 'sessions' && action_name == 'new' ||
+          controller_name == 'pages' && action_name == 'home' ||
+          controller_name == 'users' && ['body_info', 'gender_age', 'height_weight_target_weight', 'activity_level', 'allergies'].include?(action_name) %>
+      <%= render 'shared/footer' %>
+      <% end %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<% if @recipes.present? %>
+  <% @recipes.each do |recipe| %>
+    <%= link_to recipe["title"], recipe_path(recipe["id"]) %>
+    <!-- その他のレシピ情報も表示 -->
+  <% end %>
+<% else %>
+  <p>No recipes found.</p>
+<% end %>
