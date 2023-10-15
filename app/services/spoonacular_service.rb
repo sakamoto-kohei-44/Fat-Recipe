@@ -1,4 +1,5 @@
 class SpoonacularService
+  require 'httparty'
   BASE_URL = 'https://api.spoonacular.com/recipes/findByNutrients'
   API_KEY = Rails.application.credentials.dig(:spoonacular, :api_key)
 
