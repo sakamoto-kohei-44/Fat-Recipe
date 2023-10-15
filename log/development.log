@@ -27220,3 +27220,20 @@ Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","im
 Completed 200 OK in 1143ms (Views: 40.6ms | ActiveRecord: 0.8ms | Allocations: 7930)
 
 
+Started GET "/recipes" for 172.19.0.1 at 2023-10-14 20:11:47 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:6:in `index'
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 848)
+  Rendered shared/_header.html.erb (Duration: 1.9ms | Allocations: 300)
+  Rendered shared/_footer.html.erb (Duration: 1.8ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 678.5ms | Allocations: 29643)
+Completed 200 OK in 1976ms (Views: 686.8ms | ActiveRecord: 65.1ms | Allocations: 47220)
+
+
