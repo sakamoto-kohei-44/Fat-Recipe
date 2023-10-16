@@ -8,7 +8,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -24,6 +24,11 @@
           controller_name == 'users' && ['body_info', 'gender_age', 'height_weight_target_weight', 'activity_level', 'allergies'].include?(action_name) %>
       <%= render 'shared/footer' %>
       <% end %>
+      <!-- Popper.js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+      <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
     </div>
   </body>
 </html>
