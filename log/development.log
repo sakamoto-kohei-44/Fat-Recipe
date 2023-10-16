@@ -27237,3 +27237,1903 @@ Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","im
 Completed 200 OK in 1976ms (Views: 686.8ms | ActiveRecord: 65.1ms | Allocations: 47220)
 
 
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:04:21 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 994)
+  Rendered shared/_header.html.erb (Duration: 19.6ms | Allocations: 3206)
+  Rendered layout layouts/application.html.erb (Duration: 1843.2ms | Allocations: 72340)
+Completed 500 Internal Server Error in 3289ms (ActiveRecord: 46.6ms | Allocations: 93793)
+
+
+  
+ActionView::Template::Error (The asset "sample" is not present in the asset pipeline.
+):
+    12: 
+    13:                 <div class="text-end">
+    14:                     <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="header-profile">
+    15:                         <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15'%>
+    16:                     </a>
+    17:                     <% if user_signed_in? %>
+    18:                         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-light" %>
+  
+app/views/shared/_header.html.erb:15
+app/views/layouts/application.html.erb:17
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:30:00 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 517)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 4832)
+Completed 500 Internal Server Error in 1203ms (ActiveRecord: 0.0ms | Allocations: 10042)
+
+
+  
+ActionView::Template::Error (The asset "profile_icon.css" is not present in the asset pipeline.
+):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:31:40 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 918.3ms | Allocations: 37204)
+Completed 500 Internal Server Error in 1912ms (ActiveRecord: 0.0ms | Allocations: 41811)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:33:01 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 738.3ms | Allocations: 30655)
+Completed 500 Internal Server Error in 1730ms (ActiveRecord: 0.0ms | Allocations: 35328)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:34:59 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 1276.5ms | Allocations: 80409)
+Completed 500 Internal Server Error in 2314ms (ActiveRecord: 0.0ms | Allocations: 85004)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:36:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 850)
+  Rendered layout layouts/application.html.erb (Duration: 324.0ms | Allocations: 43209)
+Completed 500 Internal Server Error in 1560ms (ActiveRecord: 47.4ms | Allocations: 61203)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:37:07 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: [{"id":149241,"title":"Stevia-Sweetened Currant Banana Bread","image":"https://spoonacular.com/recipeImages/149241-312x231.jpg","imageType":"jpg","calories":186,"protein":"5g","fat":"8g","carbs":"22g"},{"id":634927,"title":"Best Potato Cheese Soup in a bread bowl","image":"https://spoonacular.com/recipeImages/634927-312x231.jpg","imageType":"jpg","calories":750,"protein":"26g","fat":"45g","carbs":"58g"},{"id":635248,"title":"Blackberry Walnut Cookies","image":"https://spoonacular.com/recipeImages/635248-312x231.jpg","imageType":"jpg","calories":142,"protein":"2g","fat":"6g","carbs":"19g"},{"id":651994,"title":"Miniature Fruit Tarts","image":"https://spoonacular.com/recipeImages/651994-312x231.jpg","imageType":"jpg","calories":482,"protein":"15g","fat":"7g","carbs":"89g"},{"id":654571,"title":"Panna Cotta with Raspberry and Orange Sauce","image":"https://spoonacular.com/recipeImages/654571-312x231.jpg","imageType":"jpg","calories":396,"protein":"8g","fat":"27g","carbs":"28g"},{"id":657972,"title":"Raw Chocolate Energy Bars","image":"https://spoonacular.com/recipeImages/657972-312x231.jpg","imageType":"jpg","calories":190,"protein":"6g","fat":"10g","carbs":"20g"},{"id":658004,"title":"Raw Vegan Blueberry Chocolate Crust \"Cheesecake","image":"https://spoonacular.com/recipeImages/658004-312x231.jpg","imageType":"jpg","calories":557,"protein":"9g","fat":"36g","carbs":"59g"},{"id":660292,"title":"Slow Cooker Minestrone Soup","image":"https://spoonacular.com/recipeImages/660292-312x231.jpg","imageType":"jpg","calories":148,"protein":"7g","fat":"2g","carbs":"22g"},{"id":715397,"title":"Cheesy Chicken and Rice Casserole","image":"https://spoonacular.com/recipeImages/715397-312x231.jpg","imageType":"jpg","calories":464,"protein":"31g","fat":"28g","carbs":"21g"},{"id":1459207,"title":"Easy Sheet Pan Pancakes","image":"https://spoonacular.com/recipeImages/1459207-312x231.jpg","imageType":"jpg","calories":218,"protein":"6g","fat":"8g","carbs":"28g"}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 308)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 19991)
+Completed 500 Internal Server Error in 1051ms (ActiveRecord: 0.0ms | Allocations: 24598)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/recipes" for 172.19.0.1 at 2023-10-15 17:39:23 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:41:15 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:41:16 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:43:43 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:43:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:43:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:43:45 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:43:46 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:43:46 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:43:46 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:52:16 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:52:17 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:52:42 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 1169.6ms | Allocations: 58753)
+Completed 500 Internal Server Error in 1211ms (ActiveRecord: 0.0ms | Allocations: 63055)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.19.0.1 at 2023-10-15 17:59:32 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 23773)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms | Allocations: 24020)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:00:01 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (51.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 18.4ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 1390.5ms | Allocations: 47547)
+Completed 500 Internal Server Error in 1592ms (ActiveRecord: 0.0ms | Allocations: 51849)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:00:04 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 133.0ms | Allocations: 23767)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.0ms | Allocations: 24014)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:00:37 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 1897.4ms | Allocations: 85601)
+Completed 500 Internal Server Error in 1906ms (ActiveRecord: 0.0ms | Allocations: 85844)
+
+
+  
+ActionView::Template::Error (Asset `bootstrap.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link bootstrap.js
+
+and restart your server):
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+    15: 
+    16:   <body>
+  
+app/views/layouts/application.html.erb:13
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:04:14 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 13.1ms | Allocations: 2383)
+  Rendered layout layouts/application.html.erb (Duration: 763.6ms | Allocations: 51164)
+Completed 500 Internal Server Error in 771ms (ActiveRecord: 0.0ms | Allocations: 51409)
+
+
+  
+ActionView::Template::Error (The asset "path/to/your/profile/icon.jpg" is not present in the asset pipeline.
+):
+    20: 
+    21:                 <div class="dropdown">
+    22:                     <%= link_to '#', class: "btn btn-secondary dropdown-toggle", role: "button", id: "profileDropdown", data: { bs_toggle: "dropdown" }, aria: { expanded: "false" } do %>
+    23:                         <%= image_tag 'path/to/your/profile/icon.jpg', alt: 'Profile Icon', width: 30, class: 'rounded-circle' %>
+    24:                     <% end %>
+    25: 
+    26:                     <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+  
+app/views/shared/_header.html.erb:23
+app/views/shared/_header.html.erb:22
+app/views/layouts/application.html.erb:19
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:04:36 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 146.1ms | Allocations: 35429)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.0ms | Allocations: 35674)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:05:39 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 519)
+  Rendered layout layouts/application.html.erb (Duration: 363.1ms | Allocations: 48971)
+Completed 500 Internal Server Error in 405ms (ActiveRecord: 0.0ms | Allocations: 53274)
+
+
+  
+ActionView::Template::Error (Asset `profile_icon.css` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link profile_icon.css
+
+and restart your server):
+     8:     <%= csp_meta_tag %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    11:     <%= stylesheet_link_tag 'profile_icon', media: 'all', 'data-turbolinks-track': 'reload' %>
+    12:     <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    13:     <%= javascript_include_tag 'bootstrap', 'data-turbo-track': 'reload' %>
+    14:   </head>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:06:50 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:06:51 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::ConnectionNotEstablished (connection to server at "172.19.0.2", port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+):
+  
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:87:in `rescue in new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (7.0.8) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.8) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.8) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:648:in `connection'
+activerecord (7.0.8) lib/active_record/migration.rb:643:in `build_watcher'
+activerecord (7.0.8) lib/active_record/migration.rb:625:in `block in call'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:11:31 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 518)
+  Rendered shared/_header.html.erb (Duration: 10.2ms | Allocations: 2728)
+  Rendered layout layouts/application.html.erb (Duration: 1212.5ms | Allocations: 51665)
+Completed 500 Internal Server Error in 1251ms (ActiveRecord: 0.0ms | Allocations: 55970)
+
+
+  
+ActionView::Template::Error (The asset "path/to/your/profile/icon.jpg" is not present in the asset pipeline.
+):
+    20: 
+    21:                 <div class="dropdown">
+    22:                     <%= link_to '#', class: "btn btn-secondary dropdown-toggle", role: "button", id: "profileDropdown", data: { bs_toggle: "dropdown" }, aria: { expanded: "false" } do %>
+    23:                         <%= image_tag 'path/to/your/profile/icon.jpg', alt: 'Profile Icon', width: 30, class: 'rounded-circle' %>
+    24:                     <% end %>
+    25: 
+    26:                     <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+  
+app/views/shared/_header.html.erb:23
+app/views/shared/_header.html.erb:22
+app/views/layouts/application.html.erb:19
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:19:28 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 9.9ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 4.3ms | Allocations: 755)
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 13028)
+Completed 200 OK in 73ms (Views: 66.7ms | ActiveRecord: 0.0ms | Allocations: 13950)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:48:52 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 205)
+  Rendered shared/_header.html.erb (Duration: 203.0ms | Allocations: 29373)
+  Rendered layout layouts/application.html.erb (Duration: 417.5ms | Allocations: 50709)
+Completed 200 OK in 433ms (Views: 424.6ms | ActiveRecord: 0.0ms | Allocations: 51584)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:50:04 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 6.9ms | Allocations: 2254)
+  Rendered layout layouts/application.html.erb (Duration: 46.6ms | Allocations: 10859)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms | Allocations: 11707)
+
+
+  
+ActionView::Template::Error (The asset "logo.png" is not present in the asset pipeline.
+):
+    2:   <nav class="navbar navbar-expand-lg navigation navbar-light bg-light">
+    3: 
+    4:     <%= link_to root_path, class: 'navbar-brand' do %>
+    5:       <%= image_tag 'logo.png' %>
+    6:     <% end %>
+    7:     <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    8:       <span class="navbar-toggler-icon"></span>
+  
+app/views/shared/_header.html.erb:5
+app/views/shared/_header.html.erb:4
+app/views/layouts/application.html.erb:19
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:50:17 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 5.7ms | Allocations: 1044)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 9630)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.0ms | Allocations: 10502)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:51:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 6.0ms | Allocations: 1403)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 9985)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.0ms | Allocations: 10855)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:56:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 6.8ms | Allocations: 1138)
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 9711)
+Completed 200 OK in 63ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 10581)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 18:57:33 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 5.3ms | Allocations: 1135)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 9714)
+Completed 200 OK in 46ms (Views: 40.2ms | ActiveRecord: 0.0ms | Allocations: 10584)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:02:15 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 7.5ms | Allocations: 1547)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 10135)
+Completed 200 OK in 65ms (Views: 59.0ms | ActiveRecord: 0.0ms | Allocations: 11005)
+
+
+Started GET "/users/sign_in" for 172.19.0.1 at 2023-10-15 19:02:22 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 714)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 44.7ms | Allocations: 3693)
+  Rendered layout layouts/application.html.erb (Duration: 66.0ms | Allocations: 11429)
+Completed 200 OK in 366ms (Views: 71.1ms | ActiveRecord: 181.8ms | Allocations: 24555)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:03:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 4.8ms | Allocations: 1130)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 9050)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 0.0ms | Allocations: 9320)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:03:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 1122)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 9066)
+Completed 200 OK in 43ms (Views: 37.8ms | ActiveRecord: 0.0ms | Allocations: 9332)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:05:03 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 15.1ms | Allocations: 1543)
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | Allocations: 10107)
+Completed 200 OK in 95ms (Views: 88.7ms | ActiveRecord: 0.0ms | Allocations: 10979)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:05:20 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 7.4ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 10126)
+Completed 200 OK in 66ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 10996)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:05:28 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 7.9ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 10131)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 0.0ms | Allocations: 11001)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:37:20 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 5.7ms | Allocations: 1130)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 9088)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.0ms | Allocations: 9355)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:38:41 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 203)
+  Rendered shared/_header.html.erb (Duration: 6.7ms | Allocations: 1403)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 9989)
+Completed 200 OK in 55ms (Views: 48.2ms | ActiveRecord: 0.0ms | Allocations: 10861)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:38:56 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 7.8ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 8977)
+Completed 200 OK in 71ms (Views: 66.2ms | ActiveRecord: 0.0ms | Allocations: 9244)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:39:00 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 7.8ms | Allocations: 1543)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 10125)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 10994)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:42:24 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 4.7ms | Allocations: 1130)
+  Rendered layout layouts/application.html.erb (Duration: 866.4ms | Allocations: 12985)
+Completed 200 OK in 873ms (Views: 868.8ms | ActiveRecord: 0.0ms | Allocations: 13252)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:42:32 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 1129)
+  Rendered layout layouts/application.html.erb (Duration: 439.1ms | Allocations: 12700)
+Completed 200 OK in 444ms (Views: 441.1ms | ActiveRecord: 0.0ms | Allocations: 12966)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:42:34 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 3.9ms | Allocations: 1122)
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 9066)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 9332)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:43:19 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.6ms | Allocations: 207)
+  Rendered shared/_header.html.erb (Duration: 9.6ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 85.2ms | Allocations: 10134)
+Completed 200 OK in 99ms (Views: 92.5ms | ActiveRecord: 0.0ms | Allocations: 11006)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:46:20 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 9.3ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 9816)
+Completed 200 OK in 73ms (Views: 65.7ms | ActiveRecord: 0.0ms | Allocations: 10686)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:46:37 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 48.8ms | Allocations: 1248)
+  Rendered layout layouts/application.html.erb (Duration: 86.4ms | Allocations: 9821)
+Completed 200 OK in 96ms (Views: 89.9ms | ActiveRecord: 0.0ms | Allocations: 10691)
+
+
+Started GET "/root_path" for 172.19.0.1 at 2023-10-15 19:46:39 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/root_path"):
+  
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:47:13 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 6.7ms | Allocations: 2288)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 10948)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms | Allocations: 11798)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout_path' for #<ActionView::Base:0x00000000012458>):
+    28:                         <li><%= link_to "マイページ", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+    29:                         <li><%= link_to "お気に入り", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+    30:                         <li><%= link_to "おすすめスポット", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+    31:                         <li><%= link_to "Logout", logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+    32:                         </ul>
+    33:                     </div>
+    34:                 </div>
+  
+app/views/shared/_header.html.erb:31
+app/views/layouts/application.html.erb:19
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:47:30 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 9.9ms | Allocations: 1249)
+  Rendered layout layouts/application.html.erb (Duration: 61.0ms | Allocations: 9846)
+Completed 200 OK in 75ms (Views: 68.1ms | ActiveRecord: 0.0ms | Allocations: 10716)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:48:40 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 205)
+  Rendered shared/_header.html.erb (Duration: 7.2ms | Allocations: 1565)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 10164)
+Completed 200 OK in 59ms (Views: 51.4ms | ActiveRecord: 0.0ms | Allocations: 11037)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:53:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 203)
+  Rendered shared/_header.html.erb (Duration: 9.5ms | Allocations: 1557)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 10143)
+Completed 200 OK in 70ms (Views: 63.5ms | ActiveRecord: 0.0ms | Allocations: 11015)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:56:22 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 6.6ms | Allocations: 1134)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 9058)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 9325)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 19:59:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 7.4ms | Allocations: 1557)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 10136)
+Completed 200 OK in 66ms (Views: 59.5ms | ActiveRecord: 0.0ms | Allocations: 11005)
+
+
+Started GET "/path_to_popperjs_core.js" for 172.19.0.1 at 2023-10-15 19:59:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/path_to_bootstrap_js.js" for 172.19.0.1 at 2023-10-15 19:59:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path_to_popperjs_core.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/path_to_bootstrap_js.js"):
+  
+Started GET "/" for 172.19.0.1 at 2023-10-15 20:01:06 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 6.6ms | Allocations: 1137)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 9084)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 9351)
+
+
+Started GET "/path_to_popperjs_core.js" for 172.19.0.1 at 2023-10-15 20:01:06 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/path_to_bootstrap_js.js" for 172.19.0.1 at 2023-10-15 20:01:06 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/path_to_popperjs_core.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/path_to_bootstrap_js.js"):
+  
+Started GET "/" for 172.19.0.1 at 2023-10-15 20:03:12 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.3ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 6.8ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 60.6ms | Allocations: 10156)
+Completed 200 OK in 73ms (Views: 67.0ms | ActiveRecord: 0.0ms | Allocations: 11027)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/popper.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/js/bootstrap.min.js"):
+  
+Started GET "/" for 172.19.0.1 at 2023-10-15 20:07:28 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 6.3ms | Allocations: 1560)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 10159)
+Completed 200 OK in 90ms (Views: 83.8ms | ActiveRecord: 0.0ms | Allocations: 11032)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 20:13:33 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 9.0ms | Allocations: 1556)
+  Rendered layout layouts/application.html.erb (Duration: 56.1ms | Allocations: 10146)
+Completed 200 OK in 70ms (Views: 62.7ms | ActiveRecord: 0.0ms | Allocations: 11018)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 20:14:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.6ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 9.9ms | Allocations: 1556)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 7030)
+Completed 200 OK in 77ms (Views: 70.7ms | ActiveRecord: 0.0ms | Allocations: 7900)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-15 20:17:51 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 10.9ms | Allocations: 1544)
+  Rendered layout layouts/application.html.erb (Duration: 64.5ms | Allocations: 7028)
+Completed 200 OK in 79ms (Views: 72.2ms | ActiveRecord: 0.0ms | Allocations: 7898)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-16 16:49:18 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 202)
+  Rendered shared/_header.html.erb (Duration: 8.5ms | Allocations: 1556)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 7030)
+Completed 200 OK in 59ms (Views: 52.7ms | ActiveRecord: 0.0ms | Allocations: 7903)
+
+
+Started GET "/users/sign_in" for 172.19.0.1 at 2023-10-16 16:49:45 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 21.1ms | Allocations: 569)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 31.7ms | Allocations: 2090)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 6739)
+Completed 200 OK in 69ms (Views: 60.3ms | ActiveRecord: 0.0ms | Allocations: 8140)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-16 17:06:30 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 207)
+  Rendered shared/_header.html.erb (Duration: 6.0ms | Allocations: 1466)
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 4619)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms | Allocations: 5474)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="p-3 text-bg-dark">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <span class="fs-1 fw-bold text-warning">メシのカルテ</span>
+            </a>
+
+            <div class="d-flex align-items-center">
+                <form class="me-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <% if user_signed_in? %>
+                        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-light" %>
+                    <% else %>
+                        <%= link_to 'ログイン', new_user_session_path, class: "btn btn-light" %>
+                    <% end %>
+                </div>
+
+                <div class="dropdown">
+                        <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
+                    <% end %>
+                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#"><%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %> マイページ</a>
+                        <%= link_to 'アカウント設定', '#', class: "dropdown-item" %>
+                        <%= link_to 'ログアウト', '#', class: "dropdown-item" %>
+                        <%= link_to '利用規約', '#', class: "dropdown-item" %>
+                        <%= link_to 'プライバシーポリシー', '#', class: "dropdown-item" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+):
+1:    <header class="p-3 text-bg-dark">
+2:        <div class="container">
+3:            <div class="d-flex flex-wrap align-items-center justify-content-between">
+4:                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+5:                    <span class="fs-1 fw-bold text-warning">メシのカルテ</span>
+6:                </a>
+7:    
+8:                <div class="d-flex align-items-center">
+9:                    <form class="me-3" role="search">
+10:                        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+11:                    </form>
+12:    
+13:                    <div class="text-end">
+14:                        <% if user_signed_in? %>
+15:                            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-light" %>
+16:                        <% else %>
+17:                            <%= link_to 'ログイン', new_user_session_path, class: "btn btn-light" %>
+18:                        <% end %>
+19:                    </div>
+20:    
+21:                    <div class="dropdown">
+22:                            <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
+23:                        <% end %>
+24:                        <div class="dropdown-menu" aria-labelledby="profileDropdown">
+25:                            <a class="dropdown-item" href="#"><%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %> マイページ</a>
+26:                            <%= link_to 'アカウント設定', '#', class: "dropdown-item" %>
+27:                            <%= link_to 'ログアウト', '#', class: "dropdown-item" %>
+28:                            <%= link_to '利用規約', '#', class: "dropdown-item" %>
+29:                            <%= link_to 'プライバシーポリシー', '#', class: "dropdown-item" %>
+30:                        </div>
+31:                    </div>
+32:                </div>
+33:            </div>
+34:        </div>
+35:    </header>
+  
+app/views/shared/_header.html.erb:38: syntax error, unexpected `end'
+app/views/shared/_header.html.erb:38: syntax error, unexpected `end'
+app/views/shared/_header.html.erb:38: syntax error, unexpected `end'
+app/views/shared/_header.html.erb:38: syntax error, unexpected `end'
+app/views/layouts/application.html.erb:17
+Started GET "/" for 172.19.0.1 at 2023-10-16 17:12:19 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 204)
+  Rendered shared/_header.html.erb (Duration: 13.9ms | Allocations: 1548)
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 7037)
+Completed 200 OK in 76ms (Views: 68.8ms | ActiveRecord: 0.0ms | Allocations: 7910)
+
+
