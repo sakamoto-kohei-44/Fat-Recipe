@@ -17,6 +17,19 @@
                         <%= link_to 'ログイン', new_user_session_path, class: "btn btn-light" %>
                     <% end %>
                 </div>
+
+                <div class="dropdown">
+                     <%= link_to '#', role: "button", id: "profileDropdown", data: { bs_toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } do %>
+                        <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
+                    <% end %>
+                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#"><%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %> マイページ</a>
+                        <%= link_to 'アカウント設定', '#', class: "dropdown-item" %>
+                        <%= link_to 'ログアウト', '#', class: "dropdown-item" %>
+                        <%= link_to '利用規約', '#', class: "dropdown-item" %>
+                        <%= link_to 'プライバシーポリシー', '#', class: "dropdown-item" %>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

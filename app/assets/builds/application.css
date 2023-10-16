@@ -11855,32 +11855,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html,
-body {
-  height: 100%;
-}
-
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
-}
-
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
-
-.form-signin input[type=email] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type=password] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
 /*!
 * Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
 * Copyright 2013-2023 Start Bootstrap
@@ -23142,7 +23116,7 @@ html {
   z-index: 999;
 }
 
-:focus, .menu-toggle:hover {
+.menu-toggle:focus, .menu-toggle:hover {
   color: #fff;
 }
 
@@ -23321,7 +23295,7 @@ body {
 }
 
 .choice-container {
-  background-color: #fff;
+  background-color: #00FFFF;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -23380,4 +23354,18 @@ body, html {
 }
 .custom-footer a:hover {
   text-decoration: underline;
+}
+
+.dropdown-toggle {
+  background: transparent;
+  border: none;
+}
+
+.dropdown-item {
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f8f8;
+  color: #555;
 }
