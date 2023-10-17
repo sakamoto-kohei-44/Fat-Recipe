@@ -33570,3 +33570,15 @@ Processing by PagesController#dashboard as HTML
 Completed 200 OK in 54ms (Views: 47.3ms | ActiveRecord: 0.0ms | Allocations: 6414)
 
 
+Started GET "/home" for 172.19.0.1 at 2023-10-17 21:43:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 3.0ms | Allocations: 117)
+  Rendered shared/_header.html.erb (Duration: 9.2ms | Allocations: 1604)
+  Rendered shared/_footer.html.erb (Duration: 2.3ms | Allocations: 364)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 5581)
+Completed 200 OK in 49ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 6451)
+
+
