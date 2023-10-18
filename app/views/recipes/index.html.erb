@@ -1,8 +1,21 @@
-<% if @recipes.present? %>
-  <% @recipes.each do |recipe| %>
-    <%= link_to recipe["title"], recipe_path(recipe["id"]) %>
-    <!-- その他のレシピ情報も表示 -->
+<h1>1日の食事計画</h1>
+
+<div class="meals">
+  <% @meal_plan["meals"].each do |meal| %>
+    <div class="meal-card">
+      <h2><%= meal["title"] %></h2>
+      <img src="https://spoonacular.com/recipeImages/<%= meal["id"] %>-<%= meal["imageType"] %>" alt="<%= meal["title"] %>">
+      <p>調理時間: <%= meal["readyInMinutes"] %>分</p>
+      <p>提供数: <%= meal["servings"] %>人分</p>
+      <a href="<%= meal["sourceUrl"] %>" target="_blank">レシピを見る</a>
+    </div>
   <% end %>
-<% else %>
-  <p>No recipes found.</p>
-<% end %>
+</div>
+
+<div class="nutrients">
+  <h2>栄養情報</h2>
+  <p>カロリー: <%= @meal_plan["nutrients"]["calories"] %></p>
+  <p>炭水化物: <%= @meal_plan["nutrients"]["carbohydrates"] %>g</p>
+  <p>脂質: <%= @meal_plan["nutrients"]["fat"] %>g</p>
+  <p>タンパク質: <%= @meal_plan["nutrients"]["protein"] %>g</p>
+</div>

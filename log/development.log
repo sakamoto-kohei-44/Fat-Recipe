@@ -33582,3 +33582,155 @@ Processing by PagesController#dashboard as HTML
 Completed 200 OK in 49ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 6451)
 
 
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-17 23:31:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-17 23:31:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipeSuggestionsController#index as HTML
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 548)
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 465)
+  Rendered shared/_header.html.erb (Duration: 7.3ms | Allocations: 2289)
+  Rendered shared/_header.html.erb (Duration: 8.7ms | Allocations: 3030)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 558)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 410)
+  Rendered layout layouts/application.html.erb (Duration: 775.2ms | Allocations: 67330)
+Completed 200 OK in 818ms (Views: 784.4ms | ActiveRecord: 0.0ms | Allocations: 72308)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 778.8ms | Allocations: 68401)
+Completed 200 OK in 822ms (Views: 788.3ms | ActiveRecord: 0.0ms | Allocations: 74190)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-17 23:31:12 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/app/app/controllers/recipes_controller.rb:25: syntax error, unexpected `end'):
+  
+app/controllers/recipes_controller.rb:25: syntax error, unexpected `end'
+app/controllers/recipes_controller.rb:25: syntax error, unexpected `end'
+Started GET "/recipes" for 172.19.0.1 at 2023-10-17 23:32:04 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Response code: 200
+Response body: {"meals":[{"id":657343,"imageType":"jpg","title":"Pumpkin Pecan Streusel Muffins","readyInMinutes":45,"servings":16,"sourceUrl":"https://spoonacular.com/pumpkin-pecan-streusel-muffins-657343"},{"id":715769,"imageType":"jpg","title":"Broccolini Quinoa Pilaf","readyInMinutes":30,"servings":2,"sourceUrl":"https://spoonacular.com/broccolini-quinoa-pilaf-715769"},{"id":634404,"imageType":"jpg","title":"Basic Risotto","readyInMinutes":45,"servings":2,"sourceUrl":"https://spoonacular.com/basic-risotto-634404"}],"nutrients":{"calories":1873.61,"protein":49.51,"fat":59.73,"carbohydrates":285.19}}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 397)
+  Rendered shared/_header.html.erb (Duration: 7.1ms | Allocations: 1181)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 4574)
+Completed 200 OK in 1282ms (Views: 34.8ms | ActiveRecord: 54.2ms | Allocations: 15968)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-17 23:32:27 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered shared/_header.html.erb (Duration: 6.6ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 4068)
+Completed 200 OK in 29ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 4752)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-17 23:32:39 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 494)
+  Rendered shared/_header.html.erb (Duration: 4.4ms | Allocations: 1225)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 4713)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 5424)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-17 23:32:41 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 83)
+  Rendered shared/_header.html.erb (Duration: 6.0ms | Allocations: 1191)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4494)
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 5022)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-17 23:32:42 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered shared/_header.html.erb (Duration: 5.5ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 4069)
+Completed 200 OK in 26ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 4737)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-17 23:32:54 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 289)
+  Rendered shared/_header.html.erb (Duration: 6.0ms | Allocations: 1174)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 4357)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 4624)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-17 23:32:56 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 56)
+  Rendered shared/_header.html.erb (Duration: 6.7ms | Allocations: 1165)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4339)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 4605)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-17 23:32:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 45)
+  Rendered shared/_header.html.erb (Duration: 5.9ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 4068)
+Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 4743)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-18 00:13:36 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 210)
+  Rendered shared/_header.html.erb (Duration: 8.5ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 4411)
+Completed 200 OK in 44ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 5112)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-18 00:13:38 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 57)
+  Rendered shared/_header.html.erb (Duration: 5.6ms | Allocations: 1165)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 4132)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 4398)
+
+
