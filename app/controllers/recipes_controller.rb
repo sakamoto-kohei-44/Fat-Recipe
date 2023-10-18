@@ -2,15 +2,18 @@ class RecipesController < ApplicationController
   require_dependency "#{Rails.root}/app/services/spoonacular_service"
 
   def index
-    # current_userがnilの場合、デフォルトのユーザーオブジェクトを使用
-    user = current_user || User.new(name: "Guest") # Guestユーザーを作成するなど、適切なデフォルトを設定
-
-    # SpoonacularServiceを使用してレシピを取得
-    @recipes = SpoonacularService.fetch_suitable_recipes(user)
+    user = current_user || User.new(name: "Guest")
+    cache_key = "meal_plan_for_user_#{user.id || 'guest'}"
+    @meal_plan = Rails.cache.fetch(cache_key, expires_in: 1.hour) do
+      SpoonacularService.generate_meal_plan
+    end
   end
 
   def show
-    @recipe = SpoonacularService.fetch_recipe_information(params[:id])
+    cache_key = "recipe_info_#{params[:id]}"
+    @recipe = Rails.cache.fetch(cache_key, expires_in: 1.hour) do
+      SpoonacularService.fetch_recipe_information(params[:id])
+    end
   end
 
   def search
