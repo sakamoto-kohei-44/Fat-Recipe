@@ -34310,3 +34310,739 @@ Migrating to AddImageUrlToRecipes (20231019055350)
   [1m[36mActiveRecord::InternalMetadata Load (3.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(323732312933266965)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 15:31:23 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"全粒粉ブルーベリーマフィン","to":"ja"}]}]
+Original title: Whole Wheat Blueberry Muffins
+Translated title: 全粒粉ブルーベリーマフィン
+Response code: 200
+Response body: [{"translations":[{"text":"レモンペッパーガーリックティラピアとクリーミーなほうれん草パッパルデッレ","to":"ja"}]}]
+Original title: Lemon Pepper Garlic Tilapia with Creamy Spinach Pappardelle
+Translated title: レモンペッパーガーリックティラピアとクリーミーなほうれん草パッパルデッレ
+Response code: 200
+Response body: [{"translations":[{"text":"ケイジャン料理: ヴィーガンジャンバラヤ","to":"ja"}]}]
+Original title: Cajun Cuisine: Vegan Jambalaya
+Translated title: ケイジャン料理: ヴィーガンジャンバラヤ
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1781)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1887)
+Completed 500 Internal Server Error in 3200ms (ActiveRecord: 51.8ms | Allocations: 23404)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>1日の食事計画</h1>
+    2: 
+    3: <div class="meals">
+    4:   <% @recipes_info.each do |recipe| %>
+    5:     <div class="meal-card">
+    6:       <h2><%= recipe["title"] %></h2>
+    7:       <img src="<%= recipe["image"] %>" alt="<%= recipe["title"] %>">
+  
+app/views/recipes/index.html.erb:4
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 15:36:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 40)
+  Rendered shared/_header.html.erb (Duration: 52.9ms | Allocations: 1701)
+  Rendered shared/_footer.html.erb (Duration: 10.5ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 995.8ms | Allocations: 27023)
+Completed 200 OK in 1240ms (Views: 1010.8ms | ActiveRecord: 145.4ms | Allocations: 32623)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-082b048bb3ea1ff3afac5ce39a89d4110ff3c74229406d59ccd74f5c3f084b56.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.css-3558ae9c1c65cbcc68f9e8f5d1b5ade83f583986ce9604cc25d35cecb2c64872.map"):
+  
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 15:39:21 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 36)
+  Rendered shared/_header.html.erb (Duration: 7.1ms | Allocations: 1138)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 4079)
+Completed 200 OK in 86ms (Views: 46.1ms | ActiveRecord: 5.8ms | Allocations: 5402)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.css-3558ae9c1c65cbcc68f9e8f5d1b5ade83f583986ce9604cc25d35cecb2c64872.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-082b048bb3ea1ff3afac5ce39a89d4110ff3c74229406d59ccd74f5c3f084b56.map"):
+  
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 15:54:18 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"シンプルな全粒小麦クレープ","to":"ja"}]}]
+Original title: Simple Whole Wheat Crepes
+Translated title: シンプルな全粒小麦クレープ
+Response code: 200
+Response body: [{"translations":[{"text":"ピーナッツソースの麺と野菜","to":"ja"}]}]
+Original title: Noodles and Veggies With Peanut Sauce
+Translated title: ピーナッツソースの麺と野菜
+Response code: 200
+Response body: [{"translations":[{"text":"ドライミーサイアム","to":"ja"}]}]
+Original title: Dry Mee Siam
+Translated title: ドライミーサイアム
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 589)
+  Rendered shared/_header.html.erb (Duration: 9.6ms | Allocations: 1711)
+  Rendered shared/_footer.html.erb (Duration: 2.1ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 270.7ms | Allocations: 27609)
+Completed 200 OK in 2208ms (Views: 280.3ms | ActiveRecord: 62.5ms | Allocations: 49102)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 15:54:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 15:54:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 416)
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 167)
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 36.4ms | Allocations: 3692)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 77.0ms | Allocations: 8223)
+Completed 200 OK in 93ms (Views: 76.9ms | ActiveRecord: 7.5ms | Allocations: 9552)
+
+
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 277.4ms | Allocations: 9178)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 302.4ms | Allocations: 14141)
+Completed 200 OK in 311ms (Views: 183.5ms | ActiveRecord: 121.2ms | Allocations: 14916)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 15:54:45 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 36)
+  Rendered shared/_header.html.erb (Duration: 16.6ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 4059)
+Completed 200 OK in 72ms (Views: 52.9ms | ActiveRecord: 2.4ms | Allocations: 5390)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.css-3558ae9c1c65cbcc68f9e8f5d1b5ade83f583986ce9604cc25d35cecb2c64872.map"):
+  
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 16:15:18 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 56)
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 275.6ms | Allocations: 4996)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 300.5ms | Allocations: 8214)
+Completed 200 OK in 310ms (Views: 178.3ms | ActiveRecord: 125.8ms | Allocations: 8481)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:15:20 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+  Rendered shared/_header.html.erb (Duration: 10.9ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 4059)
+Completed 200 OK in 41ms (Views: 24.7ms | ActiveRecord: 1.8ms | Allocations: 5375)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 16:15:45 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 494)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 75.3ms | Allocations: 12929)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 220.3ms | Allocations: 39089)
+Completed 200 OK in 244ms (Views: 176.5ms | ActiveRecord: 48.6ms | Allocations: 43451)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:15:47 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"クレープシュゼット","to":"ja"}]}]
+Original title: Crepes Suzette
+Translated title: クレープシュゼット
+Response code: 200
+Response body: [{"translations":[{"text":"簡単なトマトバジルチキン–ワンポットミール","to":"ja"}]}]
+Original title: Easy Tomato Basil Chicken – One Pot Meal
+Translated title: 簡単なトマトバジルチキン–ワンポットミール
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+Original title: Basic Risotto
+Translated title: 基本リゾット
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 371)
+  Rendered shared/_header.html.erb (Duration: 6.6ms | Allocations: 1174)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 4537)
+Completed 200 OK in 1749ms (Views: 32.4ms | ActiveRecord: 1.5ms | Allocations: 11910)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:49:04 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"ワイルドブルーベリーレモンマフィン","to":"ja"}]}]
+Original title: Wild Blueberry Lemon Muffins
+Translated title: ワイルドブルーベリーレモンマフィン
+Meal details: {"id"=>665329, "imageType"=>"jpg", "title"=>"Wild Blueberry Lemon Muffins", "readyInMinutes"=>45, "servings"=>14, "sourceUrl"=>"https://spoonacular.com/wild-blueberry-lemon-muffins-665329"}
+Response code: 200
+Response body: [{"translations":[{"text":"ポーチドエッグとベーコンのクリームソースのリングイネ","to":"ja"}]}]
+Original title: Linguine in Cream Sauce with Poached Eggs and Bacon
+Translated title: ポーチドエッグとベーコンのクリームソースのリングイネ
+Meal details: {"id"=>650127, "imageType"=>"jpg", "title"=>"Linguine in Cream Sauce with Poached Eggs and Bacon", "readyInMinutes"=>25, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/linguine-in-cream-sauce-with-poached-eggs-and-bacon-650127"}
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+Original title: Basic Risotto
+Translated title: 基本リゾット
+Meal details: {"id"=>634404, "imageType"=>"jpg", "title"=>"Basic Risotto", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/basic-risotto-634404"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 39)
+  Rendered shared/_header.html.erb (Duration: 12.4ms | Allocations: 1189)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 4233)
+Completed 200 OK in 1976ms (Views: 42.9ms | ActiveRecord: 125.4ms | Allocations: 17192)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 16:49:29 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 83)
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 53.9ms | Allocations: 1944)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 84.2ms | Allocations: 5283)
+Completed 200 OK in 97ms (Views: 81.3ms | ActiveRecord: 9.7ms | Allocations: 5810)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:49:31 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"グルテンフリーワッフル","to":"ja"}]}]
+Original title: Gluten Free Waffles
+Translated title: グルテンフリーワッフル
+Meal details: {"id"=>644860, "imageType"=>"jpg", "title"=>"Gluten Free Waffles", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/gluten-free-waffles-644860"}
+Response code: 200
+Response body: [{"translations":[{"text":"ピーナッツソースの麺と野菜","to":"ja"}]}]
+Original title: Noodles and Veggies With Peanut Sauce
+Translated title: ピーナッツソースの麺と野菜
+Meal details: {"id"=>653251, "imageType"=>"jpg", "title"=>"Noodles and Veggies With Peanut Sauce", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/noodles-and-veggies-with-peanut-sauce-653251"}
+Response code: 200
+Response body: [{"translations":[{"text":"ドライミーサイアム","to":"ja"}]}]
+Original title: Dry Mee Siam
+Translated title: ドライミーサイアム
+Meal details: {"id"=>641687, "imageType"=>"jpg", "title"=>"Dry Mee Siam", "readyInMinutes"=>45, "servings"=>3, "sourceUrl"=>"https://spoonacular.com/dry-mee-siam-641687"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 36)
+  Rendered shared/_header.html.erb (Duration: 5.9ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4059)
+Completed 200 OK in 1612ms (Views: 29.6ms | ActiveRecord: 1.8ms | Allocations: 10202)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:50:38 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"全粒粉クランベリー梨マフィン","to":"ja"}]}]
+Original title: Whole Wheat Cranberry Pear Muffins
+Translated title: 全粒粉クランベリー梨マフィン
+Meal details: {"id"=>665279, "imageType"=>"jpg", "title"=>"Whole Wheat Cranberry Pear Muffins", "readyInMinutes"=>45, "servings"=>18, "sourceUrl"=>"https://spoonacular.com/whole-wheat-cranberry-pear-muffins-665279"}
+Response code: 200
+Response body: [{"translations":[{"text":"揚げサーモンケーキ","to":"ja"}]}]
+Original title: Fried Salmon Cakes
+Translated title: 揚げサーモンケーキ
+Meal details: {"id"=>643789, "imageType"=>"jpg", "title"=>"Fried Salmon Cakes", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/fried-salmon-cakes-643789"}
+Response code: 200
+Response body: [{"translations":[{"text":"ドライミーサイアム","to":"ja"}]}]
+Original title: Dry Mee Siam
+Translated title: ドライミーサイアム
+Meal details: {"id"=>641687, "imageType"=>"jpg", "title"=>"Dry Mee Siam", "readyInMinutes"=>45, "servings"=>3, "sourceUrl"=>"https://spoonacular.com/dry-mee-siam-641687"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 589)
+  Rendered shared/_header.html.erb (Duration: 7.6ms | Allocations: 1711)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 170.8ms | Allocations: 27446)
+Completed 200 OK in 1754ms (Views: 176.4ms | ActiveRecord: 51.4ms | Allocations: 48988)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 16:50:43 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 189)
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 24.8ms | Allocations: 1956)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 5399)
+Completed 200 OK in 67ms (Views: 56.2ms | ActiveRecord: 3.9ms | Allocations: 6111)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:50:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+  Rendered shared/_header.html.erb (Duration: 5.2ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4060)
+Completed 200 OK in 31ms (Views: 18.0ms | ActiveRecord: 1.7ms | Allocations: 5410)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 16:55:30 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 494)
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 273.5ms | Allocations: 12936)
+  Rendered shared/_footer.html.erb (Duration: 4.8ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 1228.4ms | Allocations: 39110)
+Completed 200 OK in 1326ms (Views: 1127.6ms | ActiveRecord: 146.3ms | Allocations: 43472)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:55:35 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"好奇心旺盛なジョージのグルテンフリーバナナナッツパン","to":"ja"}]}]
+Original title: Curious George's Gluten-Free Banana Nut Bread
+Translated title: 好奇心旺盛なジョージのグルテンフリーバナナナッツパン
+Meal details: {"id"=>641047, "imageType"=>"jpg", "title"=>"Curious George's Gluten-Free Banana Nut Bread", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/curious-georges-gluten-free-banana-nut-bread-641047"}
+Response code: 200
+Response body: [{"translations":[{"text":"フレッシュトマト、バジル、モッツァレラチーズのファルファッレ","to":"ja"}]}]
+Original title: Farfalle with fresh tomatoes, basil and mozzarella
+Translated title: フレッシュトマト、バジル、モッツァレラチーズのファルファッレ
+Meal details: {"id"=>642585, "imageType"=>"jpg", "title"=>"Farfalle with fresh tomatoes, basil and mozzarella", "readyInMinutes"=>15, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/farfalle-with-fresh-tomatoes-basil-and-mozzarella-642585"}
+Response code: 200
+Response body: [{"translations":[{"text":"ドライミーサイアム","to":"ja"}]}]
+Original title: Dry Mee Siam
+Translated title: ドライミーサイアム
+Meal details: {"id"=>641687, "imageType"=>"jpg", "title"=>"Dry Mee Siam", "readyInMinutes"=>45, "servings"=>3, "sourceUrl"=>"https://spoonacular.com/dry-mee-siam-641687"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1671)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 1760)
+Completed 500 Internal Server Error in 1602ms (ActiveRecord: 3.1ms | Allocations: 9202)
+
+
+  
+ActionView::Template::Error (undefined method `id' for {"id"=>641047, "imageType"=>"jpg", "title"=>"好奇心旺盛なジョージのグルテンフリーバナナナッツパン", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/curious-georges-gluten-free-banana-nut-bread-641047"}:Hash):
+    4:   <% @recipes_info.each do |recipe| %>
+    5:     <div class="meal-card">
+    6:       <h2><%= recipe["title"] %></h2>
+    7:       <%= image_tag "https://spoonacular.com/recipeImages/#{recipe.id}.#{recipe.imageType}" %>
+    8:       <p>調理時間: <%= recipe["readyInMinutes"] %>分</p>
+    9:       <p>提供数: <%= recipe["servings"] %>人分</p>
+   10:       <a href="<%= recipe["sourceUrl"] %>" target="_blank">レシピを見る</a>
+  
+app/views/recipes/index.html.erb:7
+app/views/recipes/index.html.erb:4:in `each'
+app/views/recipes/index.html.erb:4
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 16:59:35 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"レモンポピーシードスコーン","to":"ja"}]}]
+Original title: Lemon-Poppy Seed Scones
+Translated title: レモンポピーシードスコーン
+Meal details: {"id"=>649853, "imageType"=>"jpg", "title"=>"Lemon-Poppy Seed Scones", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/lemon-poppy-seed-scones-649853"}
+Response code: 200
+Response body: [{"translations":[{"text":"野菜炒めのクスクス","to":"ja"}]}]
+Original title: Couscous with fried vegetables
+Translated title: 野菜炒めのクスクス
+Meal details: {"id"=>157018, "imageType"=>"jpg", "title"=>"Couscous with fried vegetables", "readyInMinutes"=>30, "servings"=>1, "sourceUrl"=>"https://spoonacular.com/couscous-with-fried-vegetables-157018"}
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+Original title: Basic Risotto
+Translated title: 基本リゾット
+Meal details: {"id"=>634404, "imageType"=>"jpg", "title"=>"Basic Risotto", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/basic-risotto-634404"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 435)
+  Rendered shared/_header.html.erb (Duration: 9.3ms | Allocations: 1576)
+  Rendered shared/_footer.html.erb (Duration: 2.5ms | Allocations: 362)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 5646)
+Completed 200 OK in 1727ms (Views: 53.5ms | ActiveRecord: 6.9ms | Allocations: 12531)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.css-3558ae9c1c65cbcc68f9e8f5d1b5ade83f583986ce9604cc25d35cecb2c64872.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/application.js-082b048bb3ea1ff3afac5ce39a89d4110ff3c74229406d59ccd74f5c3f084b56.map"):
+  
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 17:20:04 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 494)
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 126.6ms | Allocations: 12929)
+  Rendered shared/_footer.html.erb (Duration: 3.3ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 642.8ms | Allocations: 39207)
+Completed 200 OK in 702ms (Views: 578.2ms | ActiveRecord: 76.5ms | Allocations: 43569)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:20:07 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"ジュールのバナナブレッド","to":"ja"}]}]
+Original title: Jules' Banana Bread
+Translated title: ジュールのバナナブレッド
+Meal details: {"id"=>648632, "imageType"=>"jpg", "title"=>"Jules' Banana Bread", "readyInMinutes"=>45, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/jules-banana-bread-648632"}
+Response code: 200
+Response body: [{"translations":[{"text":"野菜炒めのクスクス","to":"ja"}]}]
+Original title: Couscous with fried vegetables
+Translated title: 野菜炒めのクスクス
+Meal details: {"id"=>157018, "imageType"=>"jpg", "title"=>"Couscous with fried vegetables", "readyInMinutes"=>30, "servings"=>1, "sourceUrl"=>"https://spoonacular.com/couscous-with-fried-vegetables-157018"}
+Response code: 200
+Response body: [{"translations":[{"text":"Cuban Black Beans & Rice","to":"ja"}]}]
+Original title: Cuban Black Beans & Rice
+Translated title: Cuban Black Beans & Rice
+Meal details: {"id"=>640982, "imageType"=>"jpg", "title"=>"Cuban Black Beans & Rice", "readyInMinutes"=>45, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/cuban-black-beans-rice-640982"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 438)
+  Rendered shared/_header.html.erb (Duration: 6.3ms | Allocations: 1169)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 4595)
+Completed 200 OK in 1760ms (Views: 22.7ms | ActiveRecord: 2.0ms | Allocations: 12031)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 17:33:54 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 182)
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 317.2ms | Allocations: 5377)
+  Rendered shared/_footer.html.erb (Duration: 1.7ms | Allocations: 362)
+  Rendered layout layouts/application.html.erb (Duration: 347.8ms | Allocations: 9430)
+Completed 200 OK in 365ms (Views: 218.1ms | ActiveRecord: 138.3ms | Allocations: 10308)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:33:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"ひびの入った小麦シリアル","to":"ja"}]}]
+Original title: Cracked Wheat Cereal
+Translated title: ひびの入った小麦シリアル
+Meal details: {"id"=>640337, "imageType"=>"jpg", "title"=>"Cracked Wheat Cereal", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/cracked-wheat-cereal-640337"}
+Response code: 200
+Response body: [{"translations":[{"text":"サーモンチャーハン","to":"ja"}]}]
+Original title: salmon fried rice
+Translated title: サーモンチャーハン
+Meal details: {"id"=>667701, "imageType"=>"jpg", "title"=>"salmon fried rice", "readyInMinutes"=>25, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/salmon-fried-rice-667701"}
+Response code: 200
+Response body: [{"translations":[{"text":"簡単なタブーレ","to":"ja"}]}]
+Original title: Easy Tabouleh
+Translated title: 簡単なタブーレ
+Meal details: {"id"=>642121, "imageType"=>"jpg", "title"=>"Easy Tabouleh", "readyInMinutes"=>45, "servings"=>1, "sourceUrl"=>"https://spoonacular.com/easy-tabouleh-642121"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 36.1ms | Allocations: 8582)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 8670)
+Completed 500 Internal Server Error in 1767ms (ActiveRecord: 2.4ms | Allocations: 15165)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:   <% @recipes_info.each do |recipe| %>
+    5:     <div class="meal-card">
+    6:       <h2><%= recipe["title"] %></h2>
+    7:       <%= image_tag "https://spoonacular.com/recipeImages/#{@recipe.id}-556x370.#{@recipe.image_type}" %>
+    8:       <p>調理時間: <%= recipe["readyInMinutes"] %>分</p>
+    9:       <p>提供数: <%= recipe["servings"] %>人分</p>
+   10:       <a href="<%= recipe["sourceUrl"] %>" target="_blank">レシピを見る</a>
+  
+app/views/recipes/index.html.erb:7
+app/views/recipes/index.html.erb:4:in `each'
+app/views/recipes/index.html.erb:4
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:35:37 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"Blueberry, Chocolate & Cocao Superfood Pancakes - Gluten-Free/Paleo/Vegan","to":"ja"}]}]
+Original title: Blueberry, Chocolate & Cocao Superfood Pancakes - Gluten-Free/Paleo/Vegan
+Translated title: Blueberry, Chocolate & Cocao Superfood Pancakes - Gluten-Free/Paleo/Vegan
+Meal details: {"id"=>1100990, "imageType"=>"jpg", "title"=>"Blueberry, Chocolate & Cocao Superfood Pancakes - Gluten-Free/Paleo/Vegan", "readyInMinutes"=>30, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/blueberry-chocolate-cocao-superfood-pancakes-gluten-free-paleo-vegan-1100990"}
+Response code: 200
+Response body: [{"translations":[{"text":"野菜ミネストローネスープ","to":"ja"}]}]
+Original title: Vegetable Minestrone Soup
+Translated title: 野菜ミネストローネスープ
+Meal details: {"id"=>664565, "imageType"=>"jpg", "title"=>"Vegetable Minestrone Soup", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/vegetable-minestrone-soup-664565"}
+Response code: 200
+Response body: [{"translations":[{"text":"ハニークレセント","to":"ja"}]}]
+Original title: Honey Crescents
+Translated title: ハニークレセント
+Meal details: {"id"=>647204, "imageType"=>"jpg", "title"=>"Honey Crescents", "readyInMinutes"=>45, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/honey-crescents-647204"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 431)
+  Rendered shared/_header.html.erb (Duration: 9.6ms | Allocations: 1566)
+  Rendered shared/_footer.html.erb (Duration: 2.5ms | Allocations: 362)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 5614)
+Completed 200 OK in 1777ms (Views: 56.1ms | ActiveRecord: 7.4ms | Allocations: 12405)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 17:36:31 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 494)
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 119.0ms | Allocations: 12926)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 270.7ms | Allocations: 39098)
+Completed 200 OK in 296ms (Views: 193.1ms | ActiveRecord: 82.9ms | Allocations: 43460)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:36:32 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"好奇心旺盛なジョージのグルテンフリーバナナナッツパン","to":"ja"}]}]
+Original title: Curious George's Gluten-Free Banana Nut Bread
+Translated title: 好奇心旺盛なジョージのグルテンフリーバナナナッツパン
+Meal details: {"id"=>641047, "imageType"=>"jpg", "title"=>"Curious George's Gluten-Free Banana Nut Bread", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/curious-georges-gluten-free-banana-nut-bread-641047"}
+Response code: 200
+Response body: [{"translations":[{"text":"インスタントポットキノアグレインボウル","to":"ja"}]}]
+Original title: Instant Pot Quinoa Grain Bowl
+Translated title: インスタントポットキノアグレインボウル
+Meal details: {"id"=>982371, "imageType"=>"jpg", "title"=>"Instant Pot Quinoa Grain Bowl", "readyInMinutes"=>13, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/instant-pot-quinoa-grain-bowl-982371"}
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+Original title: Basic Risotto
+Translated title: 基本リゾット
+Meal details: {"id"=>634404, "imageType"=>"jpg", "title"=>"Basic Risotto", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/basic-risotto-634404"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 447)
+  Rendered shared/_header.html.erb (Duration: 6.0ms | Allocations: 1169)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 4604)
+Completed 200 OK in 1783ms (Views: 32.4ms | ActiveRecord: 2.0ms | Allocations: 12076)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 17:36:54 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 494)
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 83.2ms | Allocations: 13007)
+  Rendered shared/_footer.html.erb (Duration: 1.4ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 322.1ms | Allocations: 39216)
+Completed 200 OK in 353ms (Views: 274.1ms | ActiveRecord: 53.7ms | Allocations: 43578)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:36:56 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+Response code: 200
+Response body: [{"translations":[{"text":"レモンラムクレープ","to":"ja"}]}]
+Original title: Lemon Rum Crêpes
+Translated title: レモンラムクレープ
+Meal details: {"id"=>1095797, "imageType"=>"jpg", "title"=>"Lemon Rum Crêpes", "readyInMinutes"=>40, "servings"=>6, "sourceUrl"=>"https://spoonacular.com/lemon-rum-crpes-1095797"}
+Response code: 200
+Response body: [{"translations":[{"text":"ピーナッツソースの麺と野菜","to":"ja"}]}]
+Original title: Noodles and Veggies With Peanut Sauce
+Translated title: ピーナッツソースの麺と野菜
+Meal details: {"id"=>653251, "imageType"=>"jpg", "title"=>"Noodles and Veggies With Peanut Sauce", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/noodles-and-veggies-with-peanut-sauce-653251"}
+Response code: 200
+Response body: [{"translations":[{"text":"ドライミーサイアム","to":"ja"}]}]
+Original title: Dry Mee Siam
+Translated title: ドライミーサイアム
+Meal details: {"id"=>641687, "imageType"=>"jpg", "title"=>"Dry Mee Siam", "readyInMinutes"=>45, "servings"=>3, "sourceUrl"=>"https://spoonacular.com/dry-mee-siam-641687"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 447)
+  Rendered shared/_header.html.erb (Duration: 6.8ms | Allocations: 1169)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 4604)
+Completed 200 OK in 1429ms (Views: 32.0ms | ActiveRecord: 1.6ms | Allocations: 12097)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 17:37:00 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 56)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 15.1ms | Allocations: 1926)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 5119)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 2.1ms | Allocations: 5388)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:37:01 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 109)
+  Rendered shared/_header.html.erb (Duration: 7.9ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 4132)
+Completed 200 OK in 39ms (Views: 24.3ms | ActiveRecord: 2.3ms | Allocations: 5460)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 17:37:03 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 56)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 56.5ms | Allocations: 1927)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 5127)
+Completed 200 OK in 79ms (Views: 72.4ms | ActiveRecord: 1.7ms | Allocations: 5393)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:37:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 109)
+  Rendered shared/_header.html.erb (Duration: 6.2ms | Allocations: 1140)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 4146)
+Completed 200 OK in 34ms (Views: 20.2ms | ActiveRecord: 2.6ms | Allocations: 5496)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-19 17:37:14 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 56)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 24.1ms | Allocations: 1915)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 5107)
+Completed 200 OK in 72ms (Views: 59.8ms | ActiveRecord: 4.4ms | Allocations: 5373)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-19 17:37:15 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:5:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+  Rendered shared/_header.html.erb (Duration: 6.2ms | Allocations: 1129)
+  Rendered shared/_footer.html.erb (Duration: 2.9ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4131)
+Completed 200 OK in 40ms (Views: 24.9ms | ActiveRecord: 1.0ms | Allocations: 5477)
+
+
