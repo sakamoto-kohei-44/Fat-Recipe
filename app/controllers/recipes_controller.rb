@@ -10,13 +10,20 @@ class RecipesController < ApplicationController
       meal_plan["meals"].each do |meal|
         original_title = meal["title"]
         translated_title = SpoonacularService.translate_text(meal["title"], 'en', 'ja')
+
+        # タイトルのログ出力
         Rails.logger.info "Original title: #{original_title}"
         Rails.logger.info "Translated title: #{translated_title}"
+
+        # 各レシピの詳細をログに出力
+        Rails.logger.info "Meal details: #{meal.inspect}"
+
         meal["title"] = translated_title
       end
       meal_plan
     end
-  end
+    @recipes_info = @meal_plan["meals"]
+end
 
   def show
     cache_key = "recipe_info_#{params[:id]}"

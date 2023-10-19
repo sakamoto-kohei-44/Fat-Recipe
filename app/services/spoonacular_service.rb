@@ -30,15 +30,35 @@ class SpoonacularService
     end
   end
 
+  def self.fetch_multiple_recipe_information(ids)
+    # 複数のレシピ情報を一度に取得するためのAPIエンドポイントは提供されていないかもしれません。
+    # そのため、一つ一つのレシピ情報を順次取得して結果を配列に格納する方法を採用します。
+    recipes_info = []
+
+    ids.each do |id|
+      recipe_info = fetch_recipe_information(id)
+      recipes_info << recipe_info unless recipe_info.empty?
+    end
+
+    recipes_info
+  end
+
   def self.fetch_recipe_information(id)
-    url = "https://api.spoonacular.com/recipes/#{id}/information"
+    url = "#{BASE_URL}/recipes/#{id}/information"
     response = HTTParty.get(url, query: { apiKey: API_KEY, includeNutrition: true })
 
     Rails.logger.info "Response code: #{response.code}"
     Rails.logger.info "Response body: #{response.body}"
 
-    return [] unless response.success?
+    return {} unless response.success? # ここを変更して空のハッシュを返すように
     response.parsed_response
+  end
+
+  def self.fetch_multiple_recipe_information(ids)
+    recipes_info = ids.map do |id|
+      fetch_recipe_information(id)
+    end
+    recipes_info
   end
 
   def self.translate_text(text, from_language, to_language)
