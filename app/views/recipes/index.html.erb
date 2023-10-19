@@ -1,13 +1,13 @@
 <h1>1日の食事計画</h1>
 
 <div class="meals">
-  <% @meal_plan["meals"].each do |meal| %>
+  <% @recipes_info.each do |recipe| %>
     <div class="meal-card">
-      <h2><%= meal["title"] %></h2>
-      <img src="https://spoonacular.com/recipeImages/<%= meal["id"] %>-<%= meal["imageType"] %>" alt="<%= meal["title"] %>">
-      <p>調理時間: <%= meal["readyInMinutes"] %>分</p>
-      <p>提供数: <%= meal["servings"] %>人分</p>
-      <a href="<%= meal["sourceUrl"] %>" target="_blank">レシピを見る</a>
+      <h2><%= recipe["title"] %></h2>
+      <%= image_tag "https://spoonacular.com/recipeImages/#{recipe["id"]}-556x370.#{recipe["imageType"]}" %>
+      <p>調理時間: <%= recipe["readyInMinutes"] %>分</p>
+      <p>提供数: <%= recipe["servings"] %>人分</p>
+      <a href="<%= recipe["sourceUrl"] %>" target="_blank">レシピを見る</a>
     </div>
   <% end %>
 </div>
