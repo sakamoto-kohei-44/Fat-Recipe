@@ -8,6 +8,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
   </head>
 
   <body>
@@ -25,7 +26,6 @@
       <% end %>
       <!-- Popper.js -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-      <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
     </div>
   </body>
 </html>
