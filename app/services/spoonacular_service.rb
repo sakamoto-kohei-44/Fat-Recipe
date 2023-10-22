@@ -48,7 +48,7 @@ class SpoonacularService
     recipes_info
   end
 
-  def self.translate_text(text, from_language, to_language)
+  def self.translate_text(text:, from_language:, to_language:)
     url = "#{TRANSLATOR_BASE_URL}/translate"
     headers = {
       'Ocp-Apim-Subscription-Key' => TRANSLATOR_API_KEY,
