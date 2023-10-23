@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  # 定数
+  KG_TO_CAL = 7700 # 1kg増加に必要なカロリー
+
   def body_info
   end
 
@@ -11,6 +14,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.goal = session[:user_goal]
+
     if @user.save
       session.delete(:user_goal)
       redirect_to root_path, notice: 'ユーザー情報が正常に保存されました。'
@@ -23,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def save_gender_age
-    if user_params
+    if user_params[:gender].present? && user_params[:age].present?
       session[:gender] = user_params[:gender]
       session[:age] = user_params[:age]
       redirect_to height_weight_target_weight_users_path, notice: "性別と年齢が正常に保存されました。"
@@ -52,24 +56,39 @@ class UsersController < ApplicationController
   def save_activity_level
     if user_params[:activity_level].present?
       session[:activity_level] = user_params[:activity_level]
-      # 基礎代謝（BMR）とTDEEの計算
+
+      # 基礎代謝(BMR)とTDEEの計算
       gender = session[:gender]
       age = session[:age].to_i
       height = session[:height].to_i
       weight = session[:weight].to_i
-
       activity_level = session[:activity_level]
+
       bmr = calculate_bmr(gender, age, height, weight)
       tdee = calculate_tdee(bmr, activity_level)
+
       session[:bmr] = bmr
       session[:tdee] = tdee
 
-      tdee = calculate_tdee(bmr, activity_level)
-      macros = calculate_macros(tdee, weight)
-      session[:protein] = macros[:protein]
-      session[:fat] = macros[:fat]
-      session[:carbs] = macros[:carbs]
+      # 目標カロリーの計算
+      target_weight = session[:target_weight].to_i
+      target_diff = (target_weight - weight)
+      total_calorie = target_diff * KG_TO_CAL
+      days_to_achieve = 60 # 例として30日で達成するとする
+      calorie_per_day = total_calorie / days_to_achieve
+      target_calorie = tdee + calorie_per_day
 
+      session[:target_calorie] = target_calorie
+      # ユーザー属性をマージ
+    user_data = {
+      gender: session[:gender],
+      age: session[:age],
+      height: session[:height],
+      target_calorie: target_calorie
+    }
+
+    # セッション保存
+    session[:user_data] = user_data
       redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
     else
       render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
@@ -121,11 +140,11 @@ class UsersController < ApplicationController
 
   def calculate_tdee(bmr, activity_level)
     case activity_level
-    when "ほとんど活動しない", "low"
+    when "低い","low"
       tdee = bmr * 1.2
-    when "中程度の活動", "moderate"
+    when "普通","moderate"
       tdee = bmr * 1.55
-    when "激しい活動", "high"
+    when "高い","high"
       tdee = bmr * 1.9
     end
     tdee

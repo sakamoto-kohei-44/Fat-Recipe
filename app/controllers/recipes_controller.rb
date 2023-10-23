@@ -2,28 +2,29 @@ class RecipesController < ApplicationController
   require_dependency "#{Rails.root}/app/services/spoonacular_service"
 
   def index
-    user = current_user || User.new(name: "Guest")
-    cache_key = "meal_plan_for_user_#{user.id || 'guest'}"
-    @meal_plan = Rails.cache.fetch(cache_key, expires_in: 1.hour) do
-      meal_plan = SpoonacularService.generate_meal_plan
-      # meals の各要素の title を翻訳
-      meal_plan["meals"].each do |meal|
-        original_title = meal["title"]
-        translated_title = SpoonacularService.translate_text(meal["title"], 'en', 'ja')
-
-        # タイトルのログ出力
-        Rails.logger.info "Original title: #{original_title}"
-        Rails.logger.info "Translated title: #{translated_title}"
-
-        # 各レシピの詳細をログに出力
-        Rails.logger.info "Meal details: #{meal.inspect}"
-
-        meal["title"] = translated_title
-      end
-      meal_plan
+    # ユーザー情報を取得
+    user_data = session[:user_data]
+    target_calories = user_data[:target_calories]
+    logger.debug("target_calories: #{target_calories}")
+    response = SpoonacularService.generate_meal_plan(
+      timeFrame: 'day',
+      targetCalories: target_calories,
+      cuisine: 'Italian'
+    )
+    logger.debug(response)
+    meals = response["meals"]
+    @recipes_info = meals
+    @meal_plan = response
+    @meal_plan["meals"].each do |meal|
+      # 翻訳処理
+      translated_title = SpoonacularService.translate_text(
+        text: meal["title"],
+        from_language: "en",
+        to_language: "ja"
+      )
+      meal["title"] = translated_title
     end
-    @recipes_info = @meal_plan["meals"]
-end
+  end
 
   def show
     cache_key = "recipe_info_#{params[:id]}"
