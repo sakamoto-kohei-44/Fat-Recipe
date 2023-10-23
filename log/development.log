@@ -37046,3 +37046,1328 @@ Processing by DashboardController#index as HTML
 Completed 200 OK in 50ms (Views: 41.8ms | ActiveRecord: 3.5ms | Allocations: 6405)
 
 
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-22 19:52:25 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 291)
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 254.7ms | Allocations: 8376)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 276.2ms | Allocations: 12783)
+Completed 200 OK in 281ms (Views: 160.6ms | ActiveRecord: 117.7ms | Allocations: 13316)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-22 19:52:29 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 215)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.2ms | Allocations: 1906)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 6191)
+Completed 200 OK in 36ms (Views: 29.4ms | ActiveRecord: 1.3ms | Allocations: 6773)
+
+
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-22 19:52:32 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 28.8ms | Allocations: 2128)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 30.4ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 124.7ms | Allocations: 7854)
+Completed 200 OK in 148ms (Views: 131.0ms | ActiveRecord: 4.4ms | Allocations: 8555)
+
+
+Started POST "/users/save_goal" for 172.19.0.1 at 2023-10-22 19:52:34 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms | Allocations: 601)
+
+
+Started GET "/users/gender_age" for 172.19.0.1 at 2023-10-22 19:52:34 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 37.3ms | Allocations: 3361)
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 29.8ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 110.8ms | Allocations: 8989)
+Completed 200 OK in 124ms (Views: 109.7ms | ActiveRecord: 6.0ms | Allocations: 9314)
+
+
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-22 19:52:38 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 730)
+
+
+Started GET "/users/height_weight_target_weight" for 172.19.0.1 at 2023-10-22 19:52:38 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3824)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.1ms | Allocations: 1881)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 9453)
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 1.3ms | Allocations: 9775)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.19.0.1 at 2023-10-22 19:52:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"163", "weight"=>"47", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 1011)
+
+
+Started GET "/users/activity_level" for 172.19.0.1 at 2023-10-22 19:52:44 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1853)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 10.3ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 7481)
+Completed 200 OK in 47ms (Views: 39.8ms | ActiveRecord: 2.7ms | Allocations: 7803)
+
+
+Started POST "/users/save_activity_level" for 172.19.0.1 at 2023-10-22 19:52:46 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 628)
+
+
+Started GET "/users/allergies" for 172.19.0.1 at 2023-10-22 19:52:46 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (5.0ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 126.7ms | Allocations: 14018)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 7.8ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 152.3ms | Allocations: 19710)
+Completed 200 OK in 157ms (Views: 62.1ms | ActiveRecord: 91.7ms | Allocations: 20031)
+
+
+Started POST "/users/save_allergies" for 172.19.0.1 at 2023-10-22 19:52:49 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "39"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 664)
+
+
+Started GET "/home" for 172.19.0.1 at 2023-10-22 19:52:49 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 7.5ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 6119)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.7ms | Allocations: 6386)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-22 19:52:50 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 282)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.6ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 6130)
+Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 0.8ms | Allocations: 6397)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-22 19:52:53 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 83)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.0ms | Allocations: 1906)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 6344)
+Completed 200 OK in 37ms (Views: 30.8ms | ActiveRecord: 0.8ms | Allocations: 6871)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-22 19:52:55 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Completed 404 Not Found in 5ms (ActiveRecord: 0.0ms | Allocations: 806)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/recipes_controller.rb:7:in `index'
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-22 20:01:49 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 87)
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 281.3ms | Allocations: 8348)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 303.0ms | Allocations: 12789)
+Completed 200 OK in 309ms (Views: 177.7ms | ActiveRecord: 127.7ms | Allocations: 13322)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-22 20:01:51 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 56)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 10.4ms | Allocations: 1880)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 6161)
+Completed 200 OK in 41ms (Views: 34.2ms | ActiveRecord: 1.5ms | Allocations: 6427)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-22 20:01:53 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 735)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/recipes_controller.rb:7:in `index'
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-22 20:01:59 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 56)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.5ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 6191)
+Completed 200 OK in 37ms (Views: 29.8ms | ActiveRecord: 1.4ms | Allocations: 6457)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-22 20:02:00 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 711)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/recipes_controller.rb:7:in `index'
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-22 20:02:47 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 87)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 127.7ms | Allocations: 5867)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 159.8ms | Allocations: 10314)
+Completed 200 OK in 166ms (Views: 57.8ms | ActiveRecord: 104.4ms | Allocations: 10847)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-22 20:02:49 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 761)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/recipes_controller.rb:7:in `index'
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 15:31:23 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 87)
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 273.8ms | Allocations: 8348)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 315.8ms | Allocations: 12810)
+Completed 200 OK in 321ms (Views: 200.1ms | ActiveRecord: 117.8ms | Allocations: 13343)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 15:31:25 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 276)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 10.1ms | Allocations: 1933)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 6265)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 1.4ms | Allocations: 6792)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 15:31:26 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 56)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 16.4ms | Allocations: 1880)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 6134)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 1.5ms | Allocations: 6401)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 15:31:28 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 728)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/recipes_controller.rb:7:in `index'
+Started GET "/" for 172.19.0.1 at 2023-10-23 15:31:54 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.4ms | Allocations: 516)
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 86.6ms | Allocations: 12890)
+  Rendered layout layouts/application.html.erb (Duration: 431.3ms | Allocations: 40599)
+Completed 200 OK in 480ms (Views: 386.4ms | ActiveRecord: 53.4ms | Allocations: 44956)
+
+
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-23 15:31:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/app/app/controllers/users_controller.rb:171: syntax error, unexpected `end'):
+  
+app/controllers/users_controller.rb:171: syntax error, unexpected `end'
+app/controllers/users_controller.rb:171: syntax error, unexpected `end'
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-23 15:36:47 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 12.4ms | Allocations: 2071)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 61.0ms | Allocations: 5858)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | Allocations: 11806)
+Completed 200 OK in 98ms (Views: 55.4ms | ActiveRecord: 38.6ms | Allocations: 12516)
+
+
+Started POST "/users/save_goal" for 172.19.0.1 at 2023-10-23 15:36:50 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"slim_muscle", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 574)
+
+
+Started GET "/users/gender_age" for 172.19.0.1 at 2023-10-23 15:36:50 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 21.1ms | Allocations: 3320)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 12.9ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 8958)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 2.0ms | Allocations: 9283)
+
+
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-23 15:36:54 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 759)
+
+
+  
+NoMethodError (undefined method `user_params_invalid?' for #<UsersController:0x00000000016af8>):
+  
+app/controllers/users_controller.rb:30:in `save_gender_age'
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-23 15:44:21 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 882)
+
+
+Started GET "/users/height_weight_target_weight" for 172.19.0.1 at 2023-10-23 15:44:21 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3840)
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 249.5ms | Allocations: 8366)
+  Rendered layout layouts/application.html.erb (Duration: 275.9ms | Allocations: 16081)
+Completed 200 OK in 283ms (Views: 160.8ms | ActiveRecord: 117.9ms | Allocations: 16637)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.19.0.1 at 2023-10-23 15:44:30 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"163", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 747)
+
+
+  
+NoMethodError (undefined method `user_params_invalid?' for #<UsersController:0x0000000001d0b0>):
+  
+app/controllers/users_controller.rb:44:in `save_height_weight_target_weight'
+Started POST "/users/save_height_weight_target_weight" for 172.19.0.1 at 2023-10-23 15:48:17 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"163", "weight"=>"49", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 1061)
+
+
+Started GET "/users/activity_level" for 172.19.0.1 at 2023-10-23 15:48:18 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1949)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 124.7ms | Allocations: 5868)
+  Rendered layout layouts/application.html.erb (Duration: 148.0ms | Allocations: 11692)
+Completed 200 OK in 154ms (Views: 45.8ms | ActiveRecord: 104.5ms | Allocations: 12248)
+
+
+Started POST "/users/save_activity_level" for 172.19.0.1 at 2023-10-23 15:48:19 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"low", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 628)
+
+
+Started GET "/users/allergies" for 172.19.0.1 at 2023-10-23 15:48:19 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (5.7ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 62.3ms | Allocations: 13970)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.3ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 86.4ms | Allocations: 19662)
+Completed 200 OK in 92ms (Views: 60.1ms | ActiveRecord: 27.9ms | Allocations: 19983)
+
+
+Started POST "/users/save_allergies" for 172.19.0.1 at 2023-10-23 15:48:21 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "39"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 672)
+
+
+Started GET "/home" for 172.19.0.1 at 2023-10-23 15:48:21 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 2.4ms | Allocations: 121)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 10.3ms | Allocations: 1943)
+  Rendered shared/_footer.html.erb (Duration: 3.1ms | Allocations: 370)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 6687)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 1.3ms | Allocations: 7269)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 15:48:23 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 524)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.9ms | Allocations: 1943)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 6524)
+Completed 200 OK in 40ms (Views: 33.5ms | ActiveRecord: 1.3ms | Allocations: 7234)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 15:48:27 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 189)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.4ms | Allocations: 1907)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 6408)
+Completed 200 OK in 41ms (Views: 33.9ms | ActiveRecord: 1.4ms | Allocations: 7116)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 15:48:29 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 763)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/recipes_controller.rb:7:in `index'
+Started GET "/" for 172.19.0.1 at 2023-10-23 15:59:49 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 88)
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 269.5ms | Allocations: 8348)
+  Rendered layout layouts/application.html.erb (Duration: 294.9ms | Allocations: 12578)
+Completed 200 OK in 302ms (Views: 161.6ms | ActiveRecord: 136.2ms | Allocations: 13112)
+
+
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-23 15:59:50 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1656)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 15.3ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 7382)
+Completed 200 OK in 47ms (Views: 38.8ms | ActiveRecord: 1.4ms | Allocations: 7909)
+
+
+Started POST "/users/save_goal" for 172.19.0.1 at 2023-10-23 15:59:52 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 479)
+
+
+Started GET "/users/gender_age" for 172.19.0.1 at 2023-10-23 15:59:53 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2635)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.2ms | Allocations: 1892)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 8332)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 1.3ms | Allocations: 8599)
+
+
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-23 15:59:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 839)
+
+
+Started GET "/users/height_weight_target_weight" for 172.19.0.1 at 2023-10-23 15:59:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 2.0ms | Allocations: 3480)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.7ms | Allocations: 1885)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 9169)
+Completed 200 OK in 34ms (Views: 28.0ms | ActiveRecord: 1.9ms | Allocations: 9436)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.19.0.1 at 2023-10-23 16:00:03 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"163", "weight"=>"49", "target_weight"=>"57", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 1035)
+
+
+Started GET "/users/activity_level" for 172.19.0.1 at 2023-10-23 16:00:04 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1652)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.2ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 7281)
+Completed 200 OK in 36ms (Views: 29.5ms | ActiveRecord: 1.9ms | Allocations: 7547)
+
+
+Started POST "/users/save_activity_level" for 172.19.0.1 at 2023-10-23 16:00:06 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 628)
+
+
+Started GET "/users/allergies" for 172.19.0.1 at 2023-10-23 16:00:06 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (4.3ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 19.2ms | Allocations: 12078)
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 44.5ms | Allocations: 1878)
+  Rendered layout layouts/application.html.erb (Duration: 147.3ms | Allocations: 17705)
+Completed 200 OK in 152ms (Views: 142.1ms | ActiveRecord: 6.7ms | Allocations: 17971)
+
+
+Started POST "/users/save_allergies" for 172.19.0.1 at 2023-10-23 16:00:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "39"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 673)
+
+
+Started GET "/home" for 172.19.0.1 at 2023-10-23 16:00:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.5ms | Allocations: 1897)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 6197)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 1.2ms | Allocations: 6465)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 16:00:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 292)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.3ms | Allocations: 1933)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 6298)
+Completed 200 OK in 40ms (Views: 34.1ms | ActiveRecord: 0.8ms | Allocations: 6825)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 16:00:12 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 83)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.3ms | Allocations: 1906)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 6335)
+Completed 200 OK in 47ms (Views: 39.4ms | ActiveRecord: 0.8ms | Allocations: 6862)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:00:14 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+{"meals"=>[{"id"=>634011, "imageType"=>"jpg", "title"=>"Banana Bread with Chocolate Swirl", "readyInMinutes"=>45, "servings"=>11, "sourceUrl"=>"https://spoonacular.com/banana-bread-with-chocolate-swirl-634011"}, {"id"=>715769, "imageType"=>"jpg", "title"=>"Broccolini Quinoa Pilaf", "readyInMinutes"=>30, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/broccolini-quinoa-pilaf-715769"}, {"id"=>634404, "imageType"=>"jpg", "title"=>"Basic Risotto", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/basic-risotto-634404"}], "nutrients"=>{"calories"=>1892.03, "protein"=>50.52, "fat"=>63.21, "carbohydrates"=>280.1}}
+Response code: 200
+Response body: [{"translations":[{"text":"チョコレートスワールとバナナブレッド","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ブロッコリーニキノアピラフ","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 451)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.9ms | Allocations: 1928)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 55.6ms | Allocations: 6433)
+Completed 200 OK in 1913ms (Views: 68.5ms | ActiveRecord: 0.9ms | Allocations: 13121)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 16:00:26 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 304)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 14.5ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 6152)
+Completed 200 OK in 53ms (Views: 44.2ms | ActiveRecord: 1.6ms | Allocations: 6419)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 16:01:07 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 56)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 29.6ms | Allocations: 1880)
+  Rendered shared/_footer.html.erb (Duration: 2.6ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 118.5ms | Allocations: 6184)
+Completed 200 OK in 136ms (Views: 121.3ms | ActiveRecord: 4.4ms | Allocations: 6451)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:01:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+{"meals"=>[{"id"=>665273, "imageType"=>"jpg", "title"=>"Whole Wheat Blueberry Muffins", "readyInMinutes"=>45, "servings"=>12, "sourceUrl"=>"https://spoonacular.com/whole-wheat-blueberry-muffins-665273"}, {"id"=>653251, "imageType"=>"jpg", "title"=>"Noodles and Veggies With Peanut Sauce", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/noodles-and-veggies-with-peanut-sauce-653251"}, {"id"=>641687, "imageType"=>"jpg", "title"=>"Dry Mee Siam", "readyInMinutes"=>45, "servings"=>3, "sourceUrl"=>"https://spoonacular.com/dry-mee-siam-641687"}], "nutrients"=>{"calories"=>1968.87, "protein"=>50.48, "fat"=>65.73, "carbohydrates"=>296.16}}
+Response code: 200
+Response body: [{"translations":[{"text":"全粒粉ブルーベリーマフィン","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ピーナッツソースの麺と野菜","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ドライミーサイアム","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 109)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 33.4ms | Allocations: 1891)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 81.8ms | Allocations: 5961)
+Completed 200 OK in 4077ms (Views: 84.7ms | ActiveRecord: 1.0ms | Allocations: 11441)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-23 16:06:48 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 88)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 143.1ms | Allocations: 5864)
+  Rendered layout layouts/application.html.erb (Duration: 168.7ms | Allocations: 10077)
+Completed 200 OK in 176ms (Views: 51.3ms | ActiveRecord: 120.4ms | Allocations: 10611)
+
+
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-23 16:06:50 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1701)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.6ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 7427)
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 0.8ms | Allocations: 7954)
+
+
+Started POST "/users/save_goal" for 172.19.0.1 at 2023-10-23 16:06:52 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"slim_muscle", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+Started GET "/users/gender_age" for 172.19.0.1 at 2023-10-23 16:06:52 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2659)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.0ms | Allocations: 1889)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 8357)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.7ms | Allocations: 8624)
+
+
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-23 16:06:56 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 15ms (ActiveRecord: 0.0ms | Allocations: 807)
+
+
+Started GET "/users/height_weight_target_weight" for 172.19.0.1 at 2023-10-23 16:06:56 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3484)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 17.9ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 9153)
+Completed 200 OK in 50ms (Views: 43.9ms | ActiveRecord: 2.3ms | Allocations: 9420)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.19.0.1 at 2023-10-23 16:07:07 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"165", "weight"=>"55", "target_weight"=>"59", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 1015)
+
+
+Started GET "/users/activity_level" for 172.19.0.1 at 2023-10-23 16:07:07 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1629)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.1ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 7257)
+Completed 200 OK in 37ms (Views: 32.6ms | ActiveRecord: 0.8ms | Allocations: 7523)
+
+
+Started POST "/users/save_activity_level" for 172.19.0.1 at 2023-10-23 16:07:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"moderate", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 659)
+
+
+Started GET "/users/allergies" for 172.19.0.1 at 2023-10-23 16:07:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (3.1ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 68.0ms | Allocations: 12254)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.7ms | Allocations: 1878)
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 17881)
+Completed 200 OK in 100ms (Views: 56.2ms | ActiveRecord: 40.8ms | Allocations: 18147)
+
+
+Started POST "/users/save_allergies" for 172.19.0.1 at 2023-10-23 16:07:11 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "39"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms | Allocations: 703)
+
+
+Started GET "/home" for 172.19.0.1 at 2023-10-23 16:07:11 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.5ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 6141)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.6ms | Allocations: 6408)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 16:07:13 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 355)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.3ms | Allocations: 1934)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 6345)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 1.0ms | Allocations: 6872)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 16:07:20 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 83)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 8.8ms | Allocations: 1906)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 6362)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.7ms | Allocations: 6889)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:07:21 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+{"meals"=>[{"id"=>648632, "imageType"=>"jpg", "title"=>"Jules' Banana Bread", "readyInMinutes"=>45, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/jules-banana-bread-648632"}, {"id"=>982371, "imageType"=>"jpg", "title"=>"Instant Pot Quinoa Grain Bowl", "readyInMinutes"=>13, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/instant-pot-quinoa-grain-bowl-982371"}, {"id"=>634404, "imageType"=>"jpg", "title"=>"Basic Risotto", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/basic-risotto-634404"}], "nutrients"=>{"calories"=>1987.22, "protein"=>55.11, "fat"=>61.2, "carbohydrates"=>307.92}}
+Response code: 200
+Response body: [{"translations":[{"text":"ジュールのバナナブレッド","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"インスタントポットキノアグレインボウル","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 121)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 24.5ms | Allocations: 1938)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 67.5ms | Allocations: 6170)
+Completed 200 OK in 1765ms (Views: 76.0ms | ActiveRecord: 0.9ms | Allocations: 11887)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 16:08:29 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 343)
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 61.0ms | Allocations: 1898)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 127.8ms | Allocations: 6247)
+Completed 200 OK in 150ms (Views: 130.8ms | ActiveRecord: 6.7ms | Allocations: 6514)
+
+
+Started GET "/" for 172.19.0.1 at 2023-10-23 16:19:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 88)
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 263.0ms | Allocations: 8340)
+  Rendered layout layouts/application.html.erb (Duration: 298.5ms | Allocations: 12509)
+Completed 200 OK in 309ms (Views: 172.8ms | ActiveRecord: 129.9ms | Allocations: 13043)
+
+
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-23 16:19:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1692)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 10.3ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 7418)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 2.0ms | Allocations: 7946)
+
+
+Started POST "/users/save_goal" for 172.19.0.1 at 2023-10-23 16:23:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_goal as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "goal"=>"standard", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/gender_age
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms | Allocations: 528)
+
+
+Started GET "/users/gender_age" for 172.19.0.1 at 2023-10-23 16:23:57 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#gender_age as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2649)
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 30.1ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 81.5ms | Allocations: 8277)
+Completed 200 OK in 89ms (Views: 78.8ms | ActiveRecord: 5.9ms | Allocations: 8543)
+
+
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-23 16:24:02 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"man", "age"=>"21", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/height_weight_target_weight
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 858)
+
+
+Started GET "/users/height_weight_target_weight" for 172.19.0.1 at 2023-10-23 16:24:02 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#height_weight_target_weight as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/height_weight_target_weight.html.erb within layouts/application
+  Rendered users/height_weight_target_weight.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3475)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 12.8ms | Allocations: 1880)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 9103)
+Completed 200 OK in 40ms (Views: 35.0ms | ActiveRecord: 1.5ms | Allocations: 9369)
+
+
+Started POST "/users/save_height_weight_target_weight" for 172.19.0.1 at 2023-10-23 16:24:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_height_weight_target_weight as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "height"=>"163", "weight"=>"47", "target_weight"=>"55", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/activity_level
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1024)
+
+
+Started GET "/users/activity_level" for 172.19.0.1 at 2023-10-23 16:24:08 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#activity_level as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/activity_level.html.erb within layouts/application
+  Rendered users/activity_level.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1678)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 12.3ms | Allocations: 1892)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 7375)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 1.5ms | Allocations: 7642)
+
+
+Started POST "/users/save_activity_level" for 172.19.0.1 at 2023-10-23 16:24:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_activity_level as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "activity_level"=>"low", "commit"=>"次へ"}
+Redirected to http://localhost:3000/users/allergies
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 668)
+
+
+Started GET "/users/allergies" for 172.19.0.1 at 2023-10-23 16:24:09 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#allergies as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/allergies.html.erb within layouts/application
+  [1m[36mAllergyItem Load (9.3ms)[0m  [1m[34mSELECT "allergy_items".* FROM "allergy_items"[0m
+  ↳ app/views/users/allergies.html.erb:7
+  Rendered users/allergies.html.erb within layouts/application (Duration: 85.2ms | Allocations: 19299)
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 16.6ms | Allocations: 1884)
+  Rendered layout layouts/application.html.erb (Duration: 135.7ms | Allocations: 24945)
+Completed 200 OK in 148ms (Views: 125.4ms | ActiveRecord: 13.2ms | Allocations: 25212)
+
+
+Started POST "/users/save_allergies" for 172.19.0.1 at 2023-10-23 16:24:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#save_allergies as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "allergy_item_ids"=>["", "39"], "commit"=>"ホームへ"}
+Redirected to http://localhost:3000/home
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 679)
+
+
+Started GET "/home" for 172.19.0.1 at 2023-10-23 16:24:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.2ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 6147)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 1.0ms | Allocations: 6414)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 16:29:10 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 83)
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 21.6ms | Allocations: 1907)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 6303)
+Completed 200 OK in 67ms (Views: 57.2ms | ActiveRecord: 3.3ms | Allocations: 6830)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:29:11 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/app/app/controllers/recipes_controller.rb:12: syntax error, unexpected local variable or method, expecting ')'
+      cuisine: "Japanese"
+      ^~~~~~~
+):
+  
+app/controllers/recipes_controller.rb:12: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/recipes_controller.rb:12: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 16:29:31 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 116.1ms | Allocations: 5867)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 139.4ms | Allocations: 10346)
+Completed 200 OK in 145ms (Views: 44.6ms | ActiveRecord: 97.0ms | Allocations: 10880)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:29:33 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/app/app/controllers/recipes_controller.rb:12: syntax error, unexpected local variable or method, expecting ')'
+      cuisine: 'Japanese'
+      ^~~~~~~
+):
+  
+app/controllers/recipes_controller.rb:12: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/recipes_controller.rb:12: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 16:30:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 87)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 59.3ms | Allocations: 5842)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 10332)
+Completed 200 OK in 94ms (Views: 50.1ms | ActiveRecord: 39.9ms | Allocations: 10866)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:30:06 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+target_calories: 
+{"meals"=>[{"id"=>644860, "imageType"=>"jpg", "title"=>"Gluten Free Waffles", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/gluten-free-waffles-644860"}, {"id"=>642777, "imageType"=>"jpg", "title"=>"Fig and Goat Cheese Pizza With Pesto", "readyInMinutes"=>15, "servings"=>6, "sourceUrl"=>"https://spoonacular.com/fig-and-goat-cheese-pizza-with-pesto-642777"}, {"id"=>648460, "imageType"=>"jpg", "title"=>"Japanese Chicken Donburi", "readyInMinutes"=>45, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/japanese-chicken-donburi-648460"}], "nutrients"=>{"calories"=>2013.67, "protein"=>57.07, "fat"=>62.54, "carbohydrates"=>300.07}}
+Response code: 200
+Response body: [{"translations":[{"text":"グルテンフリーワッフル","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"イチジクとヤギのチーズピザとペスト","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"日本のチキン丼","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 121)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.1ms | Allocations: 1928)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 6102)
+Completed 200 OK in 2007ms (Views: 58.7ms | ActiveRecord: 1.0ms | Allocations: 11903)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 16:32:16 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 310)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 32.1ms | Allocations: 1933)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 6299)
+Completed 200 OK in 92ms (Views: 82.8ms | ActiveRecord: 4.0ms | Allocations: 6826)
+
+
+Started GET "/dashboard" for 172.19.0.1 at 2023-10-23 16:41:15 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 367)
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 258.4ms | Allocations: 8310)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 281.9ms | Allocations: 12736)
+Completed 200 OK in 289ms (Views: 170.8ms | ActiveRecord: 114.3ms | Allocations: 13269)
+
+
+Started GET "/recipe_suggestions/index" for 172.19.0.1 at 2023-10-23 16:41:18 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipeSuggestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipe_suggestions/index.html.erb within layouts/application
+  Rendered recipe_suggestions/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 83)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 11.7ms | Allocations: 1906)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 6347)
+Completed 200 OK in 47ms (Views: 39.6ms | ActiveRecord: 2.0ms | Allocations: 6874)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:41:20 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+target_calories: 
+{"meals"=>[{"id"=>657761, "imageType"=>"jpg", "title"=>"Raised Doughnuts", "readyInMinutes"=>300, "servings"=>24, "sourceUrl"=>"https://spoonacular.com/raised-doughnuts-657761"}, {"id"=>653251, "imageType"=>"jpg", "title"=>"Noodles and Veggies With Peanut Sauce", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/noodles-and-veggies-with-peanut-sauce-653251"}, {"id"=>634404, "imageType"=>"jpg", "title"=>"Basic Risotto", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/basic-risotto-634404"}], "nutrients"=>{"calories"=>1918.45, "protein"=>48.93, "fat"=>64.21, "carbohydrates"=>282.79}}
+Response code: 200
+Response body: [{"translations":[{"text":"レイズドドーナツ","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ピーナッツソースの麺と野菜","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 121)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 10.0ms | Allocations: 1937)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 6131)
+Completed 200 OK in 1707ms (Views: 76.9ms | ActiveRecord: 1.4ms | Allocations: 11869)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:41:30 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+target_calories: 
+{"meals"=>[{"id"=>649853, "imageType"=>"jpg", "title"=>"Lemon-Poppy Seed Scones", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/lemon-poppy-seed-scones-649853"}, {"id"=>1098240, "imageType"=>"jpg", "title"=>"Lemon Fresh Spaghetti with Garden Sauce & Pumpkin Flowers", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/lemon-fresh-spaghetti-with-garden-sauce-pumpkin-flowers-1098240"}, {"id"=>633093, "imageType"=>"jpg", "title"=>"Autumn Fried Rice with Buffalo Nuts®", "readyInMinutes"=>45, "servings"=>8, "sourceUrl"=>"https://spoonacular.com/autumn-fried-rice-with-buffalo-nuts-633093"}], "nutrients"=>{"calories"=>1952.79, "protein"=>54.48, "fat"=>66.08, "carbohydrates"=>282.71}}
+Response code: 200
+Response body: [{"translations":[{"text":"レモンポピーシードスコーン","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"レモンフレッシュスパゲッティとガーデンソース&パンプキンフラワー","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"バッファローナッツ®の秋チャーハン","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 109)
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 24.6ms | Allocations: 1898)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 5986)
+Completed 200 OK in 3259ms (Views: 70.0ms | ActiveRecord: 5.3ms | Allocations: 11469)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:45:03 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+target_calories: 
+{"meals"=>[{"id"=>665257, "imageType"=>"jpg", "title"=>"Whole Grain Pumpkin Bread", "readyInMinutes"=>45, "servings"=>24, "sourceUrl"=>"https://spoonacular.com/whole-grain-pumpkin-bread-665257"}, {"id"=>653251, "imageType"=>"jpg", "title"=>"Noodles and Veggies With Peanut Sauce", "readyInMinutes"=>30, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/noodles-and-veggies-with-peanut-sauce-653251"}, {"id"=>664718, "imageType"=>"jpg", "title"=>"Vegetarian Tostadas", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/vegetarian-tostadas-664718"}], "nutrients"=>{"calories"=>1833.35, "protein"=>51.14, "fat"=>60.96, "carbohydrates"=>279.79}}
+Response code: 200
+Response body: [{"translations":[{"text":"全粒粉パンプキンブレッド","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ピーナッツソースの麺と野菜","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ベジタリアントスターダ","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 109)
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 26.1ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 5956)
+Completed 200 OK in 2265ms (Views: 53.6ms | ActiveRecord: 4.7ms | Allocations: 11510)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:45:31 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+target_calories: 
+{"meals"=>[{"id"=>982374, "imageType"=>"jpg", "title"=>"Perfect Buttermilk Pancakes", "readyInMinutes"=>15, "servings"=>6, "sourceUrl"=>"https://spoonacular.com/perfect-buttermilk-pancakes-982374"}, {"id"=>642585, "imageType"=>"jpg", "title"=>"Farfalle with fresh tomatoes, basil and mozzarella", "readyInMinutes"=>15, "servings"=>4, "sourceUrl"=>"https://spoonacular.com/farfalle-with-fresh-tomatoes-basil-and-mozzarella-642585"}, {"id"=>634404, "imageType"=>"jpg", "title"=>"Basic Risotto", "readyInMinutes"=>45, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/basic-risotto-634404"}], "nutrients"=>{"calories"=>1998.25, "protein"=>50.39, "fat"=>62.19, "carbohydrates"=>306.59}}
+Response code: 200
+Response body: [{"translations":[{"text":"完璧なバターミルクパンケーキ","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"フレッシュトマト、バジル、モッツァレラチーズのファルファッレ","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"基本リゾット","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 22.8ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 5956)
+Completed 200 OK in 1410ms (Views: 42.5ms | ActiveRecord: 5.8ms | Allocations: 11431)
+
+
+Started GET "/recipes" for 172.19.0.1 at 2023-10-23 16:45:37 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by RecipesController#index as HTML
+target_calories: 
+{"meals"=>[{"id"=>648013, "imageType"=>"jpg", "title"=>"Iron - Rich Gluten Free Vegan Muffins", "readyInMinutes"=>45, "servings"=>16, "sourceUrl"=>"https://spoonacular.com/iron-rich-gluten-free-vegan-muffins-648013"}, {"id"=>650127, "imageType"=>"jpg", "title"=>"Linguine in Cream Sauce with Poached Eggs and Bacon", "readyInMinutes"=>25, "servings"=>2, "sourceUrl"=>"https://spoonacular.com/linguine-in-cream-sauce-with-poached-eggs-and-bacon-650127"}, {"id"=>641687, "imageType"=>"jpg", "title"=>"Dry Mee Siam", "readyInMinutes"=>45, "servings"=>3, "sourceUrl"=>"https://spoonacular.com/dry-mee-siam-641687"}], "nutrients"=>{"calories"=>1884.63, "protein"=>52.92, "fat"=>69.58, "carbohydrates"=>260.39}}
+Response code: 200
+Response body: [{"translations":[{"text":"鉄-豊富なグルテンフリービーガンマフィン","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ポーチドエッグとベーコンのクリームソースのリングイネ","to":"ja"}]}]
+Response code: 200
+Response body: [{"translations":[{"text":"ドライミーサイアム","to":"ja"}]}]
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 109)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:11
+  Rendered shared/_header.html.erb (Duration: 9.4ms | Allocations: 1889)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 5956)
+Completed 200 OK in 1784ms (Views: 52.7ms | ActiveRecord: 1.1ms | Allocations: 11417)
+
+

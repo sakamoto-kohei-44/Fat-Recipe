@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def save_gender_age
-    if user_params
+    if user_params[:gender].present? && user_params[:age].present?
       session[:gender] = user_params[:gender]
       session[:age] = user_params[:age]
       redirect_to height_weight_target_weight_users_path, notice: "性別と年齢が正常に保存されました。"
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
       session[:target_weight] = user_params[:target_weight]
       redirect_to activity_level_users_path, notice: "正常に保存されました。"
     else
-      render :height_weight_target_weight, alert: "保存できませんでした。入力内容を確認してください。" 
+      render :height_weight_target_weight, alert: "保存できませんでした。入力内容を確認してください。"
     end
   end
 
@@ -79,7 +79,16 @@ class UsersController < ApplicationController
       target_calorie = tdee + calorie_per_day
 
       session[:target_calorie] = target_calorie
+      # ユーザー属性をマージ
+    user_data = {
+      gender: session[:gender],
+      age: session[:age],
+      height: session[:height],
+      target_calorie: target_calorie
+    }
 
+    # セッション保存
+    session[:user_data] = user_data
       redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
     else
       render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
