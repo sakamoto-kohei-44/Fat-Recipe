@@ -2,11 +2,14 @@ class RecipesController < ApplicationController
   require_dependency "#{Rails.root}/app/services/spoonacular_service"
 
   def index
-    # セッションからユーザー情報を取得
-    user_calorie = session[:target_calorie]
+    # ユーザー情報を取得
+    user_data = session[:user_data]
+    target_calories = user_data[:target_calories]
+    logger.debug("target_calories: #{target_calories}")
     response = SpoonacularService.generate_meal_plan(
       timeFrame: 'day',
-      targetCalories: user_calorie
+      targetCalories: target_calories,
+      cuisine: 'Italian'
     )
     logger.debug(response)
     meals = response["meals"]
