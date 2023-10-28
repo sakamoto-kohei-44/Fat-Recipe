@@ -1,0 +1,11 @@
+
+<div class="choice-container">
+    <h1>活動レベル選択</h1>
+    <%= form_with url: save_activity_level_users_path, local: true do |f| %>
+        <div class="input-container">
+            <%= f.label :activity_level, "活動レベルは？" %>
+            <%= f.select :activity_level, [['低い', 'low'], ['適度', 'moderate'], ['高い', 'high']] %>
+        </div>
+    <%= f.submit '次へ', class: "btn btn-light" %>
+    <% end %>
+</div>
