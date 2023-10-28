@@ -1,20 +1,24 @@
-/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  purge: [
+  content: [
     './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js'
   ],
+
   theme: {
     extend: {
       fontFamily: {
-        'custom': ['Roboto', 'sans'],
+      },
+      colors: {
       },
     },
   },
-  variants: {},
-  plugins: [
-    require('daisyui'),
-  ],
+
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["retro", "cupcake", "valentine"],
+  },
 }
