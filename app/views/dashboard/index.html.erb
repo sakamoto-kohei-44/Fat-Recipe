@@ -1,7 +1,5 @@
 <p>基礎代謝: <%= session[:bmr].floor %> kcal/day</p>
 <p>1日の推定エネルギー消費量 (TDEE): <%= session[:tdee].floor %> kcal/day</p>
+<p>必要な1日カロリー摂取量 <%= session[:target_calorie].floor %> kcal</p>
 <p>目標体重<%= session[:target_weight] %> kg </p>
 <p>現在の体重<%= session[:weight] %> kg </p>
-<p>必要なタンパク質<%= session[:protein].floor %> g</p>
-<p>必要な脂質<%= session[:fat].floor %> g </p>
-<p>必要な炭水化物<%= session[:carbs].floor %> g</p>

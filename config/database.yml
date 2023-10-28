@@ -9,6 +9,7 @@ default: &default
 development:
   <<: *default
   database: sakamotokouhei_development
+  host: db
 
 test:
   <<: *default

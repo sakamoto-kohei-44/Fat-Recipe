@@ -25,8 +25,6 @@ gem 'hotwire-rails'
 
 gem 'sassc-rails'
 
-gem 'webpacker'
-
 gem 'httparty', '~> 0.21.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

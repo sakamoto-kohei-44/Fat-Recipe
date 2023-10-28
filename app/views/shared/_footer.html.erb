@@ -1,18 +1,18 @@
-<div class="custom-footer">
-  <div class="container">
-    <div class="row">
+<footer class="fixed bottom-0 left-0 right-0 z-10 bg-blue-200 p-4 shadow-md">
+  <div class="container mx-auto text-center">
+    <div class="flex flex-row space-x-6">
       <div class="col-3">
-        <%= link_to 'ホーム', dashboard_home_path %>
+        <%= link_to 'ホーム', dashboard_home_path, class: "btn btn-primary" %>
       </div>
       <div class="col-3">
-        <%= link_to 'ダッシュボード', dashboard_path %>
+        <%= link_to 'ダッシュボード', dashboard_path, class: "btn btn-primary" %>
       </div>
       <div class="col-3">
-        <%= link_to 'レシピ', recipe_suggestions_path %>
+        <%= link_to 'レシピ', recipe_suggestions_path, class: "btn btn-primary" %>
       </div>
       <div class="col-3">
-        <%= link_to 'お気に入り', '#' %>
+        <%= link_to 'お気に入り', '#', class: "btn btn-primary" %>
       </div>
     </div>
   </div>
-</div>
+</footer>

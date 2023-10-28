@@ -1,1 +1,2 @@
-import "bootstrap/dist/js/bootstrap";
+//= require rails-ujs
+//= require scripts
