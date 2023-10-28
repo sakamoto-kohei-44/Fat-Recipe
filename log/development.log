@@ -52033,3 +52033,22 @@ Processing by UsersController#save_gender_age as HTML
 Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 1.2ms | Allocations: 4878)
 
 
+CONNECTION GET: #<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x0000ffff7ec7a780>
+Started POST "/users/save_gender_age" for 172.19.0.1 at 2023-10-28 14:30:20 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/initializers/debug_db_connection.rb:10:in `call'
+Processing by UsersController#save_gender_age as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gender"=>"", "age"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering users/gender_age.html.erb within layouts/application
+  Rendered users/gender_age.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3465)
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:16
+  Rendered shared/_header.html.erb (Duration: 72.3ms | Allocations: 11864)
+  Rendered shared/_footer.html.erb (Duration: 2.7ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 94.5ms | Allocations: 17091)
+Completed 200 OK in 138ms (Views: 77.4ms | ActiveRecord: 48.2ms | Allocations: 22176)
+
+
+CONNECTION GET: #<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x0000ffff7ec7a780>
