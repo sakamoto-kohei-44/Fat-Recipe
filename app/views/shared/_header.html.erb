@@ -1,32 +1,38 @@
-<header class="p-3 text-bg-dark">
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-between">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <span class="fs-1 fw-bold text-warning">メシのカルテ</span>
-            </a>
-
-            <div class="d-flex align-items-center">
-
-                <div class="text-end">
+<header class="fixed top-0 right-0 w-full bg-blue-200 z-10">
+    <div class="flex justify-between items-center p-4 h-20">
+        <a href="/" class="text-gray-900 font-bold text-5xl">
+            <h1 class="text-5xl font-bold font-serif text-gray-900">メシのカルテ</h1>
+        </a>
+        <div class="flex items-center">
+            <div class="mr-20">
+                <button>
+                    <a href="<%= body_info_users_path %>" class="btn">
+                    使ってみる
+                    </a>
+                </button>
+            </div>
+            <div class="ml-5 pr-5 mt-1 pb-12 align-items-center">
+                <button class="absolute right-0 mr-16 ">
                     <% if user_signed_in? %>
                         <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn btn-light" %>
                     <% else %>
                         <%= link_to 'ログイン', new_user_session_path, class: "btn btn-light" %>
                     <% end %>
-                </div>
+            </div>
 
-                <div class="dropdown">
-                     <%= link_to '#', role: "button", id: "profileDropdown", data: { bs_toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } do %>
-                        <%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %>
-                    <% end %>
-                    <div class="dropdown-menu" aria-labelledby="profileDropdown">
-                        <a class="dropdown-item" href="#"><%= image_tag 'sample', size: '40x40', class: 'rounded-circle mr15' %> マイページ</a>
-                        <%= link_to 'アカウント設定', '#', class: "dropdown-item" %>
-                        <%= link_to 'ログアウト', '#', class: "dropdown-item" %>
-                        <%= link_to '利用規約', '#', class: "dropdown-item" %>
-                        <%= link_to 'プライバシーポリシー', '#', class: "dropdown-item" %>
-                    </div>
+            <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                <%= image_tag "sample.jpg" %>
                 </div>
+            </label>
+            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                <li><%= link_to "マイページ", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                <li><%= link_to "アカウント設定", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                <li><%= link_to "ログアウト", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                <li><%= link_to "利用規約", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                <li><%= link_to "プライバシーポリシー", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+            </ul>
             </div>
         </div>
     </div>

@@ -3,3 +3,4 @@
 //= link scripts.js
 //= link application.js
 //= link application.css
+//= link application.tailwind.css
