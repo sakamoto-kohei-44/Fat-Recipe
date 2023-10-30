@@ -5,11 +5,17 @@
         </a>
         <div class="flex items-center">
             <div class="mr-20">
-                <button>
+                <% if controller_name == "pages" && action_name == "home" %>
+                <!-- ボタンを表示 -->
                     <a href="<%= body_info_users_path %>" class="btn">
                     使ってみる
                     </a>
-                </button>
+                <% else %>
+                    <!-- ボタンを非表示 -->
+                    <%= content_tag :div, class: "hidden" do %>
+                        <button>使ってみる</button>
+                    <% end %>
+                <% end %>
             </div>
             <div class="ml-5 pr-5 mt-1 pb-12 align-items-center">
                 <button class="absolute right-0 mr-16 ">
