@@ -1,11 +1,13 @@
-<div class="choice-container">
-    <h1>アレルギー選択</h1>
-    <%= form_with model: @user, url: save_allergies_users_path, local: true do |f| %>
-        <div class="input-container">
-            <%= f.label :allergy_item_ids, "アレルギー項目は？" %>
-            <br>
-            <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name %>
-        </div>
-        <%= f.submit 'ホームへ', class: "btn btn-light" %>
-    <% end %>
+<div class="pt-20">
+    <div class="choice-container">
+        <h1>アレルギー選択</h1>
+        <%= form_with model: @user, url: save_allergies_users_path, local: true do |f| %>
+            <div class="input-container">
+                <%= f.label :allergy_item_ids, "アレルギー項目は？" %>
+                <br>
+                <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name %>
+            </div>
+            <%= f.submit 'ホームへ', class: "btn btn-light" %>
+        <% end %>
+    </div>
 </div>
