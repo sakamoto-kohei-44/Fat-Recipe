@@ -13,6 +13,8 @@ module.exports = {
       fontFamily: {
       },
       colors: {
+        primary: '#ffffff',
+        blue: colors.blue,
       },
     },
   },
