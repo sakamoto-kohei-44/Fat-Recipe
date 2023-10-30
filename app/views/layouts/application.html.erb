@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>App</title>
+    <title>メシのカルテ</title>
     <!-- Bootstrap CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag 'application.tailwind', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
     <%= stylesheet_link_tag "application.tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
-
   <body>
-    <div class="page-container">
-      <% unless controller_name == 'sessions' && action_name == 'new' %>
-        <%= render 'shared/header' %>
-      <% end %>
-      <div class="content-wrap">
-        <%= yield %>
-      </div>
-      <% unless controller_name == 'sessions' && action_name == 'new' ||
-          controller_name == 'pages' && action_name == 'home' ||
-          controller_name == 'users' && ['body_info', 'gender_age', 'height_weight_target_weight', 'activity_level', 'allergies'].include?(action_name) %>
+      <%= render 'shared/header' %>
+      <%= yield %>
       <%= render 'shared/footer' %>
-      <% end %>
-      <!-- Popper.js -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-    </div>
   </body>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  </div>
 </html>
