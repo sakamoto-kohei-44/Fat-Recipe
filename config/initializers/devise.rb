@@ -13,14 +13,11 @@ Devise.setup do |config|
   config.case_insensitive_keys = [:email] # 大文字小文字を区別しない
   config.strip_whitespace_keys = [:email] # ユーザーの入力からホワイトスペースを削除
 
-  # Registerable（ユーザー登録）
-  config.registerable = true # 通常、有効にする必要があります
-
   # Confirmable（メール確認）
   # config.confirmable = true # メール確認が必要な場合に有効にします
 
   # Recoverable（パスワードリセット）
-  config.recoverable = true # パスワードリセットが必要な場合に有効にします
+  # config.recoverable = true # パスワードリセットが必要な場合に有効にします
 
   # Rememberable（永続ログイン）
   # config.rememberable = true # 永続ログインが必要な場合に有効にします

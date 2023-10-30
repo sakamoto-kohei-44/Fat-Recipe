@@ -2,7 +2,6 @@
 
 one:
   email: MyString
-  password_digest: MyString
   name: MyString
   gender: 1
   age: 1
@@ -13,7 +12,6 @@ one:
 
 two:
   email: MyString
-  password_digest: MyString
   name: MyString
   gender: 1
   age: 1
