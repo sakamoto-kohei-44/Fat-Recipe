@@ -1,7 +1,7 @@
 <header class=" bg-blue-200 z-10">
     <div class="flex justify-between items-center p-4 h-20">
-        <a href="/" class="text-gray-900 font-bold text-5xl">
-            <h1 class="text-5xl font-bold font-serif text-gray-900">メシのカルテ</h1>
+        <a href="/" class="text-white font-bold text-5xl">
+            <h1 class="text-5xl font-bold font-serif text-white">メシのカルテ</h1>
         </a>
         <div class="flex items-center">
             <div class="mr-20">
@@ -18,12 +18,17 @@
                 <% end %>
             </div>
             <div class="ml-5 pr-5 mt-1 pb-12 align-items-center">
-                <button class="absolute right-0 mr-16 ">
+                <button class="absolute right-0 mr-16">
                     <% if user_signed_in? %>
-                        <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "btn btn-light" %>
+                    <%= link_to "ログアウト",
+                                destroy_user_session_path,
+                                data: { turbo_method: :delete },
+                                class: "btn text-white rounded-full bg-cyan-500" %>
                     <% else %>
-                        <%= link_to 'ログイン', new_user_session_path, class: "btn btn-light" %>
+                    <%= link_to "ログイン",
+                                new_user_session_path %>
                     <% end %>
+                </button>
             </div>
 
             <div class="dropdown dropdown-end">
