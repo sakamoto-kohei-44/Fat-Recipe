@@ -1,21 +1,23 @@
-<h1>1日の食事計画</h1>
+<div class="pt-20">
+  <h1>1日の食事計画</h1>
 
-<div class="meals">
-  <% @recipes_info.each do |recipe| %>
-    <div class="meal-card">
-      <h2><%= recipe["title"] %></h2>
-      <%= image_tag "https://spoonacular.com/recipeImages/#{recipe["id"]}-556x370.#{recipe["imageType"]}" %>
-      <p>調理時間: <%= recipe["readyInMinutes"] %>分</p>
-      <p>提供数: <%= recipe["servings"] %>人分</p>
-      <a href="<%= recipe["sourceUrl"] %>" target="_blank">レシピを見る</a>
-    </div>
-  <% end %>
-</div>
+  <div class="meals">
+    <% @recipes_info.each do |recipe| %>
+      <div class="meal-card">
+        <h2><%= recipe["title"] %></h2>
+        <%= image_tag "https://spoonacular.com/recipeImages/#{recipe["id"]}-556x370.#{recipe["imageType"]}" %>
+        <p>調理時間: <%= recipe["readyInMinutes"] %>分</p>
+        <p>提供数: <%= recipe["servings"] %>人分</p>
+        <a href="<%= recipe["sourceUrl"] %>" target="_blank">レシピを見る</a>
+      </div>
+    <% end %>
+  </div>
 
-<div class="nutrients">
-  <h2>栄養情報</h2>
-  <p>カロリー: <%= @meal_plan["nutrients"]["calories"] %></p>
-  <p>炭水化物: <%= @meal_plan["nutrients"]["carbohydrates"] %>g</p>
-  <p>脂質: <%= @meal_plan["nutrients"]["fat"] %>g</p>
-  <p>タンパク質: <%= @meal_plan["nutrients"]["protein"] %>g</p>
+  <div class="nutrients">
+    <h2>栄養情報</h2>
+    <p>カロリー: <%= @meal_plan["nutrients"]["calories"] %></p>
+    <p>炭水化物: <%= @meal_plan["nutrients"]["carbohydrates"] %>g</p>
+    <p>脂質: <%= @meal_plan["nutrients"]["fat"] %>g</p>
+    <p>タンパク質: <%= @meal_plan["nutrients"]["protein"] %>g</p>
+  </div>
 </div>
