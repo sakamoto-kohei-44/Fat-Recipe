@@ -55447,3 +55447,34 @@ Processing by Users::RegistrationsController#new as HTML
 Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 4388)
 
 
+CONNECTION GET: #<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x0000ffff796c33f0>
+Started GET "/users/sign_up" for 172.19.0.1 at 2023-10-30 13:58:03 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/initializers/debug_db_connection.rb:10:in `call'
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 247)
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 603)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 73.5ms | Allocations: 5026)
+  Rendered shared/_header.html.erb (Duration: 2.7ms | Allocations: 739)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 84.1ms | Allocations: 7396)
+Completed 200 OK in 401ms (Views: 259.4ms | ActiveRecord: 54.2ms | Allocations: 25509)
+
+
+CONNECTION GET: #<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x0000ffff796c33f0>
+CONNECTION GET: #<ActiveRecord::ConnectionAdapters::PostgreSQLAdapter:0x0000ffff752d8708>
+Started GET "/users/body_info" for 172.19.0.1 at 2023-10-30 13:58:05 +0900
+Cannot render console from 172.19.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#body_info as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/body_info.html.erb within layouts/application
+  Rendered users/body_info.html.erb within layouts/application (Duration: 23.8ms | Allocations: 2169)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 340)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 168)
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 3415)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 4165)
+
+
