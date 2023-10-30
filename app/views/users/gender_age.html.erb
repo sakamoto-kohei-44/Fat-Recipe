@@ -1,23 +1,24 @@
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <%= form_with url: save_gender_age_users_path, local: true do |f| %>
-                <div class="mb-3">
-                    <%= f.label :gender, "性別", class: "form-label" %>
-                    <%= f.select :gender, User.genders.keys.map { |k| [k.humanize, k] }, { prompt: '選択してください' }, class: "form-select" %>
-                </div>
-                <div class="mb-3">
-                    <%= f.label :age, "年齢", class: "form-label" %>
-                    <%= f.number_field :age, placeholder: "何歳ですか？", class: "form-control" %>
-                </div>
-                <div class="mb-3 text-center">
-                    <button type="submit" 
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        次へ
-                    </button>
-                </div>
-            <% end %>
+<div class="pt-20">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <%= form_with url: save_gender_age_users_path, local: true do |f| %>
+                    <div class="mb-3 mr-20">
+                        <%= f.label :gender, "性別", class: "form-label" %>
+                        <%= f.select :gender, User.genders.keys.map { |k| [k.humanize, k] }, { prompt: '選択してください' }, class: "form-select" %>
+                    </div>
+                    <div class="mb-3">
+                        <%= f.label :age, "年齢", class: "form-label" %>
+                        <%= f.number_field :age, placeholder: "何歳ですか？", class: "form-control" %>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            次へ
+                        </button>
+                    </div>
+                <% end %>
+            </div>
         </div>
     </div>
 </div>

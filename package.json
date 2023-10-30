@@ -6,7 +6,7 @@
   "author": "sakamoto-kohei-44 <banbengongping111@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "esbuild app/assets/javascripts/application.js --bundle --sourcemap --outdir=app/assets/builds",
+    "build": "esbuild app/javascript/application.js --bundle --sourcemap --outdir=app/assets/builds",
     "scss": "sass --load-path=./node_modules ./app/assets/stylesheets/application.scss ./app/assets/stylesheets/application-temp.css",
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
     "watch:scss": "sass --load-path=./node_modules ./app/assets/stylesheets/application.scss ./app/assets/stylesheets/application-temp.css --watch",
