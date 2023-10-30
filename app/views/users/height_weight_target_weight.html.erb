@@ -1,0 +1,20 @@
+<div class="pt-20">
+    <div class="choice-container bg-gray-100 p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-semibold mb-4">体重管理</h1>
+        <%= form_with url: save_height_weight_target_weight_users_path, local: true, class: "space-y-4" do |f| %>
+            <div class="input-container flex flex-col">
+                <%= f.label :height, "身長は？", class: "mb-2 text-lg font-medium text-gray-700" %>
+                <%= f.text_field :height, placeholder: "cm", class: "px-4 py-2 border rounded-md" %>
+            </div>
+            <div class="input-container flex flex-col">
+                <%= f.label :weight, "体重は？", class: "mb-2 text-lg font-medium text-gray-700" %>
+                <%= f.text_field :weight, placeholder: "kg", class: "px-4 py-2 border rounded-md" %>
+            </div>
+            <div class="input-container flex flex-col">
+                <%= f.label :target_weight, "目標体重は？", class: "mb-2 text-lg font-medium text-gray-700" %>
+                <%= f.text_field :target_weight, placeholder: "kg", class: "px-4 py-2 border rounded-md" %>
+            </div>
+            <%= f.submit '次へ', class: "btn btn-primary mt-4" %>
+        <% end %>
+    </div>
+</div>

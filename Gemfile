@@ -3,6 +3,30 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
+gem 'acts_as_list', '~> 1.1'
+
+gem 'meta-tags', '~> 2.18'
+
+gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
+
+gem 'config', '~> 4.2', '>= 4.2.1'
+
+gem 'annotate', '~> 3.2'
+
+gem 'letter_opener_web', '~> 2.0'
+
+gem 'binding_of_caller', '~> 1.0'
+
+gem 'bullet', '~> 7.0', '>= 7.0.7'
+
+gem 'hotwire-rails'
+
+gem 'sassc-rails'
+
+gem 'httparty', '~> 0.21.0'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.7", ">= 7.0.7.2"
 
@@ -33,7 +57,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-gem 'devise'
+gem 'bootstrap', '~> 5.0.0'
+gem 'devise', '~> 4.9', '>= 4.9.3'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

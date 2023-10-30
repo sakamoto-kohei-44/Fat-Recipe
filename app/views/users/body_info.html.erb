@@ -1,0 +1,18 @@
+<div class="pt-20">
+    <div class="choice-container mt-20 p-6 bg-gray-100 rounded-md ">
+        <h1 class="text-2xl mb-4">目標は？</h1>
+        <%= form_with url: save_goal_users_path, local: true do |f| %>
+            <div class="flex space-x-4 mb-4">
+                <label class="flex items-center px-4 py-2 border rounded-md cursor-pointer hover:bg-gray-200">
+                    <%= f.radio_button :goal, "standard", class: "mr-2" %>
+                    標準体型になりたい
+                </label>
+                <label class="flex items-center px-4 py-2 border rounded-md cursor-pointer hover:bg-gray-200">
+                    <%= f.radio_button :goal, "slim_muscle", class: "mr-2" %>
+                    細マッチョになりたい
+                </label>
+            </div>
+            <%= f.submit "次へ", class: "px-4 py-2 border rounded-md bg-white hover:bg-gray-200" %>
+        <% end %>
+    </div>
+</div>
