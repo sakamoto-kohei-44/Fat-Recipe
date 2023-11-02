@@ -8,7 +8,7 @@ class DebugDbConnection
     Rails.logger.debug("CONNECTION GET: #{conn}")
 
     @app.call(env)
-  end  
+  end
 end
 
 Rails.application.middleware.insert_before(0, DebugDbConnection)
