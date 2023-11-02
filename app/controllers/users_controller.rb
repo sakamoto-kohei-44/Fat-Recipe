@@ -1,5 +1,30 @@
 class UsersController < ApplicationController
 
+  def new
+    @user = User.new
+  end
+
+  def create
+    logger.debug(user_params)
+    @user = User.new(user_params)
+    @user.age = session[:age]
+    @user.height = session[:height]
+    @user.weight = session[:weight]
+    if @user.valid?
+      logger.debug("validation passed")
+    else
+      logger.debug("validation failed")
+      logger.debug(@user.errors.full_messages)
+    end
+    if @user.save!
+      redirect_to login_path
+    else
+      # エラーメッセージ表示
+      messages = @user.errors.full_messages
+      flash[:alert] = "登録に失敗しました。#{messages.join(",")}"
+      redirect_to new_user_path
+    end
+  end
   # 定数
   KG_TO_CAL = 7700 # 1kg増加に必要なカロリー
 
@@ -11,25 +36,13 @@ class UsersController < ApplicationController
     redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
   end
 
-  def create
-    @user = User.new(user_params)
-    @user.goal = session[:user_goal]
-
-    if @user.save
-      session.delete(:user_goal)
-      redirect_to root_path, notice: 'ユーザー情報が正常に保存されました。'
-    else
-      render :new
-    end
-  end
-
   def gender_age
   end
 
   def save_gender_age
-    if user_params[:gender].present? && user_params[:age].present?
-      session[:gender] = user_params[:gender]
-      session[:age] = user_params[:age]
+    if gender_age_params[:gender].present? && gender_age_params[:age].present?
+      session[:gender] = gender_age_params[:gender]
+      session[:age] = gender_age_params[:age]
       redirect_to height_weight_target_weight_users_path, notice: "性別と年齢が正常に保存されました。"
     else
       render :gender_age, alert: "保存できませんでした。入力内容を確認してください。"
@@ -40,10 +53,10 @@ class UsersController < ApplicationController
   end
 
   def save_height_weight_target_weight
-    if user_params[:height].present? && user_params[:weight].present? && user_params[:target_weight].present?
-      session[:height] = user_params[:height]
-      session[:weight] = user_params[:weight]
-      session[:target_weight] = user_params[:target_weight]
+    if height_weight_target_weight_params[:height].present? && height_weight_target_weight_params[:weight].present? && height_weight_target_weight_params[:target_weight].present?
+      session[:height] = height_weight_target_weight_params[:height]
+      session[:weight] = height_weight_target_weight_params[:weight]
+      session[:target_weight] = height_weight_target_weight_params[:target_weight]
       redirect_to activity_level_users_path, notice: "正常に保存されました。"
     else
       render :height_weight_target_weight, alert: "保存できませんでした。入力内容を確認してください。"
@@ -54,8 +67,8 @@ class UsersController < ApplicationController
   end
 
   def save_activity_level
-    if user_params[:activity_level].present?
-      session[:activity_level] = user_params[:activity_level]
+    if activity_level_params[:activity_level].present?
+      session[:activity_level] = activity_level_params[:activity_level]
 
       # 基礎代謝(BMR)とTDEEの計算
       gender = session[:gender]
@@ -99,12 +112,12 @@ class UsersController < ApplicationController
   end
 
   def save_allergies
-    if user_params[:allergy_item_ids]&.reject(&:blank?).present?
+    if allergies_params[:allergy_item_ids]&.reject(&:blank?).present?
       # アレルギーなしのIDをチェック (例として1を使用)
-      if user_params[:allergy_item_ids].include?("39")
+      if allergies_params[:allergy_item_ids].include?("39")
         session[:allergy_item_ids] = ["39"]
       else
-        session[:allergy_item_ids] = user_params[:allergy_item_ids]
+        session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
       end
       redirect_to dashboard_home_path, notice: "アレルギー項目が正常に保存されました。"
     else
@@ -128,6 +141,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_skip_special_validation
+    # 空メソッド
+  end
 
   def calculate_bmr(gender, age, height, weight)
     if gender == "man"
@@ -166,8 +183,23 @@ class UsersController < ApplicationController
     params.permit(:goal)
   end
 
+  def gender_age_params
+    params.permit(:gender, :age)
+  end
+
+  def height_weight_target_weight_params
+    params.permit(:height, :weight, :target_weight)
+  end
+
+  def activity_level_params
+    params.permit(:activity_level)
+  end
+
+  def allergies_params
+    params.permit(allergy_item_ids: [])
+  end
+
   def user_params
-    params.permit(:age, :gender, :goal, :email, :password, :name, :height, :weight, :activity_level, :target_weight, :authenticity_token, :commit, allergy_item_ids: [])
+    params.require(:user).permit(:email, :password, :password_confirmation, :name)
   end
 end
-
