@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
   root 'pages#home'
-  # Deviseによる認証関連
-  devise_for :users, controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions'
-  }
+  get 'login', to: 'user_sessions#new'
+  post 'login', to: 'user_sessions#create'
+  delete 'logout', to: 'user_sessions#destroy'
+
   get '/home', to: 'pages#dashboard', as: 'dashboard_home'
   get 'recipe_suggestions/index', as: 'recipe_suggestions'
   get 'recipes/search'
   get 'recipes/search_results'
   patch 'users/update_profile', to: 'users#update_profile'
   patch 'users/update_account', to: 'users#update_account'
-
+  resources :user_sessions
 
   # 利用規約とプライバシーポリシー
   get 'terms', to: 'pages#terms'
@@ -30,9 +29,9 @@ Rails.application.routes.draw do
       post 'save_activity_level', to: 'users#save_activity_level', as: 'save_activity_level'
       post 'save_allergies', to: 'users#save_allergies', as: 'save_allergies'
       # マイページ関連
-      get 'my_page', to: 'users#edit_profile'      # => /my_page
+      get 'my_page', to: 'users#edit_profile', as: 'edit_profile'
       # アカウント設定関連
-      get 'account_settings', to: 'users#edit_account'      # => /account_settings
+      get 'account_settings', to: 'users#edit_account', as: 'edit_account'
     end
     # お気に入りレシピ
     resources :favorites, only: [:index]   # => /users/:user_id/favorites
