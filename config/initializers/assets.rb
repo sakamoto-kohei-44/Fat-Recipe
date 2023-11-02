@@ -13,3 +13,4 @@ Rails.application.config.assets.prefix = "/builds"
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 # Precompile app/javascript/application.js
 Rails.application.config.assets.precompile += %w( app/javascript/application.js )
+Rails.application.config.assets.precompile += %w( application.tailwind.css )
