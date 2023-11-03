@@ -6,10 +6,10 @@
         <div class="flex items-center">
             <div class="mr-20">
                 <% if controller_name == "pages" && action_name == "home" %>
-                <!-- ボタンを表示 -->
-                    <a href="<%= body_info_users_path %>" class="btn">
-                    使ってみる
-                    </a>
+                    <% unless logged_in? %>
+                        <!-- ボタンを表示 -->
+                        <%= link_to "使ってみる", body_info_users_path, class: "btn text-white rounded-full bg-cyan-500" %>
+                    <% end %>
                 <% else %>
                     <!-- ボタンを非表示 -->
                     <%= content_tag :div, class: "hidden" do %>
@@ -17,16 +17,12 @@
                     <% end %>
                 <% end %>
             </div>
-            <div class="ml-5 pr-5 mt-1 pb-12 align-items-center">
+            <div class="ml-5 pr-10 pb-12 align-items-center">
                 <button class="absolute right-0 mr-16">
                     <% if logged_in? %>
-                    <%= link_to "ログアウト",
-                                logout_path,
-                                data: { turbo_method: :delete },
-                                class: "btn text-white rounded-full bg-cyan-500" %>
+                        <!-- ログイン時は何も表示しない -->
                     <% else %>
-                    <%= link_to "ログイン",
-                                login_path, class: "btn text-white rounded-full bg-cyan-500" %>
+                    <%= link_to "ログイン", login_path, class: "btn text-white rounded-full bg-cyan-500" %>
                     <% end %>
                 </button>
             </div>
@@ -41,7 +37,7 @@
                 <li><%= link_to "マイページ", edit_profile_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
                 <li><%= link_to "お気に入り", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
                 <li><%= link_to "アカウント設定", edit_account_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                <li><%= link_to "ログアウト", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                <li><%= link_to "ログアウト", logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
                 <li><%= link_to "利用規約", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
                 <li><%= link_to "プライバシーポリシー", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
             </ul>
