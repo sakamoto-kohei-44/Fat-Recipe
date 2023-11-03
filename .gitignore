@@ -2,6 +2,7 @@ node_modules
 /log/*
 /tmp/
 application.css
+app/assets/builds
 /public/assets
 /public/builds
 /log/*.log

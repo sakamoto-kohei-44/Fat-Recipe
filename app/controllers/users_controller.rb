@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    logger.debug(user_params)
     @user = User.new(user_params)
     @user.age = session[:age]
     @user.height = session[:height]
@@ -200,6 +199,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
