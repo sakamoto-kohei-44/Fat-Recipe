@@ -157,17 +157,16 @@ https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7
 ### 使用技術<br>
 * フロントエンド<br>
   Hotwire<br>
-  Stimulus Autocomplete<br>
   JavaScript<br>
 * CSSフレームワーク<br>
-  bootstrap<br>
+  Tailwind css<br>
 * バックエンド<br>
   Ruby on Rails 7.0.7.2<br>
   Ruby 3.2.2<br>
 * RDS<br>
   PostgreSQL<br>
 * 認証・認可<br>
-  Devise<br>
+  Sorcery<br>
 * デプロイ<br>
   Render<br>
 * 環境構築<br>
