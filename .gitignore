@@ -4,3 +4,5 @@ node_modules
 application.css
 /public/assets
 /public/builds
+/log/*.log
+!/log/.keep
