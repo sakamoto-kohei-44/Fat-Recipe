@@ -1,2 +1,33 @@
-<h1>Users#edit_profile</h1>
-<p>Find me in app/views/users/edit_profile.html.erb</p>
+<div class="pt-10 bg-blue-100 min-h-screen !importan">
+  <h1 class="text-2xl font-bold mb-6">プロフィール編集</h1>
+  <%= form_with model: @user, url: edit_profile_users_path, local: true do |f| %>
+
+    <div class="mb-4">
+      <%= f.label :name, "名前", class:"block text-gray-700 font-bold mb-2" %>
+      <%= f.text_field :name, class:"border p-2 w-full" %>
+    </div>
+
+    <div class="mb-4">
+      <%= f.label :gender, "性別", class:"block text-gray-700 font-bold mb-2" %>
+      <%= f.select :gender, User.genders.keys.map {|k| [k.humanize, k]}, {}, class:"border p-2 w-full" %>
+    </div>
+
+    <div class="mb-4">
+      <%= f.label :age, "年齢", class:"block text-gray-700 font-bold mb-2" %>
+      <%= f.number_field :age, class:"border p-2 w-full" %>
+    </div>
+
+    <div class="mb-4">
+      <%= f.label :height, "身長", class:"block text-gray-700 font-bold mb-2" %>
+      <%= f.number_field :height, class:"border p-2 w-full" %>
+    </div>
+    <div class="mb-4">
+      <%= f.label :weight, "体重", class:"block text-gray-700 font-bold mb-2" %>
+      <%= f.number_field :weight, class:"border p-2 w-full" %>
+    </div>
+
+    <%= f.submit "プロフィール更新", class:"bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600" %>
+
+  <% end %>
+
+</div>
