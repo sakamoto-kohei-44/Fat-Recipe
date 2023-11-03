@@ -154,32 +154,6 @@ Spoonacular APIを利用して、初期データをインポート。
 各レシピには、材料リスト、調理手順、総カロリーなどの情報が表示される。
 ### Figma画面遷移図
 https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=5YZK4sMShNtMJ1Uk-1
-
-### 使用技術
-フロントエンド
-  Hotwire
-  Stimulus Autocomplete
-  JavaScript
-CSSフレームワーク
-  Tailwindcss
-バックエンド
-  Ruby on Rails 7.0.7.2
-  Ruby 3.2.2
-RDS
-  PostgreSQL
-ビルドツール
-  esbuild
-認証・認可
-  Devise
-デプロイ
-  Render
-環境構築
-  Docker
-バージョン管理
-  GitHub
-テスティング
-   RSpec
-   Capybara
 ### 使用技術<br>
 * フロントエンド<br>
   Hotwire<br>
