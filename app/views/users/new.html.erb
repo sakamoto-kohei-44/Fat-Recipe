@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+    <div class="pt-20 bg-blue-100 min-h-screen !importan">
       <h1>ユーザー登録</h1>
-      <%= form_with model: @user, remote: true do |f| %>
+      <%= form_with model: @user, local: true do |f| %>
         <div class="form-group">
           <%= f.label :email %>
           <%= f.email_field :email, class: 'form-control' %>
