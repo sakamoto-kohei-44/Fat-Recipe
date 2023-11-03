@@ -2,6 +2,7 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
   include Sorcery::Model
   attr_accessor :skip_special_validation
+  before_validation :set_skip_special_validation
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
@@ -23,5 +24,9 @@ class User < ApplicationRecord
 
   def skip_special_validation?
     skip_special_validation == true
+  end
+
+  def set_skip_special_validation
+    self.skip_special_validation = true if new_record? && password.present? && email.present?
   end
 end

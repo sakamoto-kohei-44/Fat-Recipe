@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get 'recipes/search_results'
   patch 'users/update_profile', to: 'users#update_profile'
   patch 'users/update_account', to: 'users#update_account'
-  resources :user_sessions
 
   # 利用規約とプライバシーポリシー
   get 'terms', to: 'pages#terms'
