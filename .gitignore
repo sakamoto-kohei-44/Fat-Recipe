@@ -2,3 +2,5 @@ node_modules
 /log/*
 /tmp/
 application.css
+/public/assets
+/public/builds
