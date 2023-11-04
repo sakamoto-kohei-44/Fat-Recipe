@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def not_authenticated
     redirect_to login_path, danger: "ログインしてください"
   end
+
+  def current_user
+    @current_user ||= user_class.find_by(id: session[:user_id])
+  end
 end

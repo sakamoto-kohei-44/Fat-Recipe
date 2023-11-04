@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  def show
+  end
+
   def new
     @user = User.new
   end
@@ -124,19 +127,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit_profile
-  end
-
-  def update_profile
-  end
-
   def edit_account
   end
 
   def update_account
-  end
-
-  def show
   end
 
   private

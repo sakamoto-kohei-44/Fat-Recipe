@@ -18,29 +18,29 @@
                 <% end %>
             </div>
             <div class="ml-5 pr-10 pb-12 align-items-center">
-                <button class="absolute right-0 mr-16">
+                <button class="absolute right-0 ml-auto">
                     <% if logged_in? %>
-                        <!-- ログイン時は何も表示しない -->
+                        <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 rounded-full">
+                            <%= image_tag current_user.avatar_url%>
+                            </div>
+                            <div class="username">
+                              <%= current_user.name %>
+                            </div>
+                        </label>
+                        <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><%= link_to "マイページ", profile_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "お気に入り", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "アカウント設定", edit_account_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "ログアウト", logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "利用規約", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "プライバシーポリシー", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                        </ul>
                     <% else %>
-                    <%= link_to "ログイン", login_path, class: "btn text-white rounded-full bg-cyan-500" %>
+                        <%= link_to "ログイン", login_path, class: "btn text-white rounded-full bg-cyan-500" %>
                     <% end %>
                 </button>
-            </div>
-
-            <div class="dropdown dropdown-end">
-            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                <div class="w-10 rounded-full">
-                <%= image_tag "sample.jpg" %>
-                </div>
-            </label>
-            <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                <li><%= link_to "マイページ", edit_profile_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                <li><%= link_to "お気に入り", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                <li><%= link_to "アカウント設定", edit_account_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                <li><%= link_to "ログアウト", logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                <li><%= link_to "利用規約", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                <li><%= link_to "プライバシーポリシー", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
-            </ul>
             </div>
         </div>
     </div>

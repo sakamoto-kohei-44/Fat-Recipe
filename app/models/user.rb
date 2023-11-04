@@ -1,7 +1,10 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
   include Sorcery::Model
+  mount_uploader :avatar, AvatarUploader
+
   attr_accessor :skip_special_validation
+
   before_validation :set_skip_special_validation
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
