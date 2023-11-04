@@ -5,7 +5,7 @@ class DebugDbConnection
 
   def call(env)
     conn = ActiveRecord::Base.connection
-    Rails.logger.debug("CONNECTION GET: #{conn}")
+    Rails.logger.debug { "CONNECTION GET: #{conn}" }
 
     @app.call(env)
   end

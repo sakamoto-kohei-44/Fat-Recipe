@@ -450,6 +450,7 @@ DEPENDENCIES
   rails-i18n
   ransack
   rubocop
+  rubocop-capybara
   rubocop-performance
   rubocop-rails
   rubocop-rspec
