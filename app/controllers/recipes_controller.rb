@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  require_dependency "#{Rails.root}/app/services/spoonacular_service"
+  require_dependency "#{Rails.root.join('app/services/spoonacular_service')}"
 
   def index
     # ユーザー情報を取得

@@ -27,14 +27,15 @@ Rails.application.routes.draw do
       post 'save_height_weight_target_weight', to: 'users#save_height_weight_target_weight', as: 'save_height_weight_target_weight'
       post 'save_activity_level', to: 'users#save_activity_level', as: 'save_activity_level'
       post 'save_allergies', to: 'users#save_allergies', as: 'save_allergies'
-      # マイページ関連
-      get 'my_page', to: 'users#edit_profile', as: 'edit_profile'
       # アカウント設定関連
       get 'account_settings', to: 'users#edit_account', as: 'edit_account'
     end
     # お気に入りレシピ
     resources :favorites, only: [:index]   # => /users/:user_id/favorites
   end
+
+  # プロフィール
+  resource :profile, only: %i[show edit update]
 
   # ダッシュボード
   get 'dashboard', to: 'dashboard#index', as: 'dashboard'
