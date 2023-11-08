@@ -30,7 +30,8 @@ class UsersController < ApplicationController
       logger.debug(@user.errors.full_messages)
     end
     if @user.save!
-      redirect_to login_path
+      session[:user_id] = @user.id
+      redirect_to dashboard_home_path
     else
       # エラーメッセージ表示
       messages = @user.errors.full_messages
@@ -150,7 +151,6 @@ class UsersController < ApplicationController
   private
 
   def set_skip_special_validation
-    # 空メソッド
   end
 
   def goal_params
