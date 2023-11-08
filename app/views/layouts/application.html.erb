@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>App</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>メシのカルテ</title>
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
-  </head>
+    <%= stylesheet_link_tag 'application.tailwind', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
 
+    <%= stylesheet_link_tag "application.tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
   <body>
-    <%= yield %>
+      <%= render 'shared/header' %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
   </body>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  </div>
 </html>

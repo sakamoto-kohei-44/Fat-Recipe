@@ -1,9 +1,47 @@
-<header class="header">
-  <div class="logo">
-    <img src=>
-  </div>
-  <nav class="nav">
-    <!-- 他のナビゲーションメニューアイテム -->
-    <a href="#" class="login-button" data-toggle="modal" data-target="#loginModal">ログイン</a>
-  </nav>
+<header class=" bg-blue-200 z-10">
+    <div class="flex justify-between items-center p-4 h-20">
+        <a href="/" class="text-white font-bold text-5xl">
+            <h1 class="text-5xl font-bold font-serif text-white">メシのカルテ</h1>
+        </a>
+        <div class="flex items-center">
+            <div class="mr-20">
+                <% if controller_name == "pages" && action_name == "home" %>
+                    <% unless logged_in? %>
+                        <!-- ボタンを表示 -->
+                        <%= link_to "使ってみる", body_info_users_path, class: "btn text-white rounded-full bg-cyan-500" %>
+                    <% end %>
+                <% else %>
+                    <!-- ボタンを非表示 -->
+                    <%= content_tag :div, class: "hidden" do %>
+                        <button>使ってみる</button>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="ml-5 pr-10 pb-12 align-items-center">
+                <button class="absolute right-0 ml-auto">
+                    <% if logged_in? %>
+                        <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 rounded-full">
+                            <%= image_tag current_user.avatar_url%>
+                            </div>
+                            <div class="username">
+                              <%= current_user.name %>
+                            </div>
+                        </label>
+                        <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><%= link_to "マイページ", profile_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "お気に入り", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "アカウント設定", edit_account_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "ログアウト", logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "利用規約", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to "プライバシーポリシー", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                        </ul>
+                    <% else %>
+                        <%= link_to "ログイン", login_path, class: "btn text-white rounded-full bg-cyan-500" %>
+                    <% end %>
+                </button>
+            </div>
+        </div>
+    </div>
 </header>
