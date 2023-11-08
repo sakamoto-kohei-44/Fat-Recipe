@@ -1,3 +1,4 @@
 import "@hotwired/turbo-rails"
-import { Application } from "@hotwired/stimulus";
 import "./controllers"
+import "./custom/chartkick"
+import "chartkick/chart.js"
