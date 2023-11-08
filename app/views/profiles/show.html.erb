@@ -1,23 +1,53 @@
-<% content_for(:title, t('.title')) %>
 <div class="container pt-3">
-  <div class="row">
-    <div class="col-md-10 offset-md-1">
-      <h1 class="float-left mb-5"><%= t('.title') %></h1>
-      <%= link_to t('defaults.edit'), edit_profile_path, class: 'btn btn-success float-right' %>
-      <table class="table">
-        <tr>
-          <th scope="row"><%= User.human_attribute_name(:email) %></th>
-          <td><%= current_user.email %></td>
-        </tr>
-        <tr>
-          <th scope="row"><%= User.human_attribute_name(:name) %></th>
-          <td><%= current_user.name %></td>
-        </tr>
-        <tr>
-          <th scope="row"><%= User.human_attribute_name(:avatar) %></th>
-          <td><%= image_tag current_user.avatar.url, class: 'rounded-circle', size: '50x50' %></td>
-        </tr>
-      </table>
-    </div>
+
+  <div class="flex justify-between items-center mb-5">
+    <h1 class="text-2xl font-bold"><%= t('.title') %></h1>
+    <%= link_to t('defaults.edit'), edit_profile_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
   </div>
+
+  <table class="table-auto w-full">
+    <tbody>
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:email) %></th>
+        <td class="border px-4 py-2"><%= current_user.email %></td>
+      </tr>
+
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:goal) %></th>
+        <td class="border px-4 py-2"><%= current_user.goal %></td>
+      </tr>
+
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:age) %></th>
+        <td class="border px-4 py-2"><%= current_user.age %></td>
+      </tr>
+
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:gender) %></th>
+        <td class="border px-4 py-2"><%= current_user.gender %></td>
+      </tr>
+
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:weight) %></th>
+        <td class="border px-4 py-2"><%= current_user.weight %></td>
+      </tr>
+
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:target_weight) %></th>
+        <td class="border px-4 py-2"><%= current_user.target_weight %></td>
+      </tr>
+
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:activity_level) %></th>
+        <td class="border px-4 py-2"><%= current_user.activity_level %></td>
+      </tr>
+
+      <tr>
+        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:avatar) %></th>
+        <td class="border px-4 py-2">
+          <%= image_tag current_user.avatar.url, class: 'w-20 h-20 object-cover rounded-full' if current_user.avatar? %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
