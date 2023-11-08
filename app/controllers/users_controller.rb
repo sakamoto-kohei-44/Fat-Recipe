@@ -21,12 +21,6 @@ class UsersController < ApplicationController
     @user.tdee = session[:tdee]
     @user.bmr = session[:bmr]
     @user.target_calorie = session[:target_calorie]
-    if @user.valid?
-      logger.debug("validation passed")
-    else
-      logger.debug("validation failed")
-      logger.debug(@user.errors.full_messages)
-    end
     if @user.save!
       session[:user_id] = @user.id
       redirect_to dashboard_home_path
@@ -37,8 +31,6 @@ class UsersController < ApplicationController
       redirect_to new_user_path
     end
   end
-  # 定数
-  KG_TO_CAL = 7700 # 1kg増加に必要なカロリー
 
   def goal
   end
@@ -46,7 +38,6 @@ class UsersController < ApplicationController
   def save_goal
     if goal_params[:goal].present?
       session[:goal] = params[:goal]
-      logger.debug("session[:goal] = #{session[:goal]}")
       redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
     else
       render :goal, alert: "保存できませんでした。入力内容を確認してください。"
@@ -98,7 +89,6 @@ class UsersController < ApplicationController
       session[:tdee] = tdee
       # activity_levelの保存
       session[:activity_level] = activity_level_params[:activity_level]
-
       # 目標カロリーの計算
       target_weight = session[:target_weight].to_i
       target_diff = (target_weight - weight)
@@ -115,7 +105,6 @@ class UsersController < ApplicationController
       height: session[:height],
       target_calorie: target_calorie
     }
-
     # セッション保存
     session[:user_data] = user_data
       redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
