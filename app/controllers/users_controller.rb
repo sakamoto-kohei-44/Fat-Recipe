@@ -9,9 +9,20 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    logger.debug("session[:goal] in create: #{session[:goal]}")
+    # sessionから値を取り出す
+    @user.goal = session[:goal]
+    logger.debug("session[:goal] value: #{session[:goal]}")
+    @user.gender = session[:gender]
     @user.age = session[:age]
     @user.height = session[:height]
     @user.weight = session[:weight]
+    @user.target_weight = session[:target_weight]
+    @user.activity_level = session[:activity_level]
+    @user.allergy_item_ids = session[:allergy_item_ids]
+    @user.tdee = session[:tdee]
+    @user.bmr = session[:bmr]
+    @user.target_calorie = session[:target_calorie]
     if @user.valid?
       logger.debug("validation passed")
     else
@@ -30,12 +41,16 @@ class UsersController < ApplicationController
   # 定数
   KG_TO_CAL = 7700 # 1kg増加に必要なカロリー
 
-  def body_info
+  def goal
   end
 
   def save_goal
-    session[:user_goal] = params[:goal]
-    redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
+    if goal_params[:goal].present?
+      session[:user_goal] = params[:goal]
+      redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
+    else
+      render :goal, alert: "保存できませんでした。入力内容を確認してください。"
+    end
   end
 
   def gender_age
@@ -70,26 +85,25 @@ class UsersController < ApplicationController
 
   def save_activity_level
     if activity_level_params[:activity_level].present?
-      session[:activity_level] = activity_level_params[:activity_level]
-
-      # 基礎代謝(BMR)とTDEEの計算
+      # session値の取得
       gender = session[:gender]
       age = session[:age].to_i
       height = session[:height].to_i
       weight = session[:weight].to_i
-      activity_level = session[:activity_level]
-
+      # bmrとtdeeを計算
       bmr = calculate_bmr(gender, age, height, weight)
-      tdee = calculate_tdee(bmr, activity_level)
-
+      tdee = calculate_tdee(bmr, activity_level_params[:activity_level])
+      # sessionに保存
       session[:bmr] = bmr
       session[:tdee] = tdee
+      # activity_levelの保存
+      session[:activity_level] = activity_level_params[:activity_level]
 
       # 目標カロリーの計算
       target_weight = session[:target_weight].to_i
       target_diff = (target_weight - weight)
       total_calorie = target_diff * KG_TO_CAL
-      days_to_achieve = 60 # 例として30日で達成するとする
+      days_to_achieve = 90
       calorie_per_day = total_calorie / days_to_achieve
       target_calorie = tdee + calorie_per_day
 
@@ -139,40 +153,7 @@ class UsersController < ApplicationController
     # 空メソッド
   end
 
-  def calculate_bmr(gender, age, height, weight)
-    if gender == "man"
-      bmr = 66.5 + (13.75 * weight) + (5.003 * height) - (6.75 * age)
-    else
-      bmr = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
-    end
-    bmr
-  end
-
-  def calculate_tdee(bmr, activity_level)
-    case activity_level
-    when "低い","low"
-      tdee = bmr * 1.2
-    when "普通","moderate"
-      tdee = bmr * 1.55
-    when "高い","high"
-      tdee = bmr * 1.9
-    end
-    tdee
-  end
-
-  def calculate_macros(tdee, weight)
-    protein_per_kg = 1.5  # これは1.5g〜2.0gの間で調整可能
-    protein_calories = protein_per_kg * weight * 4  # タンパク質1gあたり4kcal
-    fat_calories = tdee * 0.25  # 25%の脂質、これも20〜35%の間で調整可能
-    carb_calories = tdee - (protein_calories + fat_calories)
-    {
-      protein: protein_calories / 4,  # タンパク質のg数
-      fat: fat_calories / 9,  # 脂質のg数（1gの脂質は9kcal）
-      carbs: carb_calories / 4  # 炭水化物のg数
-    }
-  end
-
-  def user_goal_params
+  def goal_params
     params.permit(:goal)
   end
 
