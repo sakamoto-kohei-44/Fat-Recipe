@@ -9,10 +9,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    logger.debug("session[:goal] in create: #{session[:goal]}")
     # sessionから値を取り出す
     @user.goal = session[:goal]
-    logger.debug("session[:goal] value: #{session[:goal]}")
     @user.gender = session[:gender]
     @user.age = session[:age]
     @user.height = session[:height]
@@ -47,7 +45,8 @@ class UsersController < ApplicationController
 
   def save_goal
     if goal_params[:goal].present?
-      session[:user_goal] = params[:goal]
+      session[:goal] = params[:goal]
+      logger.debug("session[:goal] = #{session[:goal]}")
       redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
     else
       render :goal, alert: "保存できませんでした。入力内容を確認してください。"
