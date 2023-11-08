@@ -3,8 +3,11 @@ class RecipesController < ApplicationController
 
   def index
     # ユーザー情報を取得
-    user_data = session[:user_data]
-    target_calories = user_data[:target_calories]
+    if current_user
+      target_calories = current_user.target_calorie
+    else
+      target_calories = session[:target_calorie]
+    end
     logger.debug("target_calories: #{target_calories}")
     response = SpoonacularService.generate_meal_plan(
       timeFrame: 'day',
