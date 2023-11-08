@@ -1,0 +1,40 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-capybara
+  - rubocop-rails
+
+Metrics/BlockLength:
+  Max: 200
+
+Metrics/MethodLength:
+  Max: 50
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+AllCops:
+  SuggestExtensions: false
+  NewCops: enable
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Lint/EmptyConditionalBody:
+  Enabled: false
+  autocorrect: true
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false

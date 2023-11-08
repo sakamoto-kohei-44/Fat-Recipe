@@ -11,8 +11,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get height_weight_goal" do
-    get users_height_weight_goal_url
+  test "should get height_weight_target_weight" do
+    get users_height_weight_target_weight_url
     assert_response :success
   end
 
