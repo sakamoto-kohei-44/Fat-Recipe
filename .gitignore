@@ -6,5 +6,5 @@ application.css
 app/assets/builds
 /public/assets
 /public/builds
-/log/*.log
+log/development.log
 !/log/.keep
