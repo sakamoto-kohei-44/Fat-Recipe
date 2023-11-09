@@ -12,5 +12,5 @@
     <p>目標体重<%= session[:target_weight] %> kg </p>
     <p>現在の体重<%= session[:weight] %> kg </p>
   <% end %>
-  <%= line_chart @chart_data %>
+  <%= line_chart @chart_data, min: 0, max: 100  %>
 </div>
