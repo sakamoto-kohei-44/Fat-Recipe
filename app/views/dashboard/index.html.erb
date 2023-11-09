@@ -1,5 +1,5 @@
 <div class="pt-20 bg-blue-100 min-h-screen !importan">
-  <% if current_user %>
+  <% if logged_in? %>
     <p>基礎代謝: <%= current_user.bmr.floor %> kcal/day</p>
     <p>1日の推定エネルギー消費量 (TDEE): <%= current_user.tdee.floor %> kcal/day</p>
     <p>必要な1日カロリー摂取量 <%= current_user.target_calorie.floor %> kcal</p>
@@ -11,7 +11,6 @@
     <p>必要な1日カロリー摂取量 <%= session[:target_calorie].floor %> kcal</p>
     <p>目標体重<%= session[:target_weight] %> kg </p>
     <p>現在の体重<%= session[:weight] %> kg </p>
-    <%= line_chart @weight_logs.pluck(:date, :weight) %>
   <% end %>
-  <%= line_chart @weight_logs.pluck(:date, :weight) %>
+  <%= line_chart @chart_data %>
 </div>
