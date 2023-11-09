@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-  def show
-  end
-
   def new
     @user = User.new
   end
@@ -21,8 +18,9 @@ class UsersController < ApplicationController
     @user.tdee = session[:tdee]
     @user.bmr = session[:bmr]
     @user.target_calorie = session[:target_calorie]
-    if @user.save!
+    if @user.save
       session[:user_id] = @user.id
+      @weight_log = @user.weight_logs.create(weight: @user.weight, date: Date.today)
       redirect_to dashboard_home_path
     else
       # エラーメッセージ表示
@@ -30,6 +28,9 @@ class UsersController < ApplicationController
       flash[:alert] = "登録に失敗しました。#{messages.join(",")}"
       redirect_to new_user_path
     end
+  end
+
+  def show
   end
 
   def goal

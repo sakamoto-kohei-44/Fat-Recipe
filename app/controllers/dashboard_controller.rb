@@ -1,9 +1,11 @@
 class DashboardController < ApplicationController
   def index
-    @user = current_user
-    # ユーザーの体重記録を取得
-    @weight_logs = @user.weight_logs
-    # グラフ用データを作成
-    @weight_data = @weight_logs.pluck(:date, :weight)
+    if logged_in?
+      @chart_data = current_user.weight_logs.pluck(:date, :weight)
+    else
+      weight = session[:weight]
+      date = Date.today
+      @chart_data = [weight, date]
+    end
   end
 end
