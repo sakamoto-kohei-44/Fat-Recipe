@@ -10,7 +10,8 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to profile_path, success: t('defaults.message.updated', item: User.model_name.human)
+      @chart_data = current_user.weight_logs.pluck(:date, :weight)
+      redirect_to profile_path, notice: "更新しました"
     else
       flash.now['danger'] = t('defaults.message.not_updated', item: User.model_name.human)
       render :edit
