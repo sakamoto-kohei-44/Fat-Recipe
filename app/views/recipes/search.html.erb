@@ -1,18 +1,12 @@
 <div class="pt-20 bg-blue-100 min-h-screen">
-  <%= form_with url: recipes_search_results_path, method: :get, local: true do |f| %>
-    <form class="flex items-center">
-      <!-- 検索ボックス -->
-      <div class="relative">
-        <%= f.text_field :query, class:"input input-bordered w-full pr-16", placeholder:"キーワードを入力..." %>
-        <!-- 検索アイコン -->
-        <button class="absolute top-0 right-0 rounded-l-none btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+  <div class="flex flex-col w-full max-w-md mx-auto p-10">
+    <%= form_with url: recipes_search_results_path, method: :get, local: true do |f| %>
+      <div class="input-group">
+        <%= f.text_field :query, placeholder: "海外のレシピを検索", class: "input input-bordered bg-white w-full pr-16" %>
+        <button class="btn btn-square bg-blue-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
         </button>
       </div>
-      <!-- 検索ボタン -->
-      <button class="btn btn-primary ml-2">検索</button>
-    </form>
-  <% end %>
+    <% end %>
+  </div>
 </div>
