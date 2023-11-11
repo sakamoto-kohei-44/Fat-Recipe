@@ -2,8 +2,7 @@ node_modules
 /log/*
 /tmp/
 /tmp/cache
-application.css
-app/assets/builds
+app/assets/builds/application.css
 /public/assets
 /public/builds
 log/development.log

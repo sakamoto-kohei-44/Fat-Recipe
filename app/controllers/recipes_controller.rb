@@ -4,9 +4,9 @@ class RecipesController < ApplicationController
   def index
     # ユーザー情報を取得
     if current_user
-      target_calories = current_user.target_calorie
+      target_calorie = current_user.target_calorie
     else
-      target_calories = session[:target_calorie]
+      target_calorie = session[:target_calorie]
     end
     logger.debug("target_calories: #{target_calories}")
     response = SpoonacularService.generate_meal_plan(
@@ -40,5 +40,21 @@ class RecipesController < ApplicationController
   end
 
   def search_results
+    @query = SpoonacularService.translate_text(
+           text: params[:query],
+           from_language: "ja",
+           to_language: "en"
+         )
+    # 検索APIを呼び出し
+    response = SpoonacularService.search(query: @query)
+    # レスポンス処理
+    @recipes = response["results"].map do |recipe|
+      {
+        id: recipe["id"],
+        title: recipe["title"],
+        image: recipe["image"]
+      }
+    end
+    render :search_results
   end
 end
