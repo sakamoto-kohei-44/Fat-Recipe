@@ -71,4 +71,15 @@ class SpoonacularService
     return '' unless response.success?
     response.parsed_response.first['translations'].first['text']
   end
+
+  def self.search(query:)
+    url = "#{BASE_URL}/recipes/complexSearch"
+    params = {
+      query: query,
+      apiKey: API_KEY,
+      addRecipeInformation: true
+    }
+    response = HTTParty.get(url, query: params)
+    response.parsed_response
+  end
 end
