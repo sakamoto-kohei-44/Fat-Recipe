@@ -133,7 +133,7 @@ https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7
 * CSSフレームワーク<br>
   Tailwind css<br>
 * バックエンド<br>
-  Ruby on Rails 7.0.7.2<br>
+  Ruby on Rails 7.0.8<br>
   Ruby 3.2.2<br>
 * RDS<br>
   PostgreSQL<br>
@@ -149,3 +149,12 @@ https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7
    RSpec<br>
    Capybara<br>
    rubocop
+# 💻Tech Stack!
+[![Ruby](https://img.shields.io/badge/Ruby-v3.2.2-CC342D?logo=Ruby&logoColor=CC342D)](https://www.ruby-lang.org/ja/news/2023/03/30/ruby-3-2-2-released)
+[![Rails](https://img.shields.io/badge/Rails-v7.0.8-CC0000?logo=Ruby-on-Rails&logoColor=CC0000)](https://rubyonrails.org/2023/3/13/Rails-7-0-4-3-and-6-1-7-3-have-been-released)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=flat&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)
+![RSpec](https://img.shields.io/badge/-RSpec-red?logo=ruby&logoColor=white&style=flat)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=flat&logo=github&logoColor=white)
+![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=flat&logo=render&logoColor=white)
