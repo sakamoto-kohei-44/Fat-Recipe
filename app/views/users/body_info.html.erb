@@ -1,18 +1,32 @@
-<div class="pt-20 bg-blue-100 min-h-screen !importan">
-    <div class="choice-container mt-20 p-6 bg-gray-100 rounded-md ">
-        <h1 class="text-2xl mb-4">目標は？</h1>
-        <%= form_with url: save_goal_users_path, local: true do |f| %>
-            <div class="flex space-x-4 mb-4">
-                <label class="flex items-center px-4 py-2 border rounded-md cursor-pointer hover:bg-gray-200">
-                    <%= f.radio_button :goal, "standard", class: "mr-2" %>
-                    標準体型になりたい
-                </label>
-                <label class="flex items-center px-4 py-2 border rounded-md cursor-pointer hover:bg-gray-200">
-                    <%= f.radio_button :goal, "slim_muscle", class: "mr-2" %>
-                    細マッチョになりたい
-                </label>
+<div class="bg-gray-100 min-h-screen">
+  <div class="max-w-lg mx-auto px-6 py-12">
+    <ul class="steps">
+      <li class="step step-primary secondary">目標</li>
+      <li class="step">プロフィール</li>
+      <li class="step">体重</li>
+      <li class="step">活動量</li>
+      <li class="step">アレルギー</li>
+      <li class="step">確認</li>
+    </ul>
+    <h1 class="text-2xl font-bold text-gray-800 text-center mb-8">目標は?</h1>
+    <%= form_with url: save_goal_users_path, local: true do |f| %>
+      <div class="bg-white rounded-lg p-6 shadow-md">
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="flex items-center mr-5">
+              <%= f.radio_button :goal, "standard", class: "h-5 w-5 text-indigo-600" %>
+              <label class="ml-3 text-gray-700 text-lg">標準体型になりたい</label>
             </div>
-            <%= f.submit "次へ", class: "px-4 py-2 border rounded-md bg-white hover:bg-gray-200" %>
-        <% end %>
-    </div>
+            <div class="flex items-center">
+              <%= f.radio_button :goal, "slim_muscle", class: "h-5 w-5 text-indigo-600" %>
+              <label class="ml-3 text-gray-700 text-lg">細マッチョになりたい</label>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <%= f.submit "次へ", class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
