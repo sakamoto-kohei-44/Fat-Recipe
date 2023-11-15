@@ -125,9 +125,25 @@ class UsersController < ApplicationController
       else
         session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
       end
-      redirect_to dashboard_home_path, notice: "アレルギー項目が正常に保存されました。"
+        session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
+      redirect_to confirmation_users_path, notice: "アレルギー項目が正常に保存されました。"
     else
       render :allergies, alert: "アレルギー項目を選択してください。"
+    end
+  end
+
+  def confirmation
+    @user = User.new(session[:user_data])
+    @goal = session[:goal]
+    @gender = session[:gender]
+    @age = session[:age]
+    @height = session[:height]
+    @weight = session[:weight]
+    @target_weight = session[:target_weight]
+    @activity_level = session[:activity_level]
+    # モデル(User)から値を取得
+    if session[:allergy_item_ids].present?
+      @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",")
     end
   end
 
