@@ -1,24 +1,31 @@
-<div class="pt-20 bg-blue-100 min-h-screen !importan">
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <%= form_with url: save_gender_age_users_path, local: true do |f| %>
-                    <div class="mb-3 mr-20">
-                        <%= f.label :gender, "性別", class: "form-label" %>
-                        <%= f.select :gender, User.genders.keys.map { |k| [k.humanize, k] }, { prompt: '選択してください' }, class: "form-select" %>
-                    </div>
-                    <div class="mb-3">
-                        <%= f.label :age, "年齢", class: "form-label" %>
-                        <%= f.number_field :age, placeholder: "何歳ですか？", class: "form-control" %>
-                    </div>
-                    <div class="mb-3 text-center">
-                        <button type="submit"
-                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            次へ
-                        </button>
-                    </div>
-                <% end %>
+<div class="bg-gray-100 min-h-screen">
+  <div class="max-w-lg mx-auto px-6 py-12">
+    <ul class="steps steps-primary">
+      <li class="step step-primary">目標</li>
+      <li class="step step-primary">プロフィール</li>
+      <li class="step">体重</li>
+      <li class="step">活動量</li>
+      <li class="step">アレルギー</li>
+    </ul>
+    <h1 class="text-2xl font-bold text-gray-800 text-center mb-8">プロフィール入力</h1>
+    <%= form_with url: save_gender_age_users_path, local: true do |f| %>
+      <div class="bg-white rounded-lg p-6 shadow-md">
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <div class="flex-1">
+              <%= f.label :gender, "性別", class:"text-gray-700 text-lg" %>
+              <%= f.select :gender, User.genders.keys.map { |k| [k.humanize, k] }, { prompt: '選択してください' }, class: "w-full rounded-md border-gray-300 text-lg" %>
             </div>
+            <div class="flex-1 ml-5">
+              <%= f.label :age, "年齢", class:"text-gray-700 text-lg" %>
+              <%= f.number_field :age, placeholder: "何歳ですか?", class: "w-full rounded-md border-gray-300 text-lg" %>
+            </div>
+          </div>
         </div>
-    </div>
+        <div class="mt-8 text-center">
+          <%= f.submit "次へ", class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
