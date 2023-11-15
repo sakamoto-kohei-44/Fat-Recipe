@@ -1,0 +1,37 @@
+<div class="bg-gray-100 min-h-screen p-4">
+  <div class="max-w-md mx-auto">
+    <ul class="steps steps-primary py-4">
+      <li class="step step-primary ">目標</li>
+      <li class="step step-primary">プロフィール</li>
+      <li class="step step-primary">体重</li>
+      <li class="step step-primary">活動量</li>
+      <li class="step step-primary">アレルギー</li>
+      <li class="step step-primary">確認</li>
+    </ul>
+    <div class="bg-white p-8 rounded-lg shadow-md">
+      <div class="flex flex-col items-center">
+        <h2 class="text-lg font-medium mb-4">入力内容確認</h2>
+        <p class="font-medium">目標: <%= @goal %></p>
+        <p class="font-medium">性別: <%= @gender %></p>
+        <p class="font-medium">年齢: <%= @age %>歳</p>
+        <p class="font-medium">身長: <%= @height %>cm</p>
+        <p class="font-medium">体重: <%= @weight %>kg</p>
+        <p class="font-medium">目標体重: <%= @target_weight %>kg</p>
+        <p class="font-medium">活動量: <%= @activity_level %></p>
+        <p class="font-medium">アレルギー: <%= @allergy_names %></p>
+        <div class="flex justify-center space-x-4">
+          <%= link_to body_info_users_path, class: "btn btn-primary" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+            </svg>
+          <% end %>
+          <%= link_to dashboard_home_path, class: "btn btn-success btn-outline" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

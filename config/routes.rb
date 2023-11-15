@@ -29,6 +29,7 @@ Rails.application.routes.draw do
       post 'save_height_weight_target_weight', to: 'users#save_height_weight_target_weight', as: 'save_height_weight_target_weight'
       post 'save_activity_level', to: 'users#save_activity_level', as: 'save_activity_level'
       post 'save_allergies', to: 'users#save_allergies', as: 'save_allergies'
+      get 'confirmation', to: 'users#confirmation', as: 'confirmation'
       # アカウント設定関連
       get 'account_settings', to: 'users#edit_account', as: 'edit_account'
     end

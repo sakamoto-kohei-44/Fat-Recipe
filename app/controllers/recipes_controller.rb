@@ -8,11 +8,10 @@ class RecipesController < ApplicationController
     else
       target_calorie = session[:target_calorie]
     end
-    logger.debug("target_calories: #{target_calories}")
     response = SpoonacularService.generate_meal_plan(
       timeFrame: 'day',
-      targetCalories: target_calories,
-      cuisine: 'Italian'
+      targetCalories: target_calorie,
+      cuisine: "japanese"
     )
     logger.debug(response)
     meals = response["meals"]
