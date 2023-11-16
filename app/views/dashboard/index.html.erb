@@ -3,15 +3,15 @@
     <div class="text-center font-bold text-2xl mb-2">
       <% if logged_in? %>
         <p>基礎代謝: <%= current_user.bmr.floor %> kcal/day</p>
-        <p>1日の推定エネルギー消費量 (TDEE): <%= current_user.tdee.floor %> kcal/day</p>
+        <p>1日の推定エネルギー消費量: <%= current_user.tdee.floor %> kcal/day</p>
         <p>必要な1日カロリー摂取量 <%= current_user.target_calorie.floor %> kcal</p>
         <p>目標体重 <%= current_user.target_weight %> kg </p>
         <p>現在の体重 <%= current_user.weight %> kg </p>
       <% else %>
         <div class="stat">
           <div class="stat-title">基礎代謝</div>
-          <p>1日の推定エネルギー消費量 (TDEE): <%= session[:tdee].floor %> kcal/day</p>
-          <p>必要な1日カロリー摂取量 <%= session[:target_calorie].floor %> kcal</p>
+          <p>1日の推定エネルギー消費量: <%= session[:tdee].floor %> kcal/day</p>
+          <p>必要な1日カロリー摂取量 <br><%= session[:target_calorie].floor %> kcal</p>
           <p>目標体重<%= session[:target_weight] %> kg </p>
           <p>現在の体重<%= session[:weight] %> kg </p>
         </div>
