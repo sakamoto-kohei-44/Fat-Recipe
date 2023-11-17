@@ -18,7 +18,7 @@ class UserSessionsController < ApplicationController
       session[:bmr] = user.bmr
       session[:tdee] = user.tdee
       session[:target_calorie] = user.target_calorie
-      redirect_back_or_to root_path
+      redirect_back_or_to dashboard_home_path
     else
       redirect_to new_user_session_path
     end
