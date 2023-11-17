@@ -58,4 +58,10 @@ class RecipesController < ApplicationController
     end
     render :search_results
   end
+
+  def autocomplete
+    query = params[:query]
+    response = SpoonacularService.autocomplete(query: query, number: 10)
+    render json: response
+  end
 end
