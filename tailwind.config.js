@@ -13,7 +13,8 @@ module.exports = {
       fontFamily: {
       },
       colors: {
-      },
+        primary: '#4ade80',
+      }
     },
   },
 

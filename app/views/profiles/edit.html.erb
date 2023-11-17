@@ -1,0 +1,58 @@
+<% content_for(:title, t('.title')) %>
+<div class="container max-h-96 overflow-y-scroll">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h1>プロフィール編集</h1>
+      <%= javascript_include_tag "application" %>
+      <%= form_with model: @user, url: profile_path, local: true do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+          <div class="mb-4">
+            <%= f.label :email, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.email_field :email, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+          </div>
+          <div class="mb-4">
+            <%= f.label :goal, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.select :goal, User.goals.keys.map {|goal| [goal.titleize,goal]}, {}, {class: "form-select shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"} %>
+          </div>
+          <div class="mb-4">
+            <%= f.label :age, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.number_field :age, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+          </div>
+
+          <div class="mb-4">
+            <%= f.label :height, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.number_field :height, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+          </div>
+
+          <div class="mb-4">
+            <%= f.label :weight, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.number_field :weight, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+          </div>
+
+          <div class="mb-4">
+            <%= f.label :target_weight, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.number_field :target_weight, class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+          </div>
+
+          <div class="mb-4">
+            <%= f.label :activity_level, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.select :activity_level, [['低い', 'low'], ['適度', 'moderate'], ['高い', 'high']], {}, {class: "form-select shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"} %>
+          </div>
+
+          <div class="mb-4">
+            <%= f.label :avatar, class: "block text-gray-700 text-sm font-bold mb-2" %>
+            <%= f.file_field :avatar, data: {
+                   controller: "image-preview",
+                   image_preview_target: "preview"
+                 } %>
+            <%= f.hidden_field :avatar_cache %>
+            <div class='mt-3 flex items-center'>
+              <%= image_tag @user.avatar.url, class: 'w-24 h-24 rounded-full' if @user.avatar? %>
+            </div>
+          </div>
+            <%= f.submit "保存", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>

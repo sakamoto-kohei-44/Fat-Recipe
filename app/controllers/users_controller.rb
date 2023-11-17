@@ -1,25 +1,47 @@
 class UsersController < ApplicationController
 
-  # 定数
-  KG_TO_CAL = 7700 # 1kg増加に必要なカロリー
-
-  def body_info
-  end
-
-  def save_goal
-    session[:user_goal] = params[:goal]
-    redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
+  def new
+    @user = User.new
   end
 
   def create
     @user = User.new(user_params)
-    @user.goal = session[:user_goal]
-
+    # sessionから値を取り出す
+    @user.goal = session[:goal]
+    @user.gender = session[:gender]
+    @user.age = session[:age]
+    @user.height = session[:height]
+    @user.weight = session[:weight]
+    @user.target_weight = session[:target_weight]
+    @user.activity_level = session[:activity_level]
+    @user.allergy_item_ids = session[:allergy_item_ids]
+    @user.tdee = session[:tdee]
+    @user.bmr = session[:bmr]
+    @user.target_calorie = session[:target_calorie]
     if @user.save
-      session.delete(:user_goal)
-      redirect_to root_path, notice: 'ユーザー情報が正常に保存されました。'
+      session[:user_id] = @user.id
+      @weight_log = @user.weight_logs.create(weight: @user.weight, date: Date.today)
+      redirect_to dashboard_home_path
     else
-      render :new
+      # エラーメッセージ表示
+      messages = @user.errors.full_messages
+      flash[:alert] = "登録に失敗しました。#{messages.join(",")}"
+      redirect_to new_user_path
+    end
+  end
+
+  def show
+  end
+
+  def goal
+  end
+
+  def save_goal
+    if goal_params[:goal].present?
+      session[:goal] = params[:goal]
+      redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
+    else
+      render :goal, alert: "保存できませんでした。入力内容を確認してください。"
     end
   end
 
@@ -27,9 +49,9 @@ class UsersController < ApplicationController
   end
 
   def save_gender_age
-    if user_params[:gender].present? && user_params[:age].present?
-      session[:gender] = user_params[:gender]
-      session[:age] = user_params[:age]
+    if gender_age_params[:gender].present? && gender_age_params[:age].present?
+      session[:gender] = gender_age_params[:gender]
+      session[:age] = gender_age_params[:age]
       redirect_to height_weight_target_weight_users_path, notice: "性別と年齢が正常に保存されました。"
     else
       render :gender_age, alert: "保存できませんでした。入力内容を確認してください。"
@@ -40,10 +62,10 @@ class UsersController < ApplicationController
   end
 
   def save_height_weight_target_weight
-    if user_params[:height].present? && user_params[:weight].present? && user_params[:target_weight].present?
-      session[:height] = user_params[:height]
-      session[:weight] = user_params[:weight]
-      session[:target_weight] = user_params[:target_weight]
+    if height_weight_target_weight_params[:height].present? && height_weight_target_weight_params[:weight].present? && height_weight_target_weight_params[:target_weight].present?
+      session[:height] = height_weight_target_weight_params[:height]
+      session[:weight] = height_weight_target_weight_params[:weight]
+      session[:target_weight] = height_weight_target_weight_params[:target_weight]
       redirect_to activity_level_users_path, notice: "正常に保存されました。"
     else
       render :height_weight_target_weight, alert: "保存できませんでした。入力内容を確認してください。"
@@ -54,27 +76,25 @@ class UsersController < ApplicationController
   end
 
   def save_activity_level
-    if user_params[:activity_level].present?
-      session[:activity_level] = user_params[:activity_level]
-
-      # 基礎代謝(BMR)とTDEEの計算
+    if activity_level_params[:activity_level].present?
+      # session値の取得
       gender = session[:gender]
       age = session[:age].to_i
       height = session[:height].to_i
       weight = session[:weight].to_i
-      activity_level = session[:activity_level]
-
+      # bmrとtdeeを計算
       bmr = calculate_bmr(gender, age, height, weight)
-      tdee = calculate_tdee(bmr, activity_level)
-
+      tdee = calculate_tdee(bmr, activity_level_params[:activity_level])
+      # sessionに保存
       session[:bmr] = bmr
       session[:tdee] = tdee
-
+      # activity_levelの保存
+      session[:activity_level] = activity_level_params[:activity_level]
       # 目標カロリーの計算
       target_weight = session[:target_weight].to_i
       target_diff = (target_weight - weight)
       total_calorie = target_diff * KG_TO_CAL
-      days_to_achieve = 60 # 例として30日で達成するとする
+      days_to_achieve = 90
       calorie_per_day = total_calorie / days_to_achieve
       target_calorie = tdee + calorie_per_day
 
@@ -86,7 +106,6 @@ class UsersController < ApplicationController
       height: session[:height],
       target_calorie: target_calorie
     }
-
     # セッション保存
     session[:user_data] = user_data
       redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
@@ -99,23 +118,33 @@ class UsersController < ApplicationController
   end
 
   def save_allergies
-    if user_params[:allergy_item_ids]&.reject(&:blank?).present?
+    if allergies_params[:allergy_item_ids]&.reject(&:blank?).present?
       # アレルギーなしのIDをチェック (例として1を使用)
-      if user_params[:allergy_item_ids].include?("39")
+      if allergies_params[:allergy_item_ids].include?("39")
         session[:allergy_item_ids] = ["39"]
       else
-        session[:allergy_item_ids] = user_params[:allergy_item_ids]
+        session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
       end
-      redirect_to dashboard_home_path, notice: "アレルギー項目が正常に保存されました。"
+        session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
+      redirect_to confirmation_users_path, notice: "アレルギー項目が正常に保存されました。"
     else
       render :allergies, alert: "アレルギー項目を選択してください。"
     end
   end
 
-  def edit_profile
-  end
-
-  def update_profile
+  def confirmation
+    @user = User.new(session[:user_data])
+    @goal = session[:goal]
+    @gender = session[:gender]
+    @age = session[:age]
+    @height = session[:height]
+    @weight = session[:weight]
+    @target_weight = session[:target_weight]
+    @activity_level = session[:activity_level]
+    # モデル(User)から値を取得
+    if session[:allergy_item_ids].present?
+      @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",")
+    end
   end
 
   def edit_account
@@ -124,50 +153,32 @@ class UsersController < ApplicationController
   def update_account
   end
 
-  def show
-  end
-
   private
 
-  def calculate_bmr(gender, age, height, weight)
-    if gender == "man"
-      bmr = 66.5 + (13.75 * weight) + (5.003 * height) - (6.75 * age)
-    else
-      bmr = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
-    end
-    bmr
+  def set_skip_special_validation
   end
 
-  def calculate_tdee(bmr, activity_level)
-    case activity_level
-    when "低い","low"
-      tdee = bmr * 1.2
-    when "普通","moderate"
-      tdee = bmr * 1.55
-    when "高い","high"
-      tdee = bmr * 1.9
-    end
-    tdee
-  end
-
-  def calculate_macros(tdee, weight)
-    protein_per_kg = 1.5  # これは1.5g〜2.0gの間で調整可能
-    protein_calories = protein_per_kg * weight * 4  # タンパク質1gあたり4kcal
-    fat_calories = tdee * 0.25  # 25%の脂質、これも20〜35%の間で調整可能
-    carb_calories = tdee - (protein_calories + fat_calories)
-    {
-      protein: protein_calories / 4,  # タンパク質のg数
-      fat: fat_calories / 9,  # 脂質のg数（1gの脂質は9kcal）
-      carbs: carb_calories / 4  # 炭水化物のg数
-    }
-  end
-
-  def user_goal_params
+  def goal_params
     params.permit(:goal)
   end
 
+  def gender_age_params
+    params.permit(:gender, :age)
+  end
+
+  def height_weight_target_weight_params
+    params.permit(:height, :weight, :target_weight)
+  end
+
+  def activity_level_params
+    params.permit(:activity_level)
+  end
+
+  def allergies_params
+    params.permit(allergy_item_ids: [])
+  end
+
   def user_params
-    params.permit(:age, :gender, :goal, :email, :password, :name, :height, :weight, :activity_level, :target_weight, :authenticity_token, :commit, allergy_item_ids: [])
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
-

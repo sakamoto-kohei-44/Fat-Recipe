@@ -1,13 +1,31 @@
-<div class="pt-20">
-    <div class="choice-container">
-        <h1>アレルギー選択</h1>
-        <%= form_with model: @user, url: save_allergies_users_path, local: true do |f| %>
-            <div class="input-container">
-                <%= f.label :allergy_item_ids, "アレルギー項目は？" %>
-                <br>
-                <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name %>
+<div class="bg-gray-100 min-h-screen">
+  <div class="max-w-lg mx-auto p-6">
+    <ul class="steps steps-primary">
+      <li class="step step-primary">目標</li>
+      <li class="step step-primary">プロフィール</li>
+      <li class="step step-primary">体重</li>
+      <li class="step step-primary">活動量</li>
+      <li class="step step-primary">アレルギー</li>
+      <li class="step">確認</li>
+    </ul>
+    <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">アレルギー選択</h1>
+    <%= form_with model: @user, url: save_allergies_users_path, local: true do |f| %>
+      <div class="bg-white rounded-lg p-6 shadow-md">
+        <div>
+          <%= f.label :allergy_item_ids, "アレルギー項目は?", class:"text-gray-700 text-lg" %>
+        </div>
+        <div class="space-y-2 mt-2">
+          <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name do |b| %>
+            <div class="flex items-center">
+              <%= b.check_box(class: "h-5 w-5") %>
+              <span class="ml-2 text-gray-700"><%= b.text %></span>
             </div>
-            <%= f.submit 'ホームへ', class: "btn btn-light" %>
-        <% end %>
-    </div>
+          <% end %>
+        </div>
+        <div class="mt-8 text-center">
+          <%= f.submit "確認", class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
