@@ -9,8 +9,7 @@
         <%= f.text_field :query,
             placeholder: "例: トマト,ピザ",
             class:"block w-full py-2 pl-4 pr-10 text-sm rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500", 
-            data: { autocomplete_target: "input" },
-            autocomplete: "off" %>
+            data: { autocomplete_target: "input" } %>
         <ul data-autocomplete-target="suggestions" class="suggestions"></ul>
         <button class="absolute right-0 p-2 text-gray-500 rounded-r-md hover:text-white hover:bg-blue-500">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
