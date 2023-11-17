@@ -39,20 +39,22 @@ class RecipesController < ApplicationController
   end
 
   def search_results
-    @query = SpoonacularService.translate_text(
-           text: params[:query],
-           from_language: "ja",
-           to_language: "en"
-         )
-    # 検索APIを呼び出し
-    response = SpoonacularService.search(query: @query)
-    # レスポンス処理
-    @recipes = response["results"].map do |recipe|
-      {
-        id: recipe["id"],
-        title: recipe["title"],
-        image: recipe["image"]
-      }
+    queries = params[:query].split(/,\s*/)
+    @recipes = []
+    queries.each do |query|
+      translated_query = SpoonacularService.translate_text(
+        text: query,
+        from_language: "ja",
+        to_language: "en"
+      )
+      response = SpoonacularService.search(query: translated_query)
+      response["results"].each do |recipe|
+        @recipes << {
+          id: recipe["id"],
+          title: recipe["title"],
+          image: recipe["image"]
+        }
+      end
     end
     render :search_results
   end
