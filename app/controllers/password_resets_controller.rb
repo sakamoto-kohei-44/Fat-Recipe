@@ -8,7 +8,7 @@ class PasswordResetsController < ApplicationController
     rescue => e
       logger.error("Error sending password reset: #{e.message}")
     end
-    redirect_to login_path, success: t('.success') 
+    redirect_to login_path, success: t('.success')
   end
 
   def edit
