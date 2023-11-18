@@ -33,8 +33,6 @@ Rails.application.routes.draw do
       # アカウント設定関連
       get 'account_settings', to: 'users#edit_account', as: 'edit_account'
     end
-    # お気に入りレシピ
-    resources :favorites, only: [:index]   # => /users/:user_id/favorites
   end
 
   # プロフィール
