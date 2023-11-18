@@ -1,0 +1,23 @@
+ja:
+  users:
+    save_goal:
+      success: "目標が保存されました"
+      fail: "目標を選択してください"
+    save_gender_age:
+      success: "性別と年齢が保存されました"
+      fail: "性別と年齢を選択してください"
+    save_height_weight_target_weight:
+      success: "身長と体重が保存されました"
+      fail: "身長と体重を選択してください"
+    save_activity_level:
+      success: "活動レベルが保存されました"
+      fail: "活動レベルを選択してください"
+    save_allergies:
+      success: "アレルギーが保存されました"
+      fail: "アレルギーを選択してください"
+  sessions:
+    new:
+      title: "Login"
+    create:
+      success: "ログインしました"
+      fail: "ログインに失敗しました"

@@ -1,2 +1,29 @@
-<h1>PasswordResets#edit</h1>
-<p>Find me in app/views/password_resets/edit.html.erb</p>
+<%= content_for(:title, t('.title')) %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1><%= t '.title' %></h1>
+      <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= @user.email %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+        <div class="actions">
+          <p class="text-center">
+          <%= f.submit class: 'btn btn-primary' %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

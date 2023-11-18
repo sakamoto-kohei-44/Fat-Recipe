@@ -6,9 +6,10 @@
       <li class="step step-primary">体重</li>
       <li class="step step-primary">活動量</li>
       <li class="step">アレルギー</li>
+      <li class="step">確認</li>
     </ul>
     <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">活動レベル選択</h1>
-    <%= form_with url: save_activity_level_users_path, local: true do |f| %>
+    <%= form_with url: save_activity_level_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md">
         <div>
           <%= f.label :activity_level, "活動レベルは?", class:"text-gray-700 text-lg" %>
