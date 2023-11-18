@@ -1,7 +1,7 @@
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
   <div class="px-24 py-10 mx-4 text-left bg-white shadow-lg rounded-lg md:w-1/3">
     <h1 class="text-2xl font-bold text-center"><%= t('user_sessions.new.title') %></h1>
-    <%= form_with url: login_path, local: true do |f| %>
+    <%= form_with url: login_path, local: true, data: { turbo: false } do |f| %>
       <div class="mt-4">
         <%= f.label :email, t('user_sessions.new.email_label'), class: "block text-sm font-medium text-gray-700" %>
         <%= f.text_field :email, class: "block w-full px-4 py-2 mt-1 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>

@@ -7,6 +7,11 @@ ja:
       login_button: "ログイン"
       register_link: "登録ページへ"
       password_forget: "パスワードを忘れた"
+    create:
+      success: "ログインしました"
+      fail: "ログインに失敗しました"
+    destroy:
+      success: "ログアウトしました"
   users:
     new:
       title: "新規登録"
@@ -30,9 +35,3 @@ ja:
     save_allergies:
       success: "アレルギーが保存されました"
       fail: "アレルギーを選択してください"
-  sessions:
-    new:
-      title: "Login"
-    create:
-      success: "ログインしました"
-      fail: "ログインに失敗しました"
