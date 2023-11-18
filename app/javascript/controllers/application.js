@@ -7,6 +7,3 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
-import Chartkick from "chartkick"
-window.Chartkick = Chartkick
-import "chartkick/chart.js"
