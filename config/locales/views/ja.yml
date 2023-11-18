@@ -1,5 +1,20 @@
 ja:
+  user_sessions:
+    new:
+      title: "ログイン"
+      email_label: "メールアドレス"
+      password_label: "パスワード"
+      login_button: "ログイン"
+      register_link: "登録ページへ"
+      password_forget: "パスワードを忘れた"
   users:
+    new:
+      title: "新規登録"
+      email_label: "メールアドレス"
+      password_label: "パスワード"
+      password_confirmation_label: "パスワード確認"
+      register_button: "登録"
+      login_link: "ログインページへ"
     save_goal:
       success: "目標が保存されました"
       fail: "目標を選択してください"
