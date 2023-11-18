@@ -6,9 +6,10 @@
       <li class="step step-primary">体重</li>
       <li class="step">活動量</li>
       <li class="step">アレルギー</li>
+      <li class="step">確認</li>
     </ul>
     <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">体重管理</h1>
-    <%= form_with url: save_height_weight_target_weight_users_path, local: true, class: "space-y-4" do |f| %>
+    <%= form_with url: save_height_weight_target_weight_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md">
         <div class="space-y-4">
           <div>
