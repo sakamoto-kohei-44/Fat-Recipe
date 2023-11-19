@@ -13,6 +13,9 @@ ja:
     destroy:
       success: "ログアウトしました"
   users:
+    create:
+      success: "新規登録しました"
+      fail: "新規登録に失敗しました"
     new:
       title: "新規登録"
       email_label: "メールアドレス"
