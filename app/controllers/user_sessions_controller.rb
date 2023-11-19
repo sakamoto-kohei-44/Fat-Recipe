@@ -20,7 +20,7 @@ class UserSessionsController < ApplicationController
       session[:target_calorie] = user.target_calorie
       redirect_back_or_to dashboard_home_path, notice: t('.success')
     else
-      flash.now[:dander] = t('.fail')
+      flash.now[:danger] = t('.fail')
       render :new, status: :unprocessable_entity
     end
   end

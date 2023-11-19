@@ -21,10 +21,10 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       @weight_log = @user.weight_logs.create(weight: @user.weight, date: Date.today)
-      redirect_to dashboard_home_path
+      redirect_to dashboard_home_path, notice: t('users.create.success')
     else
-      flash.now[:alert] = t('.fail')
-      redirect_to new_user_path
+      flash.now[:danger] = t('users.create.fail')
+      render new_user_path
     end
   end
 
