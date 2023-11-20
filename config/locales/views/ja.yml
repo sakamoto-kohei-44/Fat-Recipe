@@ -1,5 +1,55 @@
 ja:
+  defaults:
+    title: "Fat Recipe"
+    login: "ログイン"
+    try_it: "使ってみる"
+    my_page: "マイページ"
+    account_settings: "アカウント設定"
+    logout: "ログアウト"
+    terms_of_service: "利用規約"
+    privacy_policy: "プライバシーポリシー"
+  password_resets:
+    new:
+      title: "パスワードリセット申請"
+      email_label: "メールアドレス"
+      submit: "送信"
+    create:
+      success: "再発行メールを送信しました"
+      fail: "メールアドレスを入力してください"
+    edit:
+      title: "パスワード変更"
+      password_label: "新しいパスワード"
+      password_confirmation_label: "新しいパスワード再確認"
+      submit_button: "再設定"
+    update:
+      success_password_change: "パスワードを変更しました"
+      fail_password_change1: "パスワードが未入力です"
+      fail_password_change: "パスワードが一致しません"
+  user_sessions:
+    new:
+      title: "ログイン"
+      email_label: "メールアドレス"
+      password_label: "パスワード"
+      login_button: "ログイン"
+      register_link: "登録ページへ"
+      password_forget: "パスワードを忘れた"
+    create:
+      success: "ログインしました"
+      fail: "ログインに失敗しました"
+    destroy:
+      success: "ログアウトしました"
   users:
+    create:
+      success: "新規登録しました"
+      fail: "新規登録に失敗しました"
+    new:
+      title: "新規登録"
+      name_label: "名前"
+      email_label: "メールアドレス"
+      password_label: "パスワード"
+      password_confirmation_label: "パスワード確認"
+      register_button: "登録"
+      login_link: "ログインページへ"
     save_goal:
       success: "目標が保存されました"
       fail: "目標を選択してください"
@@ -15,9 +65,104 @@ ja:
     save_allergies:
       success: "アレルギーが保存されました"
       fail: "アレルギーを選択してください"
-  sessions:
-    new:
-      title: "Login"
-    create:
-      success: "ログインしました"
-      fail: "ログインに失敗しました"
+  search:
+    title: "レシピ検索"
+    description: "※海外風のレシピしか取得できません"
+    placeholder: "例: トマト,ピザ"
+    site_description: "レシピ検索サイトの説明文章がここに入ります。"
+    about: "レシピ検索サイトについて"
+  search_results:
+    title: "検索結果"
+  dashboard:
+    bmr: "基礎代謝"
+    tdee: "1日の推定エネルギー消費量"
+    target_calorie: "必要な1日カロリー摂取量"
+    target_weight: "目標体重"
+    current_weight: "現在の体重"
+    kcal_per_day: "%{value} kcal/day"
+    kg: "%{value} kg"
+  body_info:
+    steps:
+      goal: "目標"
+      profile: "プロフィール"
+      weight: "体重"
+      activity: "活動量"
+      allergies: "アレルギー"
+      confirmation: "確認"
+    title: "目標は?"
+    standard_body: "標準体型になりたい"
+    slim_muscle: "細マッチョになりたい"
+    next: "次へ"
+  gender_age:
+    steps:
+      goal: "目標"
+      profile: "プロフィール"
+      weight: "体重"
+      activity: "活動量"
+      allergies: "アレルギー"
+      confirmation: "確認"
+    title: "プロフィール入力"
+    gender_label: "性別"
+    gender_prompt: "選択してください"
+    age_label: "年齢"
+    age_placeholder: "何歳ですか?"
+    next: "次へ"
+  height_weight_target_weight:
+    steps:
+      goal: "目標"
+      profile: "プロフィール"
+      weight: "体重"
+      activity: "活動量"
+      allergies: "アレルギー"
+      confirmation: "確認"
+    title: "体重管理"
+    height_label: "身長は?"
+    height_placeholder: "cm"
+    weight_label: "体重は?"
+    weight_placeholder: "kg"
+    target_weight_label: "目標体重は?"
+    target_weight_placeholder: "kg"
+    next_button: "次へ"
+  activity_level:
+    steps:
+      goal: "目標"
+      profile: "プロフィール"
+      weight: "体重"
+      activity: "活動量"
+      allergies: "アレルギー"
+      confirmation: "確認"
+    title: "活動レベル選択"
+    label: "活動レベルは?"
+    options:
+      low: "低い"
+      moderate: "適度"
+      high: "高い"
+    next_button: "次へ"
+  allergies:
+    steps:
+      goal: "目標"
+      profile: "プロフィール"
+      weight: "体重"
+      activity: "活動量"
+      allergies: "アレルギー"
+      confirmation: "確認"
+    title: "アレルギー選択"
+    label: "アレルギー項目は?"
+    confirm_button: "確認"
+  confirmation:
+    steps:
+      goal: "目標"
+      profile: "プロフィール"
+      weight: "体重"
+      activity: "活動量"
+      allergies: "アレルギー"
+      confirmation: "確認"
+    title: "入力内容確認"
+    goal: "目標:"
+    gender: "性別:"
+    age: "年齢:"
+    height: "身長:"
+    weight: "体重:"
+    target_weight: "目標体重:"
+    activity_level: "活動量:"
+    allergies: "アレルギー:"
