@@ -10,11 +10,11 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
   validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
+  validates :email, uniqueness: true, presence: true
 
   validates :age, presence: true, numericality: { only_integer: true, greater_than: 0 }, unless: :skip_special_validation?
   validates :height, :weight, presence: true, numericality: { greater_than: 0 }, unless: :skip_special_validation?
 
-  validates :email, uniqueness: true, presence: true
   has_many :weight_logs
   has_many :recipes
   has_many :food_preferences
