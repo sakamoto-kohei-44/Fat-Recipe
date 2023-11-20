@@ -1,19 +1,19 @@
-<header class=" bg-blue-200 z-10">
+<header class=" bg-green-300 z-10">
     <div class="flex justify-between items-center p-4 h-20">
         <a href="<%= dashboard_home_path %>" class="text-white font-bold text-5xl">
-            <h1 class="text-5xl font-bold font-serif text-white">Fat Recipe</h1>
+            <h1 class="text-5xl font-bold font-serif text-white"><%= t('defaults.title') %></h1>
         </a>
         <div class="flex items-center">
-            <div class="mr-20">
+            <div class="mr-4">
                 <% if controller_name == "pages" && action_name == "home" %>
                     <% unless logged_in? %>
                         <!-- ボタンを表示 -->
-                        <%= link_to "使ってみる", body_info_users_path, class: "btn text-white rounded-full bg-cyan-500" %>
+                        <%= link_to t('defaults.try_it'), body_info_users_path, class: "btn text-white rounded-full bg-cyan-400" %>
                     <% end %>
                 <% else %>
                     <!-- ボタンを非表示 -->
                     <%= content_tag :div, class: "hidden" do %>
-                        <button>使ってみる</button>
+                        <button>t('defaults.try_it')</button>
                     <% end %>
                 <% end %>
             </div>
@@ -30,15 +30,14 @@
                             </div>
                         </label>
                         <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><%= link_to "マイページ", profile_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                            <li><%= link_to "お気に入り", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                            <li><%= link_to "アカウント設定", edit_account_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                            <li><%= link_to "ログアウト", logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                            <li><%= link_to "利用規約", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                            <li><%= link_to "プライバシーポリシー", "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to t('defaults.my_page'), profile_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to t('defaults.account_settings'), edit_account_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to t('defaults.terms_of_service'), "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
+                            <li><%= link_to t('defaults.privacy_policy'), "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
                         </ul>
                     <% else %>
-                        <%= link_to "ログイン", login_path, class: "btn text-white rounded-full bg-cyan-500" %>
+                        <%= link_to t('defaults.login'), login_path, class: "btn text-white rounded-full bg-cyan-400" %>
                     <% end %>
                 </button>
             </div>

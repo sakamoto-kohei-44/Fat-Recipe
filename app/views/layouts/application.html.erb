@@ -16,6 +16,7 @@
   </head>
   <body>
       <%= render 'shared/header' %>
+      <%= render 'shared/flash_message' %>
       <%= yield %>
       <% if controller_name == 'pages' && action_name == 'dashboard' ||
           controller_name == 'dashboard' && action_name == 'index' ||

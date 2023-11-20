@@ -1,15 +1,14 @@
-<%= content_for(:title, t('.title')) %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1><%= t '.title' %></h1>
-      <%= form_with url: password_resets_path, local: true do |f| %>
+<%= content_for(:title, t('password_resets.new.title')) %>
+<div class="flex items-center justify-center min-h-screen bg-gray-200">
+  <div class="container mx-auto p-6">
+    <div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-8">
+      <h1 class="text-2xl font-bold text-center mb-6"><%= t('password_resets.new.title') %></h1>
+      <%= form_with url: password_resets_path, local: true, data: { turbo: false }, class: "space-y-6" do |f| %>
         <div class="form-group">
-          <%= f.label :email, User.human_attribute_name(:email) %><br />
-          <%= f.email_field :email, class: 'form-control' %>
+          <%= f.label :email, t('password_resets.new.email_label'), class: "block text-sm font-medium text-gray-700" %>
+          <%= f.email_field :email, class: "block w-full px-4 py-2 mt-1 bg-gray-100 border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>
         </div>
-        <%= f.submit t('password_resets.new.submit'),class: 'btn btn-primary' %>
+        <%= f.submit t('password_resets.new.submit'), class: "px-6 py-3 text-lg text-white bg-cyan-400 rounded-lg hover:bg-cyan-500 focus:outline-none focus:bg-sky-700 w-full" %>
       <% end %>
     </div>
   </div>
-</div>

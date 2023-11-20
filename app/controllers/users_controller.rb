@@ -21,27 +21,31 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       @weight_log = @user.weight_logs.create(weight: @user.weight, date: Date.today)
-      redirect_to dashboard_home_path
+      redirect_to dashboard_home_path, notice: t('users.create.success')
     else
-      # エラーメッセージ表示
-      messages = @user.errors.full_messages
-      flash[:alert] = "登録に失敗しました。#{messages.join(",")}"
-      redirect_to new_user_path
+      flash.now[:danger] = t('users.create.fail')
+      render new_user_path
     end
   end
 
   def show
   end
 
+  def body_info
+    @goal_form = GoalForm.new
+  end
+
   def goal
   end
 
   def save_goal
-    if goal_params[:goal].present?
-      session[:goal] = params[:goal]
-      redirect_to gender_age_users_path, notice: '目標が正常に保存されました。'
+    @goal_form = GoalForm.new(goal: goal_params[:goal])
+    if @goal_form.valid?
+      session[:goal] = goal_params[:goal]
+      redirect_to gender_age_users_path, notice: t('.success')
     else
-      render :goal, alert: "保存できませんでした。入力内容を確認してください。"
+      flash.now[:alert] = t('.fail')
+      render :body_info, status: :unprocessable_entity
     end
   end
 
@@ -49,12 +53,14 @@ class UsersController < ApplicationController
   end
 
   def save_gender_age
-    if gender_age_params[:gender].present? && gender_age_params[:age].present?
-      session[:gender] = gender_age_params[:gender]
-      session[:age] = gender_age_params[:age]
-      redirect_to height_weight_target_weight_users_path, notice: "性別と年齢が正常に保存されました。"
+    @gender_age_form = GenderAgeForm.new(gender_age_params)
+    if @gender_age_form.valid?
+      session[:gender] = @gender_age_form.gender
+      session[:age] = @gender_age_form.age
+      redirect_to height_weight_target_weight_users_path, notice: t('.success')
     else
-      render :gender_age, alert: "保存できませんでした。入力内容を確認してください。"
+      flash.now[:alert] = t('.fail')
+      render :gender_age
     end
   end
 
@@ -62,13 +68,15 @@ class UsersController < ApplicationController
   end
 
   def save_height_weight_target_weight
-    if height_weight_target_weight_params[:height].present? && height_weight_target_weight_params[:weight].present? && height_weight_target_weight_params[:target_weight].present?
-      session[:height] = height_weight_target_weight_params[:height]
-      session[:weight] = height_weight_target_weight_params[:weight]
-      session[:target_weight] = height_weight_target_weight_params[:target_weight]
-      redirect_to activity_level_users_path, notice: "正常に保存されました。"
+    @height_weight_form = HeightWeightTargetWeightForm.new(height_weight_target_weight_params)
+    if @height_weight_form.valid?
+      session[:height] = @height_weight_form.height
+      session[:weight] = @height_weight_form.weight
+      session[:target_weight] = @height_weight_form.target_weight
+      redirect_to activity_level_users_path, notice: t('.success')
     else
-      render :height_weight_target_weight, alert: "保存できませんでした。入力内容を確認してください。"
+      flash.now[:alert] = t('.fail')
+      render :height_weight_target_weight
     end
   end
 
@@ -76,7 +84,8 @@ class UsersController < ApplicationController
   end
 
   def save_activity_level
-    if activity_level_params[:activity_level].present?
+    @activity_level_form = ActivityLevelForm.new(activity_level_params)
+    if @activity_level_form.valid?
       # session値の取得
       gender = session[:gender]
       age = session[:age].to_i
@@ -108,9 +117,10 @@ class UsersController < ApplicationController
     }
     # セッション保存
     session[:user_data] = user_data
-      redirect_to allergies_users_path, notice: "活動レベルが正常に保存されました。"
+      redirect_to allergies_users_path, notice: t('.success')
     else
-      render :activity_level, alert: "活動レベルの保存に失敗しました。選択してください。"
+      flash.now[:alert] = t('.fail')
+      render :activity_level
     end
   end
 
@@ -118,7 +128,8 @@ class UsersController < ApplicationController
   end
 
   def save_allergies
-    if allergies_params[:allergy_item_ids]&.reject(&:blank?).present?
+    @allergies_form = AllergiesForm.new(allergies_params)
+    if @allergies_form.valid?
       # アレルギーなしのIDをチェック (例として1を使用)
       if allergies_params[:allergy_item_ids].include?("39")
         session[:allergy_item_ids] = ["39"]
@@ -126,9 +137,10 @@ class UsersController < ApplicationController
         session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
       end
         session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
-      redirect_to confirmation_users_path, notice: "アレルギー項目が正常に保存されました。"
+      redirect_to confirmation_users_path, notice: t('.success')
     else
-      render :allergies, alert: "アレルギー項目を選択してください。"
+      flash.now[:alert] = t('.fail')
+      render :allergies
     end
   end
 

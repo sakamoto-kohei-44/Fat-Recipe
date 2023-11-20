@@ -1,19 +1,19 @@
-<div class="pt-20 bg-blue-100 min-h-screen !importan">
+<div class="pt-20 bg-green-100 min-h-screen !importan">
   <div class="max-w-md mx-auto p-4 rounded-lg bg-white shadow-lg">
     <div class="text-center font-bold text-2xl mb-2">
       <% if logged_in? %>
-        <p>基礎代謝: <%= current_user.bmr.floor %> kcal/day</p>
-        <p>1日の推定エネルギー消費量: <%= current_user.tdee.floor %> kcal/day</p>
-        <p>必要な1日カロリー摂取量 <%= current_user.target_calorie.floor %> kcal</p>
-        <p>目標体重 <%= current_user.target_weight %> kg </p>
-        <p>現在の体重 <%= current_user.weight %> kg </p>
+        <p><%= t('dashboard.bmr') %>: <%= current_user.bmr.floor %> <%= t('dashboard.kcal_per_day', value: '') %></p>
+        <p><%= t('dashboard.tdee') %>: <%= current_user.tdee.floor %> <%= t('dashboard.kcal_per_day', value: '') %></p>
+        <p><%= t('dashboard.target_calorie') %>:<br><%= current_user.target_calorie.floor %> <%= t('dashboard.kcal_per_day', value: '') %></p>
+        <p><%= t('dashboard.target_weight') %>: <%= current_user.target_weight %> <%= t('dashboard.kg', value: '') %></p>
+        <p><%= t('dashboard.current_weight') %>: <%= current_user.weight %> <%= t('dashboard.kg', value: '') %></p>
       <% else %>
         <div class="stat">
-          <div class="stat-title">基礎代謝</div>
-          <p>1日の推定エネルギー消費量: <%= session[:tdee].floor %> kcal/day</p>
-          <p>必要な1日カロリー摂取量 <br><%= session[:target_calorie].floor %> kcal</p>
-          <p>目標体重<%= session[:target_weight] %> kg </p>
-          <p>現在の体重<%= session[:weight] %> kg </p>
+          <p><%= t('dashboard.bmr') %>: <%= session[:bmr].floor %> <%= t('dashboard.kcal_per_day', value: '') %></p>
+          <p><%= t('dashboard.tdee') %>: <%= session[:tdee].floor %> <%= t('dashboard.kcal_per_day', value: '') %></p>
+          <p><%= t('dashboard.target_calorie') %>:<br><%= session[:target_calorie].floor %> <%= t('dashboard.kcal_per_day', value: '') %></p>
+          <p><%= t('dashboard.target_weight') %>: <%= session[:target_weight] %> <%= t('dashboard.kg', value: '') %></p>
+          <p><%= t('dashboard.current_weight') %>: <%= session[:weight] %> <%= t('dashboard.kg', value: '') %></p>
         </div>
       <% end %>
       <%= line_chart @chart_data, min: 0, max: 100  %>
