@@ -1,53 +1,43 @@
-<div class="container pt-3">
-
+<div class="pt-20 bg-green-100 min-h-screen !importan">
   <div class="flex justify-between items-center mb-5">
-    <h1 class="text-2xl font-bold"><%= t('.title') %></h1>
-    <%= link_to t('defaults.edit'), edit_profile_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
+    <h1 class="text-2xl font-bold">プロフィール</h1>
   </div>
 
-  <table class="table-auto w-full">
-    <tbody>
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:email) %></th>
-        <td class="border px-4 py-2"><%= current_user.email %></td>
-      </tr>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- 個人情報のカード -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">あなたの情報</h2>
+        <p><span class="font-medium">メール:</span> <%= current_user.email %></p>
+        <p><span class="font-medium">目標:</span> <%= current_user.goal %></p>
+        <p><span class="font-medium">年齢:</span> <%= current_user.age %></p>
+        <p><span class="font-medium">性別:</span> <%= current_user.gender %></p>
+      </div>
+    </div>
 
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:goal) %></th>
-        <td class="border px-4 py-2"><%= current_user.goal %></td>
-      </tr>
+    <!-- その他の情報のカード -->
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">その他の情報</h2>
+        <p><span class="font-medium">身長:</span> <%= current_user.height %>cm</p>
+        <p><span class="font-medium">体重:</span> <%= current_user.weight %>kg</p>
+        <p><span class="font-medium">目標体重:</span> <%= current_user.target_weight %>kg</p>
+        <p><span class="font-medium">活動量:</span> <%= current_user.activity_level %></p>
+      </div>
+    </div>
 
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:age) %></th>
-        <td class="border px-4 py-2"><%= current_user.age %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:gender) %></th>
-        <td class="border px-4 py-2"><%= current_user.gender %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:weight) %></th>
-        <td class="border px-4 py-2"><%= current_user.weight %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:target_weight) %></th>
-        <td class="border px-4 py-2"><%= current_user.target_weight %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:activity_level) %></th>
-        <td class="border px-4 py-2"><%= current_user.activity_level %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:avatar) %></th>
-        <td class="border px-4 py-2">
-          <%= image_tag current_user.avatar.url, class: 'w-20 h-20 object-cover rounded-full' if current_user.avatar? %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <!-- アバターのカード -->
+    <div class="card bg-white shadow-xl">
+      <figure class="px-10 pt-10">
+        <%= image_tag current_user.avatar.url, class: 'w-20 h-20 object-cover rounded-full' if current_user.avatar? %>
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">アバター</h2>
+      </div>
+    </div>
+  </div>
+  <!-- 編集ボタン -->
+  <div class="text-center mt-5">
+    <%= link_to t('defaults.edit'), edit_profile_path, class: 'btn bg-sky-300 hover:bg-sky-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
+  </div>
 </div>

@@ -1,18 +1,18 @@
-<div class="bg-gray-100 min-h-screen">
+<div class="bg-green-100 min-h-screen">
   <div class="max-w-lg mx-auto p-6">
     <ul class="steps steps-primary">
-      <li class="step step-primary">目標</li>
-      <li class="step step-primary">プロフィール</li>
-      <li class="step step-primary">体重</li>
-      <li class="step step-primary">活動量</li>
-      <li class="step step-primary">アレルギー</li>
-      <li class="step">確認</li>
+      <li class="step step-primary"><%= t('allergies.steps.goal') %></li>
+      <li class="step step-primary"><%= t('allergies.steps.profile') %></li>
+      <li class="step step-primary"><%= t('allergies.steps.weight') %></li>
+      <li class="step step-primary"><%= t('allergies.steps.activity') %></li>
+      <li class="step step-primary"><%= t('allergies.steps.allergies') %></li>
+      <li class="step"><%= t('allergies.steps.confirmation') %></li>
     </ul>
-    <h1 class="text-2xl font-bold text-gray-800 text-center mb-6">アレルギー選択</h1>
+    <h1 class="text-2xl font-bold text-gray-800 text-center mb-6"><%= t('allergies.title') %></h1>
     <%= form_with model: @user, url: save_allergies_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md">
         <div>
-          <%= f.label :allergy_item_ids, "アレルギー項目は?", class:"text-gray-700 text-lg" %>
+          <%= f.label :allergy_item_ids, t('allergies.label'), class: "text-gray-700 text-lg" %>
         </div>
         <div class="space-y-2 mt-2">
           <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name do |b| %>
@@ -23,7 +23,7 @@
           <% end %>
         </div>
         <div class="mt-8 text-center">
-          <%= f.submit "確認", class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+          <%= f.submit t('allergies.confirm_button'), class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
         </div>
       </div>
     <% end %>

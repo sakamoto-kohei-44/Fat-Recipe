@@ -1,27 +1,20 @@
-<%= content_for(:title, t('.title')) %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-      <h1><%= t '.title' %></h1>
-      <%= form_with model: @user, url: password_reset_path(@token), local: true do |f| %>
+<div class="flex items-center justify-center min-h-screen bg-gray-200">
+  <%= content_for(:title, t('password_resets.edit.title')) %>
+  <div class="container mx-auto p-6">
+    <div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-8">
+      <h1 class="text-2xl font-bold text-center mb-6"><%= t 'password_resets.edit.title' %></h1>
+      <%= form_with model: @user, url: password_reset_path(@token), local: true, data: { turbo: false }, class: "space-y-6" do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
-
         <div class="form-group">
-          <%= f.label :email %>
-          <%= @user.email %>
+          <%= f.label :password, t('password_resets.edit.password_label'), class: "block text-sm font-medium text-gray-700" %>
+          <%= f.password_field :password, class: "block w-full px-4 py-2 mt-1 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>
         </div>
         <div class="form-group">
-          <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.label :password_confirmation, t('password_resets.edit.password_confirmation_label'), class: "block text-sm font-medium text-gray-700" %>
+          <%= f.password_field :password_confirmation, class: "block w-full px-4 py-2 mt-1 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>
         </div>
-        <div class="form-group">
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
-        </div>
-        <div class="actions">
-          <p class="text-center">
-          <%= f.submit class: 'btn btn-primary' %>
-          </p>
+        <div class="actions text-center mt-6">
+          <%= f.submit t('password_resets.edit.submit_button'), class: "px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:bg-blue-700 focus:outline-none" %>
         </div>
       <% end %>
     </div>
