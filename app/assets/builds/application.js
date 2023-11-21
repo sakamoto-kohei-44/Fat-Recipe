@@ -6957,6 +6957,21 @@
   Controller.outlets = [];
   Controller.values = {};
 
+  // app/javascript/controllers/application.js
+  var application = Application.start();
+  application.debug = false;
+  window.Stimulus = application;
+
+  // app/javascript/controllers/hello_controller.js
+  var hello_controller_default = class extends Controller {
+    connect() {
+      this.element.textContent = "Hello World!";
+    }
+  };
+
+  // app/javascript/controllers/index.js
+  application.register("hello", hello_controller_default);
+
   // node_modules/chartkick/dist/chartkick.esm.js
   function isArray(variable) {
     return Object.prototype.toString.call(variable) === "[object Array]";
@@ -9103,6 +9118,9 @@
     }, 0);
   }
   Chartkick.default = Chartkick;
+
+  // app/javascript/custom/chartkick.js
+  window.Chartkick = Chartkick;
 
   // node_modules/@kurkle/color/dist/color.esm.js
   function round(v) {
@@ -28158,25 +28176,6 @@
 
   // node_modules/chartkick/chart.js/chart.esm.js
   Chartkick.use(auto_default);
-
-  // app/javascript/controllers/application.js
-  var application = Application.start();
-  application.debug = false;
-  window.Stimulus = application;
-  window.Chartkick = Chartkick;
-
-  // app/javascript/controllers/hello_controller.js
-  var hello_controller_default = class extends Controller {
-    connect() {
-      this.element.textContent = "Hello World!";
-    }
-  };
-
-  // app/javascript/controllers/index.js
-  application.register("hello", hello_controller_default);
-
-  // app/javascript/custom/chartkick.js
-  window.Chartkick = Chartkick;
 })();
 /*! Bundled license information:
 

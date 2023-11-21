@@ -1,7 +1,7 @@
 class SpoonacularService
   require 'httparty'
   BASE_URL = 'https://api.spoonacular.com'
-  API_KEY = Rails.application.credentials.dig(:spoonacular, :api_key)
+  API_KEY = ENV['SPOONACULAR_API_KEY']
 
   DEFAULT_MIN_CARBS = 10
   DEFAULT_MAX_CARBS = 100

@@ -31,7 +31,6 @@
                         </label>
                         <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><%= link_to t('defaults.my_page'), profile_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
-                            <li><%= link_to t('defaults.account_settings'), edit_account_users_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
                             <li><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
                             <li><%= link_to t('defaults.terms_of_service'), "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
                             <li><%= link_to t('defaults.privacy_policy'), "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
@@ -39,7 +38,7 @@
                     <% else %>
                         <%= link_to t('defaults.login'), login_path, class: "btn text-white rounded-full bg-cyan-400" %>
                     <% end %>
-                </button>
+                </button
             </div>
         </div>
     </div>
