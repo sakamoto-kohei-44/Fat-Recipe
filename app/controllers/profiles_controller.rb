@@ -11,10 +11,10 @@ class ProfilesController < ApplicationController
   def update
     if @user.update(user_params)
       @chart_data = current_user.weight_logs.pluck(:date, :weight)
-      redirect_to profile_path, notice: "更新しました"
+      redirect_to profile_path, notice: t('.success')
     else
-      flash.now['danger'] = t('defaults.message.not_updated', item: User.model_name.human)
-      render :edit
+      flash.now['danger'] = t('profiles.edit.file', item: User.model_name.human)
+      render :edit, status: :unprocessable_entity
     end
   end
 
