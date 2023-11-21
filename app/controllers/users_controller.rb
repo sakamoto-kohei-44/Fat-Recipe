@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       redirect_to dashboard_home_path, notice: t('users.create.success')
     else
       flash.now[:danger] = t('users.create.fail')
-      render new_user_path
+      render new_user_path, status: :unprocessable_entity
     end
   end
 
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
       redirect_to height_weight_target_weight_users_path, notice: t('.success')
     else
       flash.now[:alert] = t('.fail')
-      render :gender_age
+      render :gender_age, status: :unprocessable_entity
     end
   end
 
@@ -76,7 +76,7 @@ class UsersController < ApplicationController
       redirect_to activity_level_users_path, notice: t('.success')
     else
       flash.now[:alert] = t('.fail')
-      render :height_weight_target_weight
+      render :height_weight_target_weight, status: :unprocessable_entity
     end
   end
 
@@ -120,7 +120,7 @@ class UsersController < ApplicationController
       redirect_to allergies_users_path, notice: t('.success')
     else
       flash.now[:alert] = t('.fail')
-      render :activity_level
+      render :activity_level, status: :unprocessable_entity
     end
   end
 
@@ -140,7 +140,7 @@ class UsersController < ApplicationController
       redirect_to confirmation_users_path, notice: t('.success')
     else
       flash.now[:alert] = t('.fail')
-      render :allergies
+      render :allergies, status: :unprocessable_entity
     end
   end
 

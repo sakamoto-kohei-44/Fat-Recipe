@@ -8,7 +8,7 @@ class PasswordResetsController < ApplicationController
       redirect_to login_path, notice: t('password_resets.create.success')
     else
       flash.now[:alert] = t('password_resets.create.fail')
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -33,7 +33,7 @@ class PasswordResetsController < ApplicationController
       redirect_to login_path, notice: t('.success_password_change')
     else
       flash.now[:danger] = t('.fail_password_change')
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 end
