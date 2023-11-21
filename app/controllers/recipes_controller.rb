@@ -48,6 +48,9 @@ class RecipesController < ApplicationController
         to_language: "en"
       )
       response = SpoonacularService.search(query: translated_query)
+      if response["error"]
+        logger.error "Response body: #{response.body}"
+      end
       response["results"].each do |recipe|
         @recipes << {
           id: recipe["id"],

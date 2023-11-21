@@ -7,3 +7,4 @@ app/assets/builds/application.css
 /public/builds
 log/development.log
 !/log/.keep
+/.env
