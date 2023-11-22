@@ -1,4 +1,9 @@
 ja:
+  activerecord:
+    attributes:
+      gender:
+        man: "男性"
+        woman: "女性"
   defaults:
     title: "Fat Recipe"
     login: "ログイン"

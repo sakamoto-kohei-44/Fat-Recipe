@@ -146,13 +146,14 @@ class UsersController < ApplicationController
 
   def confirmation
     @user = User.new(session[:user_data])
+    Rails.logger.debug "Goal: #{@goal}"
     @goal = session[:goal]
-    @gender = session[:gender]
+    @gender_key = User.genders.key(session[:gender].to_i)
     @age = session[:age]
     @height = session[:height]
     @weight = session[:weight]
     @target_weight = session[:target_weight]
-    @activity_level = session[:activity_level]
+    @activity_level_key = User.activity_levels.key(session[:activity_level].to_i)
     # モデル(User)から値を取得
     if session[:allergy_item_ids].present?
       @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",")

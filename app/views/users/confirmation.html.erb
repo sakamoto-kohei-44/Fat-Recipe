@@ -11,13 +11,13 @@
     <div class="bg-white p-8 rounded-lg shadow-md">
       <div class="flex flex-col items-center">
         <h2 class="text-lg font-medium mb-4"><%= t('confirmation.title') %></h2>
-        <p class="font-medium"><%= t('confirmation.goal') %> <%= @goal %></p>
-        <p class="font-medium"><%= t('confirmation.gender') %> <%= @gender %></p>
+        <p class="font-medium"><%= t('confirmation.goal') %> <%= t("body_info.#{@goal}") %></p>
+        <p class="font-medium"><%= t('confirmation.gender') %> <%= t("activerecord.attributes.gender.#{@gender_key}") %></p>
         <p class="font-medium"><%= t('confirmation.age') %> <%= @age %>歳</p>
         <p class="font-medium"><%= t('confirmation.height') %> <%= @height %>cm</p>
         <p class="font-medium"><%= t('confirmation.weight') %> <%= @weight %>kg</p>
         <p class="font-medium"><%= t('confirmation.target_weight') %> <%= @target_weight %>kg</p>
-        <p class="font-medium"><%= t('confirmation.activity_level') %> <%= @activity_level %></p>
+        <p class="font-medium"><%= t('confirmation.activity_level') %> <%= t("activity_level.options.#{@activity_level_key}") %></p>
         <p class="font-medium"><%= t('confirmation.allergies') %> <%= @allergy_names %></p>
         <div class="flex justify-center space-x-4">
           <%= link_to body_info_users_path, class: "btn btn-primary" do %>
