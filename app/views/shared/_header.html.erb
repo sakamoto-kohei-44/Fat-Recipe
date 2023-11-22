@@ -2,16 +2,13 @@
     <div class="flex justify-between items-center p-4 h-20">
         <% if request.path == root_path %>
             <div class="text-white font-bold text-5xl">
-                <h1 class="text-5xl font-bold font-serif text-white"><%= t('defaults.title') %></h1>
+              <h1 class="text-5xl font-bold font-serif text-white">Fat Recipe</h1>
             </div>
         <% else %>
-            <a href="<%= dashboard_home_path %>" class="text-white font-bold text-5xl">
-                <h1 class="text-5xl font-bold font-serif text-white"><%= t('defaults.title') %></h1>
+            <a href="/home" class="text-white font-bold text-5xl">
+              <h1 class="text-5xl font-bold font-serif text-white">Fat Recipe</h1>
             </a>
         <% end %>
-        <a href="<%= dashboard_home_path %>" class="text-white font-bold text-5xl">
-            <h1 class="text-5xl font-bold font-serif text-white"><%= t('defaults.title') %></h1>
-        </a>
         <div class="flex items-center">
             <div class="mr-4">
                 <% if controller_name == "pages" && action_name == "home" %>
