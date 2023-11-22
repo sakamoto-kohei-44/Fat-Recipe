@@ -22,6 +22,7 @@
     "chartkick": "^5.0.1",
     "daisyui": "^3.9.3",
     "esbuild": "^0.19.4",
+    "openai": "^4.19.1",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-flexbugs-fixes": "^5.0.2",
