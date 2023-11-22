@@ -5,6 +5,7 @@ node_modules
 app/assets/builds/application.css
 /public/assets
 /public/builds
+/public/uploads/user/avatar
 log/development.log
 !/log/.keep
 /.env
