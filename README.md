@@ -51,14 +51,16 @@
 * カロリーとTDEEなどの計算(プロフィール情報を元に必要なカロリー、栄養素を算出)
 * ユーザーの情報と目標に合わせた食事の提案
 * 週一回の体重を入力し、推移をグラフで表示
+* Open AI APIを使用した適切なレシピの提供機能
 * ステップ入力・確認画面
 * マルチ検索・オートコンプリート
   ユーザーが簡単に食材やレシピを検索できるようにする
-* ローディングスピナーやプログレスバーの実装: 「レシピを生成中...」のようなメッセージの表示。(生成時間が長ければ)
+* ローディングスピナーやプログレスバーの実装: 「レシピを生成中...」のようなメッセージの表示。
 * 利用規約、プライバシーポリシー
 * 退会処理機能
 ### その後の機能
 * 嫌いな食材設定機能：(嫌いな食材を選択)
+* DALL·E APIを用いて料理名から画像生成機能(テキストだけでも重たいので検討中)
 * LINE認証
 * 管理者画面
 * Rspec
@@ -66,7 +68,8 @@
 **### 使用するAPI**
 * Spoonacular API
 * LINE Developers API
-* Microsoft Translator Text API
+* Open AI API(GPT-4,DALL·E)
+* DeepL API
 ### Figma画面遷移図
 https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=5YZK4sMShNtMJ1Uk-1
 ### 使用技術<br>
