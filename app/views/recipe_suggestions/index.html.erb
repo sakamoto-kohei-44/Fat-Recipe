@@ -1,14 +1,17 @@
-<div class="pt-20 bg-green-100 min-h-screen !importan">
-  <%= form_with(url: recipes_path, method: :get, local: true) do |form| %>
-    <!-- カロリー入力フィールド -->
-    <div class="w-full max-w-xs">
-      <%= form.label :calories, '必要なカロリー量（一日分）', class: "block text-sm font-medium text-gray-700" %>
-      <%= form.number_field :calories, min: 0, class: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
-    </div>
-
-    <!-- レシピ取得ボタン -->
-    <div>
-      <%= form.submit 'レシピを取得', class: "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+<div class="h-screen flex flex-col items-center justify-center px-8 bg-green-100">
+  <%= form_with(url: "/recipes", method: :get) do |form| %>
+    <div class="bg-white mt-6 rounded-lg shadow-md w-full max-w-md px-10 py-8">
+      <h1 class="text-xl font-bold mb-10 text-gray-700">レシピ検索</h1>
+        <div class="flex flex-col mb-4">
+          <%= form.label :calories, "必要な1日カロリー(kcal)", class: "text-gray-700" %>
+          <%= form.number_field :calories, in: 1000..4000, step: 100,
+                                class: "p-4 mt-2 border border-gray-300 rounded shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full" %>
+        </div>
+        <%= form.submit "レシピ検索", class: "bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-8 rounded shadow-lg" %>
+      </div>
     </div>
   <% end %>
+  <p class="mt-8 text-gray-700 text-center max-w-md">
+    あなたの必要カロリー量を入力してレシピを検索できます。
+  </p>
 </div>
