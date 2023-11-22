@@ -15,7 +15,7 @@
           <div class="flex items-center">
             <div class="flex-1">
               <%= f.label :gender, t('gender_age.gender_label'), class: "text-gray-700 text-lg" %>
-              <%= f.select :gender, User.genders.keys.map { |k| [k.humanize, k] }, { prompt: t('gender_age.gender_prompt') }, class: "w-full rounded-md border-gray-300 text-lg" %>
+              <%= f.select :gender, User.genders.keys.map { |k| [User.human_attribute_name("gender.#{k}"), k] }, { prompt: t('gender_age.gender_prompt') }, class: "w-full rounded-md border-gray-300 text-lg" %>
             </div>
             <div class="flex-1 ml-5">
               <%= f.label :age, t('gender_age.age_label'), class: "text-gray-700 text-lg" %>

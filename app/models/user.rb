@@ -23,6 +23,7 @@ class User < ApplicationRecord
 
   enum gender: { man: 0, woman: 1 }
   enum goal: { standard: 0, slim_muscle: 1 }
+  enum activity_level: { low: 0, moderate: 1, high: 2 }
 
   private
 

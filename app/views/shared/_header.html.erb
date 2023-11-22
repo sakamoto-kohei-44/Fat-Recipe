@@ -1,5 +1,14 @@
 <header class=" bg-green-300 z-10">
     <div class="flex justify-between items-center p-4 h-20">
+        <% if request.path == root_path %>
+            <div class="text-white font-bold text-5xl">
+                <h1 class="text-5xl font-bold font-serif text-white"><%= t('defaults.title') %></h1>
+            </div>
+        <% else %>
+            <a href="<%= dashboard_home_path %>" class="text-white font-bold text-5xl">
+                <h1 class="text-5xl font-bold font-serif text-white"><%= t('defaults.title') %></h1>
+            </a>
+        <% end %>
         <a href="<%= dashboard_home_path %>" class="text-white font-bold text-5xl">
             <h1 class="text-5xl font-bold font-serif text-white"><%= t('defaults.title') %></h1>
         </a>
