@@ -1,17 +1,9 @@
 <div class="pt-10 bg-green-100 min-h-screen flex justify-center items-start">
-  <% if @translated_recipe %>
+  <% @translated_recipe %>
     <div class="card w-96 bg-white shadow-xl mt-10">
       <div class="card-body">
         <h1 class="card-title">あなたにおすすめのレシピはこちら！</h1>
         <p><%= @translated_recipe %></p>
       </div>
     </div>
-  <% else %>
-    <div class="card w-96 bg-white shadow-xl mt-10">
-      <div class="card-body">
-        <h1 class="card-title">レシピを生成する</h1>
-        <p>カロリー値を入力してください。</p>
-      </div>
-    </div>
-  <% end %>
 </div>
