@@ -13,6 +13,9 @@
     "watch:scss": "sass --load-path=./node_modules ./app/assets/stylesheets/application.scss ./app/assets/stylesheets/application-temp.css --watch",
     "watch:css": "yarn watch:scss & postcss ./app/assets/stylesheets/application-temp.css -o ./app/assets/builds/application.css --watch"
   },
+  "engines": {
+    "node": ">=16.9.0"
+  },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^7.3.0",
