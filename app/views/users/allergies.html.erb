@@ -1,4 +1,5 @@
-<div class="bg-green-100 min-h-screen">
+
+<div class="bg-teal-100 min-h-screen">
   <div class="max-w-lg mx-auto p-6">
     <ul class="steps steps-primary">
       <li class="step step-primary"><%= t('allergies.steps.goal') %></li>
@@ -16,14 +17,14 @@
         </div>
         <div class="space-y-2 mt-2">
           <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name do |b| %>
-            <div class="flex items-center">
-              <%= b.check_box(class: "h-5 w-5") %>
+            <label class="flex items-center">
+              <%= b.check_box(class: "h-5 w-5 text-indigo-600 rounded focus:ring-indigo-500") %>
               <span class="ml-2 text-gray-700"><%= b.text %></span>
-            </div>
+            </label>
           <% end %>
         </div>
-        <div class="mt-8 text-center">
-          <%= f.submit t('allergies.confirm_button'), class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+        <div class="text-center mt-8">
+          <%= f.submit t('allergies.confirm_button'), class: "btn btn-primary bg-cyan-300 w-full" %>
         </div>
       </div>
     <% end %>

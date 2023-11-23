@@ -1,4 +1,5 @@
-<div class="bg-green-100 min-h-screen">
+
+<div class="bg-teal-100 min-h-screen">
   <div class="max-w-lg mx-auto px-6 py-12">
     <ul class="steps steps-primary">
       <li class="step step-primary"><%= t('gender_age.steps.goal') %></li>
@@ -10,21 +11,21 @@
     </ul>
     <h1 class="text-2xl font-bold text-gray-800 text-center mb-8"><%= t('gender_age.title') %></h1>
     <%= form_with url: save_gender_age_users_path, local: true, data: { turbo: false } do |f| %>
-      <div class="bg-white rounded-lg p-6 shadow-md">
+      <div class="bg-white rounded-lg p-6 shadow-lg">
         <div class="space-y-4">
           <div class="flex items-center">
             <div class="flex-1">
               <%= f.label :gender, t('gender_age.gender_label'), class: "text-gray-700 text-lg" %>
-              <%= f.select :gender, User.genders.keys.map { |k| [User.human_attribute_name("gender.#{k}"), k] }, { prompt: t('gender_age.gender_prompt') }, class: "w-full rounded-md border-gray-300 text-lg" %>
+              <%= f.select :gender, User.genders.keys.map { |k| [User.human_attribute_name("gender.#{k}"), k] }, { prompt: t('gender_age.gender_prompt') }, class: "w-full rounded-md border-gray-400 text-lg shadow-sm" %>
             </div>
             <div class="flex-1 ml-5">
               <%= f.label :age, t('gender_age.age_label'), class: "text-gray-700 text-lg" %>
-              <%= f.number_field :age, placeholder: t('gender_age.age_placeholder'), class: "w-full rounded-md border-gray-300 text-lg" %>
+              <%= f.number_field :age, placeholder: t('gender_age.age_placeholder'), class: "w-full rounded-md border-gray-400 text-lg shadow-sm" %>
             </div>
           </div>
         </div>
-        <div class="mt-8 text-center">
-          <%= f.submit t('gender_age.next'), class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+        <div class="text-center mt-8">
+          <%= f.submit t('gender_age.next'), class: "btn btn-primary w-full bg-cyan-300" %>
         </div>
       </div>
     <% end %>

@@ -1,4 +1,5 @@
-<div class="bg-green-100 min-h-screen">
+
+<div class="bg-teal-100 min-h-screen">
   <div class="max-w-lg mx-auto p-6">
     <ul class="steps steps-primary">
       <li class="step step-primary"><%= t('height_weight_target_weight.steps.goal') %></li>
@@ -12,21 +13,12 @@
     <%= form_with url: save_height_weight_target_weight_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md">
         <div class="space-y-4">
-          <div>
-            <%= f.label :height, t('height_weight_target_weight.height_label'), class: "text-gray-700 text-lg" %>
-            <%= f.text_field :height, placeholder: t('height_weight_target_weight.height_placeholder'), class: "w-full rounded-md border-gray-300 text-lg" %>
-          </div>
-          <div>
-            <%= f.label :weight, t('height_weight_target_weight.weight_label'), class: "text-gray-700 text-lg" %>
-            <%= f.text_field :weight, placeholder: t('height_weight_target_weight.weight_placeholder'), class: "w-full rounded-md border-gray-300 text-lg" %>
-          </div>
-          <div>
-            <%= f.label :target_weight, t('height_weight_target_weight.target_weight_label'), class: "text-gray-700 text-lg" %>
-            <%= f.text_field :target_weight, placeholder: t('height_weight_target_weight.target_weight_placeholder'), class: "w-full rounded-md border-gray-300 text-lg" %>
-          </div>
+          <%= form_group(f, :height, 'height_weight_target_weight.height_label', 'height_weight_target_weight.height_placeholder') %>
+          <%= form_group(f, :weight, 'height_weight_target_weight.weight_label', 'height_weight_target_weight.weight_placeholder') %>
+          <%= form_group(f, :target_weight, 'height_weight_target_weight.target_weight_label', 'height_weight_target_weight.target_weight_placeholder') %>
         </div>
-        <div class="mt-8 text-center">
-          <%= f.submit t('height_weight_target_weight.next_button'), class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+        <div class="text-center mt-8">
+          <%= f.submit t('height_weight_target_weight.next_button'), class: "btn btn-primary w-full bg-cyan-300" %>
         </div>
       </div>
     <% end %>

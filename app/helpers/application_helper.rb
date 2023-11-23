@@ -8,4 +8,11 @@ module ApplicationHelper
     else 'bg-gray-100 border border-gray-400 text-gray-700'
     end
   end
+  def user_stats(value, title_key, unit_key, icon)
+    render partial: 'shared/user_stat', locals: { value: value, title_key: title_key, unit_key: unit_key, icon: icon }
+  end
+
+  def form_group(form, attribute, label_key, placeholder_key)
+    render partial: 'shared/form_group', locals: { form: form, attribute: attribute, label_key: label_key, placeholder_key: placeholder_key }
+  end
 end
