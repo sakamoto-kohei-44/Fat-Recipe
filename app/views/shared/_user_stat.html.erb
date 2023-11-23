@@ -1,0 +1,5 @@
+<div class="stat">
+  <div class="stat-title text-lg"><%= t(title_key) %></div>
+  <div class="stat-value text-2xl"><%= value.to_i.floor %> <%= t(unit_key, value: '') %></div>
+  <div class="stat-desc"><i class="fas fa-<%= icon %>"></i></div>
+</div>

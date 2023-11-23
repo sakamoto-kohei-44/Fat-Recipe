@@ -1,4 +1,4 @@
-<div class="bg-green-100 min-h-screen">
+<div class="bg-teal-100 min-h-screen">
   <div class="max-w-lg mx-auto p-6">
     <ul class="steps steps-primary">
       <li class="step step-primary"><%= t('activity_level.steps.goal') %></li>
@@ -16,7 +16,7 @@
           <%= f.select :activity_level, [['低い', 'low'], ['適度', 'moderate'], ['高い', 'high']].map { |label, value| [t("activity_level.options.#{value}"), value] }, {}, {class: "w-full rounded-md border-gray-300 text-lg"} %>
         </div>
         <div class="mt-8 text-center">
-          <%= f.submit t('activity_level.next_button'), class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+          <%= f.submit t('activity_level.next_button'), class: "btn btn-primary w-full bg-cyan-300" %>
         </div>
       </div>
     <% end %>
