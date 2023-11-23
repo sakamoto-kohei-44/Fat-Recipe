@@ -9,5 +9,4 @@ app/assets/builds/application.css
 log/development.log
 !/log/.keep
 /.env
-
 /config/master.key
