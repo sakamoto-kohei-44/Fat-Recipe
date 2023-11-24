@@ -21,5 +21,5 @@ RUN bundle install
 RUN yarn install
 COPY . /app
 RUN apt-get update && apt-get install -y postgresql-client
-COPY ./config/master.key /your_app_path/config/
-COPY ./config/credentials.yml.enc /your_app_path/config/
+COPY ./config/master.key /GaimMate/config/
+COPY ./config/credentials.yml.enc /GaimMate/config/
