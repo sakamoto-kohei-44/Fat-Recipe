@@ -8,7 +8,6 @@ module ApplicationHelper
     else 'bg-gray-100 border border-gray-400 text-gray-700'
     end
   end
-
   def user_stats(value, title_key, unit_key, icon)
     render partial: 'shared/user_stat', locals: { value: value, title_key: title_key, unit_key: unit_key, icon: icon }
   end
