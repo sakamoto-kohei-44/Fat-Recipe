@@ -1,20 +1,20 @@
 databases:
-  - name: GainMate
-    databaseName: GainMate_app_db
-    user: sakamoto-kohei-44
+  - name: fatrecipe_db
+    databaseName: fat_recipe
+    user: sakamoto_kohei_44
     region: singapore
 
 services:
   - type: web
-    name: GainMate_app_db
+    name: Fat_Recipe
     env: ruby
     region: singapore
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: <%= ENV['DATABASE_URL'] %>
+      - key: DATABASE_URL
         fromDatabase:
-          name: render_app
+          name: fatrecipe_db
           property: connectionString
-      - key: <%= ENV['RAILS_MASTER_KEY'] %>
+      - key: RAILS_MASTER_KEY
         sync: false
