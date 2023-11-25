@@ -6,10 +6,6 @@ class SpoonacularService
   DEFAULT_MIN_CARBS = 10
   DEFAULT_MAX_CARBS = 100
 
-  TRANSLATOR_BASE_URL = 'https://api.cognitive.microsofttranslator.com'
-  TRANSLATOR_API_KEY = Rails.application.credentials.dig(:microsoft_translator, :api_key)
-  TRANSLATOR_REGION = Rails.application.credentials.dig(:microsoft_translator, :region)
-
   def self.generate_meal_plan(target_calories = nil, diet = nil, exclude = nil)
     cache_key = "meal_plan_#{target_calories}_#{diet}_#{exclude}"
     Rails.cache.fetch(cache_key, expires_in: 1.hour) do
@@ -33,11 +29,7 @@ class SpoonacularService
   def self.fetch_recipe_information(id)
     url = "#{BASE_URL}/recipes/#{id}/information"
     response = HTTParty.get(url, query: { apiKey: API_KEY, includeNutrition: true })
-
-    Rails.logger.info "Response code: #{response.code}"
-    Rails.logger.info "Response body: #{response.body}"
-
-    return {} unless response.success? # ここを変更して空のハッシュを返すように
+    return {} unless response.success?
     response.parsed_response
   end
 
@@ -46,30 +38,6 @@ class SpoonacularService
       fetch_recipe_information(id)
     end
     recipes_info
-  end
-
-  def self.translate_text(text:, from_language:, to_language:)
-    url = "#{TRANSLATOR_BASE_URL}/translate"
-    headers = {
-      'Ocp-Apim-Subscription-Key' => TRANSLATOR_API_KEY,
-      'Ocp-Apim-Subscription-Region' => TRANSLATOR_REGION,
-      'Content-Type' => 'application/json'
-    }
-    params = {
-      'api-version' => '3.0',
-      'from' => from_language,
-      'to' => to_language,
-      'textType' => 'plain'
-    }
-    body = [{ 'Text' => text }].to_json
-
-    response = HTTParty.post(url, headers: headers, query: params, body: body)
-
-    Rails.logger.info "Response code: #{response.code}"
-    Rails.logger.info "Response body: #{response.body}"
-
-    return '' unless response.success?
-    response.parsed_response.first['translations'].first['text']
   end
 
   def self.search(query:)
