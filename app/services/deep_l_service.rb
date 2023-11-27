@@ -3,7 +3,7 @@ class DeepLService
     @api_key = ENV['DEEPL_API_KEY'] # 環境変数からAPIキーを取得
   end
 
-  def translate(text, target_lang = 'JA')
+  def translate(text, target_lang = 'EN')
     uri = URI.parse('https://api-free.deepl.com/v2/translate')
     params = {
       auth_key: @api_key,
@@ -22,7 +22,7 @@ class DeepLService
       Rails.logger.info "Received translation from DeepL: #{translated_text}"
       translated_text
     else
-      Rails.logger.error "DeepL API Error: #{response.body}"
+      Rails.logger.error "DeepL API Error: #{response.code} - #{response.body}"
       nil
     end
   rescue JSON::ParserError => e
