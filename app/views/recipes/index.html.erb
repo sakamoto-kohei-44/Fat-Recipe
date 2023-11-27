@@ -1,9 +1,13 @@
 <div class="pt-10 mb-20 bg-teal-100 min-h-screen flex justify-center items-start">
-  <% @translated_recipe %>
-    <div class="card w-96 bg-white shadow-xl mt-10">
-      <div class="card-body">
-        <h1 class="card-title">あなたにおすすめのレシピはこちら！</h1>
-        <p><%= @translated_recipe %></p>
+  <div class="card w-full max-w-4xl bg-white shadow-xl mt-10">
+    <div class="card-body p-6">
+      <div class="flex justify-center">
+        <%= image_tag 'recipe.jpg', alt: 'ロゴ', class: 'w-48 h-32' %>
       </div>
+      <h1 class="card-title text-center text-xl">あなたにおすすめのレシピ！</h1>
+      <p class="text-center text-gray-500 text-sm">※画像はイメージです</p>
+      <div class="border-b border-gray-200 mb-4"></div>
+      <p class="text-lg"><%= @translated_recipe %></p>
     </div>
+  </div>
 </div>
