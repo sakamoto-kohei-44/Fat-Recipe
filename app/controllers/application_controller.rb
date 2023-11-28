@@ -32,16 +32,4 @@ class ApplicationController < ActionController::Base
     end
     tdee
   end
-
-  def calculate_macros(tdee, weight)
-    protein_per_kg = 1.5  # これは1.5g〜2.0gの間で調整可能
-    protein_calories = protein_per_kg * weight * 4  # タンパク質1gあたり4kcal
-    fat_calories = tdee * 0.25  # 25%の脂質、これも20〜35%の間で調整可能
-    carb_calories = tdee - (protein_calories + fat_calories)
-    {
-      protein: protein_calories / 4,  # タンパク質のg数
-      fat: fat_calories / 9,  # 脂質のg数（1gの脂質は9kcal）
-      carbs: carb_calories / 4  # 炭水化物のg数
-    }
-  end
 end
