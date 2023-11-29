@@ -1,6 +1,6 @@
 class OpenAiService
   def initialize
-    @api_key = ENV['OPENAI_API_KEY']
+    @api_key = ENV.fetch('OPENAI_API_KEY', nil)
   end
 
   def generate_recipe(calories)
@@ -8,18 +8,18 @@ class OpenAiService
     uri = URI.parse("https://api.openai.com/v1/chat/completions")
     header = {
       'Content-Type': 'application/json',
-      'Authorization': "Bearer #{@api_key}"
+      Authorization: "Bearer #{@api_key}"
     }
     body = {
       model: "gpt-4",
       messages: [
         {
-          "role": "system",
-          "content": "Please provide a helpful response."
+          role: "system",
+          content: "Please provide a helpful response."
         },
         {
-          "role": "user",
-          "content": prompt
+          role: "user",
+          content: prompt
         }
       ],
       max_tokens: 300
@@ -42,7 +42,7 @@ class OpenAiService
     if parsed_response['choices'] && parsed_response['choices'].first['message']
       parsed_response['choices'].first['message']['content'].strip
     else
-      Rails.logger.error "API Error: #{parsed_response['error'] if parsed_response['error']}"
+      Rails.logger.error "API Error: #{parsed_response['error']}"
       nil
     end
   rescue JSON::ParserError => e

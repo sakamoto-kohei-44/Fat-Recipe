@@ -18,24 +18,23 @@ class RecipesController < ApplicationController
 
     queries.each do |query|
       translated_query = deepl_service.translate(query, "EN")
-      if translated_query.present?
-        response = SpoonacularService.search(query: translated_query)
-        if response["error"]
-          logger.error "Response body: #{response.body}"
-        else
-          response["results"].each do |recipe|
-            @recipes << {
-              id: recipe["id"],
-              title: recipe["title"],
-              image: recipe["image"]
-            }
-          end
+      next unless translated_query.present?
+
+      response = SpoonacularService.search(query: translated_query)
+      if response["error"]
+        logger.error "Response body: #{response.body}"
+      else
+        response["results"].each do |recipe|
+          @recipes << {
+            id: recipe["id"],
+            title: recipe["title"],
+            image: recipe["image"]
+          }
         end
       end
     end
     render :search_results
   end
-
 
   def autocomplete
     query = params[:query]

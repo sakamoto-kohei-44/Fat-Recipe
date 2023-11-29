@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
 
+  def show
+  end
+
   def new
     @user = User.new
   end
 
   def create
     @user = User.new(user_params)
-    # sessionから値を取り出す
     @user.goal = session[:goal]
     @user.gender = session[:gender]
     @user.age = session[:age]
@@ -21,14 +23,11 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       @weight_log = @user.weight_logs.create(weight: @user.weight, date: Date.today)
-      redirect_to dashboard_home_path, notice: t('users.create.success')
+      redirect_to dashboard_home_path, notice: t('.success')
     else
-      flash.now[:danger] = t('users.create.fail')
+      flash.now[:danger] = t('.fail')
       render new_user_path, status: :unprocessable_entity
     end
-  end
-
-  def show
   end
 
   def body_info
@@ -86,20 +85,15 @@ class UsersController < ApplicationController
   def save_activity_level
     @activity_level_form = ActivityLevelForm.new(activity_level_params)
     if @activity_level_form.valid?
-      # session値の取得
       gender = session[:gender]
       age = session[:age].to_i
       height = session[:height].to_i
       weight = session[:weight].to_i
-      # bmrとtdeeを計算
       bmr = calculate_bmr(gender, age, height, weight)
       tdee = calculate_tdee(bmr, activity_level_params[:activity_level])
-      # sessionに保存
       session[:bmr] = bmr
       session[:tdee] = tdee
-      # activity_levelの保存
       session[:activity_level] = activity_level_params[:activity_level]
-      # 目標カロリーの計算
       target_weight = session[:target_weight].to_i
       target_diff = (target_weight - weight)
       total_calorie = target_diff * KG_TO_CAL
@@ -108,14 +102,12 @@ class UsersController < ApplicationController
       target_calorie = tdee + calorie_per_day
 
       session[:target_calorie] = target_calorie
-      # ユーザー属性をマージ
     user_data = {
       gender: session[:gender],
       age: session[:age],
       height: session[:height],
       target_calorie: target_calorie
     }
-    # セッション保存
     session[:user_data] = user_data
       redirect_to allergies_users_path, notice: t('.success')
     else
@@ -130,7 +122,6 @@ class UsersController < ApplicationController
   def save_allergies
     @allergies_form = AllergiesForm.new(allergies_params)
     if @allergies_form.valid?
-      # アレルギーなしのIDをチェック (例として1を使用)
       if allergies_params[:allergy_item_ids].include?("39")
         session[:allergy_item_ids] = ["39"]
       else
@@ -146,7 +137,6 @@ class UsersController < ApplicationController
 
   def confirmation
     @user = User.new(session[:user_data])
-    Rails.logger.debug "Goal: #{@goal}"
     @goal = session[:goal]
     @gender_key = User.genders.key(session[:gender].to_i)
     @age = session[:age]
@@ -154,10 +144,7 @@ class UsersController < ApplicationController
     @weight = session[:weight]
     @target_weight = session[:target_weight]
     @activity_level_key = User.activity_levels.key(session[:activity_level].to_i)
-    # モデル(User)から値を取得
-    if session[:allergy_item_ids].present?
-      @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",")
-    end
+    @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",") if session[:allergy_item_ids].present?
   end
 
   def edit_account
