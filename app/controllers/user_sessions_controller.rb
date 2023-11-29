@@ -6,7 +6,6 @@ class UserSessionsController < ApplicationController
 
     if @user
       user = User.find(session[:user_id])
-      # sessionに値を復元
       session[:goal] = user.goal
       session[:gender] = user.gender
       session[:age] = user.age
@@ -27,7 +26,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    reset_session # sessionをリセット
+    reset_session
     redirect_to root_path, notice: t('.success')
   end
 end

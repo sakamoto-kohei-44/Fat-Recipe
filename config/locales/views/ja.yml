@@ -86,6 +86,13 @@ ja:
     current_weight: "現在の体重"
     kcal_per_day: "%{value} kcal/day"
     kg: "%{value} kg"
+    logo_alt: "チーズケーキアイコン"
+    guide_1_title: "使い方ガイド①"
+    guide_2_title: "使い方ガイド②"
+    feature: "特徴"
+    confirmation: "確認事項"
+    terms_of_service: "利用規約"
+    privacy_policy: "プライバシーポリシー"
   body_info:
     steps:
       goal: "目標"
@@ -187,6 +194,7 @@ ja:
       activity_level: "活動量"
       avatar: "アバター"
       edit: "編集"
+      back: "戻る"
     edit:
       title: "プロフィール編集"
       name: "名前"
@@ -201,3 +209,15 @@ ja:
       file: "変更を保存できませんでした。"
     update:
       success: "情報を更新しました"
+  home:
+    logo_alt: "チーズケーキアイコン"
+    guide_1_title: "使い方ガイド①"
+    guide_2_title: "使い方ガイド②"
+    feature: "特徴"
+    confirmation: "確認事項"
+    terms_of_service: "利用規約"
+    privacy_policy: "プライバシーポリシー"
+  recipes:
+    index:
+      title: "あなたにおすすめのレシピ！"
+      logo_alt: "料理"

@@ -2,12 +2,13 @@
   <div class="card w-full max-w-4xl bg-white shadow-xl mt-10">
     <div class="card-body p-6">
       <div class="flex justify-center">
-        <%= image_tag 'recipe.jpg', alt: 'ロゴ', class: 'w-48 h-32' %>
+        <%= image_tag 'recipe.jpg', alt: t('recipes.index.logo_alt'), class: 'w-48 h-32' %>
       </div>
-      <h1 class="card-title text-center text-xl">あなたにおすすめのレシピ！</h1>
+      <h1 class="card-title text-center text-xl"><%= t('recipes.index.title') %></h1>
       <p class="text-center text-gray-500 text-sm">※画像はイメージです</p>
       <div class="border-b border-gray-200 mb-4"></div>
       <p class="text-lg"><%= @translated_recipe %></p>
     </div>
   </div>
 </div>
+ßß

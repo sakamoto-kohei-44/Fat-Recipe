@@ -6,8 +6,8 @@ class DashboardController < ApplicationController
         [data[0].strftime("%Y/%m/%d"), data[1]]
       end
     else
-      weight = session[:weight]
-      date = Date.today
+      session[:weight]
+      date = Time.zone.today
       value = session[:weight]
       @chart_data = [[date, value]]
     end

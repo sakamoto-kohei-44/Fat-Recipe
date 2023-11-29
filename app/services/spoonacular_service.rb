@@ -1,7 +1,7 @@
 class SpoonacularService
   require 'httparty'
   BASE_URL = 'https://api.spoonacular.com'
-  API_KEY = ENV['SPOONACULAR_API_KEY']
+  API_KEY = ENV.fetch('SPOONACULAR_API_KEY', nil)
 
   DEFAULT_MIN_CARBS = 10
   DEFAULT_MAX_CARBS = 100
@@ -11,7 +11,6 @@ class SpoonacularService
     Rails.cache.fetch(cache_key, expires_in: 1.hour) do
       url = "#{BASE_URL}/mealplanner/generate"
 
-      # オプションのパラメータを設定
       params = {
         timeFrame: 'day',
         apiKey: API_KEY

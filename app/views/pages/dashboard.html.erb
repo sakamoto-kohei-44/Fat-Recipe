@@ -16,8 +16,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-32">
       <div class="p-6 bg-white rounded-lg shadow-md">
         <div class="flex items-center mb-3">
-          <%= image_tag 'logo.jpg', alt: 'チーズケーキアイコン', class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif">使い方ガイド①</h2>
+          <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.guide_1_title') %></h2>
         </div>
         <p class="font-serif text-gray-600">初めての方へ、Fat Recipeの使い方を簡単にご紹介します</p>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4">
@@ -28,8 +28,8 @@
       </div>
       <div class="p-6 bg-white rounded-lg shadow-md">
         <div class="flex items-center mb-3">
-          <%= image_tag 'logo.jpg', alt: 'チーズケーキアイコン', class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif">使い方ガイド②</h2>
+          <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.guide_2_title') %></h2>
         </div>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4 ">
           <li>ダッシュボード画面で自分の必要カロリーや基礎代謝を確認しましょう<br>(自分のことを把握することはとても大切です)</li>
@@ -39,8 +39,8 @@
       </div>
       <div class="p-6 bg-white rounded-lg shadow-md">
         <div class="flex items-center mb-3">
-          <%= image_tag 'logo.jpg', alt: 'チーズケーキアイコン', class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif">特徴</h2>
+          <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.feature') %></h2>
         </div>
         <p class="font-serif text-gray-600">Fat Recipeは以下の特徴を持っています</p>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4">
@@ -51,12 +51,12 @@
       </div>
       <div class="p-6 bg-white rounded-lg shadow-md">
       <div class="flex items-center mb-3">
-          <%= image_tag 'logo.jpg', alt: 'チーズケーキアイコン', class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif">確認事項</h2>
+          <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.confirmation') %></h2>
         </div>
       <ul class="list-disc list-inside space-y-2 font-serif mt-4">
-        <ul><a href="#" class="text-blue-600 hover:text-blue-800">利用規約</a></ul>
-        <ul><a href="#" class="text-blue-600 hover:text-blue-800">プライバシーポリシー</a></ul>
+        <ul><a href="#" class="text-blue-600 hover:text-blue-800"><%= t('dashboard.terms_of_service') %></a></ul>
+        <ul><a href="#" class="text-blue-600 hover:text-blue-800"><%= t('dashboard.privacy_policy') %></a></ul>
       </ul>
     </div>
   </div>

@@ -1,6 +1,6 @@
 class DeepLService
   def initialize
-    @api_key = ENV['DEEPL_API_KEY'] # 環境変数からAPIキーを取得
+    @api_key = ENV.fetch('DEEPL_API_KEY', nil)
   end
 
   def translate(text, target_lang = 'EN')
