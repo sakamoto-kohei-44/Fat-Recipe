@@ -4,7 +4,9 @@ class OpenAiService
   end
 
   def generate_recipe(calories)
-    prompt = "Suggest that people talk about three meal recipes for breakfast, lunch, and dinner that are appropriate for Japanese who need #{calories} kcal per day. Breakfast should be light food suitable for breakfast."
+    prompt = "Suggest that people talk about three meal recipes for breakfast, " \
+             "lunch, and dinner that are appropriate for Japanese who need " \
+             "#{calories} kcal per day. Breakfast should be light food suitable for breakfast."
     uri = URI.parse("https://api.openai.com/v1/chat/completions")
     header = {
       'Content-Type': 'application/json',

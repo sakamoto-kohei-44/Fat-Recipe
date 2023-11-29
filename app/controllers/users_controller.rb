@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user.target_calorie = session[:target_calorie]
     if @user.save
       session[:user_id] = @user.id
-      @weight_log = @user.weight_logs.create(weight: @user.weight, date: Date.today)
+      @weight_log = @user.weight_logs.create(weight: @user.weight, date: Time.zone.today)
       redirect_to dashboard_home_path, notice: t('.success')
     else
       flash.now[:danger] = t('.fail')

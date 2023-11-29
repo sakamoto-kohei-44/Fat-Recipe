@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
 
     queries.each do |query|
       translated_query = deepl_service.translate(query, "EN")
-      next unless translated_query.present?
+      next if translated_query.blank?
 
       response = SpoonacularService.search(query: translated_query)
       if response["error"]

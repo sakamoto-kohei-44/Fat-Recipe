@@ -15,11 +15,10 @@ class User < ApplicationRecord
   validates :age, presence: true, numericality: { only_integer: true, greater_than: 0 }, unless: :skip_special_validation?
   validates :height, :weight, presence: true, numericality: { greater_than: 0 }, unless: :skip_special_validation?
 
-  has_many :weight_logs
-  has_many :recipes
-  has_many :food_preferences
-  has_many :allergies
-  has_many :favorites
+  has_many :weight_logs, dependent: :destroy
+  has_many :recipes, dependent: :destroy
+  has_many :food_preferences, dependent: :destroy
+  has_many :allergies, dependent: :destroy
 
   enum gender: { man: 0, woman: 1 }
   enum goal: { standard: 0, slim_muscle: 1 }
