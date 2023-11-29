@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_10_083354) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_29_100103) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,15 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_10_083354) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "recipe_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipe_id"], name: "index_favorites_on_recipe_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-  end
-
   create_table "food_preferences", force: :cascade do |t|
     t.string "preference_type"
     t.string "food_item"
@@ -44,14 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_10_083354) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_food_preferences_on_user_id"
-  end
-
-  create_table "notifications", force: :cascade do |t|
-    t.text "content"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -85,10 +68,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_10_083354) do
     t.float "tdee"
     t.float "bmr"
     t.float "target_calorie"
-    t.string "email"
+    t.string "email", null: false
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
     t.integer "access_count_to_reset_password_page", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -102,10 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_10_083354) do
   end
 
   add_foreign_key "allergies", "users"
-  add_foreign_key "favorites", "recipes"
-  add_foreign_key "favorites", "users"
   add_foreign_key "food_preferences", "users"
-  add_foreign_key "notifications", "users"
   add_foreign_key "recipes", "users"
   add_foreign_key "weight_logs", "users"
 end
