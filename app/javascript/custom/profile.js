@@ -1,5 +1,5 @@
 import Chartkick from "chartkick";
-import Chart from "chart.js";
+import { Chart } from 'chart.js';
 
 document.addEventListener('turbo:submit-end', () => {
 
