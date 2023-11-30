@@ -3,7 +3,7 @@ node_modules
 /tmp/
 /tmp/cache
 app/assets/builds/application.css
-#/public/assets
+/public/assets
 /public/builds
 /public/uploads
 /public/uploads/user/avatar

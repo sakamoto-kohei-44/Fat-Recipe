@@ -31,9 +31,6 @@
                             <div class="w-10 rounded-full">
                             <%= image_tag current_user.avatar_url%>
                             </div>
-                            <div class="username">
-                              <%= current_user.name %>
-                            </div>
                         </label>
                         <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 z-60">
                             <li><%= link_to t('defaults.my_page'), profile_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
