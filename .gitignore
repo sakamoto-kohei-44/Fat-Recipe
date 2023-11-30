@@ -4,7 +4,7 @@ node_modules
 /tmp/cache
 app/assets/builds/application.css
 /public/assets
-#/public/builds
+/public/builds
 /public/uploads
 /public/uploads/user/avatar
 log/development.log
