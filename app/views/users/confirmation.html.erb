@@ -21,8 +21,8 @@
     <div class="bg-white p-8 rounded-lg shadow-md">
       <div class="flex flex-col items-center">
         <h2 class="text-lg font-medium mb-4"><%= t('confirmation.title') %></h2>
-        <p class="font-medium"><%= t('confirmation.goal') %> <%= t("body_info.#{@goal}") %></p>
-        <p class="font-medium"><%= t('confirmation.gender') %> <%= t("activerecord.attributes.gender.#{@gender_key}") %></p>
+        <p class="font-medium"><%= t('confirmation.goal') %> <%= t("enums.user.goal.#{@goal}") %></p>
+        <p class="font-medium"><%= t('confirmation.gender') %> <%= t("enums.user.gender.#{@gender_key}") %></p>
         <p class="font-medium"><%= t('confirmation.age') %> <%= @age %>歳</p>
         <p class="font-medium"><%= t('confirmation.height') %> <%= @height %>cm</p>
         <p class="font-medium"><%= t('confirmation.weight') %> <%= @weight %>kg</p>

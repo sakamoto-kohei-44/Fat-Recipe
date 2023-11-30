@@ -26,13 +26,13 @@
             <div class="ml-5 pr-10 pb-12 align-items-center">
                 <button class="absolute right-0 ml-auto">
                     <% if logged_in? %>
-                        <div class="dropdown dropdown-end">
-                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                            <div class="w-10 rounded-full">
-                            <%= image_tag current_user.avatar_url%>
-                            </div>
-                        </label>
-                        <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52 z-60">
+                        <div class="dropdown dropdown-end z-20">
+                          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                              <div class="w-10 rounded-full">
+                              <%= image_tag current_user.avatar_url%>
+                              </div>
+                          </label>
+                        <ul tabindex="0" class="bg-white menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52">
                             <li><%= link_to t('defaults.my_page'), profile_path, class: "block px-4 py-2 hover:bg-gray-250" %></li>
                             <li><%= link_to t('defaults.logout'), logout_path, data: { turbo_method: :delete }, class: "block px-4 py-2 hover:bg-gray-250" %></li>
                             <li><%= link_to t('defaults.terms_of_service'), "#", class: "block px-4 py-2 hover:bg-gray-250" %></li>
