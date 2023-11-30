@@ -1,53 +1,38 @@
-<div class="container pt-3">
-
+<div class="pt-20 bg-green-100 min-h-screen !important">
   <div class="flex justify-between items-center mb-5">
-    <h1 class="text-2xl font-bold"><%= t('.title') %></h1>
-    <%= link_to t('defaults.edit'), edit_profile_path, class: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
+    <h1 class="text-2xl font-bold"><%= t('profiles.show.title') %></h1>
   </div>
-
-  <table class="table-auto w-full">
-    <tbody>
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:email) %></th>
-        <td class="border px-4 py-2"><%= current_user.email %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:goal) %></th>
-        <td class="border px-4 py-2"><%= current_user.goal %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:age) %></th>
-        <td class="border px-4 py-2"><%= current_user.age %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:gender) %></th>
-        <td class="border px-4 py-2"><%= current_user.gender %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:weight) %></th>
-        <td class="border px-4 py-2"><%= current_user.weight %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:target_weight) %></th>
-        <td class="border px-4 py-2"><%= current_user.target_weight %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:activity_level) %></th>
-        <td class="border px-4 py-2"><%= current_user.activity_level %></td>
-      </tr>
-
-      <tr>
-        <th class="border px-4 py-2 text-gray-500" scope="row"><%= User.human_attribute_name(:avatar) %></th>
-        <td class="border px-4 py-2">
-          <%= image_tag current_user.avatar.url, class: 'w-20 h-20 object-cover rounded-full' if current_user.avatar? %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title"><%= t('profiles.show.your_information') %></h2>
+        <p><span class="font-medium"><%= t('profiles.show.name') %>:</span> <%= current_user.name %></p>
+        <p><span class="font-medium"><%= t('profiles.show.email') %>:</span> <%= current_user.email %></p>
+        <p><span class="font-medium"><%= t('profiles.show.goal') %>:</span> <%= current_user.goal %></p>
+        <p><span class="font-medium"><%= t('profiles.show.age') %>:</span> <%= current_user.age %></p>
+        <p><span class="font-medium"><%= t('profiles.show.gender') %>:</span> <%= current_user.gender %></p>
+      </div>
+    </div>
+    <div class="card bg-white shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title"><%= t('profiles.show.other_information') %></h2>
+        <p><span class="font-medium"><%= t('profiles.show.height') %>:</span> <%= current_user.height %>cm</p>
+        <p><span class="font-medium"><%= t('profiles.show.weight') %>:</span> <%= current_user.weight %>kg</p>
+        <p><span class="font-medium"><%= t('profiles.show.target_weight') %>:</span> <%= current_user.target_weight %>kg</p>
+        <p><span class="font-medium"><%= t('profiles.show.activity_level') %>:</span> <%= current_user.activity_level %></p>
+      </div>
+    </div>
+    <div class="card bg-white shadow-xl">
+      <figure class="px-10 pt-10">
+        <%= image_tag current_user.avatar.url, class: 'w-20 h-20 object-cover rounded-full' if current_user.avatar? %>
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title"><%= t('profiles.show.avatar') %></h2>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-5 flex justify-center space-x-4">
+    <%= link_to t('profiles.show.back'), dashboard_home_path, class: 'btn bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
+    <%= link_to t('profiles.show.edit'), edit_profile_path, class: 'btn bg-sky-300 hover:bg-sky-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline' %>
+  </div>
 </div>

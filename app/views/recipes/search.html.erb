@@ -1,16 +1,15 @@
 <div class="flex items-start justify-center min-h-screen bg-gray-100">
   <div class="w-full max-w-md px-4 pt-8">
-    <h1 class="text-2xl font-bold text-center">レシピ検索</h1>
+    <h1 class="text-2xl font-bold text-center"><%= t('search.title') %></h1>
     <p class="text-center text-sm text-gray-500 mb-8">
-      ※海外風のレシピしか取得できません
+      <%= t('search.description') %>
     </p>
     <%= form_with url: recipes_search_results_path, method: :get, local: true do |f| %>
       <div class="relative flex items-center justify-center" data-controller="autocomplete">
         <%= f.text_field :query,
-            placeholder: "例: トマト,ピザ",
+            placeholder: t('search.placeholder'),
             class:"block w-full py-2 pl-4 pr-10 text-sm rounded-md border border-gray-300 focus:border-blue-500 focus:ring-blue-500", 
-            data: { autocomplete_target: "input" },
-            autocomplete: "off" %>
+            data: { autocomplete_target: "input" } %>
         <ul data-autocomplete-target="suggestions" class="suggestions"></ul>
         <button class="absolute right-0 p-2 text-gray-500 rounded-r-md hover:text-white hover:bg-blue-500">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -21,10 +20,10 @@
     <% end %>
     <div class="mt-12 text-center">
       <p class="text-sm text-gray-500">
-        レシピ検索サイトの説明文章がここに入ります。
+        <%= t('search.site_description') %>
       </p>
       <p class="mt-4 text-sm text-blue-500">
-        <a href="#">レシピ検索サイトについて</a>
+        <%= link_to t('search.about'), "#" %>
       </p>
     </div>
   </div>

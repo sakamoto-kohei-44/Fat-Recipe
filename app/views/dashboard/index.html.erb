@@ -1,20 +1,18 @@
-<div class="pt-20 bg-blue-100 min-h-screen !importan">
-  <div class="max-w-md mx-auto p-4 rounded-lg bg-white shadow-lg">
+<div class="pt-20 bg-teal-100 min-h-screen">
+  <div class="max-w-md mx-auto p-4 mb-20 rounded-lg bg-white shadow-lg">
     <div class="text-center font-bold text-2xl mb-2">
       <% if logged_in? %>
-        <p>基礎代謝: <%= current_user.bmr.floor %> kcal/day</p>
-        <p>1日の推定エネルギー消費量: <%= current_user.tdee.floor %> kcal/day</p>
-        <p>必要な1日カロリー摂取量 <%= current_user.target_calorie.floor %> kcal</p>
-        <p>目標体重 <%= current_user.target_weight %> kg </p>
-        <p>現在の体重 <%= current_user.weight %> kg </p>
+        <%= user_stats(current_user.bmr, 'dashboard.bmr', 'dashboard.kcal_per_day', 'thermometer-half') %>
+        <%= user_stats(current_user.tdee, 'dashboard.tdee', 'dashboard.kcal_per_day', 'burn') %>
+        <%= user_stats(current_user.target_calorie, 'dashboard.target_calorie', 'dashboard.kcal_per_day', 'bullseye') %>
+        <%= user_stats(current_user.target_weight, 'dashboard.target_weight', 'dashboard.kg', 'weight-hanging') %>
+        <%= user_stats(current_user.weight, 'dashboard.current_weight', 'dashboard.kg', 'weight') %>
       <% else %>
-        <div class="stat">
-          <div class="stat-title">基礎代謝</div>
-          <p>1日の推定エネルギー消費量: <%= session[:tdee].floor %> kcal/day</p>
-          <p>必要な1日カロリー摂取量 <br><%= session[:target_calorie].floor %> kcal</p>
-          <p>目標体重<%= session[:target_weight] %> kg </p>
-          <p>現在の体重<%= session[:weight] %> kg </p>
-        </div>
+        <%= user_stats(session[:bmr], 'dashboard.bmr', 'dashboard.kcal_per_day', 'thermometer-half') %>
+        <%= user_stats(session[:tdee], 'dashboard.tdee', 'dashboard.kcal_per_day', 'burn') %>
+        <%= user_stats(session[:target_calorie], 'dashboard.target_calorie', 'dashboard.kcal_per_day', 'bullseye') %>
+        <%= user_stats(session[:target_weight], 'dashboard.target_weight', 'dashboard.kg', 'weight-hanging') %>
+        <%= user_stats(session[:weight], 'dashboard.current_weight', 'dashboard.kg', 'weight') %>
       <% end %>
       <%= line_chart @chart_data, min: 0, max: 100  %>
     </div>

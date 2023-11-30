@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>メシのカルテ</title>
+    <title>Fat Recipe</title>
     <!-- Bootstrap CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
@@ -16,7 +16,13 @@
   </head>
   <body>
       <%= render 'shared/header' %>
+      <%= render 'shared/flash_message' %>
       <%= yield %>
+      <% if controller_name == 'pages' && action_name == 'dashboard' ||
+          controller_name == 'dashboard' && action_name == 'index' ||
+          controller_name == 'recipes' && ['index', 'show', 'search', 'search_results'].include?(action_name) ||
+          controller_name == 'recipe_suggestions' && action_name == 'index' %>
       <%= render 'shared/footer' %>
+    <% end %>
   </body>
 </html>

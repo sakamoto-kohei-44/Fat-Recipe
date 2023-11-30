@@ -1,29 +1,40 @@
-<div class="bg-gray-100 min-h-screen">
-  <div class="max-w-lg mx-auto px-6 py-12">
+<div class="bg-teal-100 min-h-screen">
+  <div class="absolute top-16 left-0 right-0 w-full animate-float1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 640">
+      <path fill="#5eead4" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,224C384,235,480,245,576,218.7C672,192,768,128,864,122.7C960,117,1056,171,1152,192C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+  </div>
+  <div class="absolute top-18 left-0 right-0 w-full animate-float2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#5eead4" fill-opacity="0.5" d="M0,256L34.3,245.3C68.6,235,137,213,206,197.3C274.3,181,343,171,411,170.7C480,171,549,181,617,197.3C685.7,213,754,235,823,229.3C891.4,224,960,192,1029,181.3C1097.1,171,1166,181,1234,170.7C1302.9,160,1371,128,1406,112L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
+    </svg>
+  </div>
+  <div class="max-w-lg mx-auto px-6 py-12 relative z-10">
     <ul class="steps steps-primary">
-      <li class="step step-primary">目標</li>
-      <li class="step step-primary">プロフィール</li>
-      <li class="step">体重</li>
-      <li class="step">活動量</li>
-      <li class="step">アレルギー</li>
+      <li class="step step-primary"><%= t('gender_age.steps.goal') %></li>
+      <li class="step step-primary"><%= t('gender_age.steps.profile') %></li>
+      <li class="step"><%= t('gender_age.steps.weight') %></li>
+      <li class="step"><%= t('gender_age.steps.activity') %></li>
+      <li class="step"><%= t('gender_age.steps.allergies') %></li>
+      <li class="step"><%= t('gender_age.steps.confirmation') %></li>
     </ul>
-    <h1 class="text-2xl font-bold text-gray-800 text-center mb-8">プロフィール入力</h1>
-    <%= form_with url: save_gender_age_users_path, local: true do |f| %>
-      <div class="bg-white rounded-lg p-6 shadow-md">
+    <h1 class="text-2xl font-bold text-gray-800 text-center mb-8"><%= t('gender_age.title') %></h1>
+    <%= form_with url: save_gender_age_users_path, local: true, data: { turbo: false } do |f| %>
+      <div class="bg-white rounded-lg p-6 shadow-lg relative z-10">
         <div class="space-y-4">
           <div class="flex items-center">
             <div class="flex-1">
-              <%= f.label :gender, "性別", class:"text-gray-700 text-lg" %>
-              <%= f.select :gender, User.genders.keys.map { |k| [k.humanize, k] }, { prompt: '選択してください' }, class: "w-full rounded-md border-gray-300 text-lg" %>
+              <%= f.label :gender, t('gender_age.gender_label'), class: "text-gray-700 text-lg" %>
+              <%= f.select :gender, User.genders.keys.map { |k| [User.human_attribute_name("gender.#{k}"), k] }, { prompt: t('gender_age.gender_prompt') }, class: "w-full rounded-md border-gray-400 text-lg shadow-sm" %>
             </div>
             <div class="flex-1 ml-5">
-              <%= f.label :age, "年齢", class:"text-gray-700 text-lg" %>
-              <%= f.number_field :age, placeholder: "何歳ですか?", class: "w-full rounded-md border-gray-300 text-lg" %>
+              <%= f.label :age, t('gender_age.age_label'), class: "text-gray-700 text-lg" %>
+              <%= f.number_field :age, placeholder: t('gender_age.age_placeholder'), class: "w-full rounded-md border-gray-400 text-lg shadow-sm" %>
             </div>
           </div>
         </div>
-        <div class="mt-8 text-center">
-          <%= f.submit "次へ", class: "bg-indigo-600 text-white py-3 px-8 rounded-full text-lg hover:bg-indigo-500" %>
+        <div class="text-center mt-8">
+          <%= f.submit t('gender_age.next'), class: "btn btn-primary w-full bg-cyan-300" %>
         </div>
       </div>
     <% end %>

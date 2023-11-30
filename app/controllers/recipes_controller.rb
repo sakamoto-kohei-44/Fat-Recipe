@@ -1,37 +1,10 @@
 class RecipesController < ApplicationController
-  require_dependency "#{Rails.root.join('app/services/spoonacular_service')}"
-
   def index
-    # ユーザー情報を取得
-    if current_user
-      target_calorie = current_user.target_calorie
-    else
-      target_calorie = session[:target_calorie]
-    end
-    response = SpoonacularService.generate_meal_plan(
-      timeFrame: 'day',
-      targetCalories: target_calorie,
-      cuisine: "japanese"
-    )
-    logger.debug(response)
-    meals = response["meals"]
-    @recipes_info = meals
-    @meal_plan = response
-    @meal_plan["meals"].each do |meal|
-      # 翻訳処理
-      translated_title = SpoonacularService.translate_text(
-        text: meal["title"],
-        from_language: "en",
-        to_language: "ja"
-      )
-      meal["title"] = translated_title
-    end
-  end
-
-  def show
-    cache_key = "recipe_info_#{params[:id]}"
-    @recipe = Rails.cache.fetch(cache_key, expires_in: 1.hour) do
-      SpoonacularService.fetch_recipe_information(params[:id])
+    if params[:calories].present?
+      open_ai_service = OpenAiService.new
+      deepl_service = DeepLService.new
+      @recipe = open_ai_service.generate_recipe(params[:calories])
+      @translated_recipe = deepl_service.translate(@recipe, "JA")
     end
   end
 
@@ -39,21 +12,25 @@ class RecipesController < ApplicationController
   end
 
   def search_results
+    deepl_service = DeepLService.new
     queries = params[:query].split(/,\s*/)
     @recipes = []
+
     queries.each do |query|
-      translated_query = SpoonacularService.translate_text(
-        text: query,
-        from_language: "ja",
-        to_language: "en"
-      )
+      translated_query = deepl_service.translate(query, "EN")
+      next if translated_query.blank?
+
       response = SpoonacularService.search(query: translated_query)
-      response["results"].each do |recipe|
-        @recipes << {
-          id: recipe["id"],
-          title: recipe["title"],
-          image: recipe["image"]
-        }
+      if response["error"]
+        logger.error "Response body: #{response.body}"
+      else
+        response["results"].each do |recipe|
+          @recipes << {
+            id: recipe["id"],
+            title: recipe["title"],
+            image: recipe["image"]
+          }
+        end
       end
     end
     render :search_results
