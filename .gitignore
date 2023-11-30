@@ -1,4 +1,6 @@
 node_modules
+<<<<<<< HEAD
+=======
 /log/*
 /tmp/
 /tmp/cache
@@ -11,3 +13,4 @@ log/development.log
 !/log/.keep
 /.env
 /config/master.key
+>>>>>>> 296a96a16d0a4fc5633975ba573a8a3118093bbc
