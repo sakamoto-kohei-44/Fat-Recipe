@@ -1,4 +1,5 @@
 # [Fat Recipe]
+![スクリーンショット 2023-11-30 16 39 46](https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/d5e5b684-da65-4da6-9b00-93fedc7483b0)
 ## サービス概要
 「Fat Recipe」は、食が細い、あるいは体質的に痩せ型の人々が
 健康的な体重増加を目指したいが何を食べればいいか悩む人のために
