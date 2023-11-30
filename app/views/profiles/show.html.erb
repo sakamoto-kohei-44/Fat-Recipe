@@ -8,9 +8,9 @@
         <h2 class="card-title"><%= t('profiles.show.your_information') %></h2>
         <p><span class="font-medium"><%= t('profiles.show.name') %>:</span> <%= current_user.name %></p>
         <p><span class="font-medium"><%= t('profiles.show.email') %>:</span> <%= current_user.email %></p>
-        <p><span class="font-medium"><%= t('profiles.show.goal') %>:</span> <%= current_user.goal %></p>
+        <p><span class="font-medium"><%= t('profiles.show.goal') %>:</span> <%= t("enums.user.goal.#{current_user.goal}") %></p>
         <p><span class="font-medium"><%= t('profiles.show.age') %>:</span> <%= current_user.age %></p>
-        <p><span class="font-medium"><%= t('profiles.show.gender') %>:</span> <%= current_user.gender %></p>
+        <p><span class="font-medium"><%= t('profiles.show.gender') %>:</span> <%= t("enums.user.gender.#{current_user.gender}") %></p>
       </div>
     </div>
     <div class="card bg-white shadow-xl">
@@ -19,7 +19,7 @@
         <p><span class="font-medium"><%= t('profiles.show.height') %>:</span> <%= current_user.height %>cm</p>
         <p><span class="font-medium"><%= t('profiles.show.weight') %>:</span> <%= current_user.weight %>kg</p>
         <p><span class="font-medium"><%= t('profiles.show.target_weight') %>:</span> <%= current_user.target_weight %>kg</p>
-        <p><span class="font-medium"><%= t('profiles.show.activity_level') %>:</span> <%= current_user.activity_level %></p>
+        <p><span class="font-medium"><%= t('profiles.show.activity_level') %>:</span> <%= t("enums.user.activity_level.#{current_user.activity_level}") %></p>
       </div>
     </div>
     <div class="card bg-white shadow-xl">

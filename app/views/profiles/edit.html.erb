@@ -16,7 +16,7 @@
 
       <div class="form-control">
         <%= f.label :goal, t('profiles.edit.goal'), class: "label" %>
-        <%= f.select :goal, User.goals.keys.map { |goal| [goal.titleize, goal] }, {}, class: "select select-bordered bg-white w-full" %>
+        <%= f.select :goal, User.goals.keys.map { |goal| [t("enums.user.goal.#{goal}"), goal] }, {}, class: "select select-bordered bg-white w-full" %>
       </div>
 
       <div class="form-control">

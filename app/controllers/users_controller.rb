@@ -138,12 +138,12 @@ class UsersController < ApplicationController
   def confirmation
     @user = User.new(session[:user_data])
     @goal = session[:goal]
-    @gender_key = User.genders.key(session[:gender].to_i)
+    @gender_key = session[:gender]
     @age = session[:age]
     @height = session[:height]
     @weight = session[:weight]
     @target_weight = session[:target_weight]
-    @activity_level_key = User.activity_levels.key(session[:activity_level].to_i)
+    @activity_level_key = session[:activity_level]
     @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",") if session[:allergy_item_ids].present?
   end
 
