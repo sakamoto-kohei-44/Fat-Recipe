@@ -15,6 +15,11 @@ module.exports = {
       colors: {
         primary: '#4ade80',
       },
+      svgBackground: {
+        width: '100%',
+        height: 'auto',
+        display: 'block',
+      },
       keyframes: {
         float1: {
           '0%, 100%': { transform: 'translateY(0)' },
