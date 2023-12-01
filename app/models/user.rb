@@ -2,6 +2,7 @@ class User < ApplicationRecord
   authenticates_with_sorcery!
   include Sorcery::Model
   mount_uploader :avatar, AvatarUploader
+  before_create :set_default_timestamps
 
   attr_accessor :skip_special_validation
 
@@ -32,5 +33,10 @@ class User < ApplicationRecord
 
   def set_skip_special_validation
     self.skip_special_validation = true if new_record? && password.present? && email.present?
+  end
+
+  def set_default_timestamps
+    self.created_at ||= Time.current
+    self.updated_at ||= Time.current
   end
 end
