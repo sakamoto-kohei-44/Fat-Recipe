@@ -1,13 +1,20 @@
 <div class="h-screen flex flex-col items-center justify-start px-8 bg-teal-100">
   <div class="bg-white mt-16 rounded-lg shadow-md w-full max-w-md px-10 py-8">
     <h1 class="text-2xl font-bold mb-4 text-gray-800 text-center">AI ✖️ レシピ提案</h1>
-    <p class="text-md mb-4 text-gray-600">ダッシュボードページで自分の必要カロリー数値を確認し入力すると適切なカロリーのレシピを提供してくれます!<br>※時間がかかる場合があります</p>
+    <p class="text-md mb-4 text-gray-600">
+      ダッシュボードページで自分の必要カロリー数値を確認し入力すると適切なカロリーのレシピを提供してくれます！<br>
+      ※時間がかかる場合があります
+    </p>
     <%= form_with(url: "/recipes", method: :get, local: true) do |form| %>
       <div class="flex flex-col mb-6 text-center">
         <%= form.label :calories, "必要な1日カロリー(kcal)", class: "mb-2 text-lg text-gray-700" %>
-        <%= form.number_field :calories, in: 1000..4000, step: 100,
-                              class: "p-4 mt-2 border-2 border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full" %>
+        <%= form.number_field :calories, in: 1000..4000, step: 100, class: "p-4 mt-2 border-2 border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full" %>
+      </div>
+      <div class="flex flex-col mb-6 text-center">
+        <%= form.label :disliked_foods, "嫌いな食べ物", class: "mb-2 text-lg text-gray-700" %>
+        <%= form.text_field :disliked_foods, placeholder: "例：海老、牛乳", class: "p-4 mt-2 border-2 border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full" %>
       </div>
       <%= form.submit t('recipe_suggestions.index.submit'), class: "w-full bg-cyan-300 hover:bg-indigo-600 text-white py-3 px-8 rounded-lg shadow-lg transition ease-in-out duration-300" %>
     <% end %>
+  </div>
 </div>
