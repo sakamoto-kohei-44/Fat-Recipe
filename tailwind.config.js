@@ -34,6 +34,9 @@ module.exports = {
         float1: 'float1 7s ease-in-out infinite',
         float2: 'float2 6s ease-in-out infinite',
       },
+      maxWidth: {
+        '48': '12rem',
+      },
     },
   },
   plugins: [require("daisyui")],
