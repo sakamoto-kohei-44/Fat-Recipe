@@ -4,6 +4,6 @@
 @layer components {
   .phone-screen-image {
     @apply w-full h-auto object-cover;
-    @apply w-48;
+    @apply max-w-48;
   }
 }
