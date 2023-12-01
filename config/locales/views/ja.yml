@@ -101,6 +101,11 @@ ja:
     privacy_policy: "プライバシーポリシー"
   recipe_suggestions:
     index:
+      title: "AI ✖️ レシピ提案"
+      example1: "例: 1850"
+      calories: "必要な1日カロリー(kcal)"
+      example2: "例: 牛乳、ピーマン"
+      disliked_foods: "嫌いな食べ物"
       submit: "レシピを提案してもらう"
   body_info:
     steps:
@@ -230,6 +235,7 @@ ja:
     index:
       title: "あなたにおすすめのレシピ！"
       logo_alt: "料理"
+      image: "※画像はイメージです"
   enums:
     user:
       gender:
