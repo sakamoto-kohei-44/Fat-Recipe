@@ -38,6 +38,6 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["retro", "cupcake", "valentine"],
+    themes: ["cupcake"],
   },
 }

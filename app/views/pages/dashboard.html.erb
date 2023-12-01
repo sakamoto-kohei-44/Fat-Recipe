@@ -55,7 +55,7 @@
           <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.confirmation') %></h2>
         </div>
       <ul class="list-disc list-inside space-y-2 font-serif mt-4">
-        <ul><a href="#" class="text-blue-600 hover:text-blue-800"><%= t('dashboard.terms_of_service') %></a></ul>
+        <%= link_to t('dashboard.terms_of_service'), pages_terms_path, class: "text-blue-600 hover:text-blue-800" %>
         <ul><a href="#" class="text-blue-600 hover:text-blue-800"><%= t('dashboard.privacy_policy') %></a></ul>
       </ul>
     </div>

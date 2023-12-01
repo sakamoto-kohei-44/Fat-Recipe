@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   patch 'users/update_account', to: 'users#update_account'
 
   # 利用規約とプライバシーポリシー
-  get 'terms', to: 'pages#terms'
+  get 'terms', to: 'pages#terms', as: 'pages_terms'
   get 'privacy', to: 'pages#privacy'
   # ユーザー情報関連のルーティング
   resources :users do
