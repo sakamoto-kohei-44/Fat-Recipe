@@ -1,6 +1,12 @@
 <header class=" bg-teal-300 relative z-10">
     <div class="flex justify-between items-center p-4 h-20">
-        <% if request.path == root_path %>
+        <% if request.path == root_path ||
+            request.path == '/users/body_info' ||
+            request.path == '/users/gender_age' ||
+            request.path == '/users/height_weight_target_weight' ||
+            request.path == '/users/activity_level' ||
+            request.path == '/users/allergies' ||
+            request.path == '/users/confirmation' %>
           <div class="w-16 h-16 rounded-full overflow-hidden">
             <%= image_tag 'logo2.jpg', alt: 'Fat Recipe Logo', class: 'w-full h-auto' %>
           </div>
