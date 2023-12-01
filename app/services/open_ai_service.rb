@@ -6,9 +6,9 @@ class OpenAiService
   def generate_recipe(calories, allergies = [], disliked_foods = "")
     allergy_info = allergies.join(", ")
     prompt = "Suggest three meal recipes for breakfast, lunch, and dinner that are suitable " \
-         "for a Japanese person who needs #{calories} kcal per day and does not include " \
-         "the following allergies: #{allergy_info}. Also, avoid using these disliked foods: " \
-         "#{disliked_foods}."
+             "for a Japanese person who needs #{calories} kcal per day and does not include " \
+             "the following allergies: #{allergy_info}. Also, avoid using these disliked foods: " \
+             "#{disliked_foods}."
     uri = URI.parse("https://api.openai.com/v1/chat/completions")
     header = {
       'Content-Type': 'application/json',
