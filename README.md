@@ -79,6 +79,8 @@
 * Open AI API(GPT-4)
 * DeepL API
 ### [Figma画面遷移図](https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=5YZK4sMShNtMJ1Uk-1)
+### ER図
+![スクリーンショット 2023-12-01 13 04 32](https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/32f84e47-33ea-4707-9f27-d970e1acaa19)
 ### 技術選定<br>
 * フロントエンド<br>
   JavaScript<br>
