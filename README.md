@@ -41,27 +41,27 @@
 入力データは保存され、必要な日常のカロリーやレシピ提供に利用。<br>
 <p float="left">
   <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/f8c959ac-9417-4483-89a9-94570c65826f" width="33%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/0060f9db-51c7-4d6b-9272-ee43c3544380" width="33%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/828babe4-ce48-491e-8ada-1f7f483f55da" width="33%" />
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/0060f9db-51c7-4d6b-9272-ee43c3544380" width="32%" />
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/828babe4-ce48-491e-8ada-1f7f483f55da" width="32%" />
 </p>
 * ダッシュボード:<br>
 ユーザーの基本情報や基礎代謝、一日に必要なカロリーを表示。<br>
 体重変化推移をグラフで表示。<br>
 <p float="left">
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/8952014f-afd8-4447-8190-c1fdbfbf6283" width="33%" />
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/8952014f-afd8-4447-8190-c1fdbfbf6283" width="31%" />
 </p>
 
 * 献立提案:<br>
 ユーザーの目標に基づく一日の献立をOpen AIにより提案。<br>
 <p float="left">
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/16d9c206-85ff-4609-b90b-c28371c08674" width="33%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/611455d3-a268-48e3-a99a-f26cd0abd116" width="33%" />
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/16d9c206-85ff-4609-b90b-c28371c08674" width="31%" />
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/611455d3-a268-48e3-a99a-f26cd0abd116" width="32%" />
 </p>
 * 検索:
 料理名や材料によるレシピ検索。<br>
 <p float="left">
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/94187996-f8e9-4e7c-bf0e-f4920e14bed3" width="25%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/c0427498-f4df-48a3-8222-23a0d184d098" width="25%" />
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/94187996-f8e9-4e7c-bf0e-f4920e14bed3" width="23%" />
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/c0427498-f4df-48a3-8222-23a0d184d098" width="23%" />
 </p>
 
 ## 実装を予定している機能
