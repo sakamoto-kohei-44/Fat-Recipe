@@ -22,28 +22,14 @@
         <p class="font-serif text-gray-600">初めての方へ、Fat Recipeの使い方を簡単にご紹介します</p>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4">
           <li>初めての方は使ってみるボタンをクリックしてください</li>
-          <li>各プロフィール情報を入力してください</li>
+          <li>各プロフィール情報を入力し間違いがないか確認してください</li>
           <li>登録済みの方はログインボタンからログインしてください</li>
+          <p class="text-gray-500 text-sm">※横にスクロールできます</p>
         </ul>
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 mt-4">
-          <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <%= image_tag 'example1.jpg', alt: 'Phone Screen', class: 'phone-screen-image' %>
-            </div>
-          </div>
-          <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <%= image_tag 'example2.jpg', alt: 'Phone Screen', class: 'phone-screen-image' %>
-            </div>
-          </div>
-          <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <%= image_tag 'example6.jpg', alt: 'Phone Screen', class: 'phone-screen-image' %>
-            </div>
-          </div>
+        <div class="flex overflow-x-auto mt-4">
+          <%= image_tag 'iphone1.jpg', alt: 'iPhone Screen 1', class: 'mr-4 max-w-xs' %>
+          <%= image_tag 'iphone2.jpg', alt: 'iPhone Screen 2', class: 'mr-4 max-w-xs' %>
+          <%= image_tag 'iphone3.jpg', alt: 'iPhone Screen 3', class: 'max-w-xs' %>
         </div>
       </div>
       <div class="p-6 bg-white rounded-lg shadow-md">
@@ -52,29 +38,15 @@
           <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.guide_2_title') %></h2>
         </div>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4 ">
-          <li>ダッシュボード画面で自分の必要カロリーや基礎代謝を確認しましょう<br>(自分のことを把握することはとても大切です)</li>
+          <li>ダッシュボード画面で自分の必要カロリーや基礎代謝を確認しましょう<br>(自分の情報を把握することはとても大切です)</li>
           <li>レシピ画面で必要カロリーを入力しましょう</li>
           <li>AIがあなたに適したレシピを提供してくれます!</li>
+          <p class="text-gray-500 text-sm">※横にスクロールできます</p>
         </ul>
-        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 mt-4">
-          <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <%= image_tag 'example3.jpg', alt: 'Phone Screen', class: 'phone-screen-image' %>
-            </div>
-          </div>
-          <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <%= image_tag 'example4.jpg', alt: 'Phone Screen', class: 'phone-screen-image' %>
-            </div>
-          </div>
-          <div class="mockup-phone">
-            <div class="camera"></div>
-            <div class="display">
-              <%= image_tag 'example.jpg', alt: 'Phone Screen', class: 'phone-screen-image' %>
-            </div>
-          </div>
+        <div class="flex overflow-x-auto mt-4">
+          <%= image_tag 'iphone4.jpg', alt: 'iPhone Screen 1', class: 'mr-4 max-w-xs' %>
+          <%= image_tag 'iphone5.jpg', alt: 'iPhone Screen 2', class: 'mr-4 max-w-xs' %>
+          <%= image_tag 'iphone6.jpg', alt: 'iPhone Screen 3', class: 'max-w-xs' %>
         </div>
       </div>
       <div class="p-6 bg-white rounded-lg shadow-md">
