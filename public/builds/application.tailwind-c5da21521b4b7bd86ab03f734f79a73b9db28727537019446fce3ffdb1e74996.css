@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .phone-screen-image {
+    @apply w-full h-auto object-cover;
+    @apply w-48;
+  }
+}
+
+/* メディアクエリは@layerの外に配置 */
 @media (max-width: 768px) {
   .svg-background {
     /* モバイルデバイスでのSVGサイズと位置の調整 */

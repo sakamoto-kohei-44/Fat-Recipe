@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     @goal_form = GoalForm.new(goal: goal_params[:goal])
     if @goal_form.valid?
       session[:goal] = goal_params[:goal]
-      redirect_to gender_age_users_path, notice: t('.success')
+      redirect_to gender_age_users_path
     else
       flash.now[:alert] = t('.fail')
       render :body_info, status: :unprocessable_entity
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
     if @gender_age_form.valid?
       session[:gender] = @gender_age_form.gender
       session[:age] = @gender_age_form.age
-      redirect_to height_weight_target_weight_users_path, notice: t('.success')
+      redirect_to height_weight_target_weight_users_path
     else
       flash.now[:alert] = t('.fail')
       render :gender_age, status: :unprocessable_entity
@@ -72,7 +72,7 @@ class UsersController < ApplicationController
       session[:height] = @height_weight_form.height
       session[:weight] = @height_weight_form.weight
       session[:target_weight] = @height_weight_form.target_weight
-      redirect_to activity_level_users_path, notice: t('.success')
+      redirect_to activity_level_users_path
     else
       flash.now[:alert] = t('.fail')
       render :height_weight_target_weight, status: :unprocessable_entity
@@ -109,7 +109,7 @@ class UsersController < ApplicationController
       target_calorie: target_calorie
     }
     session[:user_data] = user_data
-      redirect_to allergies_users_path, notice: t('.success')
+      redirect_to allergies_users_path
     else
       flash.now[:alert] = t('.fail')
       render :activity_level, status: :unprocessable_entity
@@ -128,7 +128,7 @@ class UsersController < ApplicationController
         session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
       end
         session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
-      redirect_to confirmation_users_path, notice: t('.success')
+      redirect_to confirmation_users_path
     else
       flash.now[:alert] = t('.fail')
       render :allergies, status: :unprocessable_entity
@@ -138,12 +138,12 @@ class UsersController < ApplicationController
   def confirmation
     @user = User.new(session[:user_data])
     @goal = session[:goal]
-    @gender_key = session[:gender]
+    @gender_key = User.genders.key(session[:gender].to_i)
     @age = session[:age]
     @height = session[:height]
     @weight = session[:weight]
     @target_weight = session[:target_weight]
-    @activity_level_key = session[:activity_level]
+    @activity_level_key = User.activity_levels.key(session[:activity_level].to_i)
     @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",") if session[:allergy_item_ids].present?
   end
 
