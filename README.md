@@ -43,8 +43,8 @@ https://fat-recipe-af94f33f2e6f.herokuapp.com
 ユーザーは目標体型の選択後、性別、身長、体重、活動レベルを入力して基礎代謝や一日に必要なカロリーを算出。<br>
 入力データは保存され、必要な日常のカロリーやレシピ提供に利用。<br>
 <p float="left">
+  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/f6aaab7f-c033-4c78-a2e0-5c0e3981ece4" width="31%" />
   <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/f8c959ac-9417-4483-89a9-94570c65826f" width="33%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/0060f9db-51c7-4d6b-9272-ee43c3544380" width="32%" />
   <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/828babe4-ce48-491e-8ada-1f7f483f55da" width="32%" />
 </p>
 * ダッシュボード:<br>
