@@ -93,7 +93,7 @@ class UsersController < ApplicationController
       tdee = calculate_tdee(bmr, activity_level_params[:activity_level])
       session[:bmr] = bmr
       session[:tdee] = tdee
-      session[:activity_level] = activity_level_params[:activity_level]
+      session[:activity_level] = User.activity_levels[activity_level_params[:activity_level]]
       target_weight = session[:target_weight].to_i
       target_diff = (target_weight - weight)
       total_calorie = target_diff * KG_TO_CAL
@@ -143,7 +143,7 @@ class UsersController < ApplicationController
     @height = session[:height]
     @weight = session[:weight]
     @target_weight = session[:target_weight]
-    @activity_level_key = User.activity_levels.key(session[:activity_level].to_i)
+    @activity_level_key = User.activity_levels.key(session[:activity_level])
     @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",") if session[:allergy_item_ids].present?
   end
 
