@@ -85,30 +85,8 @@ class UsersController < ApplicationController
   def save_activity_level
     @activity_level_form = ActivityLevelForm.new(activity_level_params)
     if @activity_level_form.valid?
-      gender = session[:gender]
-      age = session[:age].to_i
-      height = session[:height].to_i
-      weight = session[:weight].to_i
-      bmr = calculate_bmr(gender, age, height, weight)
-      tdee = calculate_tdee(bmr, activity_level_params[:activity_level])
-      session[:bmr] = bmr
-      session[:tdee] = tdee
-      session[:activity_level] = User.activity_levels[activity_level_params[:activity_level]]
-      target_weight = session[:target_weight].to_i
-      target_diff = (target_weight - weight)
-      total_calorie = target_diff * KG_TO_CAL
-      days_to_achieve = 90
-      calorie_per_day = total_calorie / days_to_achieve
-      target_calorie = tdee + calorie_per_day
-
-      session[:target_calorie] = target_calorie
-    user_data = {
-      gender: session[:gender],
-      age: session[:age],
-      height: session[:height],
-      target_calorie: target_calorie
-    }
-    session[:user_data] = user_data
+      service = RegistrationService.new(@activity_level_form, session)
+      service.process_registration
       redirect_to allergies_users_path
     else
       flash.now[:alert] = t('.fail')
