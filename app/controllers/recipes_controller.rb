@@ -7,6 +7,11 @@ class RecipesController < ApplicationController
       disliked_foods = params[:disliked_foods]
       @recipe = open_ai_service.generate_recipe(params[:calories], allergies, disliked_foods)
       @translated_recipe = deepl_service.translate(@recipe, "JA")
+
+      recipe_parts = @translated_recipe.split("\n\n")
+      @breakfast = recipe_parts[0] if recipe_parts.length.positive?
+      @lunch = recipe_parts[1] if recipe_parts.length > 1
+      @dinner = recipe_parts[2] if recipe_parts.length > 2
     end
   end
 
