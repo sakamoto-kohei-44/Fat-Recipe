@@ -1,4 +1,6 @@
 class RegistrationService
+  KG_TO_CAL = 7700
+
   def initialize(activity_level_form, session)
     @activity_level_form = activity_level_form
     @session = session
@@ -16,6 +18,14 @@ class RegistrationService
     @session[:tdee] = tdee
     @session[:activity_level] = User.activity_levels[@activity_level_form.activity_level]
 
+    target_weight = @session[:target_weight].to_i
+    weight_diff = target_weight - weight
+    total_calorie_diff = weight_diff * KG_TO_CAL
+    days_to_achieve = 90
+    daily_calorie_change = total_calorie_diff / days_to_achieve
+    target_calorie = tdee + daily_calorie_change
+
+    @session[:target_calorie] = target_calorie
   end
 
   private

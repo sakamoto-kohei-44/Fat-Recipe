@@ -5,9 +5,23 @@
         <%= image_tag 'recipe.jpg', alt: t('recipes.index.logo_alt'), class: 'w-48 h-32' %>
       </div>
       <h1 class="card-title text-center text-xl"><%= t('recipes.index.title') %></h1>
-      <p class="text-center text-gray-500 text-sm"><%= t('recipes.index.image') %></p>
+      <p class="text-center text-gray-500 text-sm"><%= t('recipes.index.subtitle') %></p>
       <div class="border-b border-gray-200 mb-4"></div>
-      <p class="text-lg"><%= @translated_recipe %></p>
+
+      <% if @breakfast.present? %>
+        <h2 class="text-2xl font-bold mb-2">朝食</h2>
+        <p class="text-lg mb-4"><%= @breakfast %></p>
+      <% end %>
+
+      <% if @lunch.present? %>
+        <h2 class="text-2xl font-bold mb-2">昼食</h2>
+        <p class="text-lg mb-4"><%= @lunch %></p>
+      <% end %>
+
+      <% if @dinner.present? %>
+        <h2 class="text-2xl font-bold mb-2">夕食</h2>
+        <p class="text-lg"><%= @dinner %></p>
+      <% end %>
     </div>
   </div>
 </div>

@@ -156,9 +156,9 @@ ja:
     title: "活動レベル選択"
     label: "活動レベルは?"
     options:
-      low: "低い"
-      moderate: "適度"
-      high: "高い"
+      low: "低い（デスクワークなど）"
+      moderate: "適度（週に数回の軽い運動）"
+      high: "高い（毎日の激しい運動や肉体労働）"
     next_button: "次へ"
   allergies:
     steps:

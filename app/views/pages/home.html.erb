@@ -68,8 +68,8 @@
           <h2 class="text-2xl font-semibold font-serif"><%= t('home.confirmation') %></h2>
         </div>
       <ul class="list-disc list-inside space-y-2 font-serif mt-4">
-        <ul><a href="#" class="text-blue-600 hover:text-blue-800"><%= t('home.terms_of_service') %></a></ul>
-        <ul><a href="#" class="text-blue-600 hover:text-blue-800"><%= t('home.privacy_policy') %></a></ul>
+        <%= link_to t('dashboard.terms_of_service'), pages_terms_path, class: "text-blue-600 hover:text-blue-800" %><br>
+        <%= link_to t('dashboard.privacy_policy'), pages_privacy_path, class: "text-blue-600 hover:text-blue-800" %>
       </ul>
     </div>
   </div>

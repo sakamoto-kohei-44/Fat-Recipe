@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # 利用規約とプライバシーポリシー
   get 'terms', to: 'pages#terms', as: 'pages_terms'
-  get 'privacy', to: 'pages#privacy'
+  get 'privacy', to: 'pages#privacy', as: 'pages_privacy'
   # ユーザー情報関連のルーティング
   resources :users do
     collection do
