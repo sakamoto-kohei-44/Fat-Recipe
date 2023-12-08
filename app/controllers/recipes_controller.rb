@@ -8,10 +8,7 @@ class RecipesController < ApplicationController
       @recipe = open_ai_service.generate_recipe(params[:calories], allergies, disliked_foods)
       @translated_recipe = deepl_service.translate(@recipe, "JA")
 
-      recipe_parts = @translated_recipe.split("\n\n")
-      @breakfast = recipe_parts[0] if recipe_parts.length.positive?
-      @lunch = recipe_parts[1] if recipe_parts.length > 1
-      @dinner = recipe_parts[2] if recipe_parts.length > 2
+      parse_recipes(@translated_recipe)
     end
   end
 
@@ -47,5 +44,28 @@ class RecipesController < ApplicationController
     query = params[:query]
     response = SpoonacularService.autocomplete(query: query, number: 10)
     render json: response
+  end
+
+  private
+
+  def parse_recipes(translated_recipe)
+    @breakfast, @lunch, @dinner = extract_meals(translated_recipe)
+  end
+
+  def extract_meals(translated_recipe)
+    breakfast = extract_meal(translated_recipe, "朝食")
+    lunch = extract_meal(translated_recipe, "昼食")
+    dinner = extract_meal(translated_recipe, "夕食")
+    [breakfast, lunch, dinner]
+  end
+
+  def extract_meal(recipe_text, meal_type)
+    start_index = recipe_text.index(meal_type)
+    return "" unless start_index
+
+    end_index = recipe_text.index("\n\n", start_index)
+    end_index ||= recipe_text.length
+
+    recipe_text[start_index...end_index].strip
   end
 end
