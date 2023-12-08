@@ -44,7 +44,8 @@ class SpoonacularService
     params = {
       query: query,
       apiKey: API_KEY,
-      addRecipeInformation: true
+      addRecipeInformation: true,
+      number: 8
     }
     response = HTTParty.get(url, query: params)
     response.parsed_response
