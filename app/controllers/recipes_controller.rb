@@ -19,7 +19,6 @@ class RecipesController < ApplicationController
     deepl_service = DeepLService.new
     queries = params[:query].split(/,\s*/)
     @recipes = []
-
     queries.each do |query|
       translated_query = deepl_service.translate(query, "EN")
       next if translated_query.blank?
@@ -29,9 +28,10 @@ class RecipesController < ApplicationController
         logger.error "Response body: #{response.body}"
       else
         response["results"].each do |recipe|
+          translated_title = deepl_service.translate(recipe["title"])
           @recipes << {
             id: recipe["id"],
-            title: recipe["title"],
+            title: translated_title,
             image: recipe["image"]
           }
         end

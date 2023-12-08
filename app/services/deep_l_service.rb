@@ -3,7 +3,7 @@ class DeepLService
     @api_key = ENV.fetch('DEEPL_API_KEY', nil)
   end
 
-  def translate(text, target_lang = 'EN')
+  def translate(text, target_lang = 'JA')
     uri = URI.parse('https://api-free.deepl.com/v2/translate')
     params = {
       auth_key: @api_key,
