@@ -2,10 +2,11 @@ class Recipe < ApplicationRecord
   belongs_to :user
 
   def self.search(keywords)
-    sql = "name LIKE :keyword OR ingredients LIKE :keyword"
+    keywords = [keywords].flatten
+    sql = "title LIKE :keyword0"
     keywords.each_with_index do |_keyword, i|
-      sql += " OR name LIKE :keyword#{i + 1} OR ingredients LIKE :keyword#{i + 1}" if i.positive?
+      sql += " OR title LIKE :keyword#{i + 1}" if i.positive?
     end
-    where(sql, keywords: keywords)
+    where(sql, keywords.map.with_index.to_h { |keyword, i| ["keyword#{i}", "%#{keyword}%"] }.symbolize_keys)
   end
 end
