@@ -596,30 +596,6 @@
   });
 
   // node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js
-  var turbo_es2017_esm_exports = {};
-  __export(turbo_es2017_esm_exports, {
-    FrameElement: () => FrameElement,
-    FrameLoadingStyle: () => FrameLoadingStyle,
-    FrameRenderer: () => FrameRenderer,
-    PageRenderer: () => PageRenderer,
-    PageSnapshot: () => PageSnapshot,
-    StreamActions: () => StreamActions,
-    StreamElement: () => StreamElement,
-    StreamSourceElement: () => StreamSourceElement,
-    cache: () => cache,
-    clearCache: () => clearCache,
-    connectStreamSource: () => connectStreamSource,
-    disconnectStreamSource: () => disconnectStreamSource,
-    navigator: () => navigator$1,
-    registerAdapter: () => registerAdapter,
-    renderStreamMessage: () => renderStreamMessage,
-    session: () => session,
-    setConfirmMethod: () => setConfirmMethod,
-    setFormMode: () => setFormMode,
-    setProgressBarDelay: () => setProgressBarDelay,
-    start: () => start,
-    visit: () => visit
-  });
   (function() {
     if (window.Reflect === void 0 || window.customElements === void 0 || window.customElements.polyfillWrapFlushCallback) {
       return;
@@ -28203,19 +28179,14 @@
 
   // app/javascript/custom/modal_spinner.js
   document.addEventListener("DOMContentLoaded", function() {
-    var form = document.querySelector("#recipeForm");
+    var form = document.querySelector("form");
     var modal = document.getElementById("my_modal_2");
     form.addEventListener("submit", function(event) {
       event.preventDefault();
       modal.showModal();
-      setTimeout(function() {
-        form.submit();
-      }, 1e3);
+      form.submit();
     });
   });
-
-  // app/javascript/application.js
-  turbo_es2017_esm_exports.session.drive = false;
 })();
 /*! Bundled license information:
 
@@ -28259,4 +28230,6 @@ chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js:
    * Released under the MIT license
    *)
 */
-//# sourceMappingURL=application.js.map
+//# sourceMappingURL=/builds/application.js-39e64cee5e81bde1d1b321458d8eb0a02aae7dbf9feb5f8ed909b9af7540de5b.map
+//!
+;

@@ -28259,4 +28259,6 @@ chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js:
    * Released under the MIT license
    *)
 */
-//# sourceMappingURL=application.js.map
+//# sourceMappingURL=/builds/application.js-5f537c979f722b690c0ba450fd0c425bfe95d173c599a79b70b1e47a38591c79.map
+//!
+;

@@ -596,30 +596,6 @@
   });
 
   // node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js
-  var turbo_es2017_esm_exports = {};
-  __export(turbo_es2017_esm_exports, {
-    FrameElement: () => FrameElement,
-    FrameLoadingStyle: () => FrameLoadingStyle,
-    FrameRenderer: () => FrameRenderer,
-    PageRenderer: () => PageRenderer,
-    PageSnapshot: () => PageSnapshot,
-    StreamActions: () => StreamActions,
-    StreamElement: () => StreamElement,
-    StreamSourceElement: () => StreamSourceElement,
-    cache: () => cache,
-    clearCache: () => clearCache,
-    connectStreamSource: () => connectStreamSource,
-    disconnectStreamSource: () => disconnectStreamSource,
-    navigator: () => navigator$1,
-    registerAdapter: () => registerAdapter,
-    renderStreamMessage: () => renderStreamMessage,
-    session: () => session,
-    setConfirmMethod: () => setConfirmMethod,
-    setFormMode: () => setFormMode,
-    setProgressBarDelay: () => setProgressBarDelay,
-    start: () => start,
-    visit: () => visit
-  });
   (function() {
     if (window.Reflect === void 0 || window.customElements === void 0 || window.customElements.polyfillWrapFlushCallback) {
       return;
@@ -28213,9 +28189,6 @@
       }, 1e3);
     });
   });
-
-  // app/javascript/application.js
-  turbo_es2017_esm_exports.session.drive = false;
 })();
 /*! Bundled license information:
 
@@ -28259,4 +28232,6 @@ chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js:
    * Released under the MIT license
    *)
 */
-//# sourceMappingURL=application.js.map
+//# sourceMappingURL=/builds/application.js-a21af3b632449c94d10b556596262860f52f62b34a7cb24e8e3921cb1a30bdd0.map
+//!
+;

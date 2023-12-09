@@ -5,7 +5,7 @@
       ダッシュボードページで自分の必要カロリー数値を確認し入力すると適切なカロリーのレシピを提供してくれます！<br>
       ※時間がかかる場合があります
     </p>
-    <%= form_with(url: "/recipes", method: :get, local: true) do |form| %>
+    <%= form_with(url: "/recipes", method: :get, local: true, id: "recipeForm") do |form| %>
       <div class="flex flex-col mb-6 text-center">
         <%= form.label :calories, t('recipe_suggestions.index.calories'), class: "mb-2 text-lg text-gray-700" %>
         <%= form.number_field :calories, in: 1000..4000, step: 1, class: "p-4 mt-2 border-2 border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full", placeholder: t('recipe_suggestions.index.example1') %>
@@ -17,4 +17,15 @@
       <%= form.submit t('recipe_suggestions.index.submit'), class: "w-full bg-cyan-300 hover:bg-indigo-600 text-white py-3 px-8 rounded-lg shadow-lg transition ease-in-out duration-300" %>
     <% end %>
   </div>
+
+  <dialog id="my_modal_2" class="modal">
+    <div class="modal-box flex justify-center items-center">
+      <div>
+        <h3 class="font-bold text-lg text-center">生成中です...</h3>
+        <div class="py-4 flex justify-center">
+          <span class="loading loading-ring loading-lg"></span>
+        </div>
+      </div>
+    </div>
+  </dialog>
 </div>
