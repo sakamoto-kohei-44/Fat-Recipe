@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../javascript/custom/modal_spinner.js"],
+  "sourcesContent": ["document.addEventListener(\"DOMContentLoaded\", function() {\n  var form = document.querySelector('#recipeForm');\n  var modal = document.getElementById('my_modal_2');\n\n  form.addEventListener('submit', function(event) {\n    event.preventDefault();\n    modal.showModal();\n    setTimeout(function() {\n      form.submit();\n    }, 1000);\n  });\n});\n"],
+  "mappings": ";;AAAA,WAAS,iBAAiB,oBAAoB,WAAW;AACvD,QAAI,OAAO,SAAS,cAAc,aAAa;AAC/C,QAAI,QAAQ,SAAS,eAAe,YAAY;AAEhD,SAAK,iBAAiB,UAAU,SAAS,OAAO;AAC9C,YAAM,eAAe;AACrB,YAAM,UAAU;AAChB,iBAAW,WAAW;AACpB,aAAK,OAAO;AAAA,MACd,GAAG,GAAI;AAAA,IACT,CAAC;AAAA,EACH,CAAC;",
+  "names": []
+}

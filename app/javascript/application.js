@@ -1,5 +1,4 @@
-import { Turbo } from "@hotwired/turbo-rails"
-Turbo.session.drive = false
+import "@hotwired/turbo-rails"
 import "./controllers"
 import "./custom/chartkick"
 import "chartkick/chart.js"
