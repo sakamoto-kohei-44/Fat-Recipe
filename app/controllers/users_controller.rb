@@ -116,7 +116,7 @@ class UsersController < ApplicationController
   def confirmation
     @user = User.new(session[:user_data])
     @goal = session[:goal]
-    @gender_key = User.genders.key(session[:gender].to_i)
+    @gender_key = session[:gender]
     @age = session[:age]
     @height = session[:height]
     @weight = session[:weight]
