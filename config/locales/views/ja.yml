@@ -232,15 +232,3 @@ ja:
       title: "あなたにおすすめのレシピ！"
       logo_alt: "料理"
       image: "※画像はイメージです"
-  enums:
-    user:
-      gender:
-        man: "男性"
-        woman: "女性"
-      activity_level:
-        low: "低い"
-        moderate: "適度"
-        high: "高い"
-      goal:
-        standard: "標準体型"
-        slim_muscle: "細マッチョ"
