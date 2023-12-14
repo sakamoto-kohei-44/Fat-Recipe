@@ -125,6 +125,12 @@ class UsersController < ApplicationController
     @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",") if session[:allergy_item_ids].present?
   end
 
+  def destroy
+    current_user.soft_delete
+    reset_session
+    redirect_to root_path, notice: t('users.destroy.success')
+  end
+
   def edit_account
   end
 
