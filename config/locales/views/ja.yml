@@ -63,6 +63,8 @@ ja:
       password_confirmation_label: "パスワード確認"
       register_button: "登録"
       login_link: "ログインページへ"
+    destroy:
+      success: "アカウントは退会されました"
     save_goal:
       fail: "目標を選択してください"
     save_gender_age:

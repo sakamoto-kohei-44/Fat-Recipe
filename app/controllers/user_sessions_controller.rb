@@ -4,7 +4,7 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password])
 
-    if @user
+    if @user && @user.deleted_at.nil?
       user = User.find(session[:user_id])
       session[:goal] = user.goal
       session[:gender] = user.gender
@@ -19,6 +19,7 @@ class UserSessionsController < ApplicationController
       session[:target_calorie] = user.target_calorie
       redirect_back_or_to dashboard_home_path, notice: t('.success')
     else
+      reset_session
       flash.now[:danger] = t('.fail')
       render :new, status: :unprocessable_entity
     end
