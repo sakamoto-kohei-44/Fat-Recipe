@@ -26,7 +26,7 @@ class OpenAiService
           content: prompt
         }
       ],
-      max_tokens: 100
+      max_tokens: 300
     }.to_json
 
     http = Net::HTTP.new(uri.host, uri.port)
