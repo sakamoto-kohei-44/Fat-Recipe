@@ -4,11 +4,7 @@ document.addEventListener('turbo:load', function() {
 
   if (form) {
     form.addEventListener('submit', function(event) {
-      event.preventDefault();
       modal.showModal();
-      setTimeout(function() {
-        form.requestSubmit();
-      }, 1000);
     });
   }
 });

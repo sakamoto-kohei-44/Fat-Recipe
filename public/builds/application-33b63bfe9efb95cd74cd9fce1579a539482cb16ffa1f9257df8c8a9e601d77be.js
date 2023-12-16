@@ -28183,7 +28183,6 @@
     var modal = document.getElementById("my_modal_2");
     if (form) {
       form.addEventListener("submit", function(event) {
-        modal.showModal();
       });
     }
   });
@@ -28230,4 +28229,6 @@ chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js:
    * Released under the MIT license
    *)
 */
-//# sourceMappingURL=application.js.map
+//# sourceMappingURL=/builds/application.js-e26076a3674494e1e42afdfca1c34cd2a3203d600dd3ea63ce5f7efabcd0296e.map
+//!
+;
