@@ -28194,7 +28194,7 @@
       document.getElementById("modalTitle").textContent = data.title;
       document.getElementById("modalContent").textContent = data.description;
       document.getElementById("recipeDetailsModal").showModal();
-    }).catch((error2) => console.error("Error:", error2));
+    }).catch((error2) => console.error("Error loading recipe details:", error2));
   }
   window.loadRecipeDetails = loadRecipeDetails;
 })();
@@ -28240,4 +28240,6 @@ chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js:
    * Released under the MIT license
    *)
 */
-//# sourceMappingURL=application.js.map
+//# sourceMappingURL=/builds/application.js-80180d4cb02d8f28ef70730513451d73e5fb0b7fe7cfefe99d2e239152a3bfc4.map
+//!
+;

@@ -12,6 +12,17 @@ class RecipesController < ApplicationController
     end
   end
 
+  def show
+    recipe_id = params[:id]
+    deepl_service = DeepLService.new
+    @recipe_details = SpoonacularService.fetch_recipe_information(recipe_id)
+    if @recipe_details.nil?
+      flash[:alert] = 'レシピの詳細情報を取得できませんでした。'
+    else
+      @translated_description = deepl_service.translate(@recipe_details["summary"], "JA")
+    end
+  end
+
   def search
   end
 
