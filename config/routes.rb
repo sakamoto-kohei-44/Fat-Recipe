@@ -49,6 +49,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'  # => /recipes/search
       get 'search_results'  # => /recipes/search_results
+      get 'recipes/:id', to: 'recipes#show', as: :recipe
     end
   end
 end

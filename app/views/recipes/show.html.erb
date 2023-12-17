@@ -1,0 +1,6 @@
+
+<div class="container mx-auto px-4">
+  <h1 class="text-2xl font-bold text-center my-4"><%= @recipe_details["title"] %></h1>
+  <%= image_tag @recipe_details["image"], class: "w-full max-w-lg mx-auto rounded-lg shadow-md" if @recipe_details["image"].present? %>
+  <p class="text-gray-600 mt-4"><%= @translated_description.html_safe %></p>
+</div>
