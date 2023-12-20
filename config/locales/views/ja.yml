@@ -70,7 +70,7 @@ ja:
     save_gender_age:
       fail: "性別と年齢を選択してください"
     save_height_weight_target_weight:
-      fail: "身長と体重を選択してください"
+      fail: "身長、体重、目標体重の全てをを選択してください"
     save_activity_level:
       fail: "活動レベルを選択してください"
     save_allergies:
