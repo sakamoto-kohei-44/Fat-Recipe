@@ -1,5 +1,5 @@
 <% flash.each do |message_type, message| %>
-  <div class="<%= flash_class(message_type) %> px-4 py-3 rounded relative z-50" role="alert relative z-10">
+  <div class="<%= flash_class(message_type) %> px-4 py-3 rounded relative z-50 max-w-md" role="alert">
     <span class="block sm:inline"><%= message %></span>
   </div>
 <% end %>
