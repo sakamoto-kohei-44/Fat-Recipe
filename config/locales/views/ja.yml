@@ -108,7 +108,7 @@ ja:
   body_info:
     steps:
       goal: "目標"
-      profile: "プロフィール"
+      profile: "性別、年齢"
       weight: "体重"
       activity: "活動量"
       allergies: "アレルギー"
@@ -120,12 +120,12 @@ ja:
   gender_age:
     steps:
       goal: "目標"
-      profile: "プロフィール"
+      profile: "性別、年齢"
       weight: "体重"
       activity: "活動量"
       allergies: "アレルギー"
       confirmation: "確認"
-    title: "プロフィール入力"
+    title: "性別、年齢入力"
     gender_label: "性別"
     gender_prompt: "選択してください"
     age_label: "年齢"
@@ -134,7 +134,7 @@ ja:
   height_weight_target_weight:
     steps:
       goal: "目標"
-      profile: "プロフィール"
+      profile: "性別、年齢"
       weight: "体重"
       activity: "活動量"
       allergies: "アレルギー"
@@ -150,7 +150,7 @@ ja:
   activity_level:
     steps:
       goal: "目標"
-      profile: "プロフィール"
+      profile: "性別、年齢"
       weight: "体重"
       activity: "活動量"
       allergies: "アレルギー"
@@ -165,7 +165,7 @@ ja:
   allergies:
     steps:
       goal: "目標"
-      profile: "プロフィール"
+      profile: "性別、年齢"
       weight: "体重"
       activity: "活動量"
       allergies: "アレルギー"
@@ -176,7 +176,7 @@ ja:
   confirmation:
     steps:
       goal: "目標"
-      profile: "プロフィール"
+      profile: "性別、年齢"
       weight: "体重"
       activity: "活動量"
       allergies: "アレルギー"

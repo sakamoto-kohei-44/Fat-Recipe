@@ -1,6 +1,10 @@
 class RecipesController < ApplicationController
   def index
-    if params[:calories].present?
+    if params[:calories].blank?
+      flash[:alert] = 'カロリーを数値を入力してください。'
+      render 'recipe_suggestions/index'
+      return
+    else
       open_ai_service = OpenAiService.new
       deepl_service = DeepLService.new
       allergies = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name) if session[:allergy_item_ids].present?
