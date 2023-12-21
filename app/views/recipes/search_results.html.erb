@@ -1,13 +1,20 @@
 <div class="bg-white min-h-screen pt-16 px-8">
   <h1 class="text-3xl font-bold text-center"><%= t('search_results.title') %></h1>
-  <div class="mt-8 max-w-lg mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    <% @recipes.each do |recipe| %>
-      <div class="rounded overflow-hidden shadow-md">
-        <%= image_tag recipe[:image], class: "w-full aspect-square object-cover" %>
-        <div class="px-6 py-4">
-          <%= link_to recipe[:title], recipe_path(recipe[:id]), class: "text-blue-500 hover:text-blue-800" %>
+
+  <% if @recipes.empty? %>
+    <div class="mt-8 max-w-lg mx-auto">
+      <p class="text-center text-gray-600">検索結果がありません。</p>
+    </div>
+  <% else %>
+    <div class="mt-8 max-w-lg mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <% @recipes.each do |recipe| %>
+        <div class="rounded overflow-hidden shadow-md">
+          <%= image_tag recipe[:image], class: "w-full aspect-square object-cover" %>
+          <div class="px-6 py-4">
+            <%= link_to recipe[:title], recipe_path(recipe[:id]), class: "text-blue-500 hover:text-blue-800" %>
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
