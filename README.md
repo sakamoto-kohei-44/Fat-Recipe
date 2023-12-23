@@ -36,36 +36,15 @@ https://fat-recipe-af94f33f2e6f.herokuapp.com
 一方、筋トレアプリではカロリー管理や体重管理をグラフ等で視覚化する機能は備えていますが、増量のための適切なレシピを生成する機能はありません。<br>
 このアプリでは、カロリー情報や体重管理をグラフなどで視覚化する機能、増量のための適切なレシピを生成する機能の両方を組み合わせることで、二つのアプリの長所を取り入れた形となっており、これが最大の差別化ポイントです。<br>
 
-## サービス利用イメージ<br>
-* 利用方法<br>
-  初回アクセス時には使ってみるボタンとログインボタンを提示。<br>
-メールアドレスとLINEでのログインを可能とし、ゲストユーザーも大体の機能利用を許可。<br>
-ユーザーは目標体型の選択後、性別、身長、体重、活動レベルを入力して基礎代謝や一日に必要なカロリーを算出。<br>
-入力データは保存され、必要な日常のカロリーやレシピ提供に利用。<br>
-<p float="left">
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/f6aaab7f-c033-4c78-a2e0-5c0e3981ece4" width="31%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/f8c959ac-9417-4483-89a9-94570c65826f" width="33%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/828babe4-ce48-491e-8ada-1f7f483f55da" width="32%" />
-</p>
-* ダッシュボード:<br>
-ユーザーの基本情報や基礎代謝、一日に必要なカロリーを表示。<br>
-体重変化推移をグラフで表示。<br>
-<p float="left">
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/8952014f-afd8-4447-8190-c1fdbfbf6283" width="31%" />
-</p>
+## ◾主な機能
 
-* 献立提案:<br>
-ユーザーの目標に基づく一日の献立をOpen AIにより提案。<br>
-<p float="left">
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/16d9c206-85ff-4609-b90b-c28371c08674" width="31%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/611455d3-a268-48e3-a99a-f26cd0abd116" width="32%" />
-</p>
-* 検索:
-料理名や材料によるレシピ検索。<br>
-<p float="left">
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/94187996-f8e9-4e7c-bf0e-f4920e14bed3" width="23%" />
-  <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/c0427498-f4df-48a3-8222-23a0d184d098" width="23%" />
-</p>
+### メイン機能
+
+| ユーザー情報の入力 | 必要情報の可視化 | レシピ提供 | レシピ検索 |
+| --- | --- | --- | --- |
+| ![画像1](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3BvaHZ0bTlrZTl5dTZzNng2OXJxeGF4M2EycWM0NWVuanl2YTMxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IHmvIrnl2rtfQ0hAwX/giphy.gif) | ![画像2](画像URL2) | ![画像3](画像URL3) | ![画像4](画像URL4) |
+| ユーザーの各情報を入力してください | 基礎代謝や必要カロリーを数値やグラフで可視化できます | カロリーにあった適切なレシピをAIが提供してくれます | レシピ名や材料名を組み合わせて検索できます |
+
 
 ## 実装を予定している機能
 
