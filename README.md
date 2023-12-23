@@ -42,7 +42,7 @@ https://fat-recipe-af94f33f2e6f.herokuapp.com
 
 | ユーザー情報の入力 | 必要情報の可視化 | レシピ提供 | レシピ検索 |
 | --- | --- | --- | --- |
-| ![画像1](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3BvaHZ0bTlrZTl5dTZzNng2OXJxeGF4M2EycWM0NWVuanl2YTMxMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IHmvIrnl2rtfQ0hAwX/giphy.gif) | ![画像2](画像URL2) | ![画像3](画像URL3) | ![画像4](画像URL4) |
+| <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/bd3cfaac-7a90-46e9-baf3-a7b6c326f6df" alt="画像1" width="700"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/1084b2b5-c122-4122-a8ab-0760232fc9ba)" alt="画像2" width="700"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/bffba18d-a0e5-4bf9-a89f-dcbc4f1f86d9" alt="画像3" width="700"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/43a0c762-69be-47b6-928c-8410fdd37f82" alt="画像4" width="700"/> |
 | ユーザーの各情報を入力してください | 基礎代謝や必要カロリーを数値やグラフで可視化できます | カロリーにあった適切なレシピをAIが提供してくれます | レシピ名や材料名を組み合わせて検索できます |
 
 
