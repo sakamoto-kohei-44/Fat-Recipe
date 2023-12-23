@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        nikukyu: ['Nikukyu', 'serif'],
       },
       colors: {
         primary: '#4ade80',
