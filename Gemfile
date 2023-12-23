@@ -3,11 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
-gem 'kaminari', '~> 1.2', '>= 1.2.2'
-
 gem 'acts_as_list', '~> 1.1'
-
-gem 'meta-tags', '~> 2.18'
 
 gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 
@@ -66,8 +62,6 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-gem 'bootstrap', '~> 5.0.0'
 gem "sorcery"
 
 group :development, :test do
