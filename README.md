@@ -39,14 +39,15 @@ https://fat-recipe-af94f33f2e6f.herokuapp.com
 
 ### メイン機能
 
-| ユーザー情報の入力 | 必要情報の可視化 | レシピ提供 | レシピ検索 |
-| ------------------ | ---------------- | ---------- | ---------- |
-| <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/7088c92f-8372-4e35-868f-a4a371116053" alt="ユーザー情報の入力" width="230"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/1084b2b5-c122-4122-a8ab-0760232fc9ba" alt="必要情報の可視化" width="700"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/bffba18d-a0e5-4bf9-a89f-dcbc4f1f86d9" alt="レシピ提供" width="700"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/43a0c762-69be-47b6-928c-8410fdd37f82" alt="レシピ検索" width="700"/> |
-| ユーザーの各情報を入力してください | 基礎代謝や必要カロリーを数値やグラフで可視化できます | カロリーにあった適切なレシピをAIが提供してくれます | レシピ名や材料名を組み合わせて検索できます |
+| ユーザー情報の入力 | 必要情報の可視化 |
+| ------------------ | ---------------- |
+| <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/7088c92f-8372-4e35-868f-a4a371116053" alt="ユーザー情報の入力" width="270"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/9fb14572-2186-4ff8-b2b7-a80cabca1269" alt="必要情報の可視化" width="270"/> |
+| ユーザーの各情報を入力してください | 基礎代謝や必要カロリーを数値や<br>グラフで可視化できます |
 
-
-
-
+| レシピ提供 | レシピ検索 |
+| ---------- | ---------- |
+| <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/8206dc5e-a396-4b3e-9a83-e99fabd767bd" alt="レシピ提供" width="270"/> | <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/b4dcb00b-3167-4713-99d9-aab925ec5a58" alt="レシピ検索" width="270"/> |
+| カロリーにあった適切なレシピを<br>AIが提供してくれます | レシピ名や材料名を組み合わせて<br>検索できます |
 
 
 ## 実装を予定している機能
