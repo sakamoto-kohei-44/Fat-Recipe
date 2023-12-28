@@ -128,7 +128,7 @@ class UsersController < ApplicationController
   def destroy
     current_user.soft_delete
     reset_session
-    redirect_to root_path, notice: t('users.destroy.success')
+    redirect_to root_path, notice: t('.success')
   end
 
   def edit_account
