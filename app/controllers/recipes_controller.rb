@@ -1,9 +1,9 @@
 class RecipesController < ApplicationController
   def index
     if params[:calories].blank?
-      flash[:alert] = 'カロリーを数値を入力してください。'
+      flash.now[:alert] = t('.fail')
       render 'recipe_suggestions/index'
-      return
+      nil
     else
       open_ai_service = OpenAiService.new
       deepl_service = DeepLService.new
@@ -21,7 +21,7 @@ class RecipesController < ApplicationController
     deepl_service = DeepLService.new
     @recipe_details = SpoonacularService.fetch_recipe_information(recipe_id)
     if @recipe_details.nil?
-      flash[:alert] = 'レシピの詳細情報を取得できませんでした。'
+      flash.now[:alert] = t('.fail')
     else
       @translated_description = deepl_service.translate(@recipe_details["summary"], "JA")
     end
