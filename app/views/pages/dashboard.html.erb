@@ -1,23 +1,47 @@
-<div class="bg-teal-50 min-h-screen pb-20">
+<div class="bg-teal-50 min-h-screen">
   <div class="absolute top-16 left-0 right-0 w-full animate-float1">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 640">
       <path fill="#5eead4" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,224C384,235,480,245,576,218.7C672,192,768,128,864,122.7C960,117,1056,171,1152,192C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
     </svg>
   </div>
-  <div class="absolute top-18 left-0 right-0 w-full animate-float2">
+  <div class="absolute top-17 left-0 right-0 w-full animate-float2">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#5eead4" fill-opacity="0.5" d="M0,256L34.3,245.3C68.6,235,137,213,206,197.3C274.3,181,343,171,411,170.7C480,171,549,181,617,197.3C685.7,213,754,235,823,229.3C891.4,224,960,192,1029,181.3C1097.1,171,1166,181,1234,170.7C1302.9,160,1371,128,1406,112L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
     </svg>
   </div>
-  <div class="container mx-auto px-4 relative mb-8">
+  <div class="container mx-auto px-4 relative mb-24">
     <h1 class="text-4xl font-bold text-center mb-10 mt-3 font-nikukyu">
       <span class="text-7xl text-cyan-400">ふぁっとれしぴ</span>
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:mt-36 sm:mt-10">
       <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
         <div class="flex items-center mb-3">
+          <%= image_tag 'logo.jpg', alt: t('homed.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-3xl font-bold font-serif text-gray-700"><%= t('home.description') %></h2>
+        </div>
+        <h3 class="text-xl font-semibold mt-6 mb-2 font-serif text-gray-700">ターゲット</h3>
+        <ul class="list-disc list-inside space-y-2 font-serif mt-4 text-gray-600">
+          <li>痩せていることに悩んでいる人</li>
+          <li>健康的に体重を増加させたい人</li>
+          <li>太りたいけど何を食べればいいかわからない人</li>
+        </ul>
+        <h3 class="text-xl font-semibold mt-6 mb-2 font-serif text-gray-700">どうやって太るの？</h3>
+        <ul class="list-disc list-inside space-y-2 font-serif mt-4 text-gray-600">
+          <p>太るためには筋トレも大事ですが一番は食事です！</p>
+          <h2 class="text-2xl">主食を毎食しっかりとる</h2>
+          <li>主食は1日の摂取カロリーの5～6割ほどを占めるため、食べることでカロリーの不足を防ぎます。</li>
+          <h2 class="text-2xl">食事のカロリー摂取量を増やす</h2>
+          <li>遺伝的に太りにくい場合や食が細い場合は、食事全体のカロリーを無理のない範囲で増やすようにしてみましょう。</li>
+          <li>体重（体脂肪や筋肉）を増やすには、やはりカロリーを増やす必要があります。</li>
+          <h2 class="text-2xl">間食（補食）をとる</h2>
+          <li>食が細くて1度にたくさん食べられない場合や消化吸収力が低い場合は、1食の量を減らして間食（補食）をとるようにしてみましょう。</li>
+          <li>10時や15時の食事の間のタイミングで取り入れるとよいでしょう。</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
           <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.guide_1_title') %></h2>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('home.guide_1_title') %></h2>
         </div>
         <p class="font-serif text-gray-600">初めての方へ、Fat Recipeの使い方を簡単にご紹介します</p>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4">
@@ -34,8 +58,8 @@
       </div>
       <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
         <div class="flex items-center mb-3">
-          <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.guide_2_title') %></h2>
+          <%= image_tag 'logo.jpg', alt: t('home.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('home.guide_2_title') %></h2>
         </div>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4 ">
           <li>ダッシュボード画面で自分の必要カロリーや基礎代謝を確認しましょう<br>(自分の情報を把握することはとても大切です)</li>
@@ -51,8 +75,8 @@
       </div>
       <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
         <div class="flex items-center mb-3">
-          <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.feature') %></h2>
+          <%= image_tag 'logo.jpg', alt: t('homed.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('home.feature') %></h2>
         </div>
         <p class="font-serif text-gray-600">Fat Recipeの特徴</p>
         <ul class="list-disc list-inside space-y-2 font-serif mt-4">
@@ -60,16 +84,15 @@
           <li>簡単に追跡できる体重管理機能</li>
           <li>海外風レシピの検索機能</li>
         </ul>
-      </div>
-      <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
-      <div class="flex items-center mb-3">
-          <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('dashboard.confirmation') %></h2>
+        <div class="mt-4 flex items-center mb-3">
+          <%= image_tag 'logo.jpg', alt: 'チーズケーキアイコン', class: 'w-10 h-10 mr-2 rounded-full' %>
+          <h2 class="text-2xl font-semibold font-serif"><%= t('home.confirmation') %></h2>
         </div>
-      <ul class="list-disc list-inside space-y-2 font-serif mt-4">
-        <%= link_to t('dashboard.terms_of_service'), pages_terms_path, class: "text-blue-600 hover:text-blue-800" %><br>
-        <%= link_to t('dashboard.privacy_policy'), pages_privacy_path, class: "text-blue-600 hover:text-blue-800" %>
-      </ul>
+        <ul class="list-disc list-inside space-y-2 font-serif mt-4">
+          <%= link_to t('dashboard.terms_of_service'), pages_terms_path, class: "text-blue-600 hover:text-blue-800" %><br>
+          <%= link_to t('dashboard.privacy_policy'), pages_privacy_path, class: "text-blue-600 hover:text-blue-800" %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
