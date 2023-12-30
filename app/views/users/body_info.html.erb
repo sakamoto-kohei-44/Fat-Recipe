@@ -11,30 +11,30 @@
   </div>
   <div class="max-w-lg mx-auto px-6 py-12 relative z-10 md:max-w-lg">
     <ul class="steps">
-      <li class="step step-primary secondary"><%= t('body_info.steps.goal') %></li>
-      <li class="step white"><%= t('body_info.steps.profile') %></li>
-      <li class="step"><%= t('body_info.steps.weight') %></li>
-      <li class="step"><%= t('body_info.steps.activity') %></li>
-      <li class="step"><%= t('body_info.steps.allergies') %></li>
-      <li class="step"><%= t('body_info.steps.confirmation') %></li>
+      <li class="step step-primary secondary font-zenmaru"><%= t('body_info.steps.goal') %></li>
+      <li class="step white font-zenmaru"><%= t('body_info.steps.profile') %></li>
+      <li class="step font-zenmaru"><%= t('body_info.steps.weight') %></li>
+      <li class="step font-zenmaru"><%= t('body_info.steps.activity') %></li>
+      <li class="step font-zenmaru"><%= t('body_info.steps.allergies') %></li>
+      <li class="step font-zenmaru"><%= t('body_info.steps.confirmation') %></li>
     </ul>
-    <h1 class="text-2xl font-bold text-gray-800 text-center mb-8"><%= t('body_info.title') %></h1>
+    <h1 class="text-2xl font-bold text-gray-800 text-center font-zenmaru mb-8"><%= t('body_info.title') %></h1>
     <%= form_with url: save_goal_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md relative z-10">
         <div class="space-y-4">
           <div class="flex items-center">
             <div class="flex items-center mr-5">
               <%= f.radio_button :goal, "standard", class: "h-5 w-5 text-indigo-600" %>
-              <label class="ml-3 text-gray-700 text-lg"><%= t('body_info.standard_body') %></label>
+              <label class="ml-3 text-gray-700 text-lg font-zenmaru"><%= t('body_info.standard_body') %></label>
             </div>
             <div class="flex items-center">
               <%= f.radio_button :goal, "slim_muscle", class: "h-5 w-5 text-indigo-600" %>
-              <label class="ml-3 text-gray-700 text-lg"><%= t('body_info.slim_muscle') %></label>
+              <label class="ml-3 text-gray-700 text-lg font-zenmaru"><%= t('body_info.slim_muscle') %></label>
             </div>
           </div>
         </div>
         <div class="mt-8 text-center">
-          <%= f.submit t('body_info.next'), class: "btn btn-primary w-full bg-cyan-300" %>
+          <%= f.submit t('body_info.next'), class: "btn btn-primary font-zenmaru w-full bg-cyan-300" %>
         </div>
       </div>
     <% end %>

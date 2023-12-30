@@ -11,6 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        zenmaru: ['Zen Maru Gothic', 'sans-serif'],
         nikukyu: ['Nikukyu', 'serif'],
       },
       colors: {

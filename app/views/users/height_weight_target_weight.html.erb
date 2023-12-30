@@ -10,24 +10,24 @@
     </svg>
   </div>
   <div class="max-w-lg mx-auto p-6 relative z-10">
-    <ul class="steps steps-primary">
-      <li class="step step-primary"><%= t('height_weight_target_weight.steps.goal') %></li>
-      <li class="step step-primary"><%= t('height_weight_target_weight.steps.profile') %></li>
-      <li class="step step-primary"><%= t('height_weight_target_weight.steps.weight') %></li>
-      <li class="step"><%= t('height_weight_target_weight.steps.activity') %></li>
-      <li class="step"><%= t('height_weight_target_weight.steps.allergies') %></li>
-      <li class="step"><%= t('height_weight_target_weight.steps.confirmation') %></li>
+    <ul class="steps steps-primary font-zenmaru">
+      <li class="step step-primary font-zenmaru"><%= t('height_weight_target_weight.steps.goal') %></li>
+      <li class="step step-primary font-zenmaru"><%= t('height_weight_target_weight.steps.profile') %></li>
+      <li class="step step-primary font-zenmaru"><%= t('height_weight_target_weight.steps.weight') %></li>
+      <li class="step font-zenmaru"><%= t('height_weight_target_weight.steps.activity') %></li>
+      <li class="step font-zenmaru"><%= t('height_weight_target_weight.steps.allergies') %></li>
+      <li class="step font-zenmaru"><%= t('height_weight_target_weight.steps.confirmation') %></li>
     </ul>
-    <h1 class="text-2xl font-bold text-gray-800 text-center mb-6"><%= t('height_weight_target_weight.title') %></h1>
+    <h1 class="text-2xl font-bold text-gray-800 text-center font-zenmaru mb-6"><%= t('height_weight_target_weight.title') %></h1>
     <%= form_with url: save_height_weight_target_weight_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md relative z-10">
-        <div class="space-y-4">
+        <div class="space-y-4 font-zenmaru">
           <%= form_group(f, :height, 'height_weight_target_weight.height_label', 'height_weight_target_weight.height_placeholder') %>
           <%= form_group(f, :weight, 'height_weight_target_weight.weight_label', 'height_weight_target_weight.weight_placeholder') %>
           <%= form_group(f, :target_weight, 'height_weight_target_weight.target_weight_label', 'height_weight_target_weight.target_weight_placeholder') %>
         </div>
         <div class="text-center mt-8">
-          <%= f.submit t('height_weight_target_weight.next_button'), class: "btn btn-primary w-full bg-cyan-300" %>
+          <%= f.submit t('height_weight_target_weight.next_button'), class: "btn btn-primary font-zenmaru w-full bg-cyan-300" %>
         </div>
       </div>
     <% end %>

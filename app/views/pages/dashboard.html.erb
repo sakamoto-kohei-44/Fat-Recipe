@@ -17,16 +17,16 @@
       <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
         <div class="flex items-center mb-3">
           <%= image_tag 'logo.jpg', alt: t('homed.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-3xl font-bold font-serif text-gray-700"><%= t('home.description') %></h2>
+          <h2 class="font-zenmaru text-3xl font-bold text-gray-700"><%= t('home.description') %></h2>
         </div>
-        <h3 class="text-xl font-semibold mt-6 mb-2 font-serif text-gray-700">ターゲット</h3>
-        <ul class="list-disc list-inside space-y-2 font-serif mt-4 text-gray-600">
+        <h3 class="text-xl font-semibold mt-6 mb-2 font-zenmaru text-gray-700">ターゲット</h3>
+        <ul class="list-disc list-inside space-y-2 font-zenmaru mt-4 text-gray-600">
           <li>痩せていることに悩んでいる人</li>
           <li>健康的に体重を増加させたい人</li>
           <li>太りたいけど何を食べればいいかわからない人</li>
         </ul>
-        <h3 class="text-xl font-semibold mt-6 mb-2 font-serif text-gray-700">どうやって太るの？</h3>
-        <ul class="list-disc list-inside space-y-2 font-serif mt-4 text-gray-600">
+        <h3 class="text-xl font-semibold mt-6 mb-2 font-zenmaru text-gray-700">どうやって太るの？</h3>
+        <ul class="list-disc list-inside space-y-2 font-zenmaru mt-4 text-gray-600">
           <p>太るためには筋トレも大事ですが一番は食事です！</p>
           <h2 class="text-2xl">主食を毎食しっかりとる</h2>
           <li>主食は1日の摂取カロリーの5～6割ほどを占めるため、食べることでカロリーの不足を防ぎます。</li>
@@ -41,10 +41,10 @@
       <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
         <div class="flex items-center mb-3">
           <%= image_tag 'logo.jpg', alt: t('dashboard.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('home.guide_1_title') %></h2>
+          <h2 class="text-2xl font-semibold font-zenmaru"><%= t('home.guide_1_title') %></h2>
         </div>
-        <p class="font-serif text-gray-600">初めての方へ、Fat Recipeの使い方を簡単にご紹介します</p>
-        <ul class="list-disc list-inside space-y-2 font-serif mt-4">
+        <p class="font-zenmaru text-gray-600">初めての方へ、Fat Recipeの使い方を簡単にご紹介します</p>
+        <ul class="list-disc list-inside space-y-2 font-zenmaru mt-4">
           <li>初めての方は使ってみるボタンをクリックしてください</li>
           <li>各プロフィール情報を入力し間違いがないか確認してください</li>
           <li>登録済みの方はログインボタンからログインしてください</li>
@@ -59,9 +59,9 @@
       <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
         <div class="flex items-center mb-3">
           <%= image_tag 'logo.jpg', alt: t('home.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('home.guide_2_title') %></h2>
+          <h2 class="text-2xl font-semibold font-zenmaru"><%= t('home.guide_2_title') %></h2>
         </div>
-        <ul class="list-disc list-inside space-y-2 font-serif mt-4 ">
+        <ul class="list-disc list-inside space-y-2 font-zenmaru mt-4 ">
           <li>ダッシュボード画面で自分の必要カロリーや基礎代謝を確認しましょう<br>(自分の情報を把握することはとても大切です)</li>
           <li>レシピ画面で必要カロリーを入力しましょう</li>
           <li>AIがあなたに適したレシピを提供してくれます!</li>
@@ -76,19 +76,26 @@
       <div class="p-6 bg-cyan-100 rounded-lg shadow-md">
         <div class="flex items-center mb-3">
           <%= image_tag 'logo.jpg', alt: t('homed.logo_alt'), class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('home.feature') %></h2>
+          <h2 class="text-2xl font-semibold font-zenmaru"><%= t('home.feature') %></h2>
         </div>
-        <p class="font-serif text-gray-600">Fat Recipeの特徴</p>
-        <ul class="list-disc list-inside space-y-2 font-serif mt-4">
-          <li>目標体重に応じた適切なカロリーの食事プラン</li>
-          <li>簡単に追跡できる体重管理機能</li>
-          <li>海外風レシピの検索機能</li>
+        <p class="font-zenmaru text-gray-600">実はNG!?やってしまいがちなNG方法</p>
+        <ul class="list-disc list-inside space-y-2 font-zenmaru mt-4">
+          <li class="font-semibold">高カロリーなお菓子を食べる</li>
+          <p>糖質、脂質がたっぷり含まれているため、健康に悪影響を与えてしまいます</p>
+          <li class="font-semibold">夜遅い時間に暴飲暴食する</li>
+          <p>夜は消化機能が落ちる時間であるため胃腸の不調を招いてしまいます</p>
+          <li class="font-semibold">プロテインをたくさん飲む</li>
+          <p>満腹感から食事量を減らしてしまい、食事から摂りたい栄養やカロリーを摂りにくくなってしまいます</p>
+          <p>また、消化吸収能力が低い方はドリンクタイプを一気に飲んでも、なかなか消化吸収しきれないかもしれません</p>
+          <li class="font-semibold">激しい筋トレを行う</li>
+          <p>筋肉をつけるほどの高負荷な筋トレは消費カロリーも高いため、かなりたくさん食べなければいけなくなります<br>しっかりカロリーを摂らないと、体重が減ってしまったり、筋肉がつかなかったりします</p>
+          <p>まずは食事と適度な運動を中心に太る方法を実践することからはじめてみて、うまくいきはじめたら筋トレにチャレンジしましょう！</p>
         </ul>
         <div class="mt-4 flex items-center mb-3">
           <%= image_tag 'logo.jpg', alt: 'チーズケーキアイコン', class: 'w-10 h-10 mr-2 rounded-full' %>
-          <h2 class="text-2xl font-semibold font-serif"><%= t('home.confirmation') %></h2>
+          <h2 class="text-2xl font-semibold font-zenmaru"><%= t('home.confirmation') %></h2>
         </div>
-        <ul class="list-disc list-inside space-y-2 font-serif mt-4">
+        <ul class="list-disc list-inside space-y-2 font-zenmaru mt-4">
           <%= link_to t('dashboard.terms_of_service'), pages_terms_path, class: "text-blue-600 hover:text-blue-800" %><br>
           <%= link_to t('dashboard.privacy_policy'), pages_privacy_path, class: "text-blue-600 hover:text-blue-800" %>
         </ul>

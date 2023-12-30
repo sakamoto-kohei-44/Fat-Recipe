@@ -10,7 +10,7 @@
     </svg>
   </div>
   <div class="max-w-lg mx-auto p-6 relative z-10">
-    <ul class="steps steps-primary">
+    <ul class="steps steps-primary font-zenmaru">
       <li class="step step-primary"><%= t('activity_level.steps.goal') %></li>
       <li class="step step-primary"><%= t('activity_level.steps.profile') %></li>
       <li class="step step-primary"><%= t('activity_level.steps.weight') %></li>
@@ -18,15 +18,15 @@
       <li class="step"><%= t('activity_level.steps.allergies') %></li>
       <li class="step"><%= t('activity_level.steps.confirmation') %></li>
     </ul>
-    <h1 class="text-2xl font-bold text-gray-800 text-center mb-6"><%= t('activity_level.title') %></h1>
+    <h1 class="text-2xl font-bold text-gray-800 text-center font-zenmaru mb-6"><%= t('activity_level.title') %></h1>
     <%= form_with url: save_activity_level_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md relative z-10">
         <div>
-          <%= f.label :activity_level, t('activity_level.label'), class: "text-gray-700 text-lg" %>
-          <%= f.select :activity_level, [['低い', 'low'], ['適度', 'moderate'], ['高い', 'high']].map { |label, value| [t("activity_level.options.#{value}"), value] }, {}, {class: "w-full rounded-md border-gray-300 text-lg"} %>
+          <%= f.label :activity_level, t('activity_level.label'), class: "text-gray-700 text-lg font-zenmaru" %>
+          <%= f.select :activity_level, [['低い', 'low'], ['適度', 'moderate'], ['高い', 'high']].map { |label, value| [t("activity_level.options.#{value}"), value] }, {}, {class: "w-full rounded-md font-zenmaru border-gray-300 text-lg"} %>
         </div>
         <div class="mt-8 text-center">
-          <%= f.submit t('activity_level.next_button'), class: "btn btn-primary w-full bg-cyan-300" %>
+          <%= f.submit t('activity_level.next_button'), class: "btn btn-primary font-zenmaru w-full bg-cyan-300" %>
         </div>
       </div>
     <% end %>
