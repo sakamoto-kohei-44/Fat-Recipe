@@ -10,7 +10,7 @@
     </svg>
   </div>
   <div class="max-w-md mx-auto relative z-10">
-    <ul class="steps steps-primary py-4">
+    <ul class="steps steps-primary py-4 font-zenmaru">
       <li class="step step-primary "><%= t('confirmation.steps.goal') %></li>
       <li class="step step-primary"><%= t('confirmation.steps.profile') %></li>
       <li class="step step-primary"><%= t('confirmation.steps.weight') %></li>
@@ -19,7 +19,7 @@
       <li class="step step-primary"><%= t('confirmation.steps.confirmation') %></li>
     </ul>
     <div class="bg-white p-8 rounded-lg shadow-md">
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center font-zenmaru">
         <h2 class="text-lg font-medium mb-4"><%= t('confirmation.title') %></h2>
         <p class="font-medium"><%= t('confirmation.goal') %> <%= t("enums.user.goal.#{@goal}") %></p>
         <p class="font-medium"><%= t('confirmation.gender') %> <%= t("enums.user.gender.#{@gender_key}") %></p>

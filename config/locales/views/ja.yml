@@ -99,7 +99,7 @@ ja:
     privacy_policy: "プライバシーポリシー"
   recipe_suggestions:
     index:
-      title: "AI ✖️ レシピ提案"
+      title: "レシピ提案"
       example1: "例: 1850"
       calories: "必要な1日カロリー(kcal)"
       example2: "例: 牛乳、ピーマン"
@@ -225,7 +225,7 @@ ja:
     logo_alt: "チーズケーキアイコン"
     guide_1_title: "使い方ガイド①"
     guide_2_title: "使い方ガイド②"
-    feature: "特徴"
+    feature: "豆知識"
     confirmation: "確認事項"
     terms_of_service: "利用規約"
     privacy_policy: "プライバシーポリシー"

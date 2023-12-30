@@ -10,7 +10,7 @@
     </svg>
   </div>
   <div class="max-w-lg mx-auto p-6 relative z-10">
-    <ul class="steps steps-primary">
+    <ul class="steps steps-primary font-zenmaru">
       <li class="step step-primary"><%= t('allergies.steps.goal') %></li>
       <li class="step step-primary"><%= t('allergies.steps.profile') %></li>
       <li class="step step-primary"><%= t('allergies.steps.weight') %></li>
@@ -18,22 +18,22 @@
       <li class="step step-primary"><%= t('allergies.steps.allergies') %></li>
       <li class="step"><%= t('allergies.steps.confirmation') %></li>
     </ul>
-    <h1 class="text-2xl font-bold text-gray-800 text-center mb-6"><%= t('allergies.title') %></h1>
+    <h1 class="text-2xl font-bold text-gray-800 text-center font-zenmaru mb-6"><%= t('allergies.title') %></h1>
     <%= form_with model: @user, url: save_allergies_users_path, local: true, data: { turbo: false } do |f| %>
       <div class="bg-white rounded-lg p-6 shadow-md relative z-10">
         <div>
-          <%= f.label :allergy_item_ids, t('allergies.label'), class: "text-gray-700 text-lg" %>
+          <%= f.label :allergy_item_ids, t('allergies.label'), class: "text-gray-700 font-zenmaru text-lg" %>
         </div>
         <div class="space-y-2 mt-2">
           <%= f.collection_check_boxes :allergy_item_ids, AllergyItem.all, :id, :name do |b| %>
             <label class="flex items-center">
               <%= b.check_box(class: "h-5 w-5 text-indigo-600 rounded focus:ring-indigo-500") %>
-              <span class="ml-2 text-gray-700"><%= b.text %></span>
+              <span class="ml-2 text-gray-700 font-zenmaru"><%= b.text %></span>
             </label>
           <% end %>
         </div>
         <div class="text-center mt-8">
-          <%= f.submit t('allergies.confirm_button'), class: "btn btn-primary bg-cyan-300 w-full" %>
+          <%= f.submit t('allergies.confirm_button'), class: "btn btn-primary font-zenmaru bg-cyan-300 w-full" %>
         </div>
       </div>
     <% end %>
