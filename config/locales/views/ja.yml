@@ -105,6 +105,8 @@ ja:
       example2: "例: 牛乳、ピーマン"
       disliked_foods: "嫌いな食べ物"
       submit: "レシピを提案してもらう"
+      free_word: "フリーワード"
+      free_word_placeholder: "例:昼食は会社だからお弁当がいい"
   body_info:
     steps:
       goal: "目標"

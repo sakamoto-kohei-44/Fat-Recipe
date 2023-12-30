@@ -3,12 +3,12 @@ class OpenAiService
     @api_key = ENV.fetch('OPENAI_API_KEY', nil)
   end
 
-  def generate_recipe(calories, allergies = [], disliked_foods = "")
+  def generate_recipe(calories, allergies = [], disliked_foods = "", free_word = "")
     allergy_info = allergies.join(", ")
     prompt = "Suggest three meal recipes for breakfast, lunch, and dinner that are suitable " \
              "for a Japanese person who needs #{calories} kcal per day and does not include " \
              "the following allergies: #{allergy_info}. Also, avoid using these disliked foods: " \
-             "#{disliked_foods}."
+             "#{disliked_foods}. #{free_word}.Use the words breakfast, lunch, and dinner only once each.I don't need the first useless word."
     uri = URI.parse("https://api.openai.com/v1/chat/completions")
     header = {
       'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ class OpenAiService
           content: prompt
         }
       ],
-      max_tokens: 300
+      max_tokens: 500
     }.to_json
 
     http = Net::HTTP.new(uri.host, uri.port)
