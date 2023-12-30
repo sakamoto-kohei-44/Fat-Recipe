@@ -77,9 +77,12 @@ class RecipesController < ApplicationController
 
   def extract_meal(recipe_text, meal_type)
     start_index = recipe_text.index(meal_type)
-    return "" unless start_index
+    return nil unless start_index
 
-    end_index = recipe_text.index("\n\n", start_index)
+    end_index = [recipe_text.index("朝食", start_index + 1),
+                 recipe_text.index("昼食", start_index + 1),
+                 recipe_text.index("夕食", start_index + 1)].compact.min
+
     end_index ||= recipe_text.length
 
     recipe_text[start_index...end_index].strip
