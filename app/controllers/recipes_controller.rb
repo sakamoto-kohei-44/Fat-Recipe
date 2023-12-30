@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
       open_ai_service = OpenAiService.new
       deepl_service = DeepLService.new
       allergies = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name) if session[:allergy_item_ids].present?
+      free_word = params[:free_word]
       disliked_foods = params[:disliked_foods]
       @recipe = open_ai_service.generate_recipe(params[:calories], allergies, disliked_foods)
       @translated_recipe = deepl_service.translate(@recipe, "JA")
