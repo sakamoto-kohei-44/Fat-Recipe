@@ -9,8 +9,9 @@ class RecipesController < ApplicationController
       deepl_service = DeepLService.new
       allergies = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name) if session[:allergy_item_ids].present?
       free_word = params[:free_word]
+      Rails.logger.info "Free word received: #{free_word}"
       disliked_foods = params[:disliked_foods]
-      @recipe = open_ai_service.generate_recipe(params[:calories], allergies, disliked_foods)
+      @recipe = open_ai_service.generate_recipe(params[:calories], allergies, disliked_foods, free_word)
       @translated_recipe = deepl_service.translate(@recipe, "JA")
 
       parse_recipes(@translated_recipe)
@@ -69,22 +70,19 @@ class RecipesController < ApplicationController
   end
 
   def extract_meals(translated_recipe)
-    breakfast = extract_meal(translated_recipe, "朝食")
-    lunch = extract_meal(translated_recipe, "昼食")
-    dinner = extract_meal(translated_recipe, "夕食")
+    breakfast_start = translated_recipe.index("朝")
+    lunch_start = translated_recipe.index("昼")
+    dinner_start = translated_recipe.index("夕") || translated_recipe.index("夜")
+
+    breakfast = extract_meal(translated_recipe, breakfast_start, lunch_start)
+    lunch = extract_meal(translated_recipe, lunch_start, dinner_start)
+    dinner = extract_meal(translated_recipe, dinner_start, translated_recipe.length)
+
     [breakfast, lunch, dinner]
   end
 
-  def extract_meal(recipe_text, meal_type)
-    start_index = recipe_text.index(meal_type)
+  def extract_meal(recipe_text, start_index, end_index)
     return nil unless start_index
-
-    end_index = [recipe_text.index("朝", start_index + 1),
-                 recipe_text.index("昼", start_index + 1),
-                 recipe_text.index("夕", start_index + 1)].compact.min
-
-    end_index ||= recipe_text.length
-
     recipe_text[start_index...end_index].strip
   end
 end
