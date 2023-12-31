@@ -79,9 +79,9 @@ class RecipesController < ApplicationController
     start_index = recipe_text.index(meal_type)
     return nil unless start_index
 
-    end_index = [recipe_text.index("朝食", start_index + 1),
-                 recipe_text.index("昼食", start_index + 1),
-                 recipe_text.index("夕食", start_index + 1)].compact.min
+    end_index = [recipe_text.index("朝", start_index + 1),
+                 recipe_text.index("昼", start_index + 1),
+                 recipe_text.index("夕", start_index + 1)].compact.min
 
     end_index ||= recipe_text.length
 

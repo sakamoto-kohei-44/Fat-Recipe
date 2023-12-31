@@ -41,13 +41,14 @@ https://fat-recipe-af94f33f2e6f.herokuapp.com
 
 | ユーザー情報の入力 | 必要情報の可視化 |
 | ------------------ | ---------------- |
-| <img src="https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/7088c92f-8372-4e35-868f-a4a371116053" alt="ユーザー情報の入力" width="270"/> | <img src="https://i.gyazo.com/013df59740aa982b97e32c469cab0672.gif" alt="必要情報の可視化" width="270"/> |
-| ユーザーの各情報を<br>入力してください | 基礎代謝や必要カロリー<br>を数値やグラフで可視化<br>できます |
+| <img src="https://i.gyazo.com/171b649e790164c0f16a0d4dc7b7dcb7.gif" alt="ユーザー情報の入力" width="270"/> | <img src="https://i.gyazo.com/0e1c2cbc30cf6b2f48ee94199231f915.gif" alt="必要情報の可視化" width="270"/> |
+| ユーザーの各情報を入力してください | 基礎代謝や必要カロリーを<br>数値やグラフで可視化できます |
 
 | レシピ提供 | レシピ検索 |
 | ---------- | ---------- |
-| <img src="https://i.gyazo.com/3098660c38d38176045da9d41bd4f218.gif" alt="レシピ提供" width="270"/> | <img src="https://i.gyazo.com/8fc793b5e2a96ed677da4a1071bc4adf.gif" alt="レシピ検索" width="270"/> |
-| カロリーにあった適切<br>なレシピをAIが<br>提供してくれます | レシピ名や材料名を<br>組み合わせて<br>検索できます |
+| <img src="https://i.gyazo.com/7c15e8bb943ad0034cb313f909cfa667.gif" alt="レシピ提供" width="270"/> | <img src="https://i.gyazo.com/39858dfe9e01bd17bb7f4b84bae9ef27.gif" alt="レシピ検索" width="270"/> |
+| 適切なカロリーや嫌いな食材<br>フリーワードを入力することで<br>AIがおすすめのレシピを<br>提供してくれます！ | レシピ名や材料名を組み合わせて<br>検索できます |
+
 
 
 ## 実装を予定している機能
