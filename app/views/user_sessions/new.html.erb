@@ -17,6 +17,9 @@
     <div class="mt-8 text-center text-gray-600">
       <%= link_to t('user_sessions.new.register_link'), new_user_path, class: "text-sky-600 hover:underline" %>
       <%= link_to t('user_sessions.new.password_forget'), new_password_reset_path, class: "ml-4 text-sky-600 hover:underline" %>
+      <p class="mt-4">
+        <%= link_to t('user_sessions.new.forget'), body_info_users_path, class: "text-sky-600 hover:underline" %>
+      </p>
     </div>
   </div>
 </div>
