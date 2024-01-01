@@ -23,7 +23,11 @@ Rails.application.configure do
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
-    config.cache_store = :memory_store
+    config.cache_store = :redis_cache_store, {
+      url: ENV['REDIS_URL'], # Redisの接続情報を環境変数から取得する
+      expires_in: 1.hour,    # キャッシュの有効期限を設定
+      driver: :hiredis       # hiredisドライバを使用することで高速化できる
+    }
     config.public_file_server.headers = {
       "Cache-Control" => "public, max-age=#{2.days.to_i}"
     }

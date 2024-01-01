@@ -11,6 +11,12 @@ services:
     ports:
       - 5432:5432
     hostname: db
+  redis:
+   image: redis:latest
+   ports:
+     - "6379:6379"
+   volumes:
+     - ./data/redis:/data
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
@@ -23,11 +29,14 @@ services:
     environment:
       TZ: Asia/Tokyo
       RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
+      REDIS_URL: redis://redis:6379/0
     ports:
       - "3000:3000"
     depends_on:
       - db
+      - redis
 volumes:
   postgres_data:
   bundle_data:
   node_modules:
+  redis_data:
