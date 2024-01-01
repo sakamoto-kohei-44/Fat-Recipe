@@ -21,7 +21,7 @@
       gtag('js', new Date());
 
       gtag('config', 'G-SN44PDD9TC');
-
+    </script>
     <%= javascript_include_tag 'application' %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
   </head>
@@ -33,7 +33,7 @@
           controller_name == 'dashboard' && action_name == 'index' ||
           controller_name == 'recipes' && ['index', 'show', 'search', 'search_results'].include?(action_name) ||
           controller_name == 'recipe_suggestions' && action_name == 'index' %>
-      <%= render 'shared/footer' %>
-    <% end %>
+        <%= render 'shared/footer' %>
+      <% end %>
   </body>
 </html>
