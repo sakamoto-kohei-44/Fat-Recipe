@@ -113,6 +113,7 @@ GEM
     config (4.2.1)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
+    connection_pool (2.4.1)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -180,6 +181,7 @@ GEM
       activesupport (>= 6.1)
     hashdiff (1.0.1)
     hashie (5.0.0)
+    hiredis (0.6.3)
     hotwire-rails (0.1.3)
       rails (>= 6.0.0)
       stimulus-rails
@@ -276,6 +278,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (2.2.8)
+    rack-session (1.0.2)
+      rack (< 3)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.8)
@@ -317,6 +321,26 @@ GEM
       i18n
     rdoc (6.6.0)
       psych (>= 4.0.0)
+    redis (5.0.8)
+      redis-client (>= 0.17.0)
+    redis-actionpack (5.4.0)
+      actionpack (>= 5, < 8)
+      redis-rack (>= 2.1.0, < 4)
+      redis-store (>= 1.1.0, < 2)
+    redis-activesupport (5.3.0)
+      activesupport (>= 3, < 8)
+      redis-store (>= 1.3, < 2)
+    redis-client (0.19.1)
+      connection_pool
+    redis-rack (3.0.0)
+      rack-session (>= 0.2.0)
+      redis-store (>= 1.2, < 2)
+    redis-rails (5.0.2)
+      redis-actionpack (>= 5.0, < 6)
+      redis-activesupport (>= 5.0, < 6)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.10.0)
+      redis (>= 4, < 6)
     regexp_parser (2.8.2)
     reline (0.4.0)
       io-console (~> 0.5)
@@ -458,6 +482,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.8, >= 2.8.1)
   enum_help
   factory_bot_rails
+  hiredis
   hotwire-rails
   httparty (~> 0.21.0)
   jbuilder
@@ -469,6 +494,8 @@ DEPENDENCIES
   rails (~> 7.0.7, >= 7.0.7.2)
   rails-i18n
   ransack
+  redis
+  redis-rails (~> 5.0, >= 5.0.1)
   rspec-rails
   rubocop
   rubocop-capybara

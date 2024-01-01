@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
+gem 'redis'
+
+gem 'redis-rails', '~> 5.0', '>= 5.0.1'
+
+gem 'hiredis'
+
 gem 'acts_as_list', '~> 1.1'
 
 gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
