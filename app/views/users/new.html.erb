@@ -12,7 +12,7 @@
       </div>
       <div class="mt-6">
         <%= f.label :password, t('users.new.password_label'), class: "label" %>
-        <%= f.password_field :password, class: "input input-bordered bg-gray-100 w-full" %>
+        <%= f.password_field :password, placeholder: "6文字以上", class: "input input-bordered bg-gray-100 w-full" %>
       </div>
       <div class="mt-6">
         <%= f.label :password_confirmation, t('users.new.password_confirmation_label'), class: "label" %>
