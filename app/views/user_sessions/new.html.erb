@@ -4,7 +4,7 @@
     <%= form_with url: login_path, local: true, data: { turbo: false } do |f| %>
       <div class="mt-6">
         <%= f.label :email, t('user_sessions.new.email_label'), class: "block text-lg font-medium text-gray-600" %>
-        <%= f.text_field :email, autofocus: true, class: "block w-full px-4 py-3 mt-2 bg-gray-100 border rounded-md focus:border-sky-500 focus:ring-sky-300 focus:outline-none focus:ring focus:ring-opacity-50" %>
+        <%= f.email_field :email, autofocus: true, class: "block w-full px-4 py-3 mt-2 bg-gray-100 border rounded-md focus:border-sky-500 focus:ring-sky-300 focus:outline-none focus:ring focus:ring-opacity-50" %>
       </div>
       <div class="mt-6">
         <%= f.label :password, t('user_sessions.new.password_label'), class: "block text-lg font-medium text-gray-600" %>

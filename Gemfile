@@ -81,6 +81,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -101,6 +102,5 @@ group :test do
   gem 'rspec-rails'
   gem "selenium-webdriver"
   gem 'shoulda-matchers'
-  gem "webdrivers"
   gem 'webmock'
 end
