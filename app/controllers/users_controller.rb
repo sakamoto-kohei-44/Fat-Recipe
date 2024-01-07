@@ -100,13 +100,7 @@ class UsersController < ApplicationController
   def save_allergies
     @allergies_form = AllergiesForm.new(allergies_params)
     if @allergies_form.valid?
-      if allergies_params[:allergy_item_ids].include?("39")
-        session[:allergy_item_ids] = ["39"]
-      else
-        session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
-      end
-        session[:allergy_item_ids] = allergies_params[:allergy_item_ids]
-      redirect_to confirmation_users_path
+      session[:allergy_item_ids] = @allergies_form.allergy_item_ids.reject(&:blank?)
     else
       flash.now[:alert] = t('.fail')
       render :allergies, status: :unprocessable_entity
@@ -164,5 +158,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def allergies_params
+    params.fetch(:allergies_form, {}).permit(allergy_item_ids: [])
   end
 end
