@@ -99,12 +99,14 @@ class UsersController < ApplicationController
 
   def save_allergies
     @allergies_form = AllergiesForm.new(allergies_params)
-    if @allergies_form.valid?
-      session[:allergy_item_ids] = @allergies_form.allergy_item_ids.reject(&:blank?)
+    if @allergies_form.allergy_item_ids.nil? || @allergies_form.allergy_item_ids.reject(&:blank?).empty?
+      session[:allergy_item_ids] = params[:allergy_item_ids].reject(&:blank?)
     else
       flash.now[:alert] = t('.fail')
       render :allergies, status: :unprocessable_entity
+      return
     end
+    redirect_to confirmation_users_path
   end
 
   def confirmation
@@ -117,6 +119,8 @@ class UsersController < ApplicationController
     @target_weight = session[:target_weight]
     @activity_level_key = User.activity_levels.key(session[:activity_level])
     @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",") if session[:allergy_item_ids].present?
+    Rails.logger.debug "Session Data: #{session[:allergy_item_ids].inspect}"
+    Rails.logger.debug "Allergy Names: #{@allergy_names}"
   end
 
   def destroy

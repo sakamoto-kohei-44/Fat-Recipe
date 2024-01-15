@@ -4,7 +4,7 @@
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging,
 # :magic_login, :external
-Rails.application.config.sorcery.submodules = [:reset_password]
+Rails.application.config.sorcery.submodules = [:reset_password, :external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -67,6 +67,8 @@ Rails.application.config.sorcery.configure do |config|
 
   # Will register the time of last user logout, every logout.
   # Default: `true`
+
+    config.external_providers = %i[google]
   #
   # config.register_logout_time =
 
@@ -153,6 +155,12 @@ Rails.application.config.sorcery.configure do |config|
   #
   # For Auth0, site is required and should match the domain provided by Auth0.
   #
+    config.google.key = ENV['GOOGLE_CLIENT_ID']
+    config.google.secret = ENV['GOOGLE_CLIENT_SECRET']
+    #API設定で承認済みのリダイレクトURIとして登録したurlを設定
+    config.google.callback_url = 'http://localhost:3000/oauth/callback?provider=google'
+    #外部サービスから取得したユーザー情報をUserモデルの指定した属性にマッピング
+    config.google.user_info_mapping = {:email => "email"}
   # config.auth0.key = ""
   # config.auth0.secret = ""
   # config.auth0.callback_url = "https://0.0.0.0:3000/oauth/callback?provider=auth0"
@@ -243,6 +251,7 @@ Rails.application.config.sorcery.configure do |config|
   # config.battlenet.scope = "openid"
   # --- user config ---
   config.user_config do |user|
+    user.authentications_class = Authentication
     # -- core --
     # Specify username attributes, for example: [:username, :email].
     # Default: `[:email]`

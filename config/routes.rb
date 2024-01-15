@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+  get 'oauths/oauth'
+  get 'oauths/callback'
   resources :password_resets, only: %i[new create edit update]
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   root 'pages#home'
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
+
+  post "oauth/callback" => "oauths#callback"
+  get "oauth/callback" => "oauths#callback"
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
 
   get '/home', to: 'pages#dashboard', as: 'dashboard_home'
   get 'recipe_suggestions/index', as: 'recipe_suggestions'

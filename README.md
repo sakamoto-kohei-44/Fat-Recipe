@@ -16,7 +16,7 @@
 サポートを行うOpen AI×レシピ提供サービスです。
 
 ### ▼ サービスURL
-https://fat-recipe-af94f33f2e6f.herokuapp.com
+https://fat-recipe.com
 
 ## 想定されるユーザー層
 ・10代～40代のある程度料理ができる男女。<br>
@@ -68,7 +68,7 @@ https://fat-recipe-af94f33f2e6f.herokuapp.com
 * 嫌いな食材設定機能：(嫌いな食材を選択)
 * 利用規約、プライバシーポリシー
 ### その後の機能
-* LINE認証
+* Google認証
 * Rspec
 * ローディングスピナーの実装: 「レシピを生成中...」のようなメッセージの表示。
 * 退会処理機能

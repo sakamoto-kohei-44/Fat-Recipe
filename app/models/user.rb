@@ -17,9 +17,9 @@ class User < ApplicationRecord
   validates :height, :weight, presence: true, numericality: { greater_than: 0 }, unless: :skip_special_validation?
 
   has_many :weight_logs, dependent: :destroy
-  has_many :recipes, dependent: :destroy
-  has_many :food_preferences, dependent: :destroy
   has_many :allergies, dependent: :destroy
+  has_many :authentications, :dependent => :destroy
+  accepts_nested_attributes_for :authentications
 
   enum gender: { man: 0, woman: 1 }
   enum goal: { standard: 0, slim_muscle: 1 }
