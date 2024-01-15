@@ -72,11 +72,10 @@ https://fat-recipe.com
 * Rspec
 * ローディングスピナーの実装: 「レシピを生成中...」のようなメッセージの表示。
 * 退会処理機能
-* 独自ドメイン取得
 
 ### 使用するAPI
 * Spoonacular API
-* LINE Developers API
+* Google API
 * Open AI API(GPT-4)
 * DeepL API
 ## [Figma画面遷移図](https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=5YZK4sMShNtMJ1Uk-1)
