@@ -13,6 +13,10 @@ gem 'acts_as_list', '~> 1.1'
 
 gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 
+gem 'omniauth', '1.9.1'
+
+gem 'omniauth-google-oauth2'
+
 gem 'config', '~> 4.2', '>= 4.2.1'
 
 gem 'annotate', '~> 3.2'
