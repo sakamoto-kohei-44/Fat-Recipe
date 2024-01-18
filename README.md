@@ -80,7 +80,7 @@ https://fat-recipe.com
 * DeepL API
 ## [Figma画面遷移図](https://www.figma.com/file/mL0abUN3kCBi2m0N5zho9w/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=5YZK4sMShNtMJ1Uk-1)
 ## ER図
-![スクリーンショット 2023-12-23 23 53 23](https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/3ce15127-6c5f-4a95-873c-b4d8144d2706)
+![スクリーンショット 2024-01-18 15 27 28](https://github.com/sakamoto-kohei-44/Fat-Recipe/assets/130162997/27de24c1-0e85-4414-b8f3-49fb84525406)
 
 ## 技術選定<br>
 * フロントエンド<br>
