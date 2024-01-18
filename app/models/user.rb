@@ -17,7 +17,8 @@ class User < ApplicationRecord
   validates :height, :weight, presence: true, numericality: { greater_than: 0 }, unless: :skip_special_validation?
 
   has_many :weight_logs, dependent: :destroy
-  has_many :allergies, dependent: :destroy
+  has_many :user_allergies, dependent: :destroy
+  has_many :allergy_items, through: :user_allergies
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications
 

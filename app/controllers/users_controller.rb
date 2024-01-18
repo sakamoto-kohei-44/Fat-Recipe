@@ -99,14 +99,13 @@ class UsersController < ApplicationController
 
   def save_allergies
     @allergies_form = AllergiesForm.new(allergies_params)
-    if @allergies_form.allergy_item_ids.nil? || @allergies_form.allergy_item_ids.reject(&:blank?).empty?
-      session[:allergy_item_ids] = params[:allergy_item_ids].reject(&:blank?)
+    session[:allergy_item_ids] = params[:allergy_item_ids].reject(&:blank?)
+    if @allergies_form.valid?
+      redirect_to confirmation_users_path
     else
       flash.now[:alert] = t('.fail')
       render :allergies, status: :unprocessable_entity
-      return
     end
-    redirect_to confirmation_users_path
   end
 
   def confirmation
@@ -118,9 +117,11 @@ class UsersController < ApplicationController
     @weight = session[:weight]
     @target_weight = session[:target_weight]
     @activity_level_key = User.activity_levels.key(session[:activity_level])
-    @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",") if session[:allergy_item_ids].present?
-    Rails.logger.debug "Session Data: #{session[:allergy_item_ids].inspect}"
-    Rails.logger.debug "Allergy Names: #{@allergy_names}"
+    if session[:allergy_item_ids].present?
+      @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",")
+    else
+      @allergy_names = "None" # アレルギー情報がない場合の処理
+    end
   end
 
   def destroy
@@ -165,6 +166,6 @@ class UsersController < ApplicationController
   end
 
   def allergies_params
-    params.fetch(:allergies_form, {}).permit(allergy_item_ids: [])
+    params.permit(allergy_item_ids: [])
   end
 end
