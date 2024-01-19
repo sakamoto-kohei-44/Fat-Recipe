@@ -24,13 +24,13 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get 'goal'
-      get 'gender_age', as: 'gender_age'
+      get 'gender_age'
       get 'height_weight_target_weight'
       get 'activity_level'
       get 'allergies'
       get 'confirmation', to: 'users#confirmation'
       post 'save_goal', to: 'users#save_goal'
-      post 'save_gender_age', to: 'users#save_gender_age', as: 'save_gender_age' #ユーザーの年齢、性別
+      post 'save_gender_age', to: 'users#save_gender_age'
       post 'save_height_weight_target_weight', to: 'users#save_height_weight_target_weight'
       post 'save_activity_level', to: 'users#save_activity_level'
       post 'save_allergies', to: 'users#save_allergies'
