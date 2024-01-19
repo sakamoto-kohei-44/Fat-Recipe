@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   # ユーザー情報関連のルーティング
   resources :users do
     collection do
-      get 'body_info'
+      get 'goal'
       get 'gender_age', as: 'gender_age'
       get 'height_weight_target_weight'
       get 'activity_level'
