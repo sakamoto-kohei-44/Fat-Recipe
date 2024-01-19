@@ -30,10 +30,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def body_info
-    @goal_form = GoalForm.new
-  end
-
   def goal
   end
 
@@ -44,7 +40,7 @@ class UsersController < ApplicationController
       redirect_to gender_age_users_path
     else
       flash.now[:alert] = t('.fail')
-      render :body_info, status: :unprocessable_entity
+      render :goal, status: :unprocessable_entity
     end
   end
 

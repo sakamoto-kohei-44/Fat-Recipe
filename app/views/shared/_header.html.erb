@@ -1,7 +1,7 @@
 <header class=" bg-teal-300 relative z-10">
     <div class="flex justify-between items-center p-4 h-20">
         <% if request.path == root_path ||
-            request.path == '/users/body_info' ||
+            request.path == '/users/goal' ||
             request.path == '/users/gender_age' ||
             request.path == '/users/height_weight_target_weight' ||
             request.path == '/users/activity_level' ||
@@ -20,7 +20,7 @@
                 <% if controller_name == "pages" && action_name == "home" %>
                     <% unless logged_in? %>
                         <!-- ボタンを表示 -->
-                        <%= link_to t('defaults.try_it'), body_info_users_path, class: "btn text-white rounded-full bg-cyan-400 font-zenmaru" %>
+                        <%= link_to t('defaults.try_it'), goal_users_path, class: "btn text-white rounded-full bg-cyan-400 font-zenmaru" %>
                     <% end %>
                 <% else %>
                     <!-- ボタンを非表示 -->

@@ -24,11 +24,30 @@ class RegistrationService
     days_to_achieve = 90
     daily_calorie_change = total_calorie_diff / days_to_achieve
     target_calorie = tdee + daily_calorie_change
-
     @session[:target_calorie] = target_calorie
+    case @session[:goal]
+    when "standard"
+      process_standard_body(target_weight, weight_diff)
+    when "slim_muscle"
+      process_slim_muscle(target_weight, weight_diff)
+    end
   end
 
   private
+
+  def process_standard_body(target_weight, weight_diff)
+    # 標準体型の場合の日々のカロリー目標を設定
+    # 現在の体重を維持するためのカロリー量
+    daily_calorie_target = @session[:tdee] + 200
+    @session[:target_calorie] = daily_calorie_target
+  end
+
+  def process_slim_muscle(target_weight, weight_diff)
+    # 細マッチョの場合の計算
+    # 例: TDEEより少し多めのカロリー摂取、高タンパク質の食事計画
+    increased_calorie_target = @session[:tdee] + 400
+    @session[:target_calorie] = increased_calorie_target
+  end
 
   def calculate_bmr(gender, age, height, weight)
     if gender == "man"
