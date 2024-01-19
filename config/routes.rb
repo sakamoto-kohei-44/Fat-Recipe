@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get "oauth/callback" => "oauths#callback"
   get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
 
-
   get '/home', to: 'pages#dashboard', as: 'dashboard_home'
   get 'recipe_suggestions/index', as: 'recipe_suggestions'
   patch 'users/update_profile', to: 'users#update_profile'
@@ -29,12 +28,12 @@ Rails.application.routes.draw do
       get 'height_weight_target_weight'
       get 'activity_level'
       get 'allergies'
-      get 'confirmation', to: 'users#confirmation', as: 'confirmation'
-      post 'save_goal', to: 'users#save_goal', as: 'save_goal' #ユーザーが目標（標準体型または細マッチョ）を選択したときに、その情報を保存するためのアクションを実行するためのもの
+      get 'confirmation', to: 'users#confirmation'
+      post 'save_goal', to: 'users#save_goal'
       post 'save_gender_age', to: 'users#save_gender_age', as: 'save_gender_age' #ユーザーの年齢、性別
-      post 'save_height_weight_target_weight', to: 'users#save_height_weight_target_weight', as: 'save_height_weight_target_weight'
-      post 'save_activity_level', to: 'users#save_activity_level', as: 'save_activity_level'
-      post 'save_allergies', to: 'users#save_allergies', as: 'save_allergies'
+      post 'save_height_weight_target_weight', to: 'users#save_height_weight_target_weight'
+      post 'save_activity_level', to: 'users#save_activity_level'
+      post 'save_allergies', to: 'users#save_allergies'
       # アカウント設定関連
       get 'account_settings', to: 'users#edit_account', as: 'edit_account'
     end
