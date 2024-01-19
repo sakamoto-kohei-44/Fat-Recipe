@@ -1,8 +1,8 @@
 require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  test "should get body_info" do
-    get users_body_info_url
+  test "should get goal" do
+    get users_goal_url
     assert_response :success
   end
 
