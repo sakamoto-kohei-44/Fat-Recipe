@@ -4,7 +4,7 @@
     <p class="text-center text-sm text-gray-500 font-zenmaru mb-8">
       <%= t('search.description') %>
     </p>
-    <%= form_with url: recipes_search_results_path, method: :get, local: true do |f| %>
+    <%= form_with url: search_results_recipes_path, method: :get, local: true do |f| %>
       <div class="relative flex items-center justify-center" data-controller="autocomplete">
         <%= f.text_field :query,
             placeholder: t('search.placeholder'),
