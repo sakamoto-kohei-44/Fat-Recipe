@@ -14,8 +14,6 @@ Rails.application.routes.draw do
 
   get '/home', to: 'pages#dashboard', as: 'dashboard_home'
   get 'recipe_suggestions/index', as: 'recipe_suggestions'
-  patch 'users/update_profile', to: 'users#update_profile'
-  patch 'users/update_account', to: 'users#update_account'
 
   # 利用規約とプライバシーポリシー
   get 'terms', to: 'pages#terms', as: 'pages_terms'
@@ -34,8 +32,6 @@ Rails.application.routes.draw do
       post 'save_height_weight_target_weight', to: 'users#save_height_weight_target_weight'
       post 'save_activity_level', to: 'users#save_activity_level'
       post 'save_allergies', to: 'users#save_allergies'
-      # アカウント設定関連
-      get 'account_settings', to: 'users#edit_account', as: 'edit_account'
     end
     member do
       delete :destroy
