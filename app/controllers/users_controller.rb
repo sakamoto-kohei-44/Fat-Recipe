@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
-  def show
-  end
+  def show;end
 
   def new
     @user = User.new
@@ -124,12 +123,6 @@ class UsersController < ApplicationController
     current_user.soft_delete
     reset_session
     redirect_to root_path, notice: t('.success')
-  end
-
-  def edit_account
-  end
-
-  def update_account
   end
 
   private

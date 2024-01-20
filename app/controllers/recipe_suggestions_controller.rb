@@ -1,4 +1,3 @@
 class RecipeSuggestionsController < ApplicationController
-  def index
-  end
+  def index;end
 end
