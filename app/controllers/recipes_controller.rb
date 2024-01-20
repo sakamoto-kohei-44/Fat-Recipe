@@ -30,8 +30,7 @@ class RecipesController < ApplicationController
     end
   end
 
-  def search
-  end
+  def search;end
 
   def search_results
     deepl_service = DeepLService.new

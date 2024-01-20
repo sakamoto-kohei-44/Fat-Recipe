@@ -28187,28 +28187,6 @@
       });
     }
   });
-
-  // app/javascript/application.js
-  document.addEventListener("DOMContentLoaded", () => {
-    const inputElement = document.getElementById("autocompleteInput");
-    const suggestionsElement = document.getElementById("autocompleteSuggestions");
-    inputElement.addEventListener("input", (event) => {
-      const query = event.target.value;
-      if (query.length > 2) {
-        fetch(`/recipes/autocomplete?query=${encodeURIComponent(query)}`).then((response) => response.json()).then((data) => showSuggestions(data, suggestionsElement)).catch((error2) => console.error("Error:", error2));
-      } else {
-        suggestionsElement.innerHTML = "";
-      }
-    });
-  });
-  function showSuggestions(data, element) {
-    element.innerHTML = "";
-    data.forEach((item) => {
-      const suggestionElement = document.createElement("li");
-      suggestionElement.textContent = item.title;
-      element.appendChild(suggestionElement);
-    });
-  }
 })();
 /*! Bundled license information:
 
@@ -28252,4 +28230,6 @@ chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js:
    * Released under the MIT license
    *)
 */
-//# sourceMappingURL=application.js.map
+//# sourceMappingURL=/builds/application.js-296f48ecc925ebe9ce33d5ac8b76f7a697b42b8d54e1bb2b5825bcedc6549979.map
+//!
+;
