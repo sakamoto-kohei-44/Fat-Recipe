@@ -46,6 +46,7 @@ ja:
       login_button: "ログイン"
       register_link: "登録ページへ"
       password_forget: "パスワードを忘れた"
+      forget: "初めての方で基本情報を入力していない方はこちら"
     create:
       success: "ログインしました"
       fail: "ログインに失敗しました"
