@@ -10,7 +10,7 @@ class OpenAiService
               "excluding any foods that cause these allergies: #{allergy_info}, and avoiding these disliked foods: #{disliked_foods}. " \
               "Additionally, consider this special request: #{free_word}. " \
               "Ensure each meal is clearly labeled as the morning meal, midday meal, and evening meal."
-    uri = URI.parse("https://api.openai.com/v1/chat/completions")
+    uri = URI.parse("https://api.openai.com/v1/chat/completions")  # APIエンドポイントURL
     header = {
       'Content-Type': 'application/json',
       Authorization: "Bearer #{@api_key}"
@@ -35,7 +35,7 @@ class OpenAiService
     request = Net::HTTP::Post.new(uri, header)
     request.body = body
 
-    response = http.request(request)
+    response = http.request(request)  # 定義されたリクエストをOpenAIのAPIに送信
     parse_response(response)
   end
 
