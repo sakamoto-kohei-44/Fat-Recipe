@@ -13,7 +13,7 @@ class SpoonacularService
     response.parsed_response
   end
 
-  def self.fetch_multiple_recipe_information(ids)
+  def self.fetch_multiple_recipe_information(ids)  # 複数のレシピIDに対して詳細情報を一度に取得
     recipes_info = ids.map do |id|
       fetch_recipe_information(id)
     end

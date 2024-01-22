@@ -94,7 +94,7 @@ class UsersController < ApplicationController
 
   def save_allergies
     @allergies_form = AllergiesForm.new(allergies_params)
-    session[:allergy_item_ids] = params[:allergy_item_ids].reject(&:blank?)
+    session[:allergy_item_ids] = @allergies_form.allergy_item_ids.reject(&:blank?)
     if @allergies_form.valid?
       redirect_to confirmation_users_path
     else
@@ -115,10 +115,11 @@ class UsersController < ApplicationController
     if session[:allergy_item_ids].present?
       @allergy_names = AllergyItem.where(id: session[:allergy_item_ids]).pluck(:name).join(",")
     else
-      @allergy_names = "None" # アレルギー情報がない場合の処理
+      @allergy_names = "なし" # アレルギー情報がない場合の処理
     end
   end
 
+  #  退会処理
   def destroy
     current_user.soft_delete
     reset_session
