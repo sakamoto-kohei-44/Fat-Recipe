@@ -13,7 +13,7 @@ class RecipesController < ApplicationController
       end
       free_word = params[:free_word]
       disliked_foods = params[:disliked_foods]
-      @recipe = @open_ai_service.generate_recipe(params[:calories], allergies, disliked_foods, free_word)
+      @recipe = @open_ai_service.generate_recipe(params[:calories], allergies, disliked_foods, free_word)  # メソッド呼び出してレシピテキスト生成
       @translated_recipe = @deepl_service.translate(@recipe, "JA")
 
       parse_recipes(@translated_recipe)  # 朝食、昼食、夕食の各セクションを抽出
@@ -55,7 +55,7 @@ class RecipesController < ApplicationController
   def extract_meals(translated_recipe)
     breakfast_start = translated_recipe.index("朝")  # 各単語のインデックスで検索
     lunch_start = translated_recipe.index("昼")
-    dinner_start = translated_recipe.index("夕") || translated_recipe.index("夜")
+    dinner_start = translated_recipe.index("夜") || translated_recipe.index("夕")
 
     breakfast = extract_meal(translated_recipe, breakfast_start, lunch_start)  # レシピのテキストから朝食、昼食、夕食の各部分を抽出しローカル変数に格納
     lunch = extract_meal(translated_recipe, lunch_start, dinner_start)
