@@ -20,7 +20,7 @@ class PasswordResetsController < ApplicationController
 
   def update
     @token = params[:id]
-    @user = User.load_from_reset_password_token(@token)
+    @user = User.load_from_reset_password_token(@token)  # 対応するユーザーをデータベースから検索
     return not_authenticated if @user.blank?
 
     @user.skip_special_validation = true

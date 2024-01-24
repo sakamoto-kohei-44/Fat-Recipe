@@ -2,7 +2,7 @@ class UserSessionsController < ApplicationController
   def new; end
 
   def create
-    @user = login(params[:email], params[:password])
+    @user = login(params[:email], params[:password])  # 存在するか認証しユーザーオブジェクトを返す
 
     if @user && @user.deleted_at.nil?
       user = User.find(session[:user_id])

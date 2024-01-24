@@ -6,7 +6,7 @@ class SpoonacularService
   DEFAULT_MIN_CARBS = 10
   DEFAULT_MAX_CARBS = 100
 
-  def self.fetch_recipe_information(id)
+  def self.fetch_recipe_information(id)  # 指定されたIDのレシピの詳細情報を取得
     url = "#{BASE_URL}/recipes/#{id}/information"
     response = HTTParty.get(url, query: { apiKey: API_KEY, includeNutrition: true })
     return {} unless response.success?
@@ -20,7 +20,7 @@ class SpoonacularService
     recipes_info
   end
 
-  def self.search(query:)
+  def self.search(query:)  # 指定されたクエリに基づいてレシピを検索
     url = "#{BASE_URL}/recipes/complexSearch"
     params = {
       query: query,

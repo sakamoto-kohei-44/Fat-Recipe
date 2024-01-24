@@ -26,11 +26,6 @@ class User < ApplicationRecord
   enum goal: { standard: 0, slim_muscle: 1 }
   enum activity_level: { low: 0, moderate: 1, high: 2 }
 
-  # 論理削除
-  def soft_delete
-    update(deleted_at: Time.current)
-  end
-
   private
 
   def skip_special_validation?

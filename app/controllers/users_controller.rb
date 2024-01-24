@@ -80,7 +80,7 @@ class UsersController < ApplicationController
   def save_activity_level
     @activity_level_form = ActivityLevelForm.new(activity_level_params)
     if @activity_level_form.valid?
-      service = RegistrationService.new(@activity_level_form, session)
+      service = RegistrationService.new(@activity_level_form, session)  # 活動レベルのデータとセッション情報を渡す
       service.process_registration
       redirect_to allergies_users_path
     else
@@ -117,13 +117,6 @@ class UsersController < ApplicationController
     else
       @allergy_names = "なし" # アレルギー情報がない場合の処理
     end
-  end
-
-  #  退会処理
-  def destroy
-    current_user.soft_delete
-    reset_session
-    redirect_to root_path, notice: t('.success')
   end
 
   private
